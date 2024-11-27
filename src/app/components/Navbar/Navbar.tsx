@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import "./style.css";
@@ -7,28 +7,21 @@ import "./style.css";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const burger = document.querySelector(".navbar-burger");
-    const menu = document.querySelector(".navbar-menu");
-
-    if (burger && menu) {
-      burger.addEventListener("click", () => {
-        setIsMenuOpen(!isMenuOpen);
-      });
-    }
-  }, [isMenuOpen]);
-
   return (
     <>
-      <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
+      {/* Main Navbar */}
+      <nav className="relative px-4 py-4 flex justify-between items-center bg-white z-[9999]">
+        {/* Logo */}
         <Link className="text-3xl font-bold leading-none" href="#">
           <Image
-          src="/images/logo.png"
-          alt="logo"
-          width={100}
-          height={100}
+            src="/images/logo.png"
+            alt="logo"
+            width={145}
+            height={100}
           />
         </Link>
+
+        {/* Menu Button for Mobile */}
         <div className="lg:hidden">
           <button
             className="navbar-burger flex items-center text-blue-600 p-3"
@@ -37,47 +30,94 @@ const Navbar = () => {
             <svg
               className="block h-4 w-4 fill-current"
               viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
             >
-              <title>Mobile menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
             </svg>
           </button>
         </div>
-        <ul className="hidden lg:flex lg:items-center lg:space-x-6">
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
-          <li><a className="text-sm text-blue-600 font-bold" href="#">About Us</a></li>
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+
+        {/* Desktop Navbar Menu */}
+        <ul className="navWrap hidden lg:flex lg:items-center lg:space-x-6 [&>li>a]:text-sm [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300">
+          <li><Link href="#">Home</Link></li>
+          <li><Link href="#">About Us</Link></li>
+          <li><Link href="#">Shop</Link></li>
+          <li><Link href="#">Services</Link></li>
+          <li><Link href="#">Contact Us</Link></li>
         </ul>
-        <div className="hidden lg:flex space-x-3">
-          <a className="py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl" href="#">Sign In</a>
-          <a className="py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl" href="#">Sign up</a>
+
+        {/* Desktop Sign In / Sign Up Buttons */}
+        <div className="hidden lg:flex gap-x-6">
+          <Link className="text-sm text-gray-900 font-bold rounded-xl" href="#">
+          <Image
+           src="/images/cart-icon.png"
+           alt="icon"
+           width={23}
+           height={100}
+           />
+           </Link>
+          <Link className="text-sm text-white font-bold rounded-xl" href="#"> 
+          <Image
+           src="/images/user-icon.png"
+           alt="icon"
+           width={23}
+           height={100}
+           />
+           </Link>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Sidebar Menu */}
       {isMenuOpen && (
-        <div className="navbar-menu fixed inset-0 z-50 bg-gray-800 bg-opacity-25">
-          <div className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm p-6 bg-white border-r">
+        <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-25">
+          <div className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm p-4 bg-white border-r">
+            {/* Logo */}
             <div className="flex items-center mb-8">
-              <a className="mr-auto text-3xl font-bold" href="#">
-                <svg className="h-12" viewBox="0 0 10240 10240">
-                  {/* SVG path data for the logo */}
-                </svg>
-              </a>
+              <Link className="mr-auto text-3xl font-bold leading-none" href="#">
+                <Image
+                  src="/images/logo.png"
+                  alt="logo"
+                  width={145}
+                  height={100}
+                />
+              </Link>
             </div>
-            <ul className="space-y-6">
-              <li><a className="text-sm text-gray-700 hover:text-blue-600" href="#">Home</a></li>
-              <li><a className="text-sm text-gray-700 hover:text-blue-600" href="#">About Us</a></li>
-              <li><a className="text-sm text-gray-700 hover:text-blue-600" href="#">Services</a></li>
-              <li><a className="text-sm text-gray-700 hover:text-blue-600" href="#">Pricing</a></li>
-              <li><a className="text-sm text-gray-700 hover:text-blue-600" href="#">Contact</a></li>
-            </ul> 
+
+            {/* Menu Items for Sidebar */}
+            <ul className="navWrap space-y-6">
+              <li><Link href="#">Home</Link></li>
+              <li><Link href="#">About Us</Link></li>
+              <li><Link href="#">Shop</Link></li>
+              <li><Link href="#">Service</Link></li>
+              <li><Link href="#">Contact Us</Link></li>
+            </ul>
+
+            {/* Sign Up Button */}
             <div className="mt-8">
-              <a className="block py-2 px-4 bg-blue-500 hover:bg-blue-600 text-center text-white font-bold rounded-xl" href="#">Sign up</a>
+              <Link
+                className="block py-2 px-4 bg-blue-500 hover:bg-blue-600 text-center text-white font-bold rounded-xl"
+                href="#"
+              >
+                Sign up
+              </Link>
             </div>
+
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-gray-500 hover:text-gray-700"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <svg
+                className="block h-6 w-6 fill-current"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       )}
@@ -86,5 +126,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-<h3>fuhfih</h3>
