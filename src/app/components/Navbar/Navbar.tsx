@@ -38,7 +38,7 @@ const Navbar = () => {
 
         {/* Desktop Navbar Menu */}
         <ul className="navWrap hidden lg:flex lg:items-center lg:space-x-6 [&>li>a]:text-sm [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300">
-          <li><Link href="#">Home</Link></li>
+          <li><Link href="/faq">Home</Link></li>
           <li><Link href="#">About Us</Link></li>
           <li><Link href="#">Shop</Link></li>
           <li><Link href="#">Services</Link></li>
@@ -68,8 +68,8 @@ const Navbar = () => {
 
       {/* Mobile Sidebar Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-25">
-          <div className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm p-4 bg-white border-r">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-25 z-[99999]">
+          <div className="fixed top-0 left-0 bottom-0 w-5/6 transition-all duration-500 max-w-sm p-4 py-5 bg-white border-r">
             {/* Logo */}
             <div className="flex items-center mb-8">
               <Link className="mr-auto text-3xl font-bold leading-none" href="#">

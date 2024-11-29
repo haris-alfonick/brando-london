@@ -9,9 +9,9 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping
 const featureProduct = () => {
 	return (
 		<>
-			<section className="relative z-[99] bg-white md:py-16 py-5">
+			<section className="relative z-[99] bg-white px-5 md:py-16 pb-8 py-2">
 				<div className="container mx-auto">
-					<div className="text-center [&_h2]:text-3xl [&_h2]:font-semibold">
+					<div className="text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold">
 						<h2>FEATURE PRODUCTS</h2>
 					</div>
 					<Tabs defaultValue="featured">
@@ -21,8 +21,8 @@ const featureProduct = () => {
 							<TabsTrigger value="bestSeller" className="bg-transparent shadow-none text-base">Best Seller</TabsTrigger>
 						</TabsList>
 						<TabsContent value="featured">
-							<div className="grid grid-cols-12 gap-x-7 px-5">
-								<div className="col-span-3 group flex w-full flex-col self-center overflow-hidden">
+							<div className="grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col self-center overflow-hidden">
 									<div className="relative">
 									<Image
 										src="/images/jacket5.webp"
@@ -46,7 +46,7 @@ const featureProduct = () => {
 											Add to cart</Link>
 									</div>
 								</div>
-								<div className="col-span-3 group flex w-full flex-col self-center overflow-hidden">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col self-center overflow-hidden">
 								<div className="relative">
 									<Image
 										src="/images/jacket2.webp"
@@ -67,7 +67,7 @@ const featureProduct = () => {
 											Add to cart</Link>
 									</div>
 								</div>
-								<div className="col-span-3 group flex w-full flex-col self-center overflow-hidden">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col self-center overflow-hidden">
 								<div className="relative">
 									<Image
 										src="/images/jacket3.webp"
@@ -88,7 +88,7 @@ const featureProduct = () => {
 											Add to cart</Link>
 									</div>
 								</div>
-								<div className="col-span-3 group flex w-full flex-col self-center overflow-hidden">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col self-center overflow-hidden">
 								<div className="relative">
 									<Image
 										src="/images/jacket.webp"
@@ -111,8 +111,8 @@ const featureProduct = () => {
 								</div>
 							</div>
 						</TabsContent>
-						<TabsContent value="newArrival">Change your password here.</TabsContent>
-						<TabsContent value="bestSeller">Change your password here.</TabsContent>
+						<TabsContent value="newArrival">New Arrival</TabsContent>
+						<TabsContent value="bestSeller">Best Seller</TabsContent>
 					</Tabs>
 				</div>
 			</section>

@@ -10,9 +10,9 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping
 const BestSeller = () => {
 	return (
 		<>
-			<section>
+			<section className="px-5 md:pb-0 md:py-14 py-10 pb-1">
 				<div className="container mx-auto">
-					<div className="text-center [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:uppercase">
+					<div className="text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase">
 						<h2>Our Best Seller</h2>
 					</div>
 					<Tabs defaultValue="Men">
@@ -22,8 +22,8 @@ const BestSeller = () => {
 							<TabsTrigger value="Kids" className="bg-transparent shadow-none text-base">Kids</TabsTrigger>
 						</TabsList>
 						<TabsContent value="Men">
-							<div className="grid grid-cols-12 gap-x-7 px-5">
-								<div className="col-span-3 group flex w-full flex-col overflow-hidden bg-white">
+							<div className="grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col overflow-hidden bg-white">
 									<Link className="relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20" href="#">
 										<Image
 											src="/images/jacket5.webp"
@@ -57,7 +57,7 @@ const BestSeller = () => {
 									</div>
 								</div>
 
-								<div className="col-span-3 group flex w-full flex-col overflow-hidden bg-white">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col overflow-hidden bg-white">
 									<Link className="relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20" href="#">
 										<Image
 											src="/images/hand-bag.webp"
@@ -85,7 +85,7 @@ const BestSeller = () => {
 									</div>
 								</div>
 
-								<div className=" col-span-3 group flex w-full flex-col overflow-hidden bg-white">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col overflow-hidden bg-white">
 									<Link className="relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20" href="#">
 										<Image
 											src="/images/jacket.webp"
@@ -112,7 +112,7 @@ const BestSeller = () => {
 									</div>
 								</div>
 
-								<div className=" col-span-3 group flex w-full flex-col overflow-hidden bg-white">
+								<div className="md:col-span-3 col-span-6 group flex w-full flex-col overflow-hidden bg-white">
 									<Link className="relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20" href="#">
 										<Image
 											src="/images/bag.webp"
