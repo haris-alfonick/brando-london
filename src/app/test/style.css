@@ -1,0 +1,10 @@
+section.backgroungOverlay{
+    background: linear-gradient(to left, rgba(0,0,0, 0), rgba(199,245,255, 100)),url("/images/img/skymed-image.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.specialOfferSec .specialOffer{
+    background: linear-gradient(to left, rgba(0,0,0, 0), rgba(0,0,0, 100)),url("/images/img/special-bg.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+}

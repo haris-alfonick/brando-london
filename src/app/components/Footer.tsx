@@ -5,10 +5,9 @@ import Image from "next/image";
 
 const Footer = () => {
 	return (
-		<footer className="bg-[#333]">
-			<div className="container mx-auto px-5">
-				<div className="grid grid-cols-12 py-16 border-b border-b-[#525151] [&_p]:w-[80%] [&_p]:pt-5 [&_p]:text-white gap-x-5 [&_p]:text-sm [&_a]:text-white [&_a]:text-sm [&_a]:block [&_a]:pb-2 [&_strong]:text-white [&_strong]:text-sm [&_strong]:pb-2.5 [&_strong]:block ">
-					<div className="col-span-3">
+		<footer className="bg-[#333] px-5">
+				<div className="grid grid-cols-12 lg:gap-y-0 gap-y-8 py-16 border-b border-b-[#525151] [&_p]:w-full [&_p]:pt-5 [&_p]:lg:w-[80%] [&_p]:sm:w-[44%] [&_p]:text-white gap-x-5 [&_p]:text-sm [&_a]:text-white [&_a]:text-sm [&_a]:block [&_a]:pb-2 [&_strong]:text-white [&_strong]:text-sm [&_strong]:pb-2.5 [&_strong]:block ">
+					<div className="lg:col-span-3 col-span-12 ">
 						<Image
 							src="/images/logo-white.png"
 							alt="Footer Logo"
@@ -18,7 +17,7 @@ const Footer = () => {
 						<p>Welcome to XYZ, where brilliance meets innovation!
 							We are a leading company dedicated to delivering exceptional products and services to cater to your needs.</p>
 					</div>
-					<div className="col-span-2">
+					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
 						<strong>Pages</strong>
 						<div className="footerNav">
 							<Link href='#'>Home</Link>
@@ -28,7 +27,7 @@ const Footer = () => {
 							<Link href='#'>Blog</Link>
 						</div>
 					</div>
-					<div className="col-span-2">
+					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
 						<strong>Categories</strong>
 						<div className="footerNav">
 							<Link href='#'>Men Jacket</Link>
@@ -38,7 +37,7 @@ const Footer = () => {
 							<Link href='#'>Shoe</Link>
 						</div>
 					</div>
-					<div className="col-span-2">
+					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
 						<strong>Customer Care</strong>
 						<div className="footerNav">
 							<Link href='#'>Help Center</Link>
@@ -48,11 +47,11 @@ const Footer = () => {
 							<Link href='#'>Return & Refund</Link>
 						</div>
 					</div>
-					<div className="col-span-3">
+					<div className="lg:col-span-2 sm:col-span-3 col-span-12">
 						<strong>Subscribe Now</strong>
-						<div className="relative p-0.5 flex w-full max-w-sm items-center space-x-2 border bg-white !rounded-sm">
-							<Input type="email" placeholder="Your Email" className="border-none shadow-none text-sm focus-visible:ring-0 pt-0.5 px-2.5 w-fit" />
-							<Button type="submit" variant="outline" className="border-none !bg-[#333] text-sm !text-white absolute right-0.5 !rounded-sm">Subscribe</Button>
+						<div className="relative p-0.5 flex items-center space-x-2 border bg-white !rounded-sm md:w-full w-[290px]">
+							<Input type="email" placeholder="Your Email" className="border-none shadow-none text-sm focus-visible:ring-0 pt-0.5 px-2.5 w-full" />
+							<Button type="submit" variant="outline" className="border-none !bg-[#333] px-3.5 text-sm !text-white max-[485px]:static absolute right-0.5 !rounded-sm">Subscribe</Button>
 						</div>
 						<ul className="flex justify-start mt-5 space-x-3 [&>li:hover_a]:text-[#AB1E23]">
 							<li>
@@ -97,7 +96,6 @@ const Footer = () => {
 				<div className="text-white text-sm py-5 [&_strong]:font-semibold text-center">
 					<span>© 2024 <Link href="#">Brando London.</Link><strong> All right reserved</strong></span>
 				</div>
-			</div>
 		</footer>
 	)
 }
