@@ -1,128 +1,72 @@
-import { faDeaf } from '@fortawesome/free-solid-svg-icons'
+import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 
 const WishList = () => {
   return (
-    <section>
-      <div className='mt-20 my-6 xl:px-20 lg:px-5 px-5 '>
-        <h4 className='pb-5 text-xl px-5'>Wishlist</h4>
-        <div className='grid grid-cols-12 bg-[#F2F4F5] border border-[#E4E7E9] px-5 py-2'>
-          <div className='col-span-6 uppercase'>
-            <h5 className='uppercase text-sm'>Products</h5>
-          </div>
-          <div className='col-span-2'>
-            <h5 className='uppercase text-sm'>Price</h5>
-          </div>
-          <div className='col-span-2'>
-            <h5 className='uppercase text-sm'>Stock Status</h5>
-          </div>
-          <div className='col-span-2 '>
-            <h5 className='uppercase text-sm'>Actions</h5>
+    <>
+      <Navbar />
+      <div className='md:px-0 px-5'>
+        <div className='container mx-auto sm:px-12 md:px-16 pb-8'>
+          <div className='grid grid-cols-12 gap-6 pt-24'>
+            <div className='col-span-12'>
+              <div className='border border-gray-300 rounded-lg p-6'>
+                <h5 className='text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white border-b pb-4'>
+                  Wishlist
+                </h5>
+                <div className="grid grid-cols-12 bg-gray-100 py-3 px-4 border-b [&_p]:max-[485px]:text-xs">
+                  <div className="col-span-4 sm:text-base sm:col-span-4 md:col-span-4 lg:col-span-4">
+                    <p className="font-medium text-gray-700 text-sm sm:text-base">
+                      Products
+                    </p>
+                  </div>
+                  <div className='col-span-2 text-center sm:text-base sm:col-span-2 md:col-span-2 lg:col-span-2'>
+                    <p className='font-medium text-gray-700 text-sm sm:text-base'>
+                      Price
+                    </p>
+                  </div>
+                  <div className='col-span-2 text-center sm:text-base sm:col-span-2 md:col-span-2 lg:col-span-2'>
+                    <p className='font-medium text-gray-700 text-sm sm:text-base'>
+                      Stock Status
+                    </p>
+                  </div>
+                  <div className='col-span-4 text-right sm:text-base sm:col-span-4 md:col-span-4 lg:col-span-4'>
+                    <p className='font-medium text-gray-700 text-sm sm:text-base'>
+                      Actions
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-12 py-4 px-4 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm">
+                  <div className="max-[640px]:col-span-12 col-span-6 sm:col-span-4 flex sm:items-center items-left gap-4 sm:flex-row max-[485px]:col-span-12 ">
+                    
+                    <img src="/images/jacket.webp" alt="Product" className="w-12 h-14 corner"/>
+                    <p className="text-sm sm:text-base sm:leading-5 !leading-4">
+                      Edward Cafe Racer Black Leather Jacket
+                    </p>
+                  </div>
+                  <div className="col-span-1 sm:col-span-2 text-center max-[485px]:flex-row flex-col ">
+                    <p>$687.00</p>
+                  </div>
+                  <div className="col-span-2 sm:col-span-2 text-center max-[640px]:item-right flex items-center justify-center gap-2">
+                      <p>Counter</p>
+                  </div>
+                  <div className="col-span-3 sm:col-span-4 text-right">
+                    <p className='col-span2'>$687.00</p>
+                    <div className="[&_svg]:w-5 [&_svg]:h-5 'col-span2'" >
+                      <FontAwesomeIcon icon={faCircleXmark} />
+                    </div>
+                  </div>
+                </div>            
+              </div>
+            </div>
+          
           </div>
         </div>
       </div>
-
-      <div className='grid grid-cols-12  xl:px-20 lg:px-5 px-5 items-center'>
-        <div className='col-span-6 flex items-center '>
-          <div className='lg:w-16 md:w-14 '>
-            <img src='/images/Image1.png' alt='' />
-          </div>
-          <div className=''>
-            <p className='pl-3'>Edward Cafe Racer Black Leather Jacket</p>
-          </div>
-        </div>
-
-        <div className='col-span-2'>
-          <span className='text-slate-500'>$1299</span>
-          <span>$999</span>
-        </div>
-        <div className='col-span-2'>
-          <p className='uppercase text-[#2db224] text-sm'>in stock</p>
-        </div>
-        <div className='col-span-2'>
-          <button
-            type='button'
-            className="uppercase bg-[#333333] text-white px-4 py-2 text-[10px] pr-7 bg-[url('/images/Vectorr.png')] bg-[length:15px_13px] bg-no-repeat bg-[top_8px_right_10px] font-medium"
-          >
-            Add to card
-          </button>
-        </div>
-
-        <div className='col-span-6 flex items-center '>
-          <div className='lg:w-16 md:w-14'>
-            <img src='/images/Image1.png' alt='' />
-          </div>
-          <div className=''>
-            <p className='pl-3'>Edward Cafe Racer Black Leather Jacket</p>
-          </div>
-        </div>
-
-        <div className='col-span-2'>
-          <span className='text-slate-500'>$1299</span>
-          <span>$999</span>
-        </div>
-        <div className='col-span-2'>
-          <p className='uppercase text-[#2db224] text-sm'>in stock</p>
-        </div>
-        <div className='col-span-2'>
-          <button
-            type='button'
-            className="uppercase bg-[#333333] text-white px-4 py-2 text-[10px] pr-7 bg-[url('/images/Vectorr.png')] bg-[length:15px_13px] bg-no-repeat bg-[top_8px_right_10px] font-medium"
-          >
-            Add to card
-          </button>
-        </div>
-
-        <div className='col-span-6 flex items-center '>
-          <div className='lg:w-16 md:w-14'>
-            <img src='/images/Image1.png' alt='' />
-          </div>
-          <div className=''>
-            <p className='pl-3'>Edward Cafe Racer Black Leather Jacket</p>
-          </div>
-        </div>
-
-        <div className='col-span-2'>
-          <span className='text-slate-500'>$1299</span>
-          <span>$999</span>
-        </div>
-        <div className='col-span-2'>
-          <p className='uppercase text-red-700 text-sm'>out of stock</p>
-        </div>
-        <div className='col-span-2'>
-          <button
-            type='button'
-            className="uppercase border bg-slate-300 border-black font-medium px-4 py-2 text-[10px] pr-7 bg-[url('/images/Vectorr.png')] bg-[length:15px_13px] bg-no-repeat bg-[top_8px_right_10px]"
-          >
-            Add to card
-          </button>
-        </div>
-
-        <div className='col-span-6 flex items-center '>
-          <div className='lg:w-16 md:w-14'>
-            <img src='/images/Image1.png' alt='' />
-          </div>
-          <div className=''>
-            <p className='pl-3'>Edward Cafe Racer Black Leather Jacket</p>
-          </div>
-        </div>
-
-        <div className='col-span-2'>
-          <span className='text-slate-500'>$1299</span>
-          <span>$999</span>
-        </div>
-        <div className='col-span-2'>
-          <p className='uppercase text-[#2db224] text-sm'>in stock</p>
-        </div>
-        <div className='col-span-2'>
-          <button
-            type='button'
-            className="uppercase bg-[#333333] text-white px-4 py-2 text-[10px] pr-7 bg-[url('/images/Vectorr.png')] bg-[length:15px_13px] bg-no-repeat  bg-[top_8px_right_10px] font-medium"
-          >
-            Add to card
-          </button>
-        </div>
-      </div>
-    </section>
+      <Footer />
+    </>
   )
 }
 
