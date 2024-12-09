@@ -30,9 +30,7 @@ export default function FAQSection() {
                 value={`item-${index}`} // Ensure the value is unique per AccordionItem
                 className="border-none "
               >
-                <AccordionTrigger className="flex justify-between py-3.5 px-3 rounded-lg bg-[#F5F5F5] items-center hover:no-underline w-full text-left">
-                  <span className="text-base font-medium">{faq.question}</span>
-                </AccordionTrigger>
+                
                 <AccordionContent>
                   <p className="text-base px-4 py-2 text-gray-700">{faq.answer}</p>
                 </AccordionContent>
