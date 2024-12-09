@@ -15,7 +15,7 @@ const TableDemo = () => {
                 <h5 className="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white border-b pb-4">
                   Shopping Cart
                 </h5>
-                <div className="grid grid-cols-12 bg-gray-100 py-3 px-4 border-b">
+                <div className="grid grid-cols-12 bg-gray-100 py-3 px-4 border-b [&_p]:max-[485px]:text-xs">
                   <div className="col-span-5 sm:text-base sm:col-span-4 md:col-span-6 lg:col-span-6">
                     <p className="font-medium text-gray-700 text-sm sm:text-base">
                       Products
@@ -38,35 +38,29 @@ const TableDemo = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-12 py-4 px-4 items-center border-b gap-x-5">
-                  <div className="max-[640px]:col-span-12 sm:col-span-6 flex sm:items-center items-left gap-4 sm:flex-row max-[485px]:col-span-12">
+                <div className="grid grid-cols-12 py-4 px-4 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm">
+                  <div className="max-[640px]:col-span-12 sm:col-span-6 flex sm:items-center items-left gap-4 sm:flex-row max-[485px]:col-span-12 ">
                     <div className="[&_svg]:w-5 [&_svg]:h-5">
                       <FontAwesomeIcon icon={faCircleXmark} />
                     </div>
-                    <img
-                      src="/images/jacket.webp"
-                      alt="Product"
-                      className="w-12 h-14 corner"
-                    />
-                    <p className="text-gray-700 text-sm sm:text-base">
+                    <img src="/images/jacket.webp" alt="Product" className="w-12 h-14 corner"/>
+                    <p className="text-sm sm:text-base sm:leading-5 !leading-4">
                       Edward Cafe Racer Black Leather Jacket
                     </p>
                   </div>
                   <div className="col-span-2 sm:col-span-2 text-center max-[485px]:flex-row flex-col ">
-                    <p className="text-gray-700 text-sm">$687.00</p>
+                    <p>$687.00</p>
                   </div>
-                  <div className="col-span-3 sm:col-span-2 text-center max-[640px]:item-right">
-                    <div className="flex items-center justify-center gap-2">
+                  <div className="col-span-3 sm:col-span-2 text-center max-[640px]:item-right flex items-center justify-center gap-2">
                       <p>Counter</p>
-                    </div>
                   </div>
                   <div className="col-span-2 sm:col-span-2 text-right">
-                    <p className="text-gray-700 text-sm">$687.00</p>
+                    <p>$687.00</p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-12 py-4 px-4 items-center border-b">
-                  <div className="col-span-5 sm:col-span-6 flex sm:items-right items-start gap-4 sm:flex-row flex-col ">
+                <div className="grid grid-cols-12 py-4 px-4 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm">
+                  <div className="max-[640px]:col-span-12 sm:col-span-6 flex sm:items-center items-left gap-4 sm:flex-row max-[485px]:col-span-12 ">
                     <div className="[&_svg]:w-5 [&_svg]:h-5">
                       <FontAwesomeIcon icon={faCircleXmark} />
                     </div>
@@ -75,20 +69,18 @@ const TableDemo = () => {
                       alt="Product"
                       className="w-12 h-14 corner"
                     />
-                    <p className="text-gray-700 text-sm sm:text-base">
+                    <p className="text-sm sm:text-base sm:leading-5 !leading-4">
                       Edward Cafe Racer Black Leather Jacket
                     </p>
                   </div>
-                  <div className="col-span-2 sm:col-span-2 text-center ">
-                    <p className="text-gray-700 text-sm">$687.00</p>
+                  <div className="col-span-2 sm:col-span-2 text-center max-[485px]:flex-row flex-col ">
+                    <p>$687.00</p>
                   </div>
-                  <div className="col-span-3 sm:col-span-2 text-center max-[640px]:item-right">
-                    <div className="flex items-center justify-center gap-2">
+                  <div className="col-span-3 sm:col-span-2 text-center max-[640px]:item-right flex items-center justify-center gap-2">
                       <p>Counter</p>
-                    </div>
                   </div>
                   <div className="col-span-2 sm:col-span-2 text-right">
-                    <p className="text-gray-700 text-sm">$687.00</p>
+                    <p>$687.00</p>
                   </div>
                 </div>
 
@@ -109,11 +101,13 @@ const TableDemo = () => {
                 [&_button]:bg-no-repeat 
                 [&_button]:pr-15 
                 [&_button]:bg-[length:22px_22px]
-                [&_button]:sm:bg-[right_139px_top_12px]
-                [&_button]:md:bg-[right_196px_top_12px]
-                [&_button]:lg:bg-[right_26px_top_12px]
-                [&_button]:xl:bg-[right_78px_top_12px]
-                [&_button]:max-sm:bg-[right_49px_top_12px]
+                [&_button]:sm:bg-[right_139px_top_13px]
+                [&_button]:md:bg-[right_196px_top_13px]
+                [&_button]:lg:bg-[right_17px_top_14px]
+                [&_button]:xl:bg-[right_74px_top_13px]
+                [&_button]:max-sm:bg-[right_49px_top_13px]
+                [&_button]:mt-6 [&_button]:w-full [&_button]:text-white [&_button]:bg-[#333333] [&_button]:hover:bg-gray-800 [&_button]:focus:outline-none [&_button]:font-medium
+                [&_button]:corner-lg [&_button]:px-6 [&_button]:py-3
                 ">
                 <h5 className="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white border-b pb-4">
                   Cart Totals
@@ -141,9 +135,7 @@ const TableDemo = () => {
                   </div>
                 </div>
                 <button
-                  type="button"
-                  className="mt-6 w-full text-white bg-gray-900 hover:bg-gray-800 focus:outline-none font-medium corner-lg text-sm px-6 py-3"> Proceed to Checkout
-                </button>
+                  type="button"> Proceed to Checkout </button>
               </div>
 
               <div className="border border-gray-300 rounded-lg p-6 shadow-sm">
