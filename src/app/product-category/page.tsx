@@ -20,8 +20,8 @@ const ProductCategory = () => {
     <>
       <Navbar />
       <div className='px-5'>
-        <div className='grid grid-cols-12 gap-x-5'>
-          <div className='md:col-span-3 col-span-12 p-6 border [&_h3]:md:text-4xl [&_h3]:font-bold [&_h3]:mb-2.5'>
+        <div className='grid grid-cols-12 md:gap-x-5 max-md:gap-y-5'>
+          <div className='lg:col-span-3 max-lg:order-2 col-span-12 p-6 border [&_h3]:md:text-4xl [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:mb-2.5'>
             <h3>Filter</h3>
             <Accordion type='single' collapsible>
               <AccordionItem
@@ -159,7 +159,7 @@ const ProductCategory = () => {
               </AccordionItem>
             </Accordion>
           </div>
-          <div className='md:col-span-9 col-span-12 max-[640px]:col-span-4'>
+          <div className='lg:col-span-9 col-span-12'>
             <ProductCard />
           </div>
         </div>
