@@ -1,6 +1,6 @@
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 
-// initialise the WooCommerceRestApi //
+// Initialise the WooCommerceRestApi
 const api = new WooCommerceRestApi({
   url: "https://brandolondon.com",
   consumerKey: process.env.WOOCOMMERCE_KEY!,
@@ -8,13 +8,16 @@ const api = new WooCommerceRestApi({
   version: "wc/v3",
 });
 
-// fetch all products from WooCommerce //
+// Fetch all products from WooCommerce
 export async function fetchWooCommerceProducts() {
   try {
     const response = await api.get("products");
     return response;
-  } catch (error:any) {
-    throw new Error(error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+    throw new Error("An unexpected error occurred.");
   }
 }
 
@@ -22,8 +25,11 @@ export async function fetchWooCommerceProduct(productId: string) {
   try {
     const response = await api.get(`products/${productId}`);
     return response.data; // Product details
-  } catch (error: any) {
-    throw new Error(error.message);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+    throw new Error("An unexpected error occurred.");
   }
 }
 
@@ -31,8 +37,11 @@ export async function fetchWooCommerceCategories() {
   try {
     const response = await api.get("products/categories");
     return response.data; // Categories array
-  } catch (error: any) {
-    throw new Error(error.message);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+    throw new Error("An unexpected error occurred.");
   }
 }
 
@@ -42,7 +51,10 @@ export async function fetchWooCommerceProductBySlug(slug: string) {
       slug: slug, // Pass the slug to WooCommerce API
     });
     return response.data[0]; // Assuming you get a list, return the first product
-  } catch (error: any) {
-    throw new Error(error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+    throw new Error("An unexpected error occurred.");
   }
 }

@@ -27,7 +27,7 @@ export interface Product {
   total_sales: number;
   virtual: boolean;
   downloadable: boolean;
-  downloads: any[]; // TODO look at Downloads properties
+//  downloads: any[]; // TODO look at Downloads properties
   download_limit: number;
   download_expiry: number;
   external_url: string;
@@ -56,10 +56,10 @@ export interface Product {
   parent_id: number;
   purchase_note: string;
   categories: Partial<Category>[];
-  tags: any[]; // TODO look at Tags properties
+  //tags: any[]; // TODO look at Tags properties
   images: Image[];
   attributes: Attribute[];
-  default_attributes: any[]; // TODO look at default attributes properties
+  //default_attributes: any[]; // TODO look at default attributes properties
   variations: number[];
   grouped_products: number[];
   menu_order: number;
@@ -107,7 +107,7 @@ interface LineItem {
   subtotal_tax: string;
   total: string;
   total_tax: string;
-  taxes: any[];
+  //taxes: any[];
   meta_data: MetaData[];
   sku: string;
   price: number;
@@ -120,28 +120,28 @@ interface ShippingLine {
   instance_id: string;
   total: string;
   total_tax: string;
-  taxes: any[];
-  meta_data: any[];
+  //taxes: any[];
+  //meta_data: any[];
 }
 
-interface Meta_Data_Line_Item {
-  // built from my own object sending in, disregard if necessary!
-  key: string;
-  value: string;
-}
+// interface Meta_Data_Line_Item {
+//   // built from my own object sending in, disregard if necessary!
+//   key: string;
+//   value: string;
+// }
 
-interface Cart {
-  // built from my own object sending in, disregard if necessary!
-  payment_method: string;
-  payment_method_title: string;
-  billing: Billing;
-  shipping: Shipping;
-  line_items: Array<LineItem>;
-  shipping_lines: Array<ShippingLine>;
-  customer_id: number;
-  meta_data: Array<Meta_Data_Line_Item>;
-  set_paid: false;
-}
+// interface Cart {
+//   // built from my own object sending in, disregard if necessary!
+//   payment_method: string;
+//   payment_method_title: string;
+//   billing: Billing;
+//   shipping: Shipping;
+//   line_items: Array<LineItem>;
+//   shipping_lines: Array<ShippingLine>;
+//   customer_id: number;
+//   meta_data: Array<Meta_Data_Line_Item>;
+//   set_paid: false;
+// }
 
 // interface Attribute {
 // 	id: number;
@@ -229,18 +229,18 @@ export interface Order {
   payment_method: string;
   payment_method_title: string;
   transaction_id: string;
-  date_paid?: any;
-  date_paid_gmt?: any;
-  date_completed?: any;
-  date_completed_gmt?: any;
+  //date_paid?: any;
+  //date_paid_gmt?: any;
+  //date_completed?: any;
+  //date_completed_gmt?: any;
   cart_hash: string;
-  meta_data: any[];
+  //meta_data: any[];
   line_items: LineItem[];
-  tax_lines: any[];
+ // tax_lines: any[];
   shipping_lines: ShippingLine[];
-  fee_lines: any[];
-  coupon_lines: any[];
-  refunds: any[];
+ // fee_lines: any[];
+  //coupon_lines: any[];
+  //refunds: any[];
   _links: Links;
 }
 
@@ -289,22 +289,22 @@ export interface Variation {
   price: string;
   regular_price: string;
   sale_price: string;
-  date_on_sale_from?: any;
-  date_on_sale_from_gmt?: any;
-  date_on_sale_to?: any;
-  date_on_sale_to_gmt?: any;
+  //date_on_sale_from?: any;
+  //date_on_sale_from_gmt?: any;
+  //date_on_sale_to?: any;
+  //date_on_sale_to_gmt?: any;
   on_sale: boolean;
   visible: boolean;
   purchasable: boolean;
   virtual: boolean;
   downloadable: boolean;
-  downloads: any[];
+  //downloads: any[];
   download_limit: number;
   download_expiry: number;
   tax_status: string;
   tax_class: string;
   manage_stock: boolean;
-  stock_quantity?: any;
+  //stock_quantity?: any;
   in_stock: boolean;
   backorders: string;
   backorders_allowed: boolean;
