@@ -83,8 +83,8 @@ const ProductDetails = () => {
           {/* Wishlist and Compare */}
           <div className="flex xl:flex-row flex-col mt-[20px] justify-between items-center">
 
-            <div className="[&>span]:bg-no-repeat [&>span]:lg:bg-[center_left_0px] [&>span]:lg:pl-[30px] [&>span]:md:pl-6 [&>span]:pl-7 [&>span]:contain  [&>span]:bg-[center_left] [&>span:nth-child(2)]:ml-6">
-              <span className="bg-[url('/images/Vector.png')]">Add to Wishlist</span>
+            <div className="[&>span]:bg-no-repeat [&>span]:lg:bg-[center_left_0px] [&>span]:lg:pl-[30px] [&>span]:md:pl-6 [&>span]:pl-7 [&>span]:bg-contain [&>span]:bg-[center_left] [&>span:nth-child(2)]:ml-6">
+              <span className="bg-[url('/images/heart.png')]">Add to Wishlist</span>
               <span className="bg-[url('/images/ArrowsClockwise.png')]">Add to Compare</span>
             </div>
 
@@ -105,11 +105,11 @@ const ProductDetails = () => {
           </div>
 
           {/* Delivery and Features Section */}
-          <div className="mt-3 [&>p]:pl-8 [&>p]:bg-no-repeat [&>p]:bg-[length:24px_22px] [&>p]:bg-left [&_strong]:font-semibold">
+          <div className="mt-3 [&>p]:pl-8 [&>p]:bg-no-repeat [&>p]:bg-[length:22px_20px] [&>p]:bg-left [&_strong]:font-semibold">
               <p className="bg-[url(/images/delivery.png)]">
                 <strong>Estimated Delivery:</strong> Jul 30 - Aug 03
               </p>
-              <p className="bg-[url(/images/shipping.png)] !bg-[length:24px_18px] mt-3">
+              <p className="bg-[url(/images/shipping.png)] !bg-[length:22px_16px] mt-3">
                 <strong>Free Shipping & Returns:</strong> On all orders over $75
               </p>
           </div>
