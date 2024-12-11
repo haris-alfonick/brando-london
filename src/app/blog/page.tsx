@@ -313,7 +313,7 @@ export default function Blog() {
               [&_span]:md:text-[10px] [&_span]:text-[14px]
               [&_span]:text-[#333333]"
               >
-                <span className="bg-[url('/images/blog/By-1.png')]">
+                <span className="bg-[url(/images/blog/By-1.png)]">
                   Sammy Brian
                 </span>
                 <span className="bg-[url('/images/blog/uil_calender-2.png')]">
@@ -325,7 +325,7 @@ export default function Blog() {
               </div>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
+                industry. Lorem Ipsum has been the industry&apos;s standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
