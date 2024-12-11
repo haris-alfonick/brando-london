@@ -69,7 +69,7 @@ const Navbar = () => {
       {/* Mobile Sidebar Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-25 z-[99999]">
-          <div className="fixed top-0 left-0 bottom-0 w-5/6 transition-all duration-500 max-w-sm p-4 py-5 bg-white border-r">
+          <div className="fixed top-0 left-0 bottom-0 w-5/6 transition-all z-[999999] duration-500 max-w-sm p-4 py-5 bg-white border-r">
             {/* Logo */}
             <div className="flex items-center mb-8">
               <Link className="mr-auto text-3xl font-bold leading-none" href="#">

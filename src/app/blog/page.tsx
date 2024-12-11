@@ -11,47 +11,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const Card = ({ imageSrc, altText, title, description }) => (
-  <div className="flex-1 max-w-md rounded overflow-hidden shadow-lg bg-white relative">
-    <Image
-      className="w-full h-80 object-cover rounded-t-lg"
-      src={imageSrc}
-      alt={altText}
-      height={320}
-      width={640}
-    />
-    <div className="absolute bottom-0 px-6 py-4">
-      <div className="font-bold text-xl mb-2 text-white">{title}</div>
-      <p className="text-white text-base">{description}</p>
-    </div>
-  </div>
-);
-
-const TrendingCard = ({ imageSrc, altText, title, author, date, readTime }) => (
-  <div className="flex-1 max-w-[280px] rounded overflow-hidden shadow-lg bg-white relative">
-    <Image
-      className="w-full h-80 object-cover rounded-t-lg"
-      src={imageSrc}
-      alt={altText}
-      height={256}
-      width={256}
-    />
-    <div className="absolute bottom-0 px-4 py-2">
-      <button className="bg-white text-black border-none text-xs px-3 py-2 text-sm font-bold">
-        LEATHER MANUAL
-      </button>
-      <div className="font-bold text-xl mb-1 text-white">{title}</div>
-      <div className="flex text-[0.7rem] text-white justify-between">
-        <p>
-          By <span className="font-bold">{author}</span>
-        </p>
-        <p>{date}</p>
-        <p>{readTime}</p>
-      </div>
-    </div>
-  </div>
-);
-
 export default function Blog() {
   // Getting current date and formatting
   const date = new Date();
@@ -62,36 +21,199 @@ export default function Blog() {
   };
   const formattedDate = new Intl.DateTimeFormat("en-US", options).format(date);
 
+  const TopImages = [
+    {
+      src: "/images/blogtop1.png",
+      alt: "Image 1",
+      title: "Leather Manual",
+      description: "How to select the appropriate color of a jacket",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+    {
+      src: "/images/blogtop3.png",
+      alt: "Image 1",
+      title: "Leather Manual",
+      description: "How to select the appropriate color of a jacket",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+    {
+      src: "/images/blogtop1.png",
+      alt: "Image 1",
+      title: "Leather Manual",
+      description: "How to select the appropriate color of a jacket",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+    {
+      src: "/images/blogtop3.png",
+      alt: "Image 1",
+      title: "Leather Manual",
+      description: "How to select the appropriate color of a jacket",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+  ];
+
+  //images for carousal
+  const images = [
+    {
+      src: "/images/blogtrend1.png",
+      alt: "Image 1",
+      title: "What is Full Grown Leather? A Comprehensive Guide",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+    {
+      src: "/images/blogtrend2.png",
+      alt: "Image 2",
+      title: "What is Full Grown Leather? A Comprehensive Guide",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+    {
+      src: "/images/blogtrend3.png",
+      alt: "Image 3",
+      title: "What is Full Grown Leather? A Comprehensive Guide",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+    {
+      src: "/images/blogtrend2.png",
+      alt: "Image 2",
+      title: "What is Full Grown Leather? A Comprehensive Guide",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+    {
+      src: "/images/blogtrend1.png",
+      alt: "Image 1",
+      title: "What is Full Grown Leather? A Comprehensive Guide",
+      author: "Sammy Brian",
+      date: formattedDate,
+      readTime: "10 Min Read",
+    },
+  ];
+
   return (
     <>
       <Navbar />
 
       {/* Top cards */}
+
       <div className="flex justify-between space-x-6 pt-10 pb-16">
-        <Card
-          imageSrc="/images/blogtop1.png"
-          altText="Image 1"
-          title="Leather Manual"
-          description="How to select the appropriate color of a jacket"
-        />
-        <Card
-          imageSrc="/images/blogtop2.png"
-          altText="Image 2"
-          title="Leather Manual"
-          description="How to select the appropriate color of a jacket"
-        />
-        <Card
-          imageSrc="/images/blogtop3.png"
-          altText="Image 3"
-          title="Leather Manual"
-          description="How to select the appropriate color of a jacket"
-        />
+        {/*left image*/}
+        <div className="flex-1 max-w-md rounded overflow-hidden shadow-lg bg-white relative">
+          <Image
+            className="w-full h-80 object-cover rounded-t-lg"
+            src="/images/blogtop1.png"
+            alt="Image 1"
+            height={320}
+            width={640}
+          />
+          <div className="absolute bottom-0 px-6 py-4">
+            <div className="font-bold text-xl mb-2 text-white">
+              Leather Manual
+            </div>
+            <p className="text-white text-base">
+              How to select the appropriate color of a jacket
+            </p>
+            <button>press</button>
+          </div>
+        </div>
+
+        {/*mid image*/}
+        <div className="flex-1 max-w-md rounded overflow-hidden shadow-lg bg-white relative">
+          <Image
+            className="w-full h-80 object-cover rounded-t-lg"
+            src="/images/blogtop2.png"
+            alt="Image 2"
+            height={320}
+            width={640}
+          />
+          <div className="absolute bottom-0 px-6 py-4">
+            <div className="font-bold text-xl mb-2 text-white">
+              Leather Manual
+            </div>
+            <p className="text-white text-base">
+              How to select the appropriate color of a jacket
+            </p>
+            <button>press</button>
+          </div>
+        </div>
+
+        {/*right image*/}
+        <div className="flex-1 max-w-md rounded overflow-hidden shadow-lg bg-white relative">
+          <Image
+            className="w-full h-80 object-cover rounded-t-lg"
+            src="/images/blogtop3.png"
+            alt="Image 3"
+            height={320}
+            width={640}
+          />
+          <div className="absolute bottom-0 px-6 py-4">
+            <div className="font-bold text-xl mb-2 text-white">
+              Leather Manual
+            </div>
+            <p className="text-white text-base">
+              How to select the appropriate color of a jacket
+            </p>
+            <button>press</button>
+          </div>
+        </div>
+      </div>
+
+      {/*Top cards carousal currently unused */}
+      <div>
+        <Carousel>
+          <CarouselContent className="mx-auto">
+            {TopImages.map((image, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative">
+                  <Image
+                    className=""
+                    src={image.src}
+                    alt={image.alt}
+                    height={256}
+                    width={256}
+                  />
+                  <div className="absolute bottom-0 px-4 py-2">
+                    <button className="bg-white text-black border-none text-xs px-3 py-2 font-bold">
+                      LEATHER MANUAL
+                    </button>
+                    <div className="font-bold text-white">{image.title}</div>
+                    <div className="flex text-[0.65rem] text-white justify-between">
+                      <p>
+                        By <span className="font-bold">{image.author}</span>
+                      </p>
+                      <p>{image.date}</p>
+                      <p>{image.readTime}</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
 
       {/* Trending cards with title */}
       {/* Title */}
-      <div className="flex justify-between items-center pt-10 px-44">
-        <h1 className="text-black text-3xl font-bold">Trending News</h1>
+      <div className="flex justify-between items-center pt-10 px-44 pb-10">
+        <h1 className="text-lg md:text-2xl lg:text-3xl font-bold">
+          Trending News
+        </h1>
         <div className="flex-grow border-t border-gray-300 mx-4"></div>
         <div className="flex items-center">
           <Image
@@ -110,41 +232,50 @@ export default function Blog() {
           />
         </div>
       </div>
-      {/* Trending Cards */}
-      <div className="flex justify-center px-0 pt-8 pb-16 space-x-10">
-        <TrendingCard
-          imageSrc="/images/blogtrend1.png"
-          altText="Image 1"
-          title="What is Full Grown Leather? A Comprehensive Guide"
-          author="Sammy Brian"
-          date={formattedDate}
-          readTime="10 Min Read"
-        />
-        <TrendingCard
-          imageSrc="/images/blogtrend2.png"
-          altText="Image 2"
-          title="What is Full Grown Leather? A Comprehensive Guide"
-          author="Sammy Brian"
-          date={formattedDate}
-          readTime="10 Min Read"
-        />
-        <TrendingCard
-          imageSrc="/images/blogtrend3.png"
-          altText="Image 3"
-          title="What is Full Grown Leather? A Comprehensive Guide"
-          author="Sammy Brian"
-          date={formattedDate}
-          readTime="10 Min Read"
-        />
+
+      <div className="mx-auto sm:max-w-[600px] lg:max-w-[860px]">
+        <Carousel>
+          <CarouselContent className="flex">
+            {images.map((image, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="flex-1 relative">
+                  <Image
+                    className="w-full h-40 md:h-60 lg:h-80 object-cover rounded-t-lg"
+                    src={image.src}
+                    alt={image.alt}
+                    height={256}
+                    width={256}
+                  />
+                  <div className="absolute bottom-0 px-4 py-2">
+                    <button className="bg-white text-black border-none text-xs px-3 py-2 font-bold">
+                      LEATHER MANUAL
+                    </button>
+                    <div className="font-bold text-xl mb-1 text-white">
+                      {image.title}
+                    </div>
+                    <div className="flex text-[0.65rem] text-white justify-between">
+                      <p>
+                        By <span className="font-bold">{image.author}</span>
+                      </p>
+                      <p>{image.date}</p>
+                      <p>{image.readTime}</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
 
       {/* mid banner */}
-      <div className="relative flex justify-center items-center p-4 py-8">
+      <div className="relative flex justify-center items-center p-4 py-8 pt-16">
         <Image
           src="/images/blog-mid-banner.png"
-          alt="Description of image"
-          className="rounded-lg"
-          height={320}
+          alt="banner image"
+          height={250}
           width={930}
         />
         <div className="absolute inset-0 flex items-center justify-center text-white">
