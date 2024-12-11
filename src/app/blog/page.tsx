@@ -304,7 +304,12 @@ export default function Blog() {
           {/* 70% Child Div */}
           <div className="col-span-12 md:col-span-8">
             <div className=" [&_strong]:font-bold [&_strong]:my-3 [&_img]:w-[100%] [&_strong]:text-[#333333] [&_strong]:lg:text-[26px] [&_strong]:md:text-[22px] [&_strong]:block [&_strong]:text-[21px] [&_p]:pt-3 [&_p]:text-[#888888] [&_p]:text-[15px]">
-              <img src="/images/blog/rectangle01.png" alt="" />
+              <Image
+              src="/images/blog/rectangle01.png" 
+              alt="image"
+              width={100}
+              height={100} 
+              />
               <strong>
                 How to Select the Appropriate Color of a Leather Jacket?
               </strong>

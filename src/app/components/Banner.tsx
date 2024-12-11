@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,28 +59,36 @@ export default function Banner() {
     >
       {/* Child 1 */}
       <div ref={child1Ref} className="flex w-full flex-col items-cente">
-        <img
+        <Image
           src="/images/banner1.webp"
           alt="Image 1"
+          width={100}
+          height={100}
           className="h-screen w-full object-cover"
         />
-        <img
+        <Image
           src="/images/banner2.webp"
           alt="Image 2"
+          width={100}
+          height={100}
           className="h-screen w-full object-cover"
         />
       </div>
 
       {/* Child 2 */}
       <div ref={child2Ref} className="flex w-full flex-col items-center ">
-        <img
+        <Image
           src="/images/banner3.webp"
           alt="Image 3"
+          width={100}
+          height={100}
           className="h-screen w-full object-cover"
         />
-        <img
+        <Image
           src="/images/banner4.webp"
           alt="Image 4"
+          width={100}
+          height={100}
           className="h-screen w-full object-cover"
         />
       </div>

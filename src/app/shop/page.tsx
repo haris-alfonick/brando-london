@@ -21,6 +21,9 @@ const ProductCategory = () => {
       <Navbar />
       <div className='px-5'>
         <div className='container mx-auto'>
+          <div className='lg:text-4xl text-2xl font-semibold uppercase py-5 pb-10 w-fit mx-auto'>
+            <h2>Feature Products</h2>
+          </div>
           <div className='grid grid-cols-12 md:gap-x-5 max-md:gap-y-3'>
             <div className='lg:col-span-3 col-span-12 max-lg:order-2 h-fit p-6 border [&_h3]:md:text-4xl [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:mb-2.5'>
               <h3>Filter</h3>
@@ -79,31 +82,31 @@ const ProductCategory = () => {
                 >
                   <AccordionTrigger className='hover:no-underline py-0.5  [&>svg]:w-6 [&>svg]:h-6 text-gray-700'>
                     <span className='text-xl font-semibold'>
-                      Men's Collection
+                      Men&apos;s Collection
                     </span>
                   </AccordionTrigger>
                   <AccordionContent>
                     {/* Price Range Checkboxes */}
                     <ul className='pt-2.5 [&>li]:flex [&>li]:justify-start [&>li]:items-center [&>li>label]:w-full [&>li>label]:cursor-pointer [&>li]:text-lg [&>li]:text-gray-500 [&>li]:gap-x-2.5'>
                       <li>
-                        <Checkbox id='price100' />
-                        <label htmlFor='price100'>Leather Jackets</label>
+                        <Checkbox id='id10' />
+                        <label htmlFor='id10'>Leather Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price200' />
-                        <label htmlFor='price200'>Bomber Jackets</label>
+                        <Checkbox id='id20' />
+                        <label htmlFor='id20'>Bomber Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price300' />
-                        <label htmlFor='price300'>Biker Jackets</label>
+                        <Checkbox id='id30' />
+                        <label htmlFor='id30'>Biker Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price400' />
-                        <label htmlFor='price400'>Suede Jackets</label>
+                        <Checkbox id='id40' />
+                        <label htmlFor='id40'>Suede Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price500' />
-                        <label htmlFor='price500'>Vintage Jackets</label>
+                        <Checkbox id='id50' />
+                        <label htmlFor='id50'>Vintage Jackets</label>
                       </li>
                     </ul>
                   </AccordionContent>
@@ -115,31 +118,31 @@ const ProductCategory = () => {
                 >
                   <AccordionTrigger className='hover:no-underline py-0.5  [&>svg]:w-6 [&>svg]:h-6 text-gray-700'>
                     <span className='text-xl font-semibold'>
-                      Women's Collection
+                      Women&apos;s Collection
                     </span>
                   </AccordionTrigger>
                   <AccordionContent>
                     {/* Price Range Checkboxes */}
                     <ul className='pt-2.5 [&>li]:flex [&>li]:justify-start [&>li]:items-center [&>li>label]:w-full [&>li>label]:cursor-pointer [&>li]:text-lg [&>li]:text-gray-500 [&>li]:gap-x-2.5'>
                       <li>
-                        <Checkbox id='price100' />
-                        <label htmlFor='price100'>Leather Jackets</label>
+                        <Checkbox id='id60' />
+                        <label htmlFor='id60'>Leather Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price200' />
-                        <label htmlFor='price200'>Bomber Jackets</label>
+                        <Checkbox id='id70' />
+                        <label htmlFor='id70'>Bomber Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price300' />
-                        <label htmlFor='price300'>Biker Jackets</label>
+                        <Checkbox id='id80' />
+                        <label htmlFor='id80'>Biker Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price400' />
-                        <label htmlFor='price400'>Suede Jackets</label>
+                        <Checkbox id='id90' />
+                        <label htmlFor='id90'>Suede Jackets</label>
                       </li>
                       <li>
-                        <Checkbox id='price500' />
-                        <label htmlFor='price500'>Vintage Jackets</label>
+                        <Checkbox id='id100' />
+                        <label htmlFor='id100'>Vintage Jackets</label>
                       </li>
                     </ul>
                   </AccordionContent>

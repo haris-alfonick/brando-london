@@ -32,7 +32,7 @@ const ProductDetails = () => {
             </div>
 
             {/* Description */}
-            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy textever since the 1500s.</p>   
+            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry&apos;s standard dummy textever since the 1500s.</p>   
 
           </div>
 

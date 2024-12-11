@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
+import Image from 'next/image'
 
 const WishList = () => {
   return (
@@ -30,9 +31,11 @@ const WishList = () => {
 
                 <div className='grid grid-cols-12 py-3 px-4 max-[485px]:px-2.5 sm:items-center items-center border-b gap-y-3 max-lg:gap-x-3 max-[485px]:gap-x-0 '>
                   <div className='lg:col-span-5 md:col-span-4 col-span-6 max-[485px]:col-span-12 flex sm:items-center items-left gap-4 sm:flex-row [&_p]:text-gray-700 max-[425px]:col-span-8'>
-                    <img
+                    <Image
                       src='/images/jacket.webp'
                       alt='Product'
+                      width={100}
+                      height={100}
                       className='w-12 h-14 corner'
                     />
                     <p className='text-sm sm:text-base sm:leading-5 !leading-[18px]'>
@@ -64,9 +67,11 @@ const WishList = () => {
 
                 <div className='grid grid-cols-12 py-3 px-4 max-[485px]:px-2.5 sm:items-center items-center border-b gap-y-3 max-lg:gap-x-3 max-[485px]:gap-x-0 '>
                   <div className='lg:col-span-5 md:col-span-4 col-span-6 max-[485px]:col-span-12 flex sm:items-center items-left gap-4 sm:flex-row [&_p]:text-gray-700 max-[425px]:col-span-8'>
-                    <img
+                    <Image
                       src='/images/jacket.webp'
                       alt='Product'
+                      width={100}
+                      height={100}
                       className='w-12 h-14 corner'
                     />
                     <p className='text-sm sm:text-base sm:leading-5 !leading-[18px]'>
@@ -98,9 +103,11 @@ const WishList = () => {
 
                 <div className='grid grid-cols-12 py-3 px-4 max-[485px]:px-2.5 sm:items-center items-center border-b gap-y-3 max-lg:gap-x-3 max-[485px]:gap-x-0 '>
                   <div className='lg:col-span-5 md:col-span-4 col-span-6 max-[485px]:col-span-12 flex sm:items-center items-left gap-4 sm:flex-row [&_p]:text-gray-700 max-[425px]:col-span-8'>
-                    <img
+                    <Image
                       src='/images/jacket.webp'
                       alt='Product'
+                      width={100}
+                      height={100}
                       className='w-12 h-14 corner'
                     />
                     <p className='text-sm sm:text-base sm:leading-5 !leading-[18px]'>
@@ -132,9 +139,11 @@ const WishList = () => {
 
                 <div className='grid grid-cols-12 py-3 px-4 max-[485px]:px-2.5 sm:items-center items-center border-b gap-y-3 max-lg:gap-x-3 max-[485px]:gap-x-0 '>
                   <div className='lg:col-span-5 md:col-span-4 col-span-6 max-[485px]:col-span-12 flex sm:items-center items-left gap-4 sm:flex-row [&_p]:text-gray-700 max-[425px]:col-span-8'>
-                    <img
+                    <Image
                       src='/images/jacket.webp'
                       alt='Product'
+                      width={100}
+                      height={100}
                       className='w-12 h-14 corner'
                     />
                     <p className='text-sm sm:text-base sm:leading-5 !leading-[18px]'>
@@ -175,55 +184,3 @@ const WishList = () => {
 
 export default WishList
 
-// "use client"
-
-// const Animation = () => {
-//   return (
-//     <>
-//       <div className="w-full h-[400px] flex pt-5">
-//         <div className="w-1/2 h-full overflow-hidden relative">
-//           <div className="absolute top-0 left-0 w-full h-[200%] animate-slide-up">
-//             <img src="/images/image-6.webp" alt="Image 1" className="w-full h-1/2 object-cover"/>
-//             <img src="/images/image-5.webp" alt="Image 2" className="w-full h-1/2 object-cover"/>
-//           </div>
-//         </div>
-
-//         <div className="w-1/2 h-full overflow-hidden relative">
-//           <div className="absolute top-[-100%] left-0 w-full h-[200%] animate-slide-down">
-//             <img src="/images/image-7.webp" alt="Image 3" className="w-full h-1/2 object-cover"/>
-//             <img src="/images/image-8.webp" alt="Image 4" className="w-full h-1/2 object-cover"/>
-//           </div>
-//         </div>
-//       </div>
-
-//       <style jsx>{`
-//         @keyframes slide-up {
-//           0%,
-//           100% {
-//             transform: translateY(0);
-//           }
-//           50% {
-//             transform: translateY(-50%);
-//           }
-//         }
-//         @keyframes slide-down {
-//           0%,
-//           100% {
-//             transform: translateY(-50%);
-//           }
-//           50% {
-//             transform: translateY(0);
-//           }
-//         }
-//         .animate-slide-up {
-//           animation: slide-up 7s infinite;
-//         }
-//         .animate-slide-down {
-//           animation: slide-down 7s infinite;
-//         }
-//       `}</style>
-//     </>
-//   );
-// };
-
-// export default Animation;

@@ -1,4 +1,3 @@
-import Banner from "./components/Banner";
 import BestSeller from "./components/BestSeller";
 import FeatureProduct from "./components/FeatureProduct";
 import Navbar from "./components/Navbar/Navbar";
