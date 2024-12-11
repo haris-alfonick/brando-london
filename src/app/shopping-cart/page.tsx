@@ -104,7 +104,7 @@ const TableDemo = () => {
                 [&_button]:lg:bg-[right_17px_top_14px]
                 [&_button]:xl:bg-[right_74px_top_13px]
                 [&_button]:max-sm:bg-[right_40px_top_13px]
-                [&_button]:mt-6 [&_button]:w-full [&_button]:text-white [&_button]:bg-[#333333] [&_button]:hover:bg-gray-800 [&_button]:focus:outline-none [&_button]:font-medium
+                [&_button]:mt-6 [&_button]:w-full [&_button]:text-white [&_button]:bg-[#333333] [&_button]:hover:bg-gray-800 [&_button]:focus:outline-none [&[&_button]:font-medium
                 [&_button]:corner-lg [&_button]:px-6 [&_button]:py-3
                 ">
                 <h5 className="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white border-b pb-4">
