@@ -94,7 +94,7 @@ const TableDemo = () => {
             </div>
             <div className='col-span-12 lg:col-span-4 space-y-6'>
               <div
-                className="border border-gray-300 rounded-lg p-6 shadow-sm 
+                className="border border-gray-300 rounded-lg sm:p-6 p-4 shadow-sm 
                 [&_button]:bg-[url('/images/ArrowRight.webp')] 
                 [&_button]:bg-no-repeat 
                 [&_button]:pr-15 
@@ -103,7 +103,7 @@ const TableDemo = () => {
                 [&_button]:md:bg-[right_196px_top_13px]
                 [&_button]:lg:bg-[right_17px_top_14px]
                 [&_button]:xl:bg-[right_74px_top_13px]
-                [&_button]:max-sm:bg-[right_49px_top_13px]
+                [&_button]:max-sm:bg-[right_40px_top_13px]
                 [&_button]:mt-6 [&_button]:w-full [&_button]:text-white [&_button]:bg-[#333333] [&_button]:hover:bg-gray-800 [&_button]:focus:outline-none [&_button]:font-medium
                 [&_button]:corner-lg [&_button]:px-6 [&_button]:py-3
                 ">
@@ -111,7 +111,7 @@ const TableDemo = () => {
                   Cart Totals
                 </h5>
                 <div className='space-y-3 text-sm sm:text-base'>
-                  <div className='flex justify-between'>
+                  <div className='flex justify-between border-t pt-3'>
                     <p className='text-gray-700'>Sub-total</p>
                     <p className='text-gray-700'>$320</p>
                   </div>

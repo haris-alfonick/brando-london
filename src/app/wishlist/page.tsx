@@ -7,61 +7,58 @@ const WishList = () => {
   return (
     <>
       <Navbar />
-      <div className='md:px-0 px-5'>
+      <div className='px-5'>
         <div className='container mx-auto sm:px-12 md:px-16 pb-8'>
           <div className='grid grid-cols-12 gap-6 pt-24'>
             <div className='col-span-12'>
-              <div className='border border-gray-300 rounded-lg p-6'>
-                <h5 className='text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white border-b pb-4'>
-                  Wishlist
-                </h5>
-                <div className="grid grid-cols-12 bg-gray-100 py-3 px-4 border-b [&_p]:max-[485px]:text-xs">
-                  <div className="col-span-4 sm:text-base sm:col-span-4 md:col-span-4 lg:col-span-4">
-                    <p className="font-medium text-gray-700 text-sm sm:text-base">
-                      Products
-                    </p>
+              <div className='border border-gray-300 rounded-lg [&>h3]:text-lg [&>h3]:sm:text-xl [&>h3]:font-semibold [&>h3]:text-gray-950 [&>h3]:py-3 [&>h3]:px-4 [&>h3]:max-[485px]:px-2.5'>
+                <h3>Wishlist</h3>
+                <div className="grid grid-cols-12 bg-gray-100 py-3 px-4 max-[485px]:px-2.5 border-b border-t [&_p]:font-medium [&_p]:text-gray-700 [&_p]:text-sm [&_p]:sm:text-base [&_p]:max-[485px]:text-xs">
+                  <div className="lg:col-span-5 md:col-span-4 sm:text-base col-span-4 max-[780px]:col-span-3">
+                    <p>Products</p>
                   </div>
-                  <div className='col-span-2 text-center sm:text-base sm:col-span-2 md:col-span-2 lg:col-span-2'>
-                    <p className='font-medium text-gray-700 text-sm sm:text-base'>
-                      Price
-                    </p>
+                  <div className="lg:col-span-2 md:col-span-2 col-span-2 max-[780px]:col-span-2">
+                    <p>Price</p>
+                  </div> 
+                  <div className=" xl:col-span-3 lg:col-span-2 md:col-span-2 col-span-2 max-[780px]:col-span-3">
+                    <p>Stock Status</p>
                   </div>
-                  <div className='col-span-2 text-center sm:text-base sm:col-span-2 md:col-span-2 lg:col-span-2'>
-                    <p className='font-medium text-gray-700 text-sm sm:text-base'>
-                      Stock Status
-                    </p>
-                  </div>
-                  <div className='col-span-4 text-right sm:text-base sm:col-span-4 md:col-span-4 lg:col-span-4'>
-                    <p className='font-medium text-gray-700 text-sm sm:text-base'>
-                      Actions
-                    </p>
+                  <div className="xl:col-span-2 lg:col-span-3 md:col-span-4 col-span-4 max-[780px]:col-span-4">
+                    <p>Actions</p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-12 py-4 px-4 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm">
-                  <div className="max-[640px]:col-span-12 col-span-6 sm:col-span-4 flex sm:items-center items-left gap-4 sm:flex-row max-[485px]:col-span-12 ">
-                    
-                    <img src="/images/jacket.webp" alt="Product" className="w-12 h-14 corner"/>
-                    <p className="text-sm sm:text-base sm:leading-5 !leading-4">
+                <div className="grid grid-cols-12 py-3 px-4 max-[485px]:px-2.5 sm:items-center items-center border-b gap-y-3 max-lg:gap-x-3 max-[485px]:gap-x-0">
+                  
+                  <div className="lg:col-span-5 md:col-span-4 col-span-6 max-[485px]:col-span-12 flex sm:items-center items-left gap-4 sm:flex-row [&_p]:text-gray-700">
+                    <img src="/images/jacket.webp" alt="Product" className="w-12 h-14 corner" />
+                    <p className="text-sm sm:text-base sm:leading-5 !leading-[18px]">
                       Edward Cafe Racer Black Leather Jacket
                     </p>
                   </div>
-                  <div className="col-span-1 sm:col-span-2 text-center max-[485px]:flex-row flex-col ">
-                    <p>$687.00</p>
+
+                  <div className="lg:col-span-2 md:col-span-2 col-span-3 max-[485px]:col-span-3 flex gap-x-1">
+                    <span className='text-slate-500 line-through'>$1299</span>
+                    <span>$999</span>
                   </div>
-                  <div className="col-span-2 sm:col-span-2 text-center max-[640px]:item-right flex items-center justify-center gap-2">
-                      <p>Counter</p>
+
+                  <div className="xl:col-span-3 lg:col-span-2 md:col-span-2 col-span-3 max-[485px]:col-span-3 [&_span]:text-[#2db224] [&_span]:uppercase lg:[&_span]:text-base [&_span]:text-sm">
+                    <span>in stock</span>
                   </div>
-                  <div className="col-span-3 sm:col-span-4 text-right">
-                    <p className='col-span2'>$687.00</p>
-                    <div className="[&_svg]:w-5 [&_svg]:h-5 'col-span2'" >
+
+                  <div className="xl:col-span-2 lg:col-span-3 md:col-span-4 col-span-12 max-[485px]:col-span-6 flex gap-x-4 [&_button]:bg-[url('/images/ShoppingCartSimple.webp')] [&_button]:bg-no-repeat lg:[&_button]:bg-[right_10px_center] [&_button]:bg-[right_10px_center] [&_button]:bg-[length:16px_16px] [&_button]:uppercase [&_button]:py-2.5 lg:[&_button]:text-[13px] [&_button]:text-xs [&_button]:tracking-wide [&_button]:px-4 [&_button]:pr-8">
+                    <button type="button" className="bg-[#333333] text-white font-medium">
+                      Add to card
+                    </button>
+                    <div className="[&_svg]:w-5 [&_svg]:h-5 pt-2 justify-items-center">
                       <FontAwesomeIcon icon={faCircleXmark} />
                     </div>
                   </div>
-                </div>            
-              </div>
+
+                </div>
+           </div>
             </div>
-          
+
           </div>
         </div>
       </div>
