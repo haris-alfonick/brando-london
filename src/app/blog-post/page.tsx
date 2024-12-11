@@ -464,37 +464,37 @@ const BlogPost = () => {
                   </div>
                 </div>
               </div>
-              <div className="container mx-auto">
-                <form className="grid grid-cols-12 gap-4 w-full p-6 mt-12 text-[#888888] bg-[#F5F5F5] rounded-lg [&_label]:block [&_label]:mb-2 [&_label]:text-sm [&_label]:font-medium [&_input]:w-full [&_input]:p-2 [&_input]:border [&_input]:border-gray-100 [&_input]:rounded">
-                  <h2 className="col-span-12 text-[25px] font-semibold text-[#333333]">Leave a Reply</h2>
+<div className="container mx-auto">
+              <form className="grid grid-cols-12 gap-4 w-full p-6 mt-12 text-[#888888] bg-[#F5F5F5] rounded-lg [&_label]:block [&_label]:mb-2 [&_label]:text-sm [&_label]:font-medium [&_input]:w-full [&_input]:p-2 [&_input]:border [&_input]:border-gray-100 [&_input]:rounded">
+                <h2 className="col-span-12 text-[25px] font-semibold text-[#333333]">Leave a Reply</h2>
 
-                  <div className="col-span-12 [&>textarea]:w-full [&>textarea]:p-2 [&>textarea]:border [&>textarea]:border-gray-100 [&>textarea]:rounded">
-                    <label>
-                      Your Comment*
-                    </label>
-                    <textarea id="" required></textarea>
-                  </div>
+                <div className="col-span-12 [&>textarea]:w-full [&>textarea]:p-2 [&>textarea]:border [&>textarea]:border-gray-100 [&>textarea]:rounded">
+                  <label>
+                    Your Comment*
+                  </label>
+                  <textarea id="" required></textarea>
+                </div>
 
-                  <div className="col-span-12 sm:col-span-6">
-                    <label>
-                      Name*
-                    </label>
-                    <input type="" id="" required />
-                  </div>
+                <div className="col-span-12 sm:col-span-6">
+                  <label>
+                    Name*
+                  </label>
+                  <input type="" id="" required />
+                </div>
 
-                  <div className="col-span-12 sm:col-span-6">
-                    <label>
-                      Email*
-                    </label>
-                    <input type="" id="" required />
-                  </div>
+                <div className="col-span-12 sm:col-span-6">
+                  <label>
+                    Email*
+                  </label>
+                  <input type="" id="" required />
+                </div>
 
-                  <div className="col-span-12">
-                    <button className="px-4 py-2 text-white bg-[#333333] rounded hover:bg-gray-800">
-                      Send Comment
-                    </button>
-                  </div>
-                </form>
+                <div className="col-span-12">
+                  <button className="px-4 py-2 text-white bg-[#333333] rounded hover:bg-gray-800">
+                    Send Comment
+                  </button>
+                </div>
+              </form>
               </div>
 
             </div>
