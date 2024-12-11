@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 import Image from 'next/image'
+import BreadCrumbs from '../components/breadcrumbs'
 
 const TableDemo = () => {
   return (
