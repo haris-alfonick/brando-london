@@ -38,11 +38,11 @@ const Navbar = () => {
 
         {/* Desktop Navbar Menu */}
         <ul className="navWrap hidden lg:flex lg:items-center lg:space-x-6 [&>li>a]:text-sm [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300">
-          <li><Link href="/faq">Home</Link></li>
+          <li><Link href="/">Home</Link></li>
           <li><Link href="#">About Us</Link></li>
-          <li><Link href="#">Shop</Link></li>
-          <li><Link href="#">Services</Link></li>
-          <li><Link href="#">Contact Us</Link></li>
+          <li><Link href="/shop">Shop</Link></li>
+          <li><Link href="/blog-post">Blog</Link></li>
+          <li><Link href="/contact">Contact Us</Link></li>
         </ul>
 
         {/* Desktop Sign In / Sign Up Buttons */}
@@ -84,11 +84,11 @@ const Navbar = () => {
 
             {/* Menu Items for Sidebar */}
             <ul className="navWrap space-y-6">
-              <li><Link href="#">Home</Link></li>
+              <li><Link href="/">Home</Link></li>
               <li><Link href="#">About Us</Link></li>
-              <li><Link href="#">Shop</Link></li>
-              <li><Link href="#">Service</Link></li>
-              <li><Link href="#">Contact Us</Link></li>
+              <li><Link href="/shop">Shop</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
 
             {/* Sign Up Button */}

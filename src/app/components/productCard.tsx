@@ -3,7 +3,6 @@ import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
 
 const ProductCard = () => {
   return (

@@ -15,7 +15,7 @@ const CategoryList = () => {
                                 width={500}
                                 height={100}
                                 className="w-full h-auto" />
-                            <strong>Men's Jackets</strong>
+                            <strong>Men&apos;s Jackets</strong>
                         </Link>
 
                         <Link href="#" className="relative item2 md:col-span-3 col-span-6">
@@ -25,7 +25,7 @@ const CategoryList = () => {
                                 width={500}
                                 height={100}
                                 className="w-full h-auto" />
-                            <strong>Women's Jackets</strong>
+                            <strong>Women&apos;s Jackets</strong>
                         </Link>
 
                         <Link href="#" className="relative item3 md:col-span-3 col-span-6">
