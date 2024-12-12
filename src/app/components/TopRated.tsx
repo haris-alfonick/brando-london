@@ -5,13 +5,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const BestSeller = () => {
+const TopRatedProduct = () => {
   return (
     <>
       <section className='px-5 md:pb-0 md:py-14 py-10 pb-1'>
         <div className='container mx-auto'>
           <div className='text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase'>
-            <h2>Our Best Seller</h2>
+            <h2>Top Rated Products</h2>
           </div>
           <Tabs defaultValue='Men'>
             <TabsList className='flex justify-center bg-transparent mt-5 mb-6 [&_button]:text-base [&_button]:!shadow-none'>
@@ -160,4 +160,4 @@ const BestSeller = () => {
     </>
   )
 }
-export default BestSeller;
+export default TopRatedProduct

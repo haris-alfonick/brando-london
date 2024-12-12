@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import CallUs from "./components/CallUs";
 import Contact from "./components/Contact";
 import CategoryList from "./components/categories";
+import TopRatedProduct from "./components/TopRated";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
      </section>
      <FeatureProduct />
      <CategoryList />
+     <TopRatedProduct />
      <BestSeller />
      <Testimonial />
      <CallUs />
