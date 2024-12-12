@@ -3,11 +3,13 @@ import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 import Image from 'next/image'
+import BreadCrumbs from '../components/breadcrumbs'
 
 const WishList = () => {
   return (
     <>
       <Navbar />
+      <BreadCrumbs />
       <div className='px-5'>
         <div className='container mx-auto sm:px-12 md:px-16 pb-8'>
           <div className='grid grid-cols-12 gap-6 pt-24'>
