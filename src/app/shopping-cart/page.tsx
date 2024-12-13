@@ -116,7 +116,8 @@ const TableDemo = () => {
                 [&_button]:sm:bg-[right_139px_top_13px]
                 [&_button]:md:bg-[right_196px_top_13px]
                 [&_button]:lg:bg-[right_17px_top_14px]
-                [&_button]:xl:bg-[right_74px_top_13px]
+                [&_button]:xl:bg-[right_58px_top_13px]
+                [&_button]:2xl:bg-[right_95px_top_13px]
                 [&_button]:max-sm:bg-[right_40px_top_13px]
                 [&_button]:mt-6 [&_button]:w-full [&_button]:text-white [&_button]:bg-[#333333] [&_button]:hover:bg-gray-800 [&_button]:focus:outline-none [&[&_button]:font-medium
                 [&_button]:corner-lg [&_button]:px-6 [&_button]:py-3
