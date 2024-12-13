@@ -20,11 +20,11 @@ const Footer = () => {
 					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
 						<strong>Pages</strong>
 						<div className="footerNav">
-							<Link href='#'>Home</Link>
+							<Link href='/'>Home</Link>
 							<Link href='#'>About Us</Link>
-							<Link href='#'>Shop</Link>
-							<Link href='#'>Contact Us</Link>
-							<Link href='#'>Blog</Link>
+							<Link href='/shop'>Shop</Link>
+							<Link href='/contact'>Contact Us</Link>
+							<Link href='blog-post'>Blog</Link>
 						</div>
 					</div>
 					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
@@ -43,8 +43,8 @@ const Footer = () => {
 							<Link href='#'>Help Center</Link>
 							<Link href='#'>Terms & Condition</Link>
 							<Link href='#'>Shipping & Delievry</Link>
-							<Link href='#'>Privacy Policy Jacket</Link>
-							<Link href='#'>Return & Refund</Link>
+							<Link href='#'>Privacy Policy</Link>
+							<Link href='#'>FAQ</Link>
 						</div>
 					</div>
 					<div className="lg:col-span-2 sm:col-span-3 col-span-12">

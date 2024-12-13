@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 const Thumbnail = () => {
   const [mainImage1, setMainImage1] = useState('/images/product1.webp')

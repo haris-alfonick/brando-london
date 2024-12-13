@@ -8,20 +8,16 @@ const IncrementCounter = () => {
   const decrement = () => count > 1 && setCount(count - 1);
 
   return (
-    <div className="flex items-center mt-2 w-28 border">
+    <div className="flex items-center mt-2 [&_button]:w-8 [&_button]:text-lg [&_button]:font-normal text-[#] py-1 w-28 border">
       <button
         type="button"
-        onClick={decrement}
-        className="w-8 text-lg font-bold"
-      >
+        onClick={decrement}>
         -
       </button>
       <span className="flex-grow text-center">{count}</span>
       <button
         type="button"
-        onClick={increment}
-        className="w-8 text-lg font-bold"
-      >
+        onClick={increment}>
         +
       </button>
     </div>

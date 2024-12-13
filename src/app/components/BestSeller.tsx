@@ -10,7 +10,7 @@ const BestSeller = () => {
     <>
       <section className='px-5 md:pb-0 md:py-14 py-10 pb-1'>
         <div className='container mx-auto'>
-          <div className='text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase'>
+          <div className='text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase'>
             <h2>Our Best Seller</h2>
           </div>
           <Tabs defaultValue='Men'>
@@ -31,7 +31,7 @@ const BestSeller = () => {
                   <Link href='#'>
                     <div className='relative'>
                       <Image
-                        src='/images/jacket2.webp'
+                        src='/images/jacket.webp'
                         alt='product image'
                         width={500}
                         height={100}
@@ -93,7 +93,7 @@ const BestSeller = () => {
                   <Link href='#'>
                     <div className='relative'>
                       <Image
-                        src='/images/hand-bag.webp'
+                        src='/images/jacket.webp'
                         alt='product image'
                         width={500}
                         height={100}
@@ -124,7 +124,7 @@ const BestSeller = () => {
                   <Link href='#'>
                     <div className='relative'>
                       <Image
-                        src='/images/jacket3.webp'
+                        src='/images/hand-bag.webp'
                         alt='product image'
                         width={500}
                         height={100}

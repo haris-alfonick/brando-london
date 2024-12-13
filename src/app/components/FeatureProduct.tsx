@@ -11,7 +11,7 @@ const featureProduct = () => {
     <>
       <section className="relative z-[99] bg-white px-5 md:py-16 pb-8 py-2">
         <div className="container mx-auto">
-          <div className="text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold">
+          <div className="text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold">
             <h2>FEATURE PRODUCTS</h2>
           </div>
           <Tabs defaultValue="featured">
@@ -32,7 +32,7 @@ const featureProduct = () => {
 								<div className="md:col-span-3 col-span-6 group flex w-full flex-col overflow-hidden bg-white">
 									<Link className="relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20" href="#">
 										<Image
-											src="/images/jacket5.webp"
+											src="/images/jacket.webp"
 											alt="product image"
 											width={500}
 											height={100}
@@ -66,7 +66,7 @@ const featureProduct = () => {
 								<div className="md:col-span-3 col-span-6 group flex w-full flex-col overflow-hidden bg-white">
 									<Link className="relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20" href="#">
 										<Image
-											src="/images/hand-bag.webp"
+											src="/images/jacket2.webp"
 											alt="product image"
 											width={500}
 											height={100}
@@ -121,7 +121,7 @@ const featureProduct = () => {
 								<div className="md:col-span-3 col-span-6 group flex w-full flex-col overflow-hidden bg-white">
 									<Link className="relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20" href="#">
 										<Image
-											src="/images/bag.webp"
+											src="/images/jacket3.webp"
 											alt="product image"
 											width={500}
 											height={100}

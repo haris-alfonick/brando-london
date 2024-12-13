@@ -30,8 +30,8 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative overflow-hidden w-full bg-white md:py-14 z-[99] [&_img]">
-      <div className="text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold md:[&_p]:text-lg [&_p]:px-5 [&_p]:text-base [&_p]:font-medium [&_p]:py-4">
+    <div className="relative overflow-hidden w-full bg-white md:py-14 py-7 z-[99] [&_img]">
+      <div className="text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold md:[&_p]:text-lg [&_p]:px-5 [&_p]:text-base [&_p]:font-medium [&_p]:py-4">
         <h2>AS FEATURE IN</h2>
         <p>The Perfect Look and perfect Fit. The Perfect Look and perfect Fit</p>
       </div>

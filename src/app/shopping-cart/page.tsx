@@ -4,20 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 import Image from 'next/image'
 import BreadCrumbs from '../components/breadcrumbs'
+import RelatedProductCard from '../components/RelatedProduct'
 
 const TableDemo = () => {
   return (
     <>
       <Navbar />
-      <div className='md:px-0 px-5'>
-        <div className='container mx-auto sm:px-12 md:px-16 pb-8'>
-          <div className='grid grid-cols-12 gap-6 pt-24'>
+      <BreadCrumbs />
+      <div className='md:px-12 px-5 md:py-16 py-10'>
+        <div className='container mx-auto'>
+          <div className='grid grid-cols-12 gap-6'>
             <div className='col-span-12 lg:col-span-8'>
-              <div className='border border-gray-300 rounded-lg p-6'>
-                <h5 className='text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white border-b pb-4'>
+              <div className='border border-gray-300 rounded-lg'>
+                <h5 className='text-lg sm:text-xl py-3 px-5 font-semibold tracking-tight text-gray-900 dark:text-white border-b pb-4'>
                   Shopping Cart
                 </h5>
-                <div className="grid grid-cols-12 bg-gray-100 py-3 px-4 border-b [&_p]:max-[485px]:text-xs">
+                <div className="grid grid-cols-12 bg-gray-100 py-3 px-5 border-b [&_p]:max-[485px]:text-xs">
                   <div className="col-span-5 sm:text-base sm:col-span-4 md:col-span-6 lg:col-span-6">
                     <p className="font-medium text-gray-700 text-sm sm:text-base">
                       Products
@@ -40,7 +42,7 @@ const TableDemo = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-12 py-4 px-4 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm max-[485px]:gap-y-3">
+                <div className="grid grid-cols-12 py-4 px-5 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm max-[485px]:gap-y-3">
                   <div className="max-[640px]:col-span-12 sm:col-span-6 flex sm:items-center items-left gap-4 sm:flex-row max-[485px]:col-span-12 ">
                     <div className="[&_svg]:w-5 [&_svg]:h-5">
                       <FontAwesomeIcon icon={faCircleXmark} />
@@ -65,7 +67,7 @@ const TableDemo = () => {
                     <p>$687.00</p>
                   </div>
                 </div>
-                <div className="grid grid-cols-12 py-4 px-4 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm max-[485px]:gap-y-3">
+                <div className="grid grid-cols-12 py-4 px-5 items-center border-b gap-x-5 [&_p]:text-gray-700 [&_p]:text-sm max-[485px]:gap-y-3">
                   <div className="max-[640px]:col-span-12 sm:col-span-6 flex sm:items-center items-left gap-4 sm:flex-row max-[485px]:col-span-12 ">
                     <div className="[&_svg]:w-5 [&_svg]:h-5">
                       <FontAwesomeIcon icon={faCircleXmark} />
@@ -92,7 +94,7 @@ const TableDemo = () => {
                 </div>
 
                 <div
-                  className="flex flex-wrap gap-4 justify-between items-center pt-6 
+                  className="flex flex-wrap gap-4 justify-between items-center pt-6 px-5 pb-5
                 [&_button]:w-full [&_button]:sm:w-auto [&_button]:md:w-auto [&_button]:border-2 [&_button]:border-gray-600 [&_button]:hover:bg-gray-100 [&_button]:text-sm [&_button]:px-6 [&_button]:py-2 [&_button]:dark:bg-gray-800 [&_button]:dark:text-white [&_button]:corner-lg [&_button]:font-medium [&_button]:text-gray-900 [&_button]:bg-white [&_button:nth-child(1)]:pl-10 [&_button:nth-child(1)]:bg-[url('/images/ArrowLeft.webp')] 
                 [&_button:nth-child(1)]:sm:bg-[left_18px_top_9px] [&_button:nth-child(1)]:bg-no-repeat [&_button:nth-child(1)]:bg-[length:18px_18px] 
                 [&_button:nth-child(1)]:bg-[left_204px_top_9px]
@@ -165,6 +167,9 @@ const TableDemo = () => {
                 </button>
               </div>
             </div>
+          </div>
+          <div className='md:pt-16 pt-10'>
+          <RelatedProductCard />
           </div>
         </div>
       </div>

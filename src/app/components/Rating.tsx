@@ -14,7 +14,7 @@ const Rating = () => {
   };
 
   return (
-    <div className="space-y-2.5">
+    <div className="space-y-2.5 [&>label>button]:w-5 [&>label>button]:h-[18px] [&>label>button]:pb-[4px] [&>label>button]:rounded-[2px] [&>label>button]:border-[#888888] [&>label>button]:border-[1.5px]">
       {[5, 4, 3, 2, 1].map((stars) => (
         <label
           key={stars}

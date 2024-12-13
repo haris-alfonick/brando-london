@@ -10,7 +10,7 @@ const TopRatedProduct = () => {
     <>
       <section className='px-5 md:pb-0 md:py-14 py-10 pb-1'>
         <div className='container mx-auto'>
-          <div className='text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase'>
+          <div className='text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase'>
             <h2>Top Rated Products</h2>
           </div>
           <Tabs defaultValue='Men'>
