@@ -41,10 +41,10 @@ const Footer = () => {
 						<strong>Customer Care</strong>
 						<div className="footerNav">
 							<Link href='#'>Help Center</Link>
-							<Link href='#'>Terms & Condition</Link>
-							<Link href='#'>Shipping & Delievry</Link>
-							<Link href='#'>Privacy Policy</Link>
-							<Link href='#'>FAQ</Link>
+							<Link href='/terms-and-condition'>Terms & Condition</Link>
+							<Link href='/shipping-and-delivery'>Shipping & Delivery</Link>
+							<Link href='/privacy-policy'>Privacy Policy</Link>
+							<Link href='/faq'>FAQ</Link>
 						</div>
 					</div>
 					<div className="lg:col-span-2 sm:col-span-3 col-span-12">

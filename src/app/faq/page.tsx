@@ -3,6 +3,7 @@ import {
   Accordion,
   AccordionItem,
   AccordionContent,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer";
@@ -71,10 +72,14 @@ export default function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`} // Ensure the value is unique per AccordionItem
-                className="border-none "
+                className="border-none bg-[#f5f5f5] rounded-lg"
               >
+                <AccordionTrigger className="flex justify-between !no-underline font-normal items-center px-4 py-3 text-[#333] text-base ">
+                  {faq.question}
+                </AccordionTrigger>
+                
                 <AccordionContent>
-                  <p className="text-base px-4 py-2 text-gray-700">
+                  <p className="text-[15px] px-4 py-2 text-[#888]">
                     {faq.answer}
                   </p>
                 </AccordionContent>

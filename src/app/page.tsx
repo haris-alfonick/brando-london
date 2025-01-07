@@ -10,12 +10,14 @@ import Contact from "./components/Contact";
 import CategoryList from "./components/categories";
 import TopRatedProduct from "./components/TopRated";
 import Banner from "./components/Banner";
+import Demo from "./components/demo";
 
 export default function Home() {
   return (
     <div>
      <Navbar />
-     <Banner />
+     {/* <Banner /> */}
+     <Demo />
      <Slider />
      <section className="relative z-[99] bg-white md:pt-5 md:py-0 py-10 pt-1 px-5">
       <div className="container mx-auto">
