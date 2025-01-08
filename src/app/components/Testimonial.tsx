@@ -29,7 +29,7 @@ const Testimonial = () => {
     <section className="md:pb-20 md:py-12 py-5 pb-14">
       <div className="container mx-auto">
     <div className="relative overflow-hidden w-full bg-white z-[99] [&_img]">
-      <div className="text-center lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_p]:text-lg [&_p]:font-medium [&_p]:py-4">
+      <div className="text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_p]:text-lg [&_p]:font-medium [&_p]:py-4">
         <h2>From Our Customer</h2>
       </div>
       <Carousel

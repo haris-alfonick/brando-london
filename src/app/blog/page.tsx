@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import BreadCrumbs from "../components/breadcrumbs";
 
 export default function Blog() {
   // Getting current date and formatting
@@ -107,9 +108,8 @@ export default function Blog() {
   return (
     <>
       <Navbar />
-
+      <BreadCrumbs />
       {/* Top cards */}
-
       <div className="flex justify-between space-x-6 pt-10 pb-16">
         {/*left image*/}
         <div className="flex-1 max-w-md rounded overflow-hidden shadow-lg bg-white relative">

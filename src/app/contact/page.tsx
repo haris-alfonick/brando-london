@@ -5,19 +5,25 @@ import { Textarea } from '@/components/ui/textarea' // Shadcn UI Textarea
 import { Button } from '@/components/ui/button' // Shadcn UI Button
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
+import { faLayerGroup, faMoneyCheck, faStore, faTruckFast, faUnlockKeyhole } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboard, faCreditCard, faUser } from '@fortawesome/free-regular-svg-icons'
+import BreadCrumbs from '../components/breadcrumbs'
 
 const Contact = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
+      <BreadCrumbs />
       <div className='px-5'>
         <div className='container mx-auto'>
           <h2 className='text-center py-5 font-medium text-xl '>
             What can we assist you with today?
           </h2>
 
-          <div className='grid grid-rows-2 grid-cols-12  gap-4 xl:px-32 lg:px-10 md:px-5 px-3 mt-3'>
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10  bg-[url('/images/image/Truck.png')] bg-no-repeat bg-[left_8px_center]  lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+          <div className='grid grid-rows-2 grid-cols-12 gap-4 xl:px-32 lg:px-10 md:px-5 px-3 mt-3 [&>div>svg]:w-5 [&>div>svg]:h-[18px] [&>div>svg]:max-[425px]:w-[18px] [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:gap-x-3  [&>div>a]:max-[425px]:text-[11px]'>
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+              <FontAwesomeIcon icon={faTruckFast} />
               <Link
                 href='#'
                 className='lg:text-[13px] md:text-[12.5px] text-sm'
@@ -26,7 +32,8 @@ const Contact = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10 bg-[url('/images/image/LockOpen.png')] bg-no-repeat bg-[left_8px_center] lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+              <FontAwesomeIcon icon={faUnlockKeyhole} />
               <Link
                 href='#'
                 className='lg:text-[14px] md:text-[12.5px] text-sm'
@@ -35,7 +42,8 @@ const Contact = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10 bg-[url('/images/image/CreditCard.png')] bg-no-repeat bg-[left_8px_center] lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+            <FontAwesomeIcon icon={faCreditCard} />
               <Link
                 href='#'
                 className='lg:text-[14px] md:text-[12.5px] text-sm'
@@ -44,7 +52,8 @@ const Contact = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10 bg-[url('/images/image/User.png')] bg-no-repeat bg-[left_8px_center] lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+            <FontAwesomeIcon icon={faUser} />
               <Link
                 href='#'
                 className='lg:text-[14px] md:text-[12.5px] text-sm'
@@ -53,7 +62,8 @@ const Contact = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10 bg-[url('/images/image/Stack.png')] bg-no-repeat bg-[left_8px_center] lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+            <FontAwesomeIcon icon={faLayerGroup} />
               <Link
                 href='#'
                 className='lg:text-[14px] md:text-[12.5px] text-sm'
@@ -62,7 +72,8 @@ const Contact = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10 bg-[url('/images/image/Notepad.png')] bg-no-repeat bg-[left_8px_center] lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+            <FontAwesomeIcon icon={faClipboard} />
               <Link
                 href='#'
                 className='lg:text-[14px] md:text-[12.5px] text-sm'
@@ -71,7 +82,8 @@ const Contact = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10 bg-[url('/images/image/CreditCard.png')] bg-no-repeat bg-[left_8px_center] lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+            <FontAwesomeIcon icon={faMoneyCheck} />
               <Link
                 href='#'
                 className='lg:text-[14px] md:text-[12.5px] text-sm'
@@ -80,7 +92,8 @@ const Contact = () => {
               </Link>
             </div>
 
-            <div className="md:col-span-3 col-span-6 border my-auto py-3 lg:pl-[50px] md:pl-[37px] pl-10 bg-[url('/images/image/Storefront.png')] bg-no-repeat bg-[left_8px_center] lg:bg-[length:25px_25px] md:bg-[length:23px_23px] bg-[length:23px_23px]">
+            <div className='md:col-span-3 col-span-6 border my-auto py-3'>
+            <FontAwesomeIcon icon={faStore} />
               <Link
                 href='#'
                 className='lg:text-[14px] md:text-[12.5px] text-sm'
@@ -98,7 +111,7 @@ const Contact = () => {
               <Link href='#'>do I return my item?</Link>
             </li>
             <li>
-              <Link href='#'> What are the 'Delivery Timelines'?</Link>
+              <Link href='#'> What are the Delivery Timelines?</Link>
             </li>
             <li>
               <Link href='#'>How to cancel Brando Order?</Link>
@@ -126,11 +139,10 @@ const Contact = () => {
           </ul>
 
           <div className='grid grid-cols-12 md:py-16 py-10'>
-            <ul className='md:col-span-5 col-span-12 mb-5 [&_li]:lg:col-span-4 [&_li]:md:col-span-4 [&_li]:col-span-12 [&_li>h3]:font-bold [&_li>h3]:text-[#333333] [&_li>h3]:xl:text-[28px] [&_li>h3]:md-text-[22px] [&_li>h3]:text-[22px] [&_li>h3]:pb-5 [&_li]:lg-mb-5 [&_li]:mb-4 [&_li]:bg-no-repeat [&_li]:bg-[top_2px_left] [&_li>li:nth-child(2)]:pl-10 [&_li>li:nth-child(3)]:pl-10 [&_li>li:nth-child(4)]:pl-10 [&_li]:bg-[length:20px_20px] [&_li>li>a]:lg:text-[14px] [&_li>li>a]:md:text-[14px] [&_li>li>a]:text-[15px] [&_li:nth-child(1)]:lg-pr-[13px] [&_li:nth-child(1)]:2xl-pr-[80px] [&_li>li>a]:block [&_li>li>a]:leading-5 [&_li>h3>span]:md:block [&_li>h3>span]:inline [&_li>h3]:leading-9'>
-              <li>
+            <ul className='md:col-span-5 col-span-12 mb-5 [&_li]:lg:col-span-4 [&_li]:md:col-span-4 [&_li]:col-span-12 [&>h3]:font-semibold [&>h3]:text-[#333333] [&>h3]:xl:text-3xl [&>h3]:text-2xl [&>h3]:pb-7 [&_li]:lg-mb-5 [&_li]:mb-4 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block [&>h3>span]:md:block [&>h3>span]:inline [&>h3]:leading-9 [&>h3]:max-sm:leading-8'>
+
                 <h3>
-                  Don&apos;t find your answer.
-                  <span>Contact with us </span>
+                  Don&apos;t find your answer. <span>Contact with us </span>
                 </h3>
                 <li className="bg-[url('/images/bxs_phone-call.png')] bg-[length:25px_25px]">
                   <Link href='#'>+1012 3456 789</Link>
@@ -146,7 +158,7 @@ const Contact = () => {
                 </li>
 
                 {/* <div> */}
-                <div className='mt-5 [&_li]:w-[40px] [&_li]:list-none [&_span]:inline-block [&_span]:pr-4 [&_span>img]:w-[25px] '>
+                <div className='mt-6 [&_li]:w-[40px] [&_li]:list-none [&_span]:inline-block [&_span]:pr-4 [&_span>img]:w-[25px] '>
                   <span>
                     <Image
                       src='/images/vector1.png'
@@ -173,14 +185,13 @@ const Contact = () => {
                   </span>
                 </div>
                 {/* </div> */}
-              </li>
             </ul>
 
             <div className='md:col-span-5 col-span-12 lg:[&_strong]:text-3xl md:[&_strong]:text-2xl [&_strong]:text-xl'>
               <strong className='text-2xl font-semibold mb-6'>
                 Send Us a Message
               </strong>
-              <form className='grid grid-cols-1 sm:grid-cols-2 gap-4 [&>label]:text-sm [&_label]:block [&_label]:font-medium [&_label]:mt-1.5 [&_label]:mb-2.5 [&>input]:w-full [&>textarea]:w-full'>
+              <form className='grid grid-cols-1 md:pt-6 pt-2 sm:grid-cols-2 gap-4 [&>label]:text-sm [&_label]:block [&_label]:font-medium [&_label]:mt-1.5 [&_label]:mb-2.5 [&>input]:w-full [&>textarea]:w-full'>
                 {/* First Name */}
                 <div>
                   <label htmlFor='firstName'>First Name</label>

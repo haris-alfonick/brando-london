@@ -3,9 +3,11 @@ import {
   Accordion,
   AccordionItem,
   AccordionContent,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer";
+import BreadCrumbs from "../components/breadcrumbs";
 
 const FAQs = [
   {
@@ -52,10 +54,11 @@ const FAQs = [
 ];
 
 export default function FAQSection() {
+  console.log(FAQs)
   return (
     <>
       <Navbar />
-
+      <BreadCrumbs />
       <section className="px-5 md:py-12 py-6">
         <div className="container mx-auto">
           <h2 className="text-2xl font-semibold text-center mb-8">
@@ -72,6 +75,8 @@ export default function FAQSection() {
                 value={`item-${index}`} // Ensure the value is unique per AccordionItem
                 className="border-none "
               >
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                
                 <AccordionContent>
                   <p className="text-base px-4 py-2 text-gray-700">
                     {faq.answer}

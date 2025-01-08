@@ -14,7 +14,8 @@ const Rating = () => {
   };
 
   return (
-    <div className="space-y-2.5">
+    <div className="space-y-2.5 [&>label>button]:w-5 [&>label>button]:h-[18px] [&>label>button]:pb-[4px] [&>label>button]:rounded-[2px] [&>label>button]:border-[#888888] [&>label>button]:border-[1.5px]">
+
       {[5, 4, 3, 2, 1].map((stars) => (
         <label
           key={stars}
@@ -39,7 +40,7 @@ const Rating = () => {
               </svg>
             ))}
           </div>
-          <span className="text-gray-500 font-medium text-xs">{stars} And More</span>
+          <span className="text-gray-500 font-medium text-xs">{stars} and more</span>
         </label>
       ))}
     </div>

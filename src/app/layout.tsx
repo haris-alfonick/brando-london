@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster"
 import StoreProvider from "./StoreProviders";
 
 const outfit = Outfit({
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <StoreProvider>
           {children}
+          <Toaster />
         </StoreProvider>
       </body>
     </html>

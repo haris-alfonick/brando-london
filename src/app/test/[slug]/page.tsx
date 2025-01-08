@@ -2,6 +2,8 @@ import { fetchWooCommerceProductBySlug } from "../../../utils/wooCommerceApi";
 import { Metadata } from 'next';
 import { JSDOM } from 'jsdom';
 import createDOMPurify from 'dompurify';
+import AddToCartButton from "@/app/components/shop/AddToCartButton";
+import ShoppingBasket from "@/app/components/ShoppingBasket";
 
 // Set up DOMPurify for SSR
 const window = new JSDOM('').window;
@@ -30,11 +32,6 @@ function stripHtmlTags(input: string): string {
   return input.replace(/<[^>]+>/g, '');
 }
 
-function truncateText(input: string, maxLength: number): string {
-  if (input.length <= maxLength) return input;
-  return input.slice(0, maxLength).trimEnd() + '...';
-}
-
 interface Props {
   params: {
     slug: string;
@@ -46,7 +43,6 @@ export default async function ProductPage({ params }: Props) {
 
   // Fetch product data
   const product = await fetchWooCommerceProductBySlug(slug).catch(() => null);
-  console.log(product)
 
   if (!product) {
     return <h1>Product not found</h1>;
@@ -54,6 +50,7 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <div>
+      {/* <ShoppingBasket /> */}
       <h1>{product.name}</h1>
       {/* Render sanitized HTML */}
       <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(product.description) }} />
