@@ -25,12 +25,12 @@ const ProductDetails = () => {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page='' />
       <div className='py-5 px-5 min-[1300px]:max-w-[1600px] mx-auto'>
         <section className='grid grid-cols-12 gap-x-9'>
           {/* Product Image Section */}
           <div className='md:col-span-6 col-span-12'>
-            <Thumbnail />
+            {/* <Thumbnail /> */}
           </div>
 
           {/* Product Details Section */}
@@ -103,7 +103,7 @@ const ProductDetails = () => {
             {/* Quantity */}
             <div className='mt-6 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block'>
               <strong>Quantity</strong>
-              <IncrementCounter />
+              {/* <IncrementCounter /> */}
             </div>
 
             {/* Add to Cart */}
@@ -170,12 +170,12 @@ const ProductDetails = () => {
             </div>
 
             {/* Accordion */}
-            <ProductAccordion />
+            {/* <ProductAccordion /> */}
           </div>
         </section>
         <Testimonial />
         {/* Related Products */}
-        <RelatedProductCard />
+        {/* <RelatedProductCard /> */}
       </div>
       <Footer />
     </>

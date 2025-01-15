@@ -6,7 +6,7 @@ const TermsCondition = () => {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page='Terms & Conditions' />
       <section className='px-5 md:py-12 py-10 [&_p]:text-base [&_p]:pt-4 [&_ul_li]:text-[#888] [&_p]:text-[#888] [&_strong]:text-xl [&_strong]:font-medium [&_strong]:text-[#333] [&_strong]:mt-8 [&_strong]:block'>
         <div className='container mx-auto'>
           <h2 className='text-2xl font-semibold uppercase text-center sm:mb-8 mb-3'>TERMS & CONDITION</h2>

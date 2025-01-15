@@ -10,7 +10,7 @@ const Checkout = () => {
   return (
     <div>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page='' />
       <div className='lg:px-6 px-4 md:py-16 py-10'>
         <div className='container mx-auto'>
           <div className='grid grid-cols-12 md:gap-x-10 max-md:gap-y-6'>

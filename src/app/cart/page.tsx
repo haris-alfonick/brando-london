@@ -10,7 +10,7 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page='Cart' />
       <div className='md:px-12 px-5 md:py-16 py-10'>
         <div className='container mx-auto'>
           <div className='grid grid-cols-12 gap-6'>

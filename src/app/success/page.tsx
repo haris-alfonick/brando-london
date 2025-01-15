@@ -6,7 +6,7 @@ const Success = () => {
   return(
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page="Success" />
         
       <Footer />
     </>

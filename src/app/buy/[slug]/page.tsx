@@ -73,7 +73,7 @@ export default async function ProductPage({ params }: Props) {
   return (
     <div>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page={product.name} />
       <div className='py-5 px-5 min-[1300px]:max-w-[1600px] mx-auto'>
         <section className='grid grid-cols-12 gap-x-9'>
           <Thumbnail images={product.images} />

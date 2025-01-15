@@ -1,6 +1,9 @@
 import Link from "next/link"
 
-const BreadCrumbs = () => {
+const BreadCrumbs = ({page}: {page:string}) => {
+  const formatted = page
+  .replace(/-/g, " ") // Replace all dashes with spaces
+  .replace(/^./, (match) => match.toUpperCase());
   return (
     <div className='bg-[#eaeaea] lg:px-20 px-5 py-3.5'>
       <div className='container mx-auto'>
@@ -10,7 +13,7 @@ const BreadCrumbs = () => {
             <Link href="/" className="bg-[url('/images/home-icon.png')]">Home</Link>
           </li>
           <li>
-            <Link href="/">Page Name</Link>
+            <Link href="#">{formatted}</Link>
           </li>
         </ul>
       </div>

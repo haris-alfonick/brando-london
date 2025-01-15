@@ -35,7 +35,7 @@ const ProductCategory = async ( {searchParams, params}: {searchParams: Promise<R
   return(
     <>
       <Navbar />
-        <BreadCrumbs />
+        <BreadCrumbs page={slug} />
         <div className='px-5 2xl:py-12 lg:py-8 py-5'>
           <div className='grid grid-cols-12 md:gap-x-8 max-md:gap-y-3'>
             <SideBar />

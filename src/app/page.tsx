@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
-import Banner from "./components/Banner";
 import Slider from "./components/Slider";
 import FeatureProduct from "./components/FeatureProduct";
 import CategoryList from "./components/categories";
@@ -10,12 +9,13 @@ import Testimonial from "./components/Testimonial";
 import CallUs from "./components/CallUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import HeroBanner from "./components/Banner/page";
 
 export default function Home() {
   return (
     <div>
      <Navbar />
-     <Banner />
+     <HeroBanner />
      <Slider />
      <section className="relative z-[99] bg-white md:pt-5 md:py-0 py-10 pt-1 px-5">
       <div className="container mx-auto">

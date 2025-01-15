@@ -58,7 +58,7 @@ export default function FAQSection() {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page="FAQs" />
       <section className="px-5 md:py-12 py-6">
         <div className="container mx-auto">
           <h2 className="text-2xl font-semibold text-center mb-8">

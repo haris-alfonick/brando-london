@@ -108,7 +108,7 @@ export default function Blog() {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page="Blog" />
       {/* Top cards */}
       <div className="flex justify-between space-x-6 pt-10 pb-16">
         {/*left image*/}

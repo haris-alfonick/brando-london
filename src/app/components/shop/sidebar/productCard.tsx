@@ -36,13 +36,15 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
         <div
           className='relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20'
         >
-          <Image
-            src={imageSrc}
-            alt={product.name || 'Product image'}
-            width={600}
-            height={100}
-            className='h-full w-full object-cover'
-          />
+          <Link href={product.slug}>
+            <Image
+              src={imageSrc}
+              alt={product.name || 'Product image'}
+              width={600}
+              height={100}
+              className='h-full w-full object-cover'
+            />
+          </Link>
           <div className='absolute flex items-center w-fit mb-4 gap-x-2 transition-all duration-300 right-0 left-0 top-0 bottom-0 m-auto [&_.cardIcons]:rounded-full [&_.cardIcons]:bg-white [&_.cardIcons]:h-10 [&_.cardIcons]:w-10 [&_.cardIcons]:flex [&_.cardIcons]:justify-center [&_.cardIcons]:items-center group-hover:opacity-100 opacity-0 z-[99]'>
             <Link href={`/buy/${product.slug}`} className='cardIcons hover:!bg-gray-300'>
               <FontAwesomeIcon width={24} icon={faEye} className='w-[24px] h-[24px]' />

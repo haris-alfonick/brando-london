@@ -9,7 +9,7 @@ const WishList = () => {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page='Whishlist' />
       <div className='px-5'>
         <div className='container mx-auto sm:px-12 md:px-16 pb-8'>
           <div className='grid grid-cols-12 gap-6 pt-24'>

@@ -10,7 +10,7 @@ const TableDemo = () => {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page='' />
       <div className='md:px-12 px-5 md:py-16 py-10'>
         <div className='container mx-auto'>
           <div className='grid grid-cols-12 gap-6'>
@@ -170,7 +170,7 @@ const TableDemo = () => {
             </div>
           </div>
           <div className='md:pt-16 pt-10'>
-          <RelatedProductCard />
+          {/* <RelatedProductCard /> */}
           </div>
         </div>
       </div>

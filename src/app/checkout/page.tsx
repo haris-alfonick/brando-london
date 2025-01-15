@@ -11,7 +11,7 @@ const Checkout = () => {
   return (
     <div>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page='Checkout' />
       <StripeCheckOut />
       <Footer />
     </div>
