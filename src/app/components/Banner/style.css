@@ -1,0 +1,18 @@
+.child img{
+  height: 100vh;
+}
+
+@media(max-width: 767px){
+ .bgMobile{
+  background-image: url('/images/banner2.webp'), linear-gradient(0deg, #1a1a1a, transparent);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+                  url('/images/mobile-banner.webp');
+  background-size: cover;
+  height: 400px;
+  align-content: end !important;
+ }
+ .bgMobile h1{
+  color: #fff;
+  font-weight: 500;
+ }
+}

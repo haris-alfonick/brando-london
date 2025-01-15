@@ -67,7 +67,7 @@ const Contact = () => {
 
               {/* Submit Button */}
               <div className="sm:col-span-2">
-                <Button type="submit" className="w-full sm:w-auto font-semibold pb-3 px-8">
+                <Button type="submit" className="w-full sm:w-auto block font-semibold pt-2.5 px-8 max-sm:py-5">
                   Send Message
                 </Button>
               </div>
