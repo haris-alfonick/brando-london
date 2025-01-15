@@ -1,4 +1,5 @@
 import CartTotal from "../cart/cartTotal"
+import StripeCheckOut from "../components/stripe-checkout"
 
 const OrderSummary = () => {
 

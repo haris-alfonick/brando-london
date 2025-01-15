@@ -1,0 +1,10 @@
+[lcl-host]
+realm-apid = 'localhost'
+
+[org]
+apid = 'abdur-rehman840'
+
+[service]
+apid = 'next'
+category = 'javascript'
+cert-style = 'acme'

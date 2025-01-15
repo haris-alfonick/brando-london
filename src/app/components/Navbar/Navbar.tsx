@@ -55,22 +55,22 @@ const Navbar = () => {
         <div className="hidden lg:flex gap-x-6">
           <div className=' relative'>
           <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>{cartLength}</div>
-          <Link className="text-sm text-[#`333333] font-bold rounded-xl" href="/">
+          <Link className="text-sm text-[#`333333] font-bold rounded-xl" href="/cart">
           <Image
-           src="/images/cart-icon.png"
-           alt="icon"
-           width={23}
-           height={100}
-           />
+            src="/images/cart-icon.png"
+            alt="icon"
+            width={23}
+            height={100}
+          />
            </Link>
           </div>
           <Link className="text-sm text-white font-bold rounded-xl" href="/"> 
           <Image
-           src="/images/user-icon.png"
-           alt="icon"
-           width={23}
-           height={100}
-           />
+            src="/images/user-icon.png"
+            alt="icon"
+            width={23}
+            height={100}
+          />
            </Link>
         </div>
       </nav>

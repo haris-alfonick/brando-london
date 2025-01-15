@@ -61,7 +61,7 @@ export default async function ProductPage({ params }: Props) {
   const product = await fetchWooCommerceProductBySlug(slug).catch(() => null);
   const salePrice = product.price - 40;
   const sale = salePrice.toFixed(2)
-  
+
   if (!product) {
     return <h1>Product not found</h1>;
   }
@@ -125,7 +125,7 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </section>
         <Testimonial />
-        <RelatedProductCard />
+        <RelatedProductCard relatedIds={product.related_ids} />
       </div>
       <Footer />
       {/* <ShoppingBasket /> */}

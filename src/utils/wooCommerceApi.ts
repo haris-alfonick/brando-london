@@ -131,3 +131,27 @@ export async function fetchWooCommerceCategoryBySlug(slug: string) {
   }
 }
 
+export async function fetchRelatedProducts(relatedIds: string[]) {
+  try {
+    const params = {
+      include: relatedIds.join(","),
+      per_page: relatedIds.length,
+    };
+    const response = await api.get("products", params);
+    return response.data; // Return the related products
+  } catch (error) {
+    console.error("Error fetching related products:", error);
+    throw new Error("Failed to fetch related products.");
+  }
+}
+
+export async function fetchAllReviews() {
+  try {
+    
+    const response = await api.get("products/reviews");
+    return response.data; // Return the related products
+  } catch (error) {
+    console.error("Error fetching related products:", error);
+    throw new Error("Failed to fetch related products.");
+  }
+}

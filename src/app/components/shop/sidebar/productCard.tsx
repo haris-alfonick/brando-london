@@ -10,10 +10,11 @@ import Price from '../price'
 
 type ProductCardProps = {
   product: Product;
+  relatedProduct: boolean
 };
 
 
-const ProductCard = ({product}: ProductCardProps) => {
+const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
 
   if(!product){
     return(
@@ -31,7 +32,7 @@ const ProductCard = ({product}: ProductCardProps) => {
   const imageSrc = product.images?.[0]?.src || '/fallback-image.jpg';
   return (
     <>
-      <div className={`${product.id} lg:col-span-3 md:col-span-4 col-span-6 group flex w-full flex-col overflow-hidden`}>
+      <div className={`${product.id} ${relatedProduct ? 'lg:col-span-(need 5)' : 'lg:col-span-3 md:col-span-4 col-span-6'} group flex w-full flex-col overflow-hidden`}>
         <div
           className='relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20'
         >
@@ -43,12 +44,12 @@ const ProductCard = ({product}: ProductCardProps) => {
             className='h-full w-full object-cover'
           />
           <div className='absolute flex items-center w-fit mb-4 gap-x-2 transition-all duration-300 right-0 left-0 top-0 bottom-0 m-auto [&_.cardIcons]:rounded-full [&_.cardIcons]:bg-white [&_.cardIcons]:h-10 [&_.cardIcons]:w-10 [&_.cardIcons]:flex [&_.cardIcons]:justify-center [&_.cardIcons]:items-center group-hover:opacity-100 opacity-0 z-[99]'>
-            <Link href={`buy/${product.slug}`} className='cardIcons hover:!bg-gray-300'>
+            <Link href={`/buy/${product.slug}`} className='cardIcons hover:!bg-gray-300'>
               <FontAwesomeIcon width={24} icon={faEye} className='w-[24px] h-[24px]' />
             </Link>
-            <button className='cardIcons text-red-700 hover:!bg-gray-300'>
+            {/* <button className='cardIcons text-red-700 hover:!bg-gray-300'>
               <FontAwesomeIcon width={24} icon={faHeart} className='w-[24px] h-[24px]' />
-            </button>
+            </button> */}
             <AddToCartButton productId={product.id} name={product.name} image={imageSrc} price={product.price} text={""} size="" quantity={1} />
           </div>
           <div className='cardIcons absolute top-2 right-2 flex justify-between gap-x-2 items-center py-0.5 px-2.5 bg-white z-[99999] [&>span]:font-semibold'>

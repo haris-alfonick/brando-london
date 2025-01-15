@@ -29,7 +29,7 @@ const Handler = ({attributes, productId, productName, image, price}: AttributesP
           className="mt-6 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block"
         >
           <strong>{attribute.name}</strong>
-          <div className="flex gap-x-2 mt-2">
+          <div className="block gap-x-2 mt-2 [&_label]:mr-1.5 [&_label]:mb-1.5 [&_label]:inline-block [&_span]:block">
             {attribute.name === "Color" ? (
               attribute.options.map((color: any, idx: any) => (
                 <label key={idx} className="cursor-pointer">

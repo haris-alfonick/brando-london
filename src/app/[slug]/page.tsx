@@ -45,7 +45,7 @@ const ProductCategory = async ( {searchParams, params}: {searchParams: Promise<R
               </div>
               <div id='product-grid' className='grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3'>
                 {initialProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} relatedProduct={false} />
                 ))}
               </div>
               {/* Client-side Load More button */}

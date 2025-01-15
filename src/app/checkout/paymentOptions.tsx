@@ -12,12 +12,12 @@ const PaymentOptions = () => {
         <div className='col-span-12'>
           <RadioGroup
             className='flex gap-x-10 border py-4 px-5 rounded-lg [&>div]:flex [&>div]:flex-col [&>div]:gap-y-1.5 [&>div]:justify-center [&>div]:items-center [&_div:nth-child(1)_svg]:w-6 [&_div>svg]:h-9 [&_div:nth-child(2)_svg]:w-12 [&>div>span]:text-sm [&>div>span]:pb-1 [&>div>span]:text-[#333333]'
-            defaultValue='paypalCard'
+            defaultValue='stripeCard'
           >
             <div>
-              <FontAwesomeIcon icon={faPaypal} />
+              {/* <FontAwesomeIcon icon={faPaypal} />
               <span>Paypal</span>
-              <RadioGroupItem value='paypalCard' id='paypalCard' />
+              <RadioGroupItem value='paypalCard' id='paypalCard' /> */}
             </div>
             <div>
               <FontAwesomeIcon icon={faStripe} />

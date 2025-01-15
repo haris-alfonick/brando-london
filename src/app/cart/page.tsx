@@ -60,9 +60,6 @@ const Cart = () => {
             <CartTotal cartPage={true} />
             
           </div>
-          <div className='md:pt-16 pt-10'>
-          <RelatedProductCard />
-          </div>
         </div>
       </div>
       <Footer />
