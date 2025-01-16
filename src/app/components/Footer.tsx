@@ -21,26 +21,25 @@ const Footer = () => {
 						<strong>Pages</strong>
 						<div className="footerNav">
 							<Link href='/'>Home</Link>
-							<Link href='#'>About Us</Link>
+							<Link href='/about-us'>About Us</Link>
 							<Link href='/shop'>Shop</Link>
 							<Link href='/contact'>Contact Us</Link>
-							<Link href='blog-post'>Blog</Link>
+							<Link href='#'>Blog</Link>
 						</div>
 					</div>
 					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
 						<strong>Categories</strong>
 						<div className="footerNav">
-							<Link href='#'>Men Jacket</Link>
-							<Link href='#'>Women Jacket</Link>
-							<Link href='#'>Kids Jacket</Link>
-							<Link href='#'>Leather Bags Jacket</Link>
-							<Link href='#'>Shoe</Link>
+							<Link href='/mens-leather-jackets'>Men Leather Jackets</Link>
+							<Link href='/mens-vintage-leather-jackets'>Men Vintage Jacket</Link>
+							<Link href='/mens-suede-leather-jackets'>Men Suede Leather Jackets</Link>
+							<Link href='womens-leather-jackets'>Women Leather Jackets</Link>
+							<Link href='/womens-vintage-leather-jackets'>Women Vintage Jackets</Link>
 						</div>
 					</div>
 					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
 						<strong>Customer Care</strong>
 						<div className="footerNav">
-							<Link href='#'>Help Center</Link>
 							<Link href='/terms-and-condition'>Terms & Condition</Link>
 							<Link href='/shipping-and-delivery'>Shipping & Delivery</Link>
 							<Link href='/privacy-policy'>Privacy Policy</Link>
