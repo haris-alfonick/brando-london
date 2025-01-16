@@ -64,14 +64,14 @@ const Navbar = () => {
           />
            </Link>
           </div>
-          <Link className="text-sm text-white font-bold rounded-xl" href="/"> 
+          {/* <Link className="text-sm text-white font-bold rounded-xl" href="/"> 
           <Image
             src="/images/user-icon.png"
             alt="icon"
             width={23}
             height={100}
           />
-           </Link>
+           </Link> */}
         </div>
       </nav>
 
