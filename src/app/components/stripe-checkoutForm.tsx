@@ -104,7 +104,7 @@ const StripeCheckOutForm = ({amount}: {amount: number}) => {
                 mt-6 w-full text-white bg-[#333333] hover:bg-gray-800 uppercase tracking-wide focus:outline-none font-medium
                 rounded px-6 py-3"
                 type="submit" disabled={!stripe || loading}>
-                {loading ? "Processing..." : "Place Order"}
+                {loading ? "Processing..." : `Place Order`}
               </button>
               {errorMessage && <div>{errorMessage}</div>}  
             </div>

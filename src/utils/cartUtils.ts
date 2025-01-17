@@ -43,7 +43,9 @@ export const updateCartAndCalculateTotals = async (
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-  const shipping = 25;
+
+  // Apply shipping charges only if subtotal > 0
+  const shipping = subtotal > 0 ? 25 : 0;
   const total = parseFloat((subtotal + shipping).toFixed(2));
 
   return { updatedCart, subtotal, shipping, total };

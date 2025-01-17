@@ -4,8 +4,10 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import "./style.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const HeroBanner = () => {
+  const router = useRouter()
   useEffect(() => {
     let scrollDirection: string | null = null; // Track last scroll direction
 
@@ -113,8 +115,8 @@ const HeroBanner = () => {
         <h1>Explore the latest Trends<span className="block">and timeless classics</span></h1>
         <p className="md:block hidden">Fashion is part of the daily air and it changes all the time with all events. Tou can even see the approaching of a revolution in clothes.</p>
         <div className="flex justify-center gap-x-3 max-md:pt-5">
-          <button className="!bg-white !text-[#282828]">Men</button>
-          <button>Women</button>
+          <button onClick={() => router.push('mens-leather-jackets')} className="!bg-white !text-[#282828]">Men</button>
+          <button onClick={() => router.push('womens-leather-jackets')} className="cursor-pointer">Women</button>
         </div>
       </div>
     </div>
