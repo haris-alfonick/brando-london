@@ -27,7 +27,7 @@ const ProductDetails = () => {
       <Navbar />
       <BreadCrumbs page='' />
       <div className='py-5 px-5 min-[1300px]:max-w-[1600px] mx-auto'>
-        <section className='grid grid-cols-12 gap-x-9'>
+        <section className='grid grid-cols-12 md:gap-x-9'>
           {/* Product Image Section */}
           <div className='md:col-span-6 col-span-12'>
             {/* <Thumbnail /> */}

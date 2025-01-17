@@ -95,6 +95,7 @@ const Footer = () => {
 				<div className="text-white text-sm py-5 [&_strong]:font-semibold text-center">
 					<span>© 2024 <Link href="#">Brando London.</Link><strong> All right reserved</strong></span>
 				</div>
+				
 		</footer>
 	)
 }
