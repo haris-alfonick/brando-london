@@ -37,10 +37,10 @@ const ProductCategory = async ( {searchParams, params}: {searchParams: Promise<R
       <Navbar />
         <BreadCrumbs page={slug} />
         <div className='px-5 2xl:py-12 lg:py-8 py-5'>
-          <div className='grid grid-cols-12 md:gap-x-8 max-md:gap-y-3'>
+          <div className='grid grid-cols-12 md:gap-x-8'>
             <SideBar />
-            <div className='lg:col-span-9 col-span-12'>
-              <div className='lg:text-4xl text-[#333333] text-2xl font-semibold uppercase py-5 pb-10 w-fit mx-auto'>
+            <div className='xl:col-span-9 col-span-12'>
+              <div className='lg:text-4xl text-[#333333] text-2xl font-semibold uppercase py-5 pb-10 max-sm:py-5 max-xl:!pt-0.5 w-fit mx-auto'>
                 <h1>{categoryName}</h1>
               </div>
               <div id='product-grid' className='grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3'>

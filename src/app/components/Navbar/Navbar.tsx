@@ -41,7 +41,7 @@ const Navbar = () => {
            </Link>
           </div>
           <button
-            className="navbar-burger flex items-center text-[#333333] p-3"
+            className="navbar-burger flex items-center text-[#333333] pl-3"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
@@ -89,7 +89,7 @@ const Navbar = () => {
       {/* Mobile Sidebar Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-[#333333] bg-opacity-25 z-[99999]">
-          <div className="fixed top-0 left-0 bottom-0 w-5/6 transition-all z-[999999] duration-500 max-w-sm p-4 py-5 bg-white border-r">
+          <div className="fixed top-0 left-0 bottom-0 w-5/6 transition-all h-full overflow-y-auto z-[9999999] duration-500 max-w-sm p-4 py-5 bg-white border-r">
             {/* Logo */}
             <div className="flex items-center mb-8">
               <Link className="mr-auto text-3xl font-bold leading-none" href="/">
@@ -103,24 +103,36 @@ const Navbar = () => {
             </div>
 
             {/* Menu Items for Sidebar */}
-            <ul className="navWrap space-y-6">
+            <ul className="navWrap space-y-3">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about-us">About Us</Link></li>
               <li><Link href="/shop">Shop</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="#">Blog</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
 
-            {/* Sign Up Button */}
-            <div className="mt-8">
-              <Link
-                className="block py-2 px-4 bg-[#333333] text-center text-white font-bold rounded-md"
-                href="#"
-              >
-                Sign up
-              </Link>
+            {/* Categories */}
+            <div className='[&_a]:text-[#333] [&_a]:text-base [&_a]:block [&_a]:pb-2 [&_strong]:text-[#333] [&_strong]:my-3 [&_strong]:mt-6 [&_strong]:text-lg [&_strong]:py-1.5 [&_strong]:pb-0 [&_strong]:underline [&_strong]:rounded-sm [&_strong]:font-semibold [&_strong]:block '>
+              <strong>Men's Collection</strong>
+              <div className="footerNav space-y-0.5">
+                <Link href='/mens-leather-jackets'>Men Leather Jackets</Link>
+                <Link href='/mens-vintage-leather-jackets'>Men Vintage Jacket</Link>
+                <Link href='/mens-suede-leather-jackets'>Men Suede Leather Jackets</Link>
+                <Link href='mens-biker-leather-jackets'>Men Biker Jackets</Link>
+                <Link href='/mens-bomber-jackets'>Men Bomber Jackets</Link>
+              </div>
             </div>
 
+            <div className='[&_a]:text-[#333] [&_a]:text-base [&_a]:block [&_a]:pb-2 [&_strong]:text-[#333] [&_strong]:my-3 [&_strong]:mt-6 [&_strong]:text-lg [&_strong]:py-1.5 [&_strong]:pb-0 [&_strong]:underline [&_strong]:rounded-sm [&_strong]:font-semibold [&_strong]:block '>
+              <strong>Women's Collection</strong>
+              <div className="footerNav space-y-0.5">
+                <Link href='/mens-leather-jackets'>Men Leather Jackets</Link>
+                <Link href='/mens-vintage-leather-jackets'>Men Vintage Jacket</Link>
+                <Link href='/mens-suede-leather-jackets'>Men Suede Leather Jackets</Link>
+                <Link href='/womens-leather-jackets'>Women Leather Jackets</Link>
+                <Link href='/womens-vintage-leather-jackets'>Women Vintage Jackets</Link>
+              </div>
+            </div>
             {/* Close Button */}
             <button
               className="absolute top-6 right-6 text-[#333333]"
