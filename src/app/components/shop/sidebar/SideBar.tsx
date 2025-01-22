@@ -22,7 +22,7 @@ const SideBar = () => {
 
       {/* Sidebar */}
       <div
-        className={`xl:col-span-3 col-span-12 xl:static fixed top-0 left-0 h-full w-[300px] overflow-auto bg-white transform transition-transform duration-300 ${
+        className={`xl:col-span-3 col-span-12 xl:static fixed top-0 left-0  h-full max-xl:w-[300px] overflow-auto bg-white transform transition-transform duration-300 ${
           isSidebarOpen ? 'translate-x-0 max-xl:z-[99999]' : 'max-xl:-translate-x-full'
         }`}>
         {/* Close Button */}
