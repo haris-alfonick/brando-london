@@ -42,7 +42,7 @@ const Testimonial = () => {
         draggable={true} // Allow drag functionality
         centerMode={false} // Center the active item
         focusOnSelect={false} // Allow focus on center item on click
-        className="testimonialWrap [&_ul:first-of-type] py-10 pb-16 [&_p]:w-[95%]"
+        className="testimonialWrap [&_ul:first-of-type] py-10 pb-16 [&_p]:w-[95%] max-md:[&_ul_li]:!border-r-0"
       >
         {/* Logos */}
           <div className="[&_p]:text-[#888] w-[90%] mx-auto relative after:conetnt-{} after:absolute after:w-full after:h-full after:bg-[url(/images/qoma.png)] after:bg-no-repeat after:bg-left-top after:top-0 after:left-0 pl-20 pt-12">

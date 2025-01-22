@@ -15,18 +15,16 @@ const SideBar = () => {
       {/* Filter Button */}
       <button
         onClick={() => setIsSidebarOpen(true)}
-        className='xl:hidden flex items-center justify-start gap-x-1.5 py-[1px] px-2.5 rounded-sm w-fit border border-[#333] mb-2'
-      >
+        className='xl:hidden flex items-center justify-start gap-x-1.5 py-[1px] px-2.5 rounded-sm w-fit border border-[#333] mb-2'>
         <FontAwesomeIcon icon={faFilter} width={16} height={16} />
         <span className='text-[#333] text-lg rounded-md'>Filter</span>
       </button>
 
       {/* Sidebar */}
       <div
-        className={`xl:col-span-3 col-span-12 xl:static fixed top-0 left-0 z-[9999] h-full w-[300px] overflow-auto bg-white shadow-lg transform transition-transform duration-300 ${
-          isSidebarOpen ? 'translate-x-0' : 'max-xl:-translate-x-full'
-        }`}
-      >
+        className={`xl:col-span-3 col-span-12 xl:static fixed top-0 left-0 h-full w-[300px] overflow-auto bg-white transform transition-transform duration-300 ${
+          isSidebarOpen ? 'translate-x-0 max-xl:z-[99999]' : 'max-xl:-translate-x-full'
+        }`}>
         {/* Close Button */}
         <button
           onClick={() => setIsSidebarOpen(false)}

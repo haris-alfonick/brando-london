@@ -120,7 +120,7 @@ const ContactForm = () => {
         <div className="sm:col-span-2">
           <Button
             type="submit"
-            className="w-full sm:w-auto block font-semibold py-2.5 px-8 max-sm:py-5"
+            className="w-full sm:w-auto block font-semibold py-2 pb-[30px] px-8 max-sm:pb-[31px] max-sm:pt-[9px]"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
