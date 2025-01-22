@@ -54,7 +54,7 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
             </button> */}
             <AddToCartButton productId={product.id} name={product.name} image={imageSrc} price={product.price} text={""} size="" quantity={1} />
           </div>
-          <div className='cardIcons absolute top-2 right-2 flex justify-between gap-x-2 items-center py-0.5 px-2.5 bg-white z-[99999] [&>span]:font-semibold'>
+          <div className='cardIcons absolute top-2 right-2 flex justify-between gap-x-2 items-center py-0.5 px-2.5 bg-white z-[999] [&>span]:font-semibold'>
             <FontAwesomeIcon width={14} icon={faStar} className='text-[#eae640]' />
             <span>4.9</span>
           </div>

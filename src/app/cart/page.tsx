@@ -46,10 +46,9 @@ const Cart = () => {
 
                 <div
                   className="flex flex-wrap gap-4 justify-between items-center pt-6 px-5 pb-5
-                [&_a]:w-full [&_a]:sm:w-auto [&_a]:md:w-auto [&_a]:border-2 [&_a]:border-gray-600 [&_a]:hover:bg-gray-100 [&_a]:text-sm [&_a]:px-6 [&_a]:py-2 [&_a]:dark:bg-gray-800 [&_a]:dark:text-white [&_a]:corner-lg [&_a]:font-medium [&_a]:text-gray-900 [&_a]:bg-white [&_a:nth-child(1)]:pl-10 [&_a:nth-child(1)]:bg-[url('/images/ArrowLeft.webp')] 
+                [&_a]:w-fit max-sm:[&_a]:m-auto [&_a]:sm:w-auto [&_a]:md:w-auto [&_a]:border-2 [&_a]:border-gray-600 [&_a]:hover:bg-gray-100 [&_a]:text-sm [&_a]:px-6 [&_a]:py-2 [&_a]:dark:bg-gray-800 [&_a]:dark:text-white [&_a]:corner-lg [&_a]:font-medium [&_a]:text-gray-900 [&_a]:bg-white [&_a:nth-child(1)]:pl-10 [&_a:nth-child(1)]:bg-[url('/images/ArrowLeft.webp')] 
                 [&_a:nth-child(1)]:sm:bg-[left_18px_top_9px] [&_a:nth-child(1)]:bg-no-repeat [&_a:nth-child(1)]:bg-[length:18px_18px] 
-                [&_a:nth-child(1)]:bg-[left_204px_top_9px]
-                [&_a:nth-child(1)]:max-sm:bg-[left_72px_top_9px]"
+                [&_a:nth-child(1)]:bg-[left_10px_center]"
                 >
                   <Link href="/shop">Return to Shop</Link>
 

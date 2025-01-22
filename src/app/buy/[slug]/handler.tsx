@@ -1,9 +1,11 @@
+
 "use client"
 import { useState } from "react"
 import IncrementCounter from "@/app/components/shop/Counter"
 import AddToCartButton from "@/app/components/shop/AddToCartButton"
 import { faHeart } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import CartButton from "@/app/components/productButton"
 
 interface AttributesProps {
   attributes: any[];
@@ -71,12 +73,13 @@ const Handler = ({attributes, productId, productName, image, price}: AttributesP
         />
       </div>
 
-      <div className='mt-6 flex justify-between items-center gap-x-6 [&>button]:bg-[#333333] [&>button]:text-white [&>button]:w-full [&>button]:py-2 [&>button]:rounded'>
+      {/* <div className='mt-6 flex justify-between items-center gap-x-6 [&>button]:bg-[#333333] [&>button]:text-white [&>button]:w-full [&>button]:py-2 [&>button]:rounded'>
         <AddToCartButton productId={productId} name={productName} image={image} price={price} text="Add to Cart" size={selectedSize} quantity={quantity} />
         <div className='[&>svg]:w-6'>
           <FontAwesomeIcon icon={faHeart} />
         </div>
-      </div>
+      </div> */}
+      <AddToCartButton productId={productId} name={productName} image={image} price={price} text="Add to Cart" size={selectedSize} quantity={quantity} />
     </>
   )
 }

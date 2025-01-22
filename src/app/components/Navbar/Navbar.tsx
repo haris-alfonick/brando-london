@@ -28,13 +28,24 @@ const Navbar = () => {
         </Link>
 
         {/* Menu Button for Mobile */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center gap-x-2.5">
+        <div className=' relative'>
+          <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>{cartLength}</div>
+          <Link className="text-sm text-[#333333] font-bold rounded-xl" href="/cart">
+          <Image
+            src="/images/cart-icon.png"
+            alt="icon"
+            width={25}
+            height={100}
+          />
+           </Link>
+          </div>
           <button
             className="navbar-burger flex items-center text-[#333333] p-3"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
-              className="block h-4 w-4 fill-current"
+              className="block h-5 w-5 fill-current"
               viewBox="0 0 20 20"
             >
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -43,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navbar Menu */}
-        <ul className="navWrap hidden lg:flex lg:items-center lg:space-x-6 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300">
+        <ul className="navWrap hidden lg:flex lg:items-center lg:space-x-7 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about-us">About Us</Link></li>
           <li><Link href="/shop">Shop</Link></li>
@@ -55,7 +66,7 @@ const Navbar = () => {
         <div className="hidden lg:flex gap-x-6">
           <div className=' relative'>
           <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>{cartLength}</div>
-          <Link className="text-sm text-[#`333333] font-bold rounded-xl" href="/cart">
+          <Link className="text-sm text-[#333333] font-bold rounded-xl" href="/cart">
           <Image
             src="/images/cart-icon.png"
             alt="icon"
@@ -116,7 +127,7 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <svg
-                className="block h-6 w-6 fill-current"
+                className="block h-7 w-7 fill-current"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
