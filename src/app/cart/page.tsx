@@ -5,7 +5,11 @@ import RelatedProductCard from '../components/RelatedProduct'
 import CartTotal from './cartTotal'
 import CartItem from './cartItems'
 import Link from 'next/link'
+import { Metadata } from 'next'
 
+export const metadata:Metadata = {
+  title: "Cart - Brando London"
+}
 const Cart = () => {
   return (
     <>

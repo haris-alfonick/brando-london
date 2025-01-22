@@ -51,12 +51,17 @@ const BillingInformation = () => {
     setLocalBilling(updatedBilling); // Update local state for immediate feedback
     debouncedDispatch(updatedBilling); // Dispatch after debounce delay
 
-    if (isShippingSameAsBilling) {
-      const updatedShipping = { ...updatedBilling, email: undefined };
+    const updatedShipping = { ...updatedBilling, email: undefined };
+    setLocalShipping(updatedShipping);
+    debouncedDispatchShipping(updatedShipping);
+
+    // future reference 
+    // if (isShippingSameAsBilling) {
+    //   const updatedShipping = { ...updatedBilling, email: undefined };
       
-      setLocalShipping(updatedShipping);
-      debouncedDispatchShipping(updatedShipping);
-    }
+    //   setLocalShipping(updatedShipping);
+    //   debouncedDispatchShipping(updatedShipping);
+    // }
   };
   
   const handleShippingChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,6 +83,7 @@ const BillingInformation = () => {
  
  
  useEffect(() => {
+  
   if (billing.country) {
     SetSelectedCountry(billing.country);
   }
@@ -119,22 +125,26 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
     <>
       <div className='grid grid-cols-12 gap-x-5 gap-y-5 p-6 border rounded-xl [&_h3]:text-[#333333] [&_h3]:text-xl [&_h3]:font-medium [&>div>label]:block [&>div>label]:text-[#333333] [&>div>label]:mb-2.5'>
         <h3 className='col-span-12'>Contact Information</h3>
-        <div className='lg:col-span-4 col-span-6'>
-          <Label htmlFor='name'>Name</Label>
-          <Input type='text' id='name' name="firstName" value={localBilling.firstName} onChange={handleBillingChange} />
+        <div className='lg:col-span-3 col-span-6'>
+          <Label htmlFor='first_name'>Name</Label>
+          <Input type='text' id='first_name' name="first_name" value={localBilling.first_name} onChange={handleBillingChange} required />
         </div>
-        <div className='lg:col-span-4 col-span-6'>
+        <div className='lg:col-span-3 col-span-6'>
+          <Label htmlFor='last_name'>Last Name</Label>
+          <Input type='text' id='last_name' name="last_name" value={localBilling.last_name} onChange={handleBillingChange} required />
+        </div>
+        <div className='lg:col-span-3 col-span-6'>
           <Label htmlFor='email'>Email Address</Label>
-          <Input type='email' name="email" id='email' value={localBilling.email} onChange={handleBillingChange} />
+          <Input type='email' name="email" id='email' value={localBilling.email} onChange={handleBillingChange} required />
         </div>
 
-        <div className='lg:col-span-4 col-span-6'>
+        <div className='lg:col-span-3 col-span-6'>
           <Label htmlFor='number'>Phone Number</Label>
-          <Input type='tel' id='phone' name="phone" value={localBilling.phone} onChange={handleBillingChange} />
+          <Input type='tel' id='phone' name="phone" value={localBilling.phone} onChange={handleBillingChange} required />
         </div>
         <div className='col-span-12'>
           <Label htmlFor='address'>Shipping Address</Label>
-          <Input type='text' id='address' name="address" value={localBilling.address} onChange={handleBillingChange} />
+          <Input type='text' id='address' name="address_1" value={localBilling.address_1} onChange={handleBillingChange} required />
         </div>
         <div className='lg:col-span-3 col-span-6'>
           <Label htmlFor='number'>Country </Label>
@@ -143,7 +153,7 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
             SetSelectedCountry(value)
             setLocalBilling(updatedBilling); // Update local state
             debouncedDispatch(updatedBilling);
-          }} value={selectedCountry}>
+          }} value={selectedCountry} required>
             <SelectTrigger>
               <SelectValue placeholder="Select Country" />
             </SelectTrigger>
@@ -163,7 +173,7 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
             setSelectedState(value)
             setLocalBilling(updatedBilling); // Update local state
             debouncedDispatch(updatedBilling);
-          }} value={selectedState}>
+          }} value={selectedState} required>
             <SelectTrigger>
               <SelectValue placeholder="Select State" />
             </SelectTrigger>
@@ -178,11 +188,11 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
         </div>
         <div className='lg:col-span-3 col-span-6'>
           <Label htmlFor='number'>City</Label>
-          <Input type='text' id='city' name="city" value={localBilling.city} onChange={handleBillingChange} />
+          <Input type='text' id='city' name="city" value={localBilling.city} onChange={handleBillingChange} required />
         </div>
         <div className='lg:col-span-3 col-span-6'>
           <Label htmlFor='zipCode'>Zip Code</Label>
-          <Input type='text' id='postalCode' name="postalCode" value={localBilling.postalCode} onChange={handleBillingChange} />
+          <Input type='text' id='postalCode' name="postalCode" value={localBilling.postalCode} onChange={handleBillingChange} required />
         </div>
         <div className='col-span-12'>
           <Label htmlFor='name'>

@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface BillingInfo {
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   email: string;
   phone: string;
-  address: string;
+  address_1: string;
   city: string;
   state: string;
   country: string;
@@ -13,10 +13,10 @@ interface BillingInfo {
 }
 
 interface ShippingInfo {
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   phone: string;
-  address: string;
+  address_1: string;
   city: string;
   state: string;
   country: string;
@@ -40,21 +40,21 @@ interface OrderState {
 
 const initialState: OrderState = {
   billing: {
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
     phone: '',
-    address: '',
+    address_1: '',
     city: '',
     state: '',
     country: '',
     postalCode: '',
   },
   shipping: {
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     phone: '',
-    address: '',
+    address_1: '',
     city: '',
     state: '',
     country: '',

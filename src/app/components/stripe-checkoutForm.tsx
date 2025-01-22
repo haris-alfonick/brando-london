@@ -6,6 +6,7 @@ import OrderSummary from "../checkout/orderSummary";
 import convertToSubCurreny from "@/lib/convetToSubCurrency";
 import { Skeleton } from "@/components/ui/skeleton";
 import SummaryLoading from "../cart/loading";
+import { createOrder } from "@/utils/wooCommerceApi";
 
 const StripeCheckOutForm = ({amount, data}: {amount: number, data: any}) => {
 
@@ -28,38 +29,73 @@ const StripeCheckOutForm = ({amount, data}: {amount: number, data: any}) => {
   //   .then((data) => setClientSecret(data.clientSecret))
   // }, [amount])
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  console.log(data);
+  setLoading(true);
 
-    // if (!stripe || !elements) {
-    //   return;
-    // }    
+  if (!stripe || !elements) {
+    return;
+  }
 
-    // const { error:submitError } = await elements.submit();
+  const { error: submitError } = await elements.submit();
 
-    // if (submitError) {
-    //   setErrorMessage(submitError.message || "An unexpected error occurred.");
-    //   setLoading(false);
-    //   return
-    // }
+  if (submitError) {
+    setErrorMessage(submitError.message || "An unexpected error occurred.");
+    setLoading(false);
+    return;
+  }
 
-    // const {error} = await stripe.confirmPayment({
-    //   elements,
-    //   clientSecret,
-    //   confirmParams: {
-    //     return_url: `${process.env.NEXT_PUBLIC_HOST}/success?amount=${amount}`
-    //   }
-    // })
+  try {
+    const orderData = {
+      ...data,
+      payment_method: "stripe",
+      payment_method_title: "Credit Card",
+      set_paid: false
+    };
 
-    // if(error){
-    //   setErrorMessage(error.message)
-    // }else{
+    // Create the order in WooCommerce (or handle it on your backend)
+    const addOrder = await createOrder(orderData);
 
-    // }
+    // Pass the WooCommerce order_id along with the amount to the payment intent API
+    const response = await fetch("/api/stripe-payment-intent", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        amount: convertToSubCurreny(amount), // Convert the amount to the smallest currency unit (cents)
+        order_id: addOrder.id, // Send the WooCommerce order_id
+      })
+    });
 
-    // setLoading(false)
-  };
+    const result = await response.json();
+    if (result.clientSecret) {
+      setClientSecret(result.clientSecret);
+    }
+
+    // Process payment using Stripe
+    const { error } = await stripe.confirmPayment({
+      elements,
+      clientSecret: result.clientSecret,
+      confirmParams: {
+        return_url: `${process.env.NEXT_PUBLIC_HOST}/success?amount=${amount}`,
+      },
+    });
+
+    if (error) {
+      setErrorMessage(error.message);
+    } else {
+      // Payment successful logic
+    }
+  } catch (error) {
+    console.log(error);
+    setErrorMessage("An error occurred while creating the order.");
+  }
+
+  setLoading(false);
+};
+  
 
   // if(!clientSecret || !stripe || !elements){
   //   return(
