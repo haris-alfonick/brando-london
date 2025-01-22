@@ -6,6 +6,7 @@ import SideBar from '../components/shop/sidebar/SideBar';
 import { fetchProductsServerAction } from '@/actions/fetchProducts';
 import { Product } from '@/utils/wooCommerceTypes';
 import LoadMoreButton from './LoadMoreButton';
+import CustomizedNow from '../components/CustomizedNow';
 
 const Shop = async ({searchParams}: {searchParams: Promise<Record<string, string>>}) => {
   const resolveSearchParams = await searchParams;
@@ -35,13 +36,7 @@ const Shop = async ({searchParams}: {searchParams: Promise<Record<string, string
               maxPrice={resolveSearchParams.min_price} 
               categorySlug=""
             />
-            <div className='xl:max-w-[800px] m-auto sm:my-12 my-5 flex justify-between items-center gap-x-2 max-sm:gap-y-5 max-sm:text-center max-sm:flex-col bg-[#EAEAEA] p-7 rounded-lg [&_strong]:text-2xl [&_strong]:font-medium [&_strong]:text-[#333] [&_p]:text-[#888] [&_p]:text-base [&_p]:pt-1.5'>
-              <div>
-                <strong>Didn't find what you were looking for</strong>
-                <p>Get your Custom made Leather Jackets</p>
-              </div>
-              <button className='bg-[#333] text-white font-medium p-2 px-6 rounded-md max-sm:text-sm'>Customize Now</button>
-            </div>
+            <CustomizedNow />
           </div>
         </div>
       </div>
