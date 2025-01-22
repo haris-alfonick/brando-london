@@ -75,7 +75,7 @@ export default async function ProductPage({ params }: Props) {
       <Navbar />
       <BreadCrumbs page={product.name} />
       <div className='py-5 px-5 min-[1300px]:max-w-[1600px] mx-auto'>
-        <section className='grid grid-cols-12 gap-x-9'>
+        <section className='grid grid-cols-12 md:gap-x-9'>
           <Thumbnail images={product.images} />
           {/* Product Details Section */}
           <div className='md:col-span-6 col-span-12'>

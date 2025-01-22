@@ -17,10 +17,10 @@ const Shop = async ({searchParams}: {searchParams: Promise<Record<string, string
     <>
       <Navbar />
       <BreadCrumbs page='Shop' />
-      <div className='px-5 2xl:py-12 lg:py-8 py-5'>
-        <div className='grid grid-cols-12 md:gap-x-8 max-md:gap-y-3'>
-          <SideBar />
-          <div className='lg:col-span-9 col-span-12'>
+      <div className='px-5 2xl:py-12 lg:py-8 lg:pt-3 py-5'>
+        <div className='grid grid-cols-12 lg:gap-x-8 max-md:gap-y-3'>
+        <SideBar  />
+          <div className='xl:col-span-9 col-span-12'>
             <div id='product-grid' className='grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3'>
               {initialProducts.map((product) => (
                 <ProductCard key={product.id} product={product} relatedProduct={false} />

@@ -56,7 +56,7 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ initialPage, totalPages
         <div className="text-center mt-5">
           <button
             onClick={loadMore}
-            className="px-6 py-2 bg-gray-700 hover:bg-gray-500 text-white rounded disabled:bg-gray-300"
+            className="px-6 py-2 bg-[#333] hover:bg-white hover:text-[#333] border !border-[#333] font-medium max-sm:text-sm text-white rounded transition-all"
             disabled={loading}
           >
             {loading ? 'Loading...' : 'Load More'}

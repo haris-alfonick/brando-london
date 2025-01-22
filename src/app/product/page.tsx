@@ -20,6 +20,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import BreadCrumbs from '../components/breadcrumbs'
 import RelatedProductCard from '../components/RelatedProduct'
 import Testimonial from '../components/Testimonial'
+import CartButton from '../components/productButton'
 
 const ProductDetails = () => {
   return (
@@ -27,7 +28,7 @@ const ProductDetails = () => {
       <Navbar />
       <BreadCrumbs page='' />
       <div className='py-5 px-5 min-[1300px]:max-w-[1600px] mx-auto'>
-        <section className='grid grid-cols-12 md:gap-x-9'>
+        <section className='grid grid-cols-12 md:gap-x-9 gap-x-0'>
           {/* Product Image Section */}
           <div className='md:col-span-6 col-span-12'>
             {/* <Thumbnail /> */}
@@ -107,12 +108,12 @@ const ProductDetails = () => {
             </div>
 
             {/* Add to Cart */}
-            <div className='mt-6 flex justify-between items-center gap-x-6 [&>button]:bg-[#333333] [&>button]:text-white [&>button]:w-full [&>button]:py-2 [&>button]:rounded'>
-              <button>Add to Cart</button>
-              <div className='[&>svg]:w-6'>
-                <FontAwesomeIcon icon={faHeart} />
-              </div>
-            </div>
+            {/* <div className='mt-6 flex justify-between items-center md:gap-x-6 gap-x-3 [&>button]:bg-[#333333] [&>button]:text-white [&>button]:w-full [&>button]:py-2 md:[&>button]:rounded [&_.buyNow]:bg-white [&_.buyNow]:text-[#333] [&_.buyNow]:border [&_.buyNow]:font-medium [&_.buyNow]:border-[#333] [&_.cart]:border [&_.cart]:border-[#333] md:relative fixed bottom-0 md:w-full w-[100%] z-[99999] left-0 right-0 m-auto'>
+              <button className='buyNow'>Buy Now</button>
+              <button className='cart'>Add to Cart</button>
+            </div> */}
+
+            <CartButton />
 
             {/* Wishlist and Compare */}
             <div className='flex xl:flex-row flex-col mt-6 justify-between xl:items-center items-start max-xl:gap-y-2.5'>
