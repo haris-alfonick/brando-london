@@ -54,7 +54,7 @@ const FAQs = [
 ];
 
 export default function FAQSection() {
-  console.log(FAQs)
+  
   return (
     <>
       <Navbar />

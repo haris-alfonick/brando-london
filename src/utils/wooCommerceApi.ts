@@ -155,3 +155,13 @@ export async function fetchAllReviews() {
     throw new Error("Failed to fetch related products.");
   }
 }
+
+export async function createOrder(data:any) {
+  try {
+    const response = await api.post("orders", data)
+    return response.data; // Return the related products
+  } catch (error) {
+    console.error("Error creating order:", error);
+    throw new Error("Failed to create order.");
+  }
+}

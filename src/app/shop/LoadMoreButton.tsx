@@ -25,7 +25,7 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ initialPage, totalPages
       setLoading(true);
       try {
         // Fetch the next page of products
-        const { products: newProducts } = await fetchProductsServerAction(page + 1, 4, minPrice, maxPrice, categorySlug);
+        const { products: newProducts } = await fetchProductsServerAction(page + 1, 12, minPrice, maxPrice, categorySlug);
         
         if (newProducts.length > 0) {
           setProducts((prevProducts) => [...prevProducts, ...newProducts]);
@@ -47,8 +47,8 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ initialPage, totalPages
   return (
     <>
       <div className='grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3'>
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} relatedProduct={false} />
+        {products.map((product, index) => (
+          <ProductCard key={product.id + index.toString()} product={product} relatedProduct={false} />
         ))}
       </div>
 

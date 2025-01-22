@@ -114,7 +114,7 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
 
     updateCart();
   }, [cartItemsData]);
-  console.log(totals)
+
   return(
     <>
       <div className='grid grid-cols-12 gap-x-5 gap-y-5 p-6 border rounded-xl [&_h3]:text-[#333333] [&_h3]:text-xl [&_h3]:font-medium [&>div>label]:block [&>div>label]:text-[#333333] [&>div>label]:mb-2.5'>
@@ -157,7 +157,7 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
           </Select>
         </div>
         <div className='lg:col-span-3 col-span-6'>
-          <Label htmlFor='number'>Region/State {selectedState}</Label>
+          <Label htmlFor='number'>Region/State </Label>
           <Select onValueChange={(value) => {
             const updatedBilling = { ...localBilling, state: value };
             setSelectedState(value)

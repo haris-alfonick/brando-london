@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useAppSelector } from "@/lib/hooks";
 import PlaceOrder from "../checkout/PlaceOrder";
+import { Skeleton } from "@/components/ui/skeleton";
+import SummaryLoading from "./loading";
 
 interface CartTotalProps {
   cartPage: boolean;
@@ -41,7 +43,7 @@ const CartTotal = ({ cartPage }: CartTotalProps) => {
   return (
     <div className="col-span-12 lg:col-span-4 space-y-6">
       {!isVerified ? (
-        <p>Loading...</p>
+        <SummaryLoading />
       ) : (
         <>
           <div className="border border-gray-300 rounded-lg sm:p-6 p-4 shadow-sm">

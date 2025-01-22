@@ -23,8 +23,6 @@ const PlaceOrder = ({ total }: PlaceOrderProps) => {
         total,
       });
   
-      console.log("Stripe session response:", data);
-  
       if (!data.sessionId) {
         throw new Error("Failed to retrieve sessionId.");
       }

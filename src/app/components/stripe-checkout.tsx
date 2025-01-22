@@ -7,12 +7,12 @@ import convertToSubCurreny from "@/lib/convetToSubCurrency";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
-const StripeCheckOut = ({ total }: { total: number }) => {
+const StripeCheckOut = ({ total, data }: { total: number, data: any }) => {
   // Ensure total is greater than 0 before rendering Elements
-  if (total <= 0) {
-    return <p>Loading payment details...</p>; // Or any loading indicator
-  }
-
+  // if (total <= 0) {
+  //   return <p>Loading payment details...</p>; // Or any loading indicator
+  // }
+  
   return (
     <Elements
       stripe={stripePromise}
@@ -22,7 +22,7 @@ const StripeCheckOut = ({ total }: { total: number }) => {
         currency: "usd",
       }}
     >
-      <StripeCheckOutForm amount={total} />
+      <StripeCheckOutForm amount={total} data={data} />
     </Elements>
   );
 };

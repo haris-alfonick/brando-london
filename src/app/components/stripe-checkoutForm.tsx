@@ -3,14 +3,11 @@ import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import { useEffect, useState } from "react";
 import BillingInformation from "../checkout/billingInformation";
 import OrderSummary from "../checkout/orderSummary";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStripe } from "@fortawesome/free-brands-svg-icons";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
 import convertToSubCurreny from "@/lib/convetToSubCurrency";
+import { Skeleton } from "@/components/ui/skeleton";
+import SummaryLoading from "../cart/loading";
 
-const StripeCheckOutForm = ({amount}: {amount: number}) => {
+const StripeCheckOutForm = ({amount, data}: {amount: number, data: any}) => {
 
   const stripe = useStripe();
   const elements = useElements();
@@ -19,58 +16,58 @@ const StripeCheckOutForm = ({amount}: {amount: number}) => {
   const [clientSecret, setClientSecret] = useState("")
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    fetch("/api/stripe-payment-intent", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({amount: convertToSubCurreny(amount)})
-    })
-    .then((res) => res.json())
-    .then((data) => setClientSecret(data.clientSecret))
-  }, [amount])
+  // useEffect(() => {
+  //   fetch("/api/stripe-payment-intent", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({amount: convertToSubCurreny(amount)})
+  //   })
+  //   .then((res) => res.json())
+  //   .then((data) => setClientSecret(data.clientSecret))
+  // }, [amount])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
-    if (!stripe || !elements) {
-      return;
-    }    
+    // if (!stripe || !elements) {
+    //   return;
+    // }    
 
-    const { error:submitError } = await elements.submit();
+    // const { error:submitError } = await elements.submit();
 
-    if (submitError) {
-      setErrorMessage(submitError.message || "An unexpected error occurred.");
-      setLoading(false);
-      return
-    }
+    // if (submitError) {
+    //   setErrorMessage(submitError.message || "An unexpected error occurred.");
+    //   setLoading(false);
+    //   return
+    // }
 
-    const {error} = await stripe.confirmPayment({
-      elements,
-      clientSecret,
-      confirmParams: {
-        return_url: `${process.env.NEXT_PUBLIC_HOST}/success?amount=${amount}`
-      }
-    })
+    // const {error} = await stripe.confirmPayment({
+    //   elements,
+    //   clientSecret,
+    //   confirmParams: {
+    //     return_url: `${process.env.NEXT_PUBLIC_HOST}/success?amount=${amount}`
+    //   }
+    // })
 
-    if(error){
-      setErrorMessage(error.message)
-    }else{
+    // if(error){
+    //   setErrorMessage(error.message)
+    // }else{
 
-    }
+    // }
 
-    setLoading(false)
+    // setLoading(false)
   };
 
-  if(!clientSecret || !stripe || !elements){
-    return(
-      <>
-        loading
-      </>
-    )
-  }
+  // if(!clientSecret || !stripe || !elements){
+  //   return(
+  //     <>
+  //       loading..
+  //     </>
+  //   )
+  // }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -82,7 +79,7 @@ const StripeCheckOutForm = ({amount}: {amount: number}) => {
               <div className='grid grid-cols-12 gap-x-5 gap-y-5 p-6 border rounded-xl [&_h3]:text-[#333333] [&_h3]:text-xl [&_h3]:font-medium [&>div>label]:block [&>div>label]:text-[#333333] [&>div>label]:mb-2.5'>
                 <h3 className='col-span-12'>Payment Option</h3>
                 <div className='col-span-12'>
-                  {clientSecret && <PaymentElement />}
+                  <PaymentElement />
                 </div>
               </div>         
             </div>
@@ -106,7 +103,7 @@ const StripeCheckOutForm = ({amount}: {amount: number}) => {
                 type="submit" disabled={!stripe || loading}>
                 {loading ? "Processing..." : `Place Order`}
               </button>
-              {errorMessage && <div>{errorMessage}</div>}  
+              {errorMessage && <div>{errorMessage}</div>} 
             </div>
           </div>
         </div>

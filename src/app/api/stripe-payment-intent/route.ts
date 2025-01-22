@@ -5,11 +5,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
 
 export const POST = async (request: NextRequest) => {
   try {
-    // const { amount } = await request.json(); // Extract amount from request body
+    const { amount } = await request.json(); // Extract amount from request body
 
     // Create a PaymentIntent
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: 2500, // Amount in the smallest currency unit
+      amount, // Amount in the smallest currency unit
       currency: "usd",
       automatic_payment_methods: {enabled: true}
     });
