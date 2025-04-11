@@ -12,7 +12,7 @@ const Navbar = () => {
   const cartItemsData = useAppSelector((state) => state.cart.items.length)
   useEffect( () => {
     setCartLength(cartItemsData)
-  }, [])
+  }, [cartItemsData])
   return (
     <>
       {/* Main Navbar */}
@@ -113,7 +113,7 @@ const Navbar = () => {
 
             {/* Categories */}
             <div className='[&_a]:text-[#333] [&_a]:text-base [&_a]:block [&_a]:pb-2 [&_strong]:text-[#333] [&_strong]:my-3 [&_strong]:mt-6 [&_strong]:text-lg [&_strong]:py-1.5 [&_strong]:pb-0 [&_strong]:underline [&_strong]:rounded-sm [&_strong]:font-semibold [&_strong]:block '>
-              <strong>Men's Collection</strong>
+              <strong>Men&apos;s Collection</strong>
               <div className="footerNav space-y-0.5">
                 <Link href='/mens-leather-jackets'>Men Leather Jackets</Link>
                 <Link href='/mens-vintage-leather-jackets'>Men Vintage Jacket</Link>
@@ -124,7 +124,7 @@ const Navbar = () => {
             </div>
 
             <div className='[&_a]:text-[#333] [&_a]:text-base [&_a]:block [&_a]:pb-2 [&_strong]:text-[#333] [&_strong]:my-3 [&_strong]:mt-6 [&_strong]:text-lg [&_strong]:py-1.5 [&_strong]:pb-0 [&_strong]:underline [&_strong]:rounded-sm [&_strong]:font-semibold [&_strong]:block '>
-              <strong>Women's Collection</strong>
+              <strong>Women&apos;s Collection</strong>
               <div className="footerNav space-y-0.5">
                 <Link href='/mens-leather-jackets'>Men Leather Jackets</Link>
                 <Link href='/mens-vintage-leather-jackets'>Men Vintage Jacket</Link>

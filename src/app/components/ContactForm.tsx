@@ -51,6 +51,7 @@ const ContactForm = () => {
         setErrorMessage(result.message || "Failed to send your message. Please try again.");
       }
     } catch (error) {
+      console.error("Error sending message:", error);
       setErrorMessage("An unexpected error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);

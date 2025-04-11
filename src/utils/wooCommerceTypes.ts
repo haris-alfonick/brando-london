@@ -48,14 +48,18 @@ export interface Product {
   shipping_class: string;
   shipping_class_id: number;
   reviews_allowed: boolean;
-  average_rating: string;
+  average_rating: number;
   rating_count: number;
   related_ids: number[];
   upsell_ids: number[];
   cross_sell_ids: number[];
   parent_id: number;
   purchase_note: string;
-  categories: Partial<Category>[];
+  categories: Array<{
+    id: number;
+    name: string;
+    slug: string;
+  }>;
   //tags: any[]; // TODO look at Tags properties
   images: Image[];
   attributes: Attribute[];
@@ -165,9 +169,10 @@ export interface Image {
 }
 
 export interface Attribute {
-  id: number;
+  id: string | number;
   name: string;
-  option: string;
+  options: string[];
+  slug: string;
 }
 
 export interface MetaData {
@@ -322,4 +327,21 @@ export interface Variation {
 
 export interface Self {
   href: string;
+}
+
+export interface WooCommerceCategory {
+  id: number;
+  name: string;
+  slug: string;
+  parent: number;
+  description: string;
+  display: string;
+  image: Image;
+  menu_order: number;
+  count: number;
+  yoast_head_json: {
+    title: string;
+    og_description: string;
+  };
+  _links: Links;
 }

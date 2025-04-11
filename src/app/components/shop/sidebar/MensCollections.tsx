@@ -1,4 +1,3 @@
-import { Checkbox } from '@/components/ui/checkbox'
 import {
   AccordionItem,
   AccordionTrigger,
@@ -19,19 +18,19 @@ const MensCollections = () => {
           {/* Price Range Checkboxes */}
           <ul className='pt-2.5 [&>li]:flex [&>li]:justify-start [&>li]:items-center [&>li>label]:w-full [&>li>label]:cursor-pointer [&>li>button]:w-5 [&>li>button]:h-[18px] [&>li>button]:pb-[4px] [&>li>button]:rounded-[2px] [&>li>button]:border-[#888888] [&>li>button]:border-[1.5px] [&>li]:text-base [&>li]:text-[#999999] [&>li]:gap-x-2.5'>
             <li>
-              <Link href="/mens-leather-jackets">Men's Leather Jackets</Link>
+              <Link href="/mens-leather-jackets">Men&apos;s Leather Jackets</Link>
             </li>
             <li>
-              <Link href="/mens-bomber-jackets">Men's Bomber Jackets</Link>
+              <Link href="/mens-bomber-jackets">Men&apos;s Bomber Jackets</Link>
             </li>
             <li>
-              <Link href="/mens-biker-leather-jackets">Men's Biker Jackets</Link>
+              <Link href="/mens-biker-leather-jackets">Men&apos;s Biker Jackets</Link>
             </li>
             <li>
-              <Link href="/mens-suede-leather-jackets">Men's Suede Jackets</Link>
+              <Link href="/mens-suede-leather-jackets">Men&apos;s Suede Jackets</Link>
             </li>
             <li>
-              <Link href="/mens-vintage-leather-jackets">Men's Vintage Jackets</Link>
+              <Link href="/mens-vintage-leather-jackets">Men&apos;s Vintage Jackets</Link>
             </li>
           </ul>
         </AccordionContent>

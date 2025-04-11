@@ -9,7 +9,7 @@ import createDOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
 
 interface ProductLongDescriptionParams{
-  description: HTMLElement
+  description: string | undefined
 }
 
 const window = new JSDOM('').window;
@@ -25,7 +25,7 @@ const ProductAccordion = ({description}: ProductLongDescriptionParams) => {
       <AccordionItem value='description'>
         <AccordionTrigger>Description</AccordionTrigger>
         <AccordionContent>
-        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }} /> 
+        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description || '') }} /> 
         <h4 className='mt-4 font-semibold'>Feature</h4>
         <ul className='mt-2 space-y-3 [&>li]:bg-no-repeat [&>li]:bg-[length:21px_20px] [&>li]:bg-[left_center] [&>li]:pl-8'>
           <li className="bg-[url('/images/medal.png')]">

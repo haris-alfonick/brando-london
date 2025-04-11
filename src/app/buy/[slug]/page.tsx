@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { fetchWooCommerceProductBySlug } from "../../../utils/wooCommerceApi";
 import { Metadata } from 'next';
 import { JSDOM } from 'jsdom';
@@ -25,15 +26,15 @@ import Handler from "./handler";
 const window = new JSDOM('').window;
 const DOMPurify = createDOMPurify(window);
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
   const { slug } = await params;
 
   // Fetch product data
   const product = await fetchWooCommerceProductBySlug(slug).catch(() => null);
 
   // Fallback values
-  const metaTitle = product?.yoast_head_json.title || "Product Not Found";
-  const metaDescription = product?.yoast_head_json.og_description
+  const metaTitle = product?.yoast_head_json?.title || "Product Not Found";
+  const metaDescription = product?.yoast_head_json?.og_description
     ? stripHtmlTags(product.yoast_head_json.og_description)
     : "Description not available";
 
@@ -48,27 +49,30 @@ function stripHtmlTags(input: string): string {
   return input.replace(/<[^>]+>/g, '');
 }
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
+// interface Props {
+//   params: {
+//     slug: string;
+//   };
+// }
 
-export default async function ProductPage({ params }: Props) {
+export default async function ProductPage({ params }: any) {
   const { slug } = await params;
 
   // Fetch product data
   const product = await fetchWooCommerceProductBySlug(slug).catch(() => null);
-  const salePrice = product.price - 40;
-  const sale = salePrice.toFixed(2)
+  if (product) {
+    console.log(product.attributes);
+  }
+  // const salePrice = product.price - 40;
+  // const sale = salePrice.toFixed(2)
 
   if (!product) {
     return <h1>Product not found</h1>;
   }
 
-  const handleSelectedSize = (size: string | null) => {
-    console.log("Selected size from Attributes component:", size);
-  };
+  // const handleSelectedSize = (size: string | null) => {
+  //   console.log("Selected size from Attributes component:", size);
+  // };
   
   return (
     <div>
@@ -84,7 +88,7 @@ export default async function ProductPage({ params }: Props) {
               <span>{product.categories[0].name}</span>
               <h1>{product.name}</h1>
               <Price price={product.price} productPage={true} /> 
-              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(product.short_description) }} /> 
+              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(product.short_description || '') }} /> 
 
             </div>
             <Handler attributes={product.attributes} productId={product.id} productName={product.name} image={product.images[0].src} price={product.price} />

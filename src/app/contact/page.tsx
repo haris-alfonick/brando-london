@@ -1,13 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Input } from '@/components/ui/input' // Shadcn UI Input
-import { Textarea } from '@/components/ui/textarea' // Shadcn UI Textarea
-import { Button } from '@/components/ui/button' // Shadcn UI Button
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
-import { faLayerGroup, faMoneyCheck, faStore, faTruckFast, faUnlockKeyhole } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClipboard, faCreditCard, faUser } from '@fortawesome/free-regular-svg-icons'
 import BreadCrumbs from '../components/breadcrumbs'
 import ContactForm from '../components/ContactForm'
 

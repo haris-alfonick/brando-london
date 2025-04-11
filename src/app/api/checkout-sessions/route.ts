@@ -1,12 +1,40 @@
 import { NextRequest, NextResponse } from "next/server";
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+import Stripe from 'stripe';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: '2024-12-18.acacia',
+});
+
+interface CartItem {
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+}
+
+interface RequestBody {
+  items: CartItem[];
+  email: string;
+  billing: {
+    name: string;
+    address: string;
+    country: string;
+  };
+}
 
 export async function POST(req: NextRequest) {
-  const body = await req.json();
-  const { items, email, billing } = body;
-
   try {
-    const orangedItems = items.map((item: any) => ({
+    const body = await req.json() as RequestBody;
+    const { items, email, billing } = body;
+
+    if (!items || !email || !billing) {
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    const lineItems = items.map((item: CartItem) => ({
       price_data: {
         currency: 'usd',
         product_data: {
@@ -20,7 +48,6 @@ export async function POST(req: NextRequest) {
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
-      
       shipping_options: [
         {
           shipping_rate_data: {
@@ -43,23 +70,25 @@ export async function POST(req: NextRequest) {
           },
         }
       ],
-      line_items: orangedItems,
+      line_items: lineItems,
       mode: 'payment',
       success_url: `${process.env.HOST}/success`,
       cancel_url: `${process.env.HOST}/checkout`,
-      customer_email: email, // Autofills the email
-      
+      customer_email: email,
       metadata: {
         email,
-        shipping_name: "Haris",
-        shipping_address: "R-174",
-        shipping_country: "uni",
+        shipping_name: billing.name,
+        shipping_address: billing.address,
+        shipping_country: billing.country,
       },
     });
 
     return NextResponse.json({ sessionId: session.id });
-  } catch (error: any) {
-    console.error("Error creating Stripe session:", error.message);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    console.error("Error creating Stripe session:", error instanceof Error ? error.message : 'Unknown error');
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : 'An unexpected error occurred' },
+      { status: 500 }
+    );
   }
 }

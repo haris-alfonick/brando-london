@@ -7,7 +7,7 @@ const BlogPost = () => {
   return (
     <>
       <Navbar />
-      <BreadCrumbs />
+      <BreadCrumbs page="Blog" />
       <div className="bg-[linear-gradient(to_right,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/images/background1.png')] relative xl:h-[600px] lg:h-[500px] md:h-[350px] h-[300px] bg-cover bg-center bg-no-repeat">
         <div className='container mx-auto'>
           <div

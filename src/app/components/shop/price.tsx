@@ -1,5 +1,10 @@
-const Price = ({price, productPage}: any) => {
-  const salePrice = price - 40;
+interface PriceType {
+  price: string,
+  productPage: boolean
+}
+
+const Price = ({price, productPage}: PriceType) => {
+  const salePrice = Number(price) - 40;
   const sale = salePrice.toFixed(2)
   return(
     <>

@@ -18,22 +18,22 @@ const LeatherType = () => {
           {/* Price Range Checkboxes */}
           <ul className='pt-2.5 [&>li]:flex [&>li]:justify-start [&>li]:items-center [&>li>label]:w-full [&>li>label]:cursor-pointer [&>li>button]:w-5 [&>li>button]:h-[18px] [&>li>button]:pb-[4px] [&>li>button]:rounded-[2px] [&>li>button]:border-[#888888] [&>li>button]:border-[1.5px] [&>li]:text-base [&>li]:text-[#999999] [&>li]:gap-x-2.5'>
             <li>
-              <Link href="/mens-sheepskin-jackets">Men's Sheepskin Jackets</Link>
+              <Link href="/mens-sheepskin-jackets">Men&apos;s Sheepskin Jackets</Link>
             </li>
             <li>
-              <Link href="/mens-cowhide-jackets">Men's Cowhide Jackets</Link>
+              <Link href="/mens-cowhide-jackets">Men&apos;s Cowhide Jackets</Link>
             </li>
             <li>
-              <Link href="/mens-goatskin-jackets">Men's Goatskin Jackets</Link>
+              <Link href="/mens-goatskin-jackets">Men&apos;s Goatskin Jackets</Link>
             </li>
             <li>
-              <Link href="/womens-sheepskin-coats">Women's Sheepskin Coats</Link>
+              <Link href="/womens-sheepskin-coats">Women&apos;s Sheepskin Coats</Link>
             </li>
             <li>
-              <Link href="/womens-cowhide-coats">Women's Cowhide Coats</Link>
+              <Link href="/womens-cowhide-coats">Women&apos;s Cowhide Coats</Link>
             </li>
             <li>
-              <Link href="/womens-goatskin-coats">Women's Goatskin Coats</Link>
+              <Link href="/womens-goatskin-coats">Women&apos;s Goatskin Coats</Link>
             </li>
           </ul>
         </AccordionContent>

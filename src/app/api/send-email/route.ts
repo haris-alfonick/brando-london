@@ -1,6 +1,6 @@
 // app/api/contact/route.ts
 import { NextRequest, NextResponse } from "next/server";
-const { sendMail } = require('@/lib/mailer');
+import { sendMail } from '@/lib/mailer';
 
 export async function POST(req: NextRequest) {
   try {

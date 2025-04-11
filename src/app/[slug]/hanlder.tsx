@@ -1,11 +1,6 @@
 import { fetchWooCommerceCategoryBySlug } from "@/utils/wooCommerceApi";
 import { Metadata } from "next";
 
-interface CategoryHandlerParam {
-  title: string,
-  description: string
-}
-
 export async function CategoryHandler({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = await params;
 

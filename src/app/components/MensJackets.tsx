@@ -1,7 +1,6 @@
 import { fetchHomePageData } from '@/actions/FetchTabs'
 import ProductCard from './shop/sidebar/productCard'
-import { Product } from '@/utils/wooCommerceTypes'
-
+import { WooCommerceProduct } from '@/utils/wooCommerceApi'
 
 const MensJackets = async () => {
   const { mensJackets } = await fetchHomePageData();
@@ -13,7 +12,7 @@ const MensJackets = async () => {
             <h2>Mens Leather Jackets</h2>
           </div>
           <div className='grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3'>
-            {mensJackets.map((product: Product) => (
+            {mensJackets.map((product: WooCommerceProduct) => (
               <ProductCard key={product.id} product={product} relatedProduct={false} />
             ))}
           </div>

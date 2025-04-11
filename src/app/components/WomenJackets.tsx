@@ -1,5 +1,5 @@
 import { fetchHomePageData } from '@/actions/FetchTabs'
-import { Product } from '@/utils/wooCommerceTypes'
+import { WooCommerceProduct } from '@/utils/wooCommerceApi'
 import ProductCard from './shop/sidebar/productCard'
 
 const Womenjackets = async () => {
@@ -13,7 +13,7 @@ const Womenjackets = async () => {
             <h2>Women Leather Jackets</h2>
           </div>
           <div className='grid grid-cols-12 gap-x-7 md:gap-y-0 gap-y-3'>
-            {womenJackets.map((product: Product) => (
+            {womenJackets.map((product: WooCommerceProduct) => (
               <ProductCard key={product.id} product={product} relatedProduct={false} />
             ))}
           </div>

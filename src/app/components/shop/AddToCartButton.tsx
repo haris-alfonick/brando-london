@@ -9,7 +9,7 @@ import { useToast } from "@/hooks/use-toast"
 import { useRouter } from "next/navigation";
 
 type AddtoCardButtonParams = {
-  productId: any,
+  productId: number,
   name: string,
   image: string,
   price: string,
@@ -20,7 +20,7 @@ type AddtoCardButtonParams = {
 
 const AddToCartButton = ({productId, name, image, price, text, size, quantity}: AddtoCardButtonParams) => {
 
-  const [isClient, setIsClient] = useState(false);
+  // const [isClient, setIsClient] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -28,9 +28,9 @@ const AddToCartButton = ({productId, name, image, price, text, size, quantity}: 
   const router = useRouter()
 
   // Set isClient to true after component is mounted on the client side
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
   
   const dispatch = useAppDispatch();
 
@@ -60,7 +60,7 @@ const AddToCartButton = ({productId, name, image, price, text, size, quantity}: 
 
   if (!isVisible) return null;
 
-  const HandleAddTocart = (productId: string, isBuyNow:boolean) => {
+  const HandleAddTocart = (productId: number, isBuyNow:boolean) => {
     if(!size){
       toast({
         variant: "destructive",
@@ -69,7 +69,7 @@ const AddToCartButton = ({productId, name, image, price, text, size, quantity}: 
       return
     }
     const item = {
-      id: productId,
+      id: String(productId),
       name: name,
       price: parseFloat(price),
       quantity: quantity,
@@ -98,7 +98,7 @@ const AddToCartButton = ({productId, name, image, price, text, size, quantity}: 
           <button className="cart" onClick={() => HandleAddTocart(productId, false)}>Add to Cart</button>
         </div>
       ) : (
-        <button onClick={() => HandleAddTocart(productId)} className='cardIcons text-black hover:!bg-gray-300'>
+        <button onClick={() => HandleAddTocart(productId, false)} className='cardIcons text-black hover:!bg-gray-300'>
           <FontAwesomeIcon width={24} icon={faCartShopping} className='w-6 h-6' />
         </button>
       )}

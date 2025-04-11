@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export const POST = async (request: NextRequest) => {
   try {
-    const { amount, order_id, billing_details } = await request.json(); // Extract amount and order_id from request body
+    const { amount, order_id } = await request.json(); // Extract amount and order_id from request body
 
     // Create a PaymentIntent with order_id in metadata
     const paymentIntent = await stripe.paymentIntents.create({

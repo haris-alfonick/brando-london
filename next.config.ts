@@ -3,7 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['wp.brandolondon.com'], // Add other domains as needed
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'wp.brandolondon.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
 

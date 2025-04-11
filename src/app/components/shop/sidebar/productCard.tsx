@@ -1,15 +1,15 @@
-import { faEye, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Product } from '@/utils/wooCommerceTypes'
+import { WooCommerceProduct } from '@/utils/wooCommerceApi'
 import { Skeleton } from "@/components/ui/skeleton"
 import AddToCartButton from '../AddToCartButton'
 import Price from '../price'
 
 type ProductCardProps = {
-  product: Product;
+  product: WooCommerceProduct;
   relatedProduct: boolean
 };
 

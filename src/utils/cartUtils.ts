@@ -3,6 +3,7 @@ import { fetchWooCommerceProduct } from "@/utils/wooCommerceApi";
 interface CartItem {
   id: string;
   name: string;
+  image: string;
   quantity: number;
   price: number;
 }
@@ -14,7 +15,7 @@ interface CartTotals {
   total: number;
 }
 
-const TAX_RATE = 0.2; // Example tax rate (20%)
+// const TAX_RATE = 0.2; // Example tax rate (20%)
 
 /**
  * Updates cart items by fetching current prices and calculates totals.
@@ -30,10 +31,12 @@ export const updateCartAndCalculateTotals = async (
   for (const item of cartItems) {
     try {
       const product = await fetchWooCommerceProduct(item.id);
-      updatedCart.push({
-        ...item,
-        price: product.price, // Update with API price
-      });
+      if (product) {
+        updatedCart.push({
+          ...item,
+          price: parseFloat(product.price), // Convert string to number
+        });
+      }
     } catch (error) {
       console.error(`Error fetching product details for ID ${item.id}:`, error);
     }

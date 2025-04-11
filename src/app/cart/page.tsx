@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
 import BreadCrumbs from '../components/breadcrumbs'
-import RelatedProductCard from '../components/RelatedProduct'
 import CartTotal from './cartTotal'
 import CartItem from './cartItems'
 import Link from 'next/link'

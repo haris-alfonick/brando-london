@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { fetchProductsServerAction } from '@/actions/fetchProducts';
-import { Product } from '@/utils/wooCommerceTypes';
+import { WooCommerceProduct } from '@/utils/wooCommerceApi';
 import ProductCard from '../components/shop/sidebar/productCard';
 
 interface LoadMoreButtonProps {
@@ -14,8 +14,8 @@ interface LoadMoreButtonProps {
   categorySlug: string | ""
 }
 
-const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ initialPage, totalPages, totalProducts, minPrice, maxPrice, categorySlug }) => {
-  const [products, setProducts] = useState<Product[]>([]);
+const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ initialPage, totalPages, minPrice, maxPrice, categorySlug }) => {
+  const [products, setProducts] = useState<WooCommerceProduct[]>([]);
   const [page, setPage] = useState(initialPage);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);

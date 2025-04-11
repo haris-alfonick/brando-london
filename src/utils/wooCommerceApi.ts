@@ -1,8 +1,9 @@
 "use server"
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
+import { Image, Links } from './wooCommerceTypes';
 
 const api = new WooCommerceRestApi({
-  url: "https://wp.brandolondon.com",
+  url: process.env.WOOCOMMERCE_URL!,
   consumerKey: process.env.WOOCOMMERCE_KEY!,
   consumerSecret: process.env.WOOCOMMERCE_SECRET!,
   version: "wc/v3",
@@ -16,13 +17,95 @@ function handleError(error: unknown) {
   throw new Error("An unexpected error occurred.");
 }
 
-export async function sendOrderToWooCommerce(orderData: any) {
-  try {
-    const response = await api.post("orders", orderData);
-    return response
-  } catch (error: unknown) {
-    handleError(error);
-  }
+interface Address {
+  first_name: string;
+  last_name: string;
+  email?: string;
+  phone: string;
+  address_1: string;
+  city: string;
+  state: string;
+  country: string;
+  postalCode: string;
+}
+
+interface LineItem {
+  product_id: number;
+  quantity: number;
+}
+
+interface ShippingLine {
+  method_id: string;
+  method_title: string;
+  total: string;
+}
+
+export interface OrderData {
+  billing: Address;
+  shipping: Address;
+  line_items: LineItem[];
+  shipping_lines: ShippingLine[];
+}
+
+export interface WooCommerceProduct {
+  id: number;
+  name: string;
+  slug: string;
+  price: string;
+  regular_price: string;
+  sale_price: string;
+  average_rating: number;
+  images: Array<{
+    id: number;
+    src: string;
+    alt: string;
+    name: string;
+  }>;
+  attributes: Array<{
+    id: string | number;
+    name: string;
+    options: string[];
+    slug: string;
+  }>;
+  categories: Array<{
+    id: number;
+    name: string;
+    slug: string;
+  }>;
+  yoast_head_json?: {
+    title: string;
+    og_description: string;
+  };
+  short_description?: string;
+  description?: string;
+  related_ids?: number[];
+}
+
+interface WooCommerceCategory {
+  id: number;
+  name: string;
+  slug: string;
+  parent: number;
+  description: string;
+  display: string;
+  image: Image;
+  menu_order: number;
+  count: number;
+  yoast_head_json: {
+    title: string;
+    og_description: string;
+  };
+  _links: Links;
+}
+
+interface WooCommerceOrder {
+  id: number;
+  status: string;
+  total: string;
+  billing: Address;
+  shipping: Address;
+  line_items: LineItem[];
+  shipping_lines: ShippingLine[];
 }
 
 interface ProductFilters {
@@ -30,32 +113,33 @@ interface ProductFilters {
   max_price?: string;
   color?: string;
   size?: string;
-  rating?: number; // Optional
+  rating?: number;
   categorySlug?: string;
   per_page?: number;
   page?: number;
   featured?: boolean;
   bestSeller?: boolean;
-  newArrivals?: boolean; 
+  newArrivals?: boolean;
+  include?: string[];
 }
 
 export async function fetchWooCommerceProducts(filters?: ProductFilters) {
   try {
-    const params: Record<string, any> = {
+    const params: Record<string, string | number | boolean> = {
       per_page: filters?.per_page || 10,
       page: filters?.page || 1,
     };
 
-    let categoryInfo = null;
+    let categoryInfo: WooCommerceCategory | null = null;
 
     if (filters?.min_price) params.min_price = filters.min_price;
     if (filters?.max_price) params.max_price = filters.max_price;
 
     if (filters?.categorySlug) {
-      // Fetch category details from category slug
-      categoryInfo = await fetchWooCommerceCategoryBySlug(filters.categorySlug);
-      if (categoryInfo) {
-        params.category = categoryInfo.id; // Use the category ID in the product request
+      const category = await fetchWooCommerceCategoryBySlug(filters.categorySlug);
+      if (category) {
+        categoryInfo = category;
+        params.category = category.id;
       }
     }
 
@@ -72,16 +156,15 @@ export async function fetchWooCommerceProducts(filters?: ProductFilters) {
     }
 
     const response = await api.get("products", params);
-    let products = response.data;
+    let products: WooCommerceProduct[] = response.data;
 
-    // Safe rating filter
     if (filters && filters.rating !== undefined) {
-      products = products.filter((product: any) => product.average_rating >= filters.rating!);
+      products = products.filter((product) => product.average_rating >= filters.rating!);
     }
 
     return {
       products,
-      categoryName: categoryInfo?.name || null, // Include the category name
+      categoryName: categoryInfo?.name || null,
       totalProducts: response.headers["x-wp-total"],
       totalPages: response.headers["x-wp-totalpages"],
     };
@@ -91,11 +174,10 @@ export async function fetchWooCommerceProducts(filters?: ProductFilters) {
   }
 }
 
-
 export async function fetchWooCommerceProduct(productId: string) {
   try {
     const response = await api.get(`products/${productId}`);
-    return response.data;
+    return response.data as WooCommerceProduct;
   } catch (error: unknown) {
     handleError(error);
   }
@@ -104,7 +186,7 @@ export async function fetchWooCommerceProduct(productId: string) {
 export async function fetchWooCommerceProductBySlug(slug: string) {
   try {
     const response = await api.get("products", { slug });
-    return response.data[0]; // Return first matching product
+    return response.data[0] as WooCommerceProduct;
   } catch (error: unknown) {
     handleError(error);
   }
@@ -113,10 +195,10 @@ export async function fetchWooCommerceProductBySlug(slug: string) {
 export async function fetchWooCommerceCategories() {
   try {
     const response = await api.get("products/categories");
-    return response.data.map((category: any) => ({
+    return response.data.map((category: WooCommerceCategory) => ({
       id: category.id,
       name: category.name,
-    })); // Normalize response
+    }));
   } catch (error: unknown) {
     handleError(error);
   }
@@ -125,41 +207,37 @@ export async function fetchWooCommerceCategories() {
 export async function fetchWooCommerceCategoryBySlug(slug: string) {
   try {
     const response = await api.get("products/categories", { slug });
-    return response.data[0] // Normalize response
+    return response.data[0] as WooCommerceCategory;
   } catch (error: unknown) {
     handleError(error);
   }
 }
 
-export async function fetchRelatedProducts(relatedIds: string[]) {
+export async function fetchRelatedProducts(relatedIds: (number | string)[]) {
   try {
-    const params = {
-      include: relatedIds.join(","),
-      per_page: relatedIds.length,
-    };
-    const response = await api.get("products", params);
-    return response.data; // Return the related products
+    const { data } = await api.get("products", {
+      include: relatedIds.map(id => id.toString())
+    });
+    return data;
   } catch (error) {
-    console.error("Error fetching related products:", error);
-    throw new Error("Failed to fetch related products.");
+    handleError(error);
   }
 }
 
 export async function fetchAllReviews() {
   try {
-    
     const response = await api.get("products/reviews");
-    return response.data; // Return the related products
+    return response.data;
   } catch (error) {
-    console.error("Error fetching related products:", error);
-    throw new Error("Failed to fetch related products.");
+    console.error("Error fetching reviews:", error);
+    throw new Error("Failed to fetch reviews.");
   }
 }
 
-export async function createOrder(data:any) {
+export async function createOrder(data: OrderData) {
   try {
-    const response = await api.post("orders", data)
-    return response.data; // Return the related products
+    const response = await api.post("orders", data);
+    return response.data as WooCommerceOrder;
   } catch (error) {
     console.error("Error creating order:", error);
     throw new Error("Failed to create order.");

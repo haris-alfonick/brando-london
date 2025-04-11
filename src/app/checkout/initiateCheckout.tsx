@@ -20,7 +20,7 @@ const InitiateCheckout = () => {
   const data = {
     billing: billingInfo,
     shipping: shippingInfo,
-    line_items: cartItemsData.map(({ id, quantity }) => ({ product_id: id, quantity })),
+    line_items: cartItemsData.map(({ id, quantity }) => ({ product_id: Number(id), quantity })),
     shipping_lines: [
       {
         method_id: "flat_rate",
@@ -52,7 +52,7 @@ const InitiateCheckout = () => {
     };
 
     fetchCartData();
-  }, [cartItemsData]);
+  }, [cartItemsData, router]);
 
   if (cartItemsData.length <= 0) {
     return null; // Avoid rendering UI while redirecting

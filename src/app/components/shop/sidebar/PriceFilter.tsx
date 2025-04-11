@@ -1,10 +1,5 @@
 "use client";
-import { Slider } from '@/components/ui/slider' // Slider from ShadCN UI
-import { useSearchParams, useRouter } from "next/navigation";
-import { useState } from "react";
-import { Checkbox } from '@/components/ui/checkbox'
 import {
-  Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent
@@ -13,23 +8,23 @@ import Link from 'next/link';
 
 
 export default function PriceFilter() {
-  const [range, setRange] = useState([0, 400])
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  // const [range, setRange] = useState([0, 400])
+  // const router = useRouter();
+  // const searchParams = useSearchParams();
 
-  const [filters, setFilters] = useState({
-    min_price: range[0] || "",
-    max_price: range[1] || ""
-  });
+  // const [filters, setFilters] = useState({
+  //   min_price: range[0] || "",
+  //   max_price: range[1] || ""
+  // });
 
-  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFilters((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+  // const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  //   setFilters((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  // };
 
-  const applyFilters = () => {
-    const params = new URLSearchParams(filters as Record<string, string>).toString();
-    router.push(`/shop?min_price=${range[0]}&max_price=${range[1]}`);
-  };
+  // const applyFilters = () => {
+  //   const params = new URLSearchParams(filters as Record<string, string>).toString();
+  //   router.push(`/shop?min_price=${range[0]}&max_price=${range[1]}`);
+  // };
 
   return (
     <div>

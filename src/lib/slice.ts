@@ -1,4 +1,4 @@
-import { createSlice, nanoid, current } from '@reduxjs/toolkit'
+import { createSlice, nanoid } from '@reduxjs/toolkit'
 
 interface User {
   id: string

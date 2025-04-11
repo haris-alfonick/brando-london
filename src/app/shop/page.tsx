@@ -4,7 +4,6 @@ import ProductCard from '../components/shop/sidebar/productCard';
 import BreadCrumbs from '../components/breadcrumbs';
 import SideBar from '../components/shop/sidebar/SideBar';
 import { fetchProductsServerAction } from '@/actions/fetchProducts';
-import { Product } from '@/utils/wooCommerceTypes';
 import LoadMoreButton from './LoadMoreButton';
 import CustomizedNow from '../components/CustomizedNow';
 

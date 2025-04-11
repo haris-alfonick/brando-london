@@ -1,11 +1,13 @@
 import { fetchRelatedProducts } from '@/utils/wooCommerceApi'
 import ProductCard from './shop/sidebar/productCard'
+import { WooCommerceProduct } from '@/utils/wooCommerceApi'
 
 interface RelatedProductCardProps {
-  relatedIds: string[];
+  relatedIds?: (number | string)[];
 }
 
-const RelatedProductCard = async ({relatedIds}:RelatedProductCardProps) => {
+const RelatedProductCard = async ({relatedIds = []}:RelatedProductCardProps) => {
+  if (!relatedIds?.length) return null;
 
   const relatedProducts = await fetchRelatedProducts(relatedIds).catch(() => null);
 
@@ -17,7 +19,7 @@ const RelatedProductCard = async ({relatedIds}:RelatedProductCardProps) => {
         </div>
         <div className='overflow-x-auto m-w-full mt-5'>
           <div className='grid grid-cols-5 gap-x-7 md:gap-y-0 gap-y-3 min-w-[1200px]'>
-            {relatedProducts.map((product:any) => (
+            {relatedProducts?.map((product: WooCommerceProduct) => (
               <ProductCard key={product.id} product={product} relatedProduct={true} />
             ))}
           </div>

@@ -1,15 +1,18 @@
-
 "use client"
 import { useState } from "react"
 import IncrementCounter from "@/app/components/shop/Counter"
 import AddToCartButton from "@/app/components/shop/AddToCartButton"
-import { faHeart } from "@fortawesome/free-regular-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import CartButton from "@/app/components/productButton"
+
+interface Attribute {
+  id: string | number;
+  name: string;
+  slug: string;
+  options: string[];
+}
 
 interface AttributesProps {
-  attributes: any[];
-  productId: string;
+  attributes: Attribute[];
+  productId: number;
   productName: string;
   image: string;
   price: string;
@@ -25,7 +28,7 @@ const Handler = ({attributes, productId, productName, image, price}: AttributesP
   
   return(
     <>
-      {attributes.map((attribute: any) => (
+      {attributes.map((attribute) => (
         <div
           key={attribute.id}
           className="mt-6 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block"
@@ -33,7 +36,7 @@ const Handler = ({attributes, productId, productName, image, price}: AttributesP
           <strong>{attribute.name}</strong>
           <div className="block gap-x-2 mt-2 [&_label]:mr-1.5 [&_label]:mb-1.5 [&_label]:inline-block [&_span]:block">
             {attribute.name === "Color" ? (
-              attribute.options.map((color: any, idx: any) => (
+              attribute.options.map((color, idx) => (
                 <label key={idx} className="cursor-pointer">
                   <input
                     type="radio"
@@ -47,7 +50,7 @@ const Handler = ({attributes, productId, productName, image, price}: AttributesP
                 </label>
               ))
             ) : (
-              attribute.options.map((option: any, idx: any) => (
+              attribute.options.map((option, idx) => (
                 <label key={idx} className="cursor-pointer">
                   <input
                     type="radio"

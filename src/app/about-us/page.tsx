@@ -29,7 +29,7 @@ const AboutUs = () => {
           <div className="min-[1300px]:max-w-[1100px] m-auto grid grid-cols-1 justify-items-center text-center gap-y-10 items-center gap-x-14 sm:[&_h2]:text-4xl [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase [&_h2]:text-[#282828] [&_p]:text-[#888] sm:[&_p]:text-lg [&_p]:text-base [&_p]:pt-3">
             <div>
               <h2>WHY CHOOSE US</h2>
-              <p>We offer a wide range of stylish leather jackets that perfectly blend affordability and quality. Our dedicated marketing team constantly explores the latest fashion trends to meet the preferences of our global customers. With thousands of products available, we provide designs, sizes, and colors to suit every taste. Each jacket reflects our commitment to excellent value and customer satisfaction. Whether you're looking for timeless classics or modern trends, we have something for everyone. Choose us for quality, variety, and style at an unbeatable price.</p>
+              <p>We offer a wide range of stylish leather jackets that perfectly blend affordability and quality. Our dedicated marketing team constantly explores the latest fashion trends to meet the preferences of our global customers. With thousands of products available, we provide designs, sizes, and colors to suit every taste. Each jacket reflects our commitment to excellent value and customer satisfaction. Whether you&apos;re looking for timeless classics or modern trends, we have something for everyone. Choose us for quality, variety, and style at an unbeatable price.</p>
             </div>
             <div>
               <Image
@@ -65,6 +65,26 @@ const AboutUs = () => {
         </div>
       </section>
       <Footer />
+      {/* I am working on a wordpress woocommerce website, using flatsome theme
+      I am proding mobile repair service
+      I have 2 locations Seattle and Bellevue
+
+      what senario is that user comes to the website and select device repair like iPhone 14 pro max
+      he/she has option to wather to book an appointment if nears to location, or mail the device to the address for repair
+
+      Now the question is that when user add to cart "iPhone 14 pro max screen repair" on product page
+      and redirected to cart page 
+      now I want them to give them 3 options "Choose location 1", "Choose location 2", or mail it in
+
+      as per their selection I want to procceed further
+
+      if select location 1 or 2 means he/she wanted to book an appointment 
+      then display them a page with 10:00 am to 6:30 pm time slot with 30min gap and date selection as well
+      disable time slot if someone already selected e.g. if someone selected 11:30am on 2nd feb 2025 time slot then it sould be disabled for other users on perticular date only
+      how to achove above approach, what is the best method
+      then procceed further
+
+      if select mail it in don't display appointment system  */}
     </>
   )
 }

@@ -2,7 +2,7 @@
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useAppDispatch, useAppSelector } from "@/lib/hooks"
-import { setBillingInfo, setShippingInfo, setShippingSameAsBilling, } from "@/lib/features/checkout/orderSlice"
+import { setBillingInfo, setShippingInfo } from "@/lib/features/checkout/orderSlice"
 import debounce from "lodash.debounce";
 import { useEffect, useState } from "react"
 import { Country, State } from "country-state-city";
@@ -10,118 +10,92 @@ import { Country, State } from "country-state-city";
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea"
-import PaymentOptions from "./paymentOptions"
-import PlaceOrder from "./PlaceOrder"
-import { updateCartAndCalculateTotals } from "@/utils/cartUtils"
+
+interface AddressInfo {
+  first_name: string;
+  last_name: string;
+  phone: string;
+  address_1: string;
+  city: string;
+  state: string;
+  country: string;
+  postalCode: string;
+}
+
+interface BillingInfo extends AddressInfo {
+  email: string;
+}
 
 const BillingInformation = () => {
   const dispatch = useAppDispatch();
   const billing = useAppSelector((state) => state.order.billing);
-  const shipping = useAppSelector((state) => state.order.shipping)
   const isShippingSameAsBilling = useAppSelector(
     (state) => state.order.isShippingSameAsBilling
   );
   
-  const [localBilling, setLocalBilling] = useState(billing);
-  const [localShipping, setLocalShipping] = useState(shipping);
-  const [selectedCountry, SetSelectedCountry] = useState<any>()
-  const [selectedState, setSelectedState] = useState<string>();
-  const [selectedShippingCountry, SetSelectedShippingCountry] = useState<any>()
-  const [selectedShippingState, setSelectedShippingState] = useState<string>();
-  const [isSameShippng, setisSameShippng] = useState<boolean>(false);
+  const [localBilling, setLocalBilling] = useState<BillingInfo>(billing);
+  const [selectedCountry, setSelectedCountry] = useState<string>(billing.country || "");
+  const [selectedState, setSelectedState] = useState<string>(billing.state || "");
 
   // Debounced dispatch function
-  const debouncedDispatch = debounce((updatedBilling: any) => {
+  const debouncedDispatch = debounce((updatedBilling: BillingInfo) => {
     dispatch(setBillingInfo(updatedBilling));
-  }, 300);
-
-  const debouncedDispatchShipping = debounce((updatedShipping) => {
-    dispatch(setShippingInfo(updatedShipping));
   }, 300);
 
   const handleBillingChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     const updatedBilling = { ...localBilling, [name]: value };
-    setLocalBilling(updatedBilling); // Update local state for immediate feedback
-    debouncedDispatch(updatedBilling); // Dispatch after debounce delay
+    setLocalBilling(updatedBilling);
+    debouncedDispatch(updatedBilling);
 
-    const updatedShipping = { ...updatedBilling, email: undefined };
-    setLocalShipping(updatedShipping);
-    debouncedDispatchShipping(updatedShipping);
-
-    // future reference 
-    // if (isShippingSameAsBilling) {
-    //   const updatedShipping = { ...updatedBilling, email: undefined };
-      
-    //   setLocalShipping(updatedShipping);
-    //   debouncedDispatchShipping(updatedShipping);
-    // }
-  };
-  
-  const handleShippingChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    const updatedShipping = { ...localShipping, [name]: value };
-    setLocalShipping(updatedShipping);
-    debouncedDispatchShipping(updatedShipping);
+    if (isShippingSameAsBilling) {
+      const shippingInfo: Omit<BillingInfo, 'email'> = {
+        first_name: updatedBilling.first_name,
+        last_name: updatedBilling.last_name,
+        phone: updatedBilling.phone,
+        address_1: updatedBilling.address_1,
+        city: updatedBilling.city,
+        state: updatedBilling.state,
+        country: updatedBilling.country,
+        postalCode: updatedBilling.postalCode
+      };
+      dispatch(setShippingInfo(shippingInfo));
+    }
   };
 
   useEffect(() => {
     if (isShippingSameAsBilling) {
-      const { email, ...shippingInfo } = localBilling; // Exclude email
-      setLocalShipping(shippingInfo); // Exclude email from shipping
+      const shippingInfo: Omit<BillingInfo, 'email'> = {
+        first_name: localBilling.first_name,
+        last_name: localBilling.last_name,
+        phone: localBilling.phone,
+        address_1: localBilling.address_1,
+        city: localBilling.city,
+        state: localBilling.state,
+        country: localBilling.country,
+        postalCode: localBilling.postalCode
+      };
       dispatch(setShippingInfo(shippingInfo));
     }
-  }, [isShippingSameAsBilling, billing]);
+  }, [isShippingSameAsBilling, localBilling, dispatch]);
 
- const countries = Country.getAllCountries()
- 
- 
- useEffect(() => {
-  
-  if (billing.country) {
-    SetSelectedCountry(billing.country);
-  }
-  if (billing.state) {
-    setSelectedState(billing.state);
-  }
-  if(shipping.country){
-    SetSelectedShippingCountry(shipping.country)
-  }
-  if (shipping.state) {
-    setSelectedShippingState(shipping.state);
-  }
-}, [billing.country, billing.state, shipping.country, shipping.state]);
-
-const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
-  const cartItemsData = useAppSelector((state) => state.cart.items);
+  const countries = Country.getAllCountries();
 
   useEffect(() => {
-    const updateCart = async () => {
-      try {
-        const storedCart = cartItemsData;
-        if (!storedCart) return;
+    if (billing.country) {
+      setSelectedCountry(billing.country);
+    }
+    if (billing.state) {
+      setSelectedState(billing.state);
+    }
+  }, [billing.country, billing.state]);
 
-        const { updatedCart, subtotal, shipping, total } =
-          await updateCartAndCalculateTotals(storedCart);
-
-        setTotals({ subtotal, shipping, total });
-        localStorage.setItem("cart", JSON.stringify(updatedCart)); // Update localStorage
-
-      } catch (error) {
-        console.error("Error updating cart:", error);
-      }
-    };
-
-    updateCart();
-  }, [cartItemsData]);
-
-  return(
+  return (
     <>
       <div className='grid grid-cols-12 gap-x-5 gap-y-5 p-6 border rounded-xl [&_h3]:text-[#333333] [&_h3]:text-xl [&_h3]:font-medium [&>div>label]:block [&>div>label]:text-[#333333] [&>div>label]:mb-2.5'>
         <h3 className='col-span-12'>Contact Information</h3>
@@ -150,8 +124,8 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
           <Label htmlFor='number'>Country </Label>
           <Select onValueChange={(value) => {
             const updatedBilling = { ...localBilling, country: value };
-            SetSelectedCountry(value)
-            setLocalBilling(updatedBilling); // Update local state
+            setSelectedCountry(value);
+            setLocalBilling(updatedBilling);
             debouncedDispatch(updatedBilling);
           }} value={selectedCountry} required>
             <SelectTrigger>
@@ -170,8 +144,8 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
           <Label htmlFor='number'>Region/State </Label>
           <Select onValueChange={(value) => {
             const updatedBilling = { ...localBilling, state: value };
-            setSelectedState(value)
-            setLocalBilling(updatedBilling); // Update local state
+            setSelectedState(value);
+            setLocalBilling(updatedBilling);
             debouncedDispatch(updatedBilling);
           }} value={selectedState} required>
             <SelectTrigger>
@@ -205,9 +179,8 @@ const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
           />
         </div>
       </div>
-      {/* <PlaceOrder total={totals.total} /> */}
     </>
-  )
-}
+  );
+};
 
-export default BillingInformation
+export default BillingInformation;

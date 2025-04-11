@@ -1,9 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { fetchWooCommerceCategories } from "@/utils/wooCommerceApi";
 
 const CategoryList = async () => {
-  const categories = await fetchWooCommerceCategories().catch(() => null);
   
   return (
     <section className="followUp bg-[#333333] px-5 md:pb-20 md:py-16 py-10 pb-14">
@@ -38,7 +36,7 @@ const CategoryList = async () => {
                 width={500}
                 height={100}
                 className="w-full h-auto" />
-              <strong>Men's Coats</strong>
+              <strong>Men&apos;s Coats</strong>
             </Link>
 
             <Link href="/womens-coats" className="relative item4 md:col-span-3 col-span-6">
@@ -48,7 +46,7 @@ const CategoryList = async () => {
                 width={500}
                 height={100}
                 className="w-full h-auto" />
-              <strong>Women's Coats</strong>
+              <strong>Women&apos;s Coats</strong>
             </Link>
           </div>
         </div>

@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 import Image from 'next/image'
 import BreadCrumbs from '../components/breadcrumbs'
-import RelatedProductCard from '../components/RelatedProduct'
 
 const TableDemo = () => {
   return (

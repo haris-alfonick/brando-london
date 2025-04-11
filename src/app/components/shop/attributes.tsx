@@ -1,23 +1,28 @@
 "use client";
 
-import { useState } from "react";
+interface Attribute {
+  id: string | number;
+  name: string;
+  slug: string;
+  options: string[];
+}
 
 type AttributesProps = {
-  attributes: any[];
+  attributes: Attribute[];
   onSelectedSizeChange: (size: string | null) => void;
 };
 
 const Attributes = ({ attributes, onSelectedSizeChange }: AttributesProps) => {
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  // const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
   const handleSizeChange = (size: string) => {
-    setSelectedSize(size);
+    // setSelectedSize(size);
     onSelectedSizeChange(size);
   };
 
   return (
     <>
-      {attributes.map((attribute: any) => (
+      {attributes.map((attribute) => (
         <div
           key={attribute.id}
           className="mt-6 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block"
@@ -25,7 +30,7 @@ const Attributes = ({ attributes, onSelectedSizeChange }: AttributesProps) => {
           <strong>{attribute.name}</strong>
           <div className="flex gap-x-2 mt-2">
             {attribute.name === "Color" ? (
-              attribute.options.map((color: any, idx: any) => (
+              attribute.options.map((color, idx) => (
                 <label key={idx} className="cursor-pointer">
                   <input
                     type="radio"
@@ -39,7 +44,7 @@ const Attributes = ({ attributes, onSelectedSizeChange }: AttributesProps) => {
                 </label>
               ))
             ) : (
-              attribute.options.map((option: any, idx: any) => (
+              attribute.options.map((option, idx) => (
                 <label key={idx} className="cursor-pointer">
                   <input
                     type="radio"

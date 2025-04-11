@@ -1,6 +1,4 @@
 import React from 'react'
-import ProductAccordion from '../components/ProductAccordion'
-import IncrementCounter from '../components/shop/Counter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCcVisa,
@@ -13,12 +11,9 @@ import {
   faPinterestP
 } from '@fortawesome/free-brands-svg-icons'
 import { faClone } from '@fortawesome/free-regular-svg-icons'
-import Thumbnail from '../components/ProductThumbnail'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import BreadCrumbs from '../components/breadcrumbs'
-import RelatedProductCard from '../components/RelatedProduct'
 import Testimonial from '../components/Testimonial'
 import CartButton from '../components/productButton'
 

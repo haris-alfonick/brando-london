@@ -5,16 +5,22 @@ import { updateCartAndCalculateTotals } from "@/utils/cartUtils";
 import Link from "next/link";
 import Image from "next/image";
 import { useAppSelector } from "@/lib/hooks";
-import PlaceOrder from "../checkout/PlaceOrder";
-import { Skeleton } from "@/components/ui/skeleton";
 import SummaryLoading from "./loading";
 
 interface CartTotalProps {
   cartPage: boolean;
 }
 
+interface CartItems {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+}
+
 const CartTotal = ({ cartPage }: CartTotalProps) => {
-  const [cart, setCart] = useState<any[]>([]);
+  const [cart, setCart] = useState<CartItems[]>([])
   const [isVerified, setIsVerified] = useState(false);
   const [totals, setTotals] = useState({ subtotal: 0, shipping: 0, total: 0 });
   const cartItemsData = useAppSelector((state) => state.cart.items);
