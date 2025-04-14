@@ -36,12 +36,13 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
     <>
       <div className={`${product.id} ${relatedProduct ? 'lg:col-span-(need 5)' : 'lg:col-span-3 md:col-span-4 col-span-6'} group flex w-full flex-col overflow-hidden`}>
         <div
-          className='relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20'
+          className='relative w-full h-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20'
         >
           <Link href={`/buy/${product.slug}`} className='relative z-10'>
+          
               {isImageLoading && (
-                <div className="relative h-[500px] w-full">
-                  <Skeleton className="absolute inset-0 h-full w-full rounded-xl" />
+                <div className="relative h-full w-full">
+                  <Skeleton className="inset-0 h-full w-full rounded-xl" />
                 </div>
               )}
               <Image
