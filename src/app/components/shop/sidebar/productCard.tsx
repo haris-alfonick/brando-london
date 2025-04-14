@@ -1,3 +1,4 @@
+'use client'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,6 +8,7 @@ import { WooCommerceProduct } from '@/utils/wooCommerceApi'
 import { Skeleton } from "@/components/ui/skeleton"
 import AddToCartButton from '../AddToCartButton'
 import Price from '../price'
+import { useState } from 'react'
 
 type ProductCardProps = {
   product: WooCommerceProduct;
@@ -14,6 +16,7 @@ type ProductCardProps = {
 };
 
 const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
+  const [isImageLoading, setIsImageLoading] = useState(true);
 
   if(!product){
     return(
@@ -36,13 +39,20 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
           className='relative w-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20'
         >
           <Link href={`/buy/${product.slug}`} className='relative z-10'>
-            <Image
-              src={imageSrc}
-              alt={product.name || 'Product image'}
-              width={600}
-              height={100}
-              className='h-full w-full object-cover'
-            />
+              {isImageLoading && (
+                <div className="relative h-[500px] w-full">
+                  <Skeleton className="absolute inset-0 h-full w-full rounded-xl" />
+                </div>
+              )}
+              <Image
+                src={imageSrc}
+                alt={product.name || 'Product image'}
+                width={600}
+                height={100}
+                className={`h-full w-full object-cover ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                onLoad={() => setIsImageLoading(false)}
+                priority={true}
+              />
           </Link>
           <div className='absolute hidden lg:flex items-center w-fit mb-4 gap-x-2 transition-all duration-300 right-0 left-0 top-0 bottom-0 m-auto [&_.cardIcons]:rounded-full [&_.cardIcons]:bg-white [&_.cardIcons]:h-10 [&_.cardIcons]:w-10 [&_.cardIcons]:flex [&_.cardIcons]:justify-center [&_.cardIcons]:items-center group-hover:opacity-100 opacity-0 z-[99]'>
             <Link href={`/buy/${product.slug}`} className='cardIcons hover:!bg-gray-300'>
