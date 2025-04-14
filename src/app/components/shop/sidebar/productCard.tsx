@@ -13,7 +13,6 @@ type ProductCardProps = {
   relatedProduct: boolean
 };
 
-
 const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
 
   if(!product){

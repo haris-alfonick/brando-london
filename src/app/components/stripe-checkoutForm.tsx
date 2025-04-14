@@ -108,7 +108,6 @@ const StripeCheckOutForm = ({amount, data}: {amount: number, data: OrderData}) =
       setLoading(false);
     }
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <div className='lg:px-6 px-4 md:py-16 py-10'>
