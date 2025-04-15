@@ -23,7 +23,7 @@ const StarRating = ({ rating, reviewCount }: reviewStar) => {
   }
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 my-2">
       <div className="flex space-x-0.5">{stars}</div>
       <span className="text-sm text-[#6b7280]">
         ({reviewCount}{reviewCount === 1})

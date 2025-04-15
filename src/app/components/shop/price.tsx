@@ -8,7 +8,7 @@ const Price = ({price, productPage}: PriceType) => {
   const sale = salePrice.toFixed(2)
   return(
     <>
-      <div className={`flex items-center ${productPage ? 'gap-x-4 my-4' : 'gap-x-2 [&_span]:text-lg'}`}>
+      <div className={`flex items-center ${productPage ? 'gap-x-4 mb-4' : 'gap-x-2 [&_span]:text-lg'}`}>
         <span className={`${productPage ? 'text-xl lg:text-2xl' : 'text-[#282828]'} font-semibold`}>
           ${parseFloat(price).toFixed(2)}
         </span>

@@ -21,6 +21,7 @@ import Testimonial from '../../components/Testimonial'
 import Price from "@/app/components/shop/price";
 import SocialShare from "@/app/components/shop/socialShare";
 import Handler from "./handler";
+import StarRating from "@/app/components/review-star";
 
 // Set up DOMPurify for SSR
 const window = new JSDOM('').window;
@@ -87,6 +88,7 @@ export default async function ProductPage({ params }: any) {
 
               <span>{product.categories[0].name}</span>
               <h1>{product.name}</h1>
+              <StarRating rating={product.average_rating} reviewCount={product.rating_count} />
               <Price price={product.price} productPage={true} /> 
               <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(product.short_description || '') }} /> 
 
