@@ -1,12 +1,8 @@
 'use client'
-import { faEye } from '@fortawesome/free-regular-svg-icons'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import Image from 'next/image'
 import { WooCommerceProduct } from '@/utils/wooCommerceApi'
 import { Skeleton } from "@/components/ui/skeleton"
-import AddToCartButton from '../AddToCartButton'
 import Price from '../price'
 import { useState } from 'react'
 import StarRating from '../../review-star'
