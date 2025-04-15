@@ -60,9 +60,9 @@ export default async function ProductPage({ params }: any) {
 
   // Fetch product data
   const product = await fetchWooCommerceProductBySlug(slug).catch(() => null);
-  if (product) {
-    console.log(product.attributes);
-  }
+  // if (product) {
+  //   console.log(product);
+  // }
   // const salePrice = product.price - 40;
   // const sale = salePrice.toFixed(2)
 

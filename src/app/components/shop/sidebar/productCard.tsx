@@ -9,6 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 import AddToCartButton from '../AddToCartButton'
 import Price from '../price'
 import { useState } from 'react'
+import StarRating from '../../review-star'
 
 type ProductCardProps = {
   product: WooCommerceProduct;
@@ -16,6 +17,7 @@ type ProductCardProps = {
 };
 
 const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
+  
   const [isImageLoading, setIsImageLoading] = useState(true);
 
   if(!product){
@@ -55,23 +57,23 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
                 priority={true}
               />
           </Link>
-          <div className='absolute hidden lg:flex items-center w-fit mb-4 gap-x-2 transition-all duration-300 right-0 left-0 top-0 bottom-0 m-auto [&_.cardIcons]:rounded-full [&_.cardIcons]:bg-white [&_.cardIcons]:h-10 [&_.cardIcons]:w-10 [&_.cardIcons]:flex [&_.cardIcons]:justify-center [&_.cardIcons]:items-center group-hover:opacity-100 opacity-0 z-[99]'>
+          {/* <div className='absolute hidden lg:flex items-center w-fit mb-4 gap-x-2 transition-all duration-300 right-0 left-0 top-0 bottom-0 m-auto [&_.cardIcons]:rounded-full [&_.cardIcons]:bg-white [&_.cardIcons]:h-10 [&_.cardIcons]:w-10 [&_.cardIcons]:flex [&_.cardIcons]:justify-center [&_.cardIcons]:items-center group-hover:opacity-100 opacity-0 z-[99]'>
             <Link href={`/buy/${product.slug}`} className='cardIcons hover:!bg-gray-300'>
               <FontAwesomeIcon width={24} icon={faEye} className='w-[24px] h-[24px]' />
             </Link>
-            {/* <button className='cardIcons text-red-700 hover:!bg-gray-300'>
-              <FontAwesomeIcon width={24} icon={faHeart} className='w-[24px] h-[24px]' />
-            </button> */}
             <AddToCartButton productId={product.id} name={product.name} image={imageSrc} price={product.price} text={""} size="" quantity={1} />
-          </div>
-          <div className='cardIcons absolute top-2 right-2 flex justify-between gap-x-2 items-center py-0.5 px-2.5 bg-white z-[999] [&>span]:font-semibold'>
+          </div> */}
+          {/* <div className='cardIcons absolute top-auto -bottom-3 right-2 flex justify-between gap-x-2 items-center py-0.5 px-2.5 bg-white z-[999] [&>span]:font-semibold'>
             <FontAwesomeIcon width={14} icon={faStar} className='text-[#eae640]' />
             <span>4.9</span>
-          </div>
+          </div> */}
         </div>
         <div className='py-3'>
           <Price price={product.price} productPage={false} />
-          <p className='leading-5 py-1 pb-3 text-base'>{product.name}</p>
+          <StarRating rating={product.average_rating} reviewCount={product.rating_count} />
+          <Link href={`/buy/${product.slug}`}>
+            <p className='leading-5 py-1 pb-3 text-base group-hover:text-[#ab1e23]'>{product.name}</p>
+          </Link>
         </div>
       </div>
     </>

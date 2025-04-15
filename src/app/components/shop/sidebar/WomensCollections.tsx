@@ -16,7 +16,7 @@ const WomensCollections = () => {
         </AccordionTrigger>
         <AccordionContent>
           {/* Price Range Checkboxes */}
-          <ul className='pt-2.5 [&>li]:flex [&>li]:justify-start [&>li]:items-center [&>li>label]:w-full [&>li>label]:cursor-pointer [&>li>button]:w-5 [&>li>button]:h-[18px] [&>li>button]:pb-[4px] [&>li>button]:rounded-[2px] [&>li>button]:border-[#888888] [&>li>button]:border-[1.5px] [&>li]:text-base [&>li]:text-[#999999] [&>li]:gap-x-2.5'>
+          <ul className='pt-2.5 [&>li]:flex [&>li]:justify-start [&>li]:items-center [&>li>label]:w-full [&>li>label]:cursor-pointer [&>li>button]:w-5 [&>li>button]:h-[18px] [&>li>button]:pb-[4px] [&>li>button]:rounded-[2px] [&>li>button]:border-[#888888] [&>li>button]:border-[1.5px] [&>li]:text-base [&>li>a:hover]:text-[#ab1e23] [&>li]:text-[#999999] [&>li]:gap-x-2.5'>
             <li>
               <Link href="/womens-leather-jackets">Women&apos;s Leather Jackets</Link>
             </li>

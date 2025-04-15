@@ -55,6 +55,7 @@ export interface WooCommerceProduct {
   regular_price: string;
   sale_price: string;
   average_rating: number;
+  rating_count: number;
   images: Array<{
     id: number;
     src: string;

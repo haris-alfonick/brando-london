@@ -24,7 +24,7 @@ const Footer = () => {
 							<Link href='/about-us'>About Us</Link>
 							<Link href='/shop'>Shop</Link>
 							<Link href='/contact'>Contact Us</Link>
-							<Link href='#'>Blog</Link>
+							{/* <Link href='#'>Blog</Link> */}
 						</div>
 					</div>
 					<div className="lg:col-span-2 sm:col-span-4 col-span-6">
