@@ -84,6 +84,7 @@ export default async function ProductPage({ params }: any) {
           <Thumbnail images={product.images} />
           {/* Product Details Section */}
           <div className='md:col-span-6 col-span-12'>
+            <div className="md:sticky md:top-4">
             <div className='[&>span]:text-gray-500 [&>span]:block [&>span]:tracking-wide [&>span]:uppercase [&>span]:text-[13px] [&_h1]:text-2xl [&_h1]:lg:text-3xl [&_h1]:font-semibold [&_h1]:mt-2 [&>p]:text-sm [&>p]:text-gray-600'>
 
               <span>{product.categories[0].name}</span>
@@ -128,6 +129,7 @@ export default async function ProductPage({ params }: any) {
             </div>
 
             <ProductAccordion description={product.description} />
+             </div>
           </div>
         </section>
         <Testimonial />

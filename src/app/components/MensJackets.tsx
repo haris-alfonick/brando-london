@@ -21,4 +21,5 @@ const MensJackets = async () => {
     </>
   )
 }
-export default MensJackets
+export default MensJackets;
+

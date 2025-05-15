@@ -12,7 +12,7 @@ const Price = ({price, productPage}: PriceType) => {
         <span className={`${productPage ? 'text-xl lg:text-2xl' : 'text-[#282828]'} font-semibold`}>
           ${parseFloat(price).toFixed(2)}
         </span>
-        <span className='line-through text-gray-500'>${sale}</span>
+        <span className='line-through text-xl lg:text-[23px] text-gray-500'>${sale}</span>
         {productPage && (
           <span className='text-sm bg-gray-800 text-white px-2 py-1 rounded'>
             Save 33%

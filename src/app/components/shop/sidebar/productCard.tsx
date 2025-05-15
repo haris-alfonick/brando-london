@@ -48,7 +48,7 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
                 alt={product.name || 'Product image'}
                 width={600}
                 height={100}
-                className={`h-full w-full object-cover ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                className={`h-full w-full group-hover:scale-110 transition-all duration-500 object-cover ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                 onLoad={() => setIsImageLoading(false)}
                 priority={true}
               />
