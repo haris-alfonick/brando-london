@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
+	const currentYear = new Date().getFullYear();
 	return (
 		<footer className="bg-[#333] px-5">
 				<div className="grid grid-cols-12 lg:gap-y-0 gap-y-8 py-16 border-b border-b-[#525151] [&_p]:w-full [&_p]:pt-5 [&_p]:lg:w-[80%] [&_p]:sm:w-[44%] [&_p]:text-white gap-x-5 [&_p]:text-sm [&_a]:text-white [&_a]:text-sm [&_a]:block [&_a]:pb-2 [&_strong]:text-white [&_strong]:text-sm [&_strong]:pb-2.5 [&_strong]:block ">
@@ -93,7 +94,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className="text-white text-sm py-5 [&_strong]:font-semibold text-center">
-					<span>© 2024 <Link href="#">Brando London.</Link><strong> All right reserved</strong></span>
+					<span>© {currentYear} <Link href="#">Brando London.</Link><strong> All right reserved</strong></span>
 				</div>
 				
 		</footer>

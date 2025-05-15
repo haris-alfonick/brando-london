@@ -15,11 +15,11 @@ const FeatureProduct = async () => {
           <div className="text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold">
             <h2>FEATURE PRODUCTS</h2>
           </div>
-          <Tabs defaultValue="featured">
+          <Tabs defaultValue="newArrival">
             <TabsList className="flex justify-center bg-transparent mt-5 mb-6 [&>button]:text-base [&>button]:!shadow-none">
-              <TabsTrigger value="featured">Featured</TabsTrigger>
+              {/* <TabsTrigger value="featured">Featured</TabsTrigger> */}
               <TabsTrigger value="newArrival">New Arrival</TabsTrigger>
-              <TabsTrigger value="bestSeller">Best Seller</TabsTrigger>
+              {/* <TabsTrigger value="bestSeller">Best Seller</TabsTrigger> */}
             </TabsList>
 
             <TabsContent value="featured">

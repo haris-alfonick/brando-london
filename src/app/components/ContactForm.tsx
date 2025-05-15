@@ -59,7 +59,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="md:col-span-5 col-span-12 lg:[&_strong]:text-3xl md:[&_strong]:text-2xl [&_strong]:text-xl">
+    <div className="lg:[&_strong]:text-3xl md:[&_strong]:text-2xl [&_strong]:text-xl">
       <strong className="text-2xl font-semibold mb-6">Send Us a Message</strong>
       <form
         onSubmit={handleSubmit}
