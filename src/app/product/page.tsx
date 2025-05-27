@@ -42,10 +42,10 @@ const ProductDetails = () => {
 
               {/* Price */}
               <div className='flex items-center gap-x-4 my-4'>
+                <span className='line-through text-gray-500'>$59.00</span>
                 <span className='text-xl lg:text-2xl font-semibold'>
                   $229.00
                 </span>
-                <span className='line-through text-gray-500'>$59.00</span>
                 <span className='text-sm bg-gray-800 text-white px-2 py-1 rounded'>
                   Save 33%
                 </span>
