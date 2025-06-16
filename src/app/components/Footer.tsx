@@ -60,41 +60,41 @@ const Footer = () => {
 					<ul className="flex w-fit justify-start mt-5 space-x-4 [&_img]:transition-transform [&_img]:duration-300 [&_img]:ease-in-out [&_img:hover]:scale-110">
 					<li>
 							<Link href="#">
-								<img
+								<Image
 									src="/images/_Facebook.png"
 									width={28}
 									height={28}
-									alt="image"
+									alt="Facebbok"
 								/>
 							</Link>
 						</li>
 						<li>
 							<Link href="#">
-								<img
+								<Image
 									src="/images/_Instagram.png"
 									width={28}
 									height={28}
-									alt="image"
+									alt="Instagram"
 								/>
 							</Link>
 						</li>
 						<li>
 							<Link href="#">
-								<img
+								<Image
 									src="/images/_Twitter.png"
 									width={28}
 									height={28}
-									alt="image"
+									alt="Twitter"
 								/>
 							</Link>
 						</li>
 						<li>
 							<Link href="#">
-								<img
+								<Image
 									src="/images/_Linkedin.png"
 									width={28}
 									height={28}
-									alt="image"
+									alt="Linkedin"
 								/>
 							</Link>
 						</li>

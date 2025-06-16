@@ -187,7 +187,7 @@ CarouselContent.displayName = "CarouselContent"
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { index?: number }
->(({ className, index, ...props }, ref) => {
+>(({ className, ...props }, ref) => {
   const { orientation, selectedIndex } = useCarousel()
   const [localIndex, setLocalIndex] = React.useState<number | null>(null)
 
