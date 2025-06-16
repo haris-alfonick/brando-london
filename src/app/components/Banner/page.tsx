@@ -111,7 +111,7 @@ const HeroBanner = () => {
           </div>
         </div>
       </div>
-      <div className="bgMobile relative md:absolute h-fit bottom-0 top-0 left-0 right-0 m-auto md:max-w-[700px] max-w-full md:py-0 sm:py-20 py-12 pt-28 md:bg-none bg-no-repeat bg-cover bg-center sm:px-0 px-1.5 text-center [&>h1]:text-[#282828] sm:[&>h1]:text-[42px] [&>h1]:text-2xl [&>h1]:leading-tight [&>h1]:font-bold [&>h1]:uppercase [&>p]:font-semibold [&>p]:text-[#5f5f5f] [&>p]:py-5 [&>p]:pb-8 [&>p]:leading-6 sm:[&>p]:w-[415px] [&>p]:w-full [&>p]:m-auto [&>p]:text-lg [&_button]:bg-[#282828] [&_button]:text-white sm:[&_button]:w-44 [&_button]:w-32 sm:[&_button]:text-lg [&_button]:py-2.5 [&_button]:rounded-md m">   
+      <div className="bgMobile relative md:absolute h-fit bottom-0 top-0 left-0 right-0 m-auto md:max-w-[700px] max-w-full md:py-0 sm:py-20 py-12 pt-28 md:bg-none bg-no-repeat bg-cover bg-center sm:px-0 px-1.5 text-center [&>h1]:text-[#282828] sm:[&>h1]:text-[42px] [&>h1]:text-2xl [&>h1]:leading-tight [&>h1]:font-bold [&>h1]:uppercase [&>p]:font-semibold [&>p]:text-[#5f5f5f] [&>p]:py-5 [&>p]:pb-8 [&>p]:leading-6 sm:[&>p]:w-[415px] [&>p]:w-full [&>p]:m-auto [&>p]:text-lg [&_button]:bg-[#282828] [&_button]:text-white sm:[&_button]:w-44 [&_button]:w-32 sm:[&_button]:text-lg [&_button]:py-2.5 [&_button]:rounded-md">   
         <h1>Explore the latest Trends<span className="block">and timeless classics</span></h1>
         <p className="md:block hidden">Fashion is part of the daily air and it changes all the time with all events. Tou can even see the approaching of a revolution in clothes.</p>
         <div className="flex justify-center gap-x-3 max-md:pt-5">

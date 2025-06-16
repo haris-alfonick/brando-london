@@ -136,53 +136,54 @@ const Contact = () => {
           <div className='grid grid-cols-12 md:py-16 py-10'>
             <ul className='md:col-span-5 col-span-12 mb-5 [&_li]:lg:col-span-4 [&_li]:md:col-span-4 [&_li]:col-span-12 [&>h3]:font-semibold [&>h3]:text-[#333333] [&>h3]:xl:text-3xl [&>h3]:text-2xl [&>h3]:pb-7 [&_li]:lg-mb-5 [&_li]:mb-4 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block [&>h3>span]:md:block [&>h3>span]:inline [&>h3]:leading-9 [&>h3]:max-sm:leading-8'>
 
-                <h3>
-                  Don&apos;t find your answer. <span>Contact with us </span>
-                </h3>
-                <li className="bg-[url('/images/bxs_phone-call.png')] bg-[length:25px_25px]">
-                  <Link href='#'>+1012 3456 789</Link>
-                </li>
-                <li className="bg-[url('/images/ic_sharp-email.png')]">
-                  <Link href='#'>demo@gmail.com</Link>
-                </li>
-                <li className="bg-[url('/images/carbon_location-filled.png')] bg-[length:20px_3px]">
-                  <Link href='#'>
-                    132 Dartmouth Street Boston, <br /> Massachusetts 02156
-                    United States
-                  </Link>
-                </li>
+              <h3>
+                Don&apos;t find your answer. <span>Contact with us </span>
+              </h3>
+              <li className="bg-[url('/images/bxs_phone-call.png')] bg-[length:25px_25px]">
+                <Link href='#'>+1012 3456 789</Link>
+              </li>
+              <li className="bg-[url('/images/ic_sharp-email.png')]">
+                <Link href='#'>demo@gmail.com</Link>
+              </li>
+              <li className="bg-[url('/images/carbon_location-filled.png')] bg-[length:20px_3px]">
+                <Link href='#'>
+                  132 Dartmouth Street Boston, <br /> Massachusetts 02156
+                  United States
+                </Link>
+              </li>
 
-                {/* <div> */}
-                <div className='mt-6 [&_li]:w-[40px] [&_li]:list-none [&_span]:inline-block [&_span]:pr-4 [&_span>img]:w-[25px] '>
-                  <span>
-                    <Image
-                      src='/images/vector1.png'
-                      width={100}
-                      height={100}
-                      alt=''
-                    />
-                  </span>
-                  <span>
-                    <Image
-                      src='/images/vector2-1.png'
-                      width={100}
-                      height={100}
-                      alt=''
-                    />
-                  </span>
-                  <span>
-                    <Image
-                      src='/images/vector3-1.png'
-                      width={100}
-                      height={100}
-                      alt=''
-                    />
-                  </span>
-                </div>
-                {/* </div> */}
+              {/* <div> */}
+              <div className='mt-6 [&_li]:w-[40px] [&_li]:list-none [&_span]:inline-block [&_span]:pr-4 [&_span>img]:w-[25px] '>
+                <span>
+                  <Image
+                    src='/images/vector1.png'
+                    width={100}
+                    height={100}
+                    alt=''
+                  />
+                </span>
+                <span>
+                  <Image
+                    src='/images/vector2-1.png'
+                    width={100}
+                    height={100}
+                    alt=''
+                  />
+                </span>
+                <span>
+                  <Image
+                    src='/images/vector3-1.png'
+                    width={100}
+                    height={100}
+                    alt=''
+                  />
+                </span>
+              </div>
+              {/* </div> */}
             </ul>
-
-            <ContactForm />
+            <div className='md:col-span-5 col-span-12 ml-auto mr-0'>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </div>

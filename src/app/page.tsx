@@ -3,6 +3,8 @@ import dynamic from 'next/dynamic';
 import Navbar from "./components/Navbar/Navbar";
 import HeroBanner from "./components/Banner/page";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import TextSlider from "./components/TextSlider";
+import CounterSlider from "./components/CounterSlider";
 
 // Loading component
 const LoadingFallback = () => (
@@ -64,7 +66,7 @@ export default function Home() {
         <Navbar />
         <HeroBanner />
         <Slider />
-        <section className="relative z-[99] bg-white md:pt-5 md:py-0 py-10 pt-1 px-5">
+        <section className="relative z-[99] bg-white md:pt-5 md:py-0 py-10 pt-1 max-md:pb-2 px-5">
           <div className="container mx-auto">
             <div className="flex justify-center md:flex-row flex-col h-full lg:gap-x-12 md:gap-x-8 gap-x-0">
               <div className="md:order-1 order-2">
@@ -90,10 +92,12 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <TextSlider />
         <FeatureProduct />
         <CategoryList />
         <MensJackets />
         <Womenjackets />
+        <CounterSlider />
         <Testimonial />
         <CallUs />
         <Contact />

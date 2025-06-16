@@ -45,8 +45,8 @@ const Testimonial = () => {
         className="testimonialWrap [&_ul:first-of-type] py-10 pb-16 [&_p]:w-[95%] max-md:[&_ul_li]:!border-r-0"
       >
         {/* Logos */}
-          <div className="[&_p]:text-[#888] w-[90%] mx-auto relative after:conetnt-{} after:absolute after:w-full after:h-full after:bg-[url(/images/qoma.png)] after:bg-no-repeat after:bg-left-top after:top-0 after:left-0 pl-20 pt-12">
-            <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry’s that standards dummy text ever since the 1500s, when an unknown</p>
+          <div className="[&_p]:text-[#888] w-[90%] mx-auto relative after:conetnt-{} after:absolute after:w-full after:h-full after:bg-[url(/images/qoma-stars.webp)] after:bg-no-repeat after:bg-left-top after:top-0 after:left-0 pl-[4.3rem] pt-12">
+            <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry&apos;s that standards dummy text ever since the 1500s, when an unknown</p>
             <div className="flex justify-start items-center pt-4 gap-x-3 [&>img]:w-[52px] [&>img]:rounded-full [&>img]:border [&>img]:border-[#D9D9D9] [&>img]:p-1
             [&>strong]:relative [&>strong]:block [&>strong]:pl-7 [&>strong]:after:content-{} [&>strong]:after:absolute [&>strong]:after:top-0.5 [&>strong]:after:left-0 [&>strong]:after:bottom-0 [&>strong]:after:m-auto [&>strong]:after:w-5 [&>strong]:after:h-0.5 [&>strong]:after:bg-[#333]
             [&>strong]:text-[#333] [&>strong]:font-semibold [&>strong]:text-sm">
@@ -56,11 +56,11 @@ const Testimonial = () => {
                 width={100}
                 height={100}
                 />
-                <strong>Christina M./ From Canada</strong>
+                <strong>Christina M./ From UK</strong>
             </div>
           </div>
-          <div className="[&_p]:text-[#888] w-[90%] mx-auto relative after:conetnt-{} after:absolute after:w-full after:h-full after:bg-[url(/images/qoma.png)] after:bg-no-repeat after:bg-left-top after:top-0 after:left-0 pl-20 pt-12">
-            <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry’s that standards dummy text ever since the 1500s, when an unknown</p>
+          <div className="[&_p]:text-[#888] w-[90%] mx-auto relative after:conetnt-{} after:absolute after:w-full after:h-full after:bg-[url(/images/qoma-stars.webp)] after:bg-no-repeat after:bg-left-top after:top-0 after:left-0 pl-[4.3rem] pt-12">
+            <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry&apos;s that standards dummy text ever since the 1500s, when an unknown</p>
             <div className="flex justify-start items-center pt-4 gap-x-3 [&>img]:w-[52px] [&>img]:rounded-full [&>img]:border [&>img]:border-[#D9D9D9] [&>img]:p-1
             [&>strong]:relative [&>strong]:block [&>strong]:pl-7 [&>strong]:after:content-{} [&>strong]:after:absolute [&>strong]:after:top-0.5 [&>strong]:after:left-0 [&>strong]:after:bottom-0 [&>strong]:after:m-auto [&>strong]:after:w-5 [&>strong]:after:h-0.5 [&>strong]:after:bg-[#333]
             [&>strong]:text-[#333] [&>strong]:font-semibold [&>strong]:text-sm">
@@ -70,11 +70,11 @@ const Testimonial = () => {
                 width={100}
                 height={100}
                 />
-                <strong>Christina M./ From Canada</strong>
+                <strong>Tyler H./ From Canada</strong>
             </div>
           </div>
-          <div className="[&_p]:text-[#888] w-[90%] mx-auto relative after:conetnt-{} after:absolute after:w-full after:h-full after:bg-[url(/images/qoma.png)] after:bg-no-repeat after:bg-left-top after:top-0 after:left-0 pl-20 pt-12">
-            <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry’s that standards dummy text ever since the 1500s, when an unknown</p>
+          <div className="[&_p]:text-[#888] w-[90%] mx-auto relative after:conetnt-{} after:absolute after:w-full after:h-full after:bg-[url(/images/qoma-stars.webp)] after:bg-no-repeat after:bg-left-top after:top-0 after:left-0 pl-[4.3rem] pt-12">
+            <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry&apos;s that standards dummy text ever since the 1500s, when an unknown</p>
             <div className="flex justify-start items-center pt-4 gap-x-3 [&>img]:w-[52px] [&>img]:rounded-full [&>img]:border [&>img]:border-[#D9D9D9] [&>img]:p-1
             [&>strong]:relative [&>strong]:block [&>strong]:pl-7 [&>strong]:after:content-{} [&>strong]:after:absolute [&>strong]:after:top-0.5 [&>strong]:after:left-0 [&>strong]:after:bottom-0 [&>strong]:after:m-auto [&>strong]:after:w-5 [&>strong]:after:h-0.5 [&>strong]:after:bg-[#333]
             [&>strong]:text-[#333] [&>strong]:font-semibold [&>strong]:text-sm">
@@ -84,7 +84,7 @@ const Testimonial = () => {
                 width={100}
                 height={100}
                 />
-                <strong>Christina M./ From Canada</strong>
+                <strong>Austin Y./ From UK</strong>
             </div>
           </div>
       </Carousel>

@@ -68,7 +68,7 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
           <Price price={product.price} productPage={false} />
           <StarRating rating={product.average_rating} reviewCount={product.rating_count} />
           <Link href={`/buy/${product.slug}`}>
-            <p className='leading-5 py-1 pb-3 text-base group-hover:text-[#ab1e23]'>{product.name}</p>
+            <p className='leading-5 py-1 pb-3 text-base group-hover:opacity-70 transition-opacity duration-300'>{product.name}</p>
           </Link>
         </div>
       </div>

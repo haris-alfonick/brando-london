@@ -54,9 +54,9 @@ const Contact = () => {
                   height={100}
                   className="rounded-lg"
                   />
-                   <ul className=' mt-5 [&_li]:mb-3 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block'>
+                   <ul className=' mt-5 [&_li]:mb-3 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:w-fit [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block'>
                 <li className="bg-[url('/images/bxs_phone-call.png')] bg-[length:25px_25px]">
-                  <Link href='#'>+1012 3456 789</Link>
+                  <Link href='tel:+10123456789'>+1012 3456 789</Link>
                 </li>
                 <li className="bg-[url('/images/ic_sharp-email.png')]">
                   <Link href='mailto:sales@brandolondon.com'>sales@brandolondon.com</Link>
@@ -68,7 +68,7 @@ const Contact = () => {
                 </li>
             </ul>
           </div>
-          <div className="md:col-span-6 col-span-12 md:-mt-24">
+          <div className="md:col-span-6 col-span-12 md:-mt-24 ml-auto mr-0">
             <ContactForm />
           </div>
         </div>

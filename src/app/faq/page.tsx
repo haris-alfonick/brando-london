@@ -75,7 +75,7 @@ export default function FAQSection() {
                 value={`item-${index}`} // Ensure the value is unique per AccordionItem
                 className="border-none bg-[#f5f5f5] rounded-lg"
               >
-                <AccordionTrigger className="flex justify-between !no-underline font-normal items-center px-4 py-3 text-[#333] text-base ">
+                <AccordionTrigger className="flex justify-between !no-underline font-normal items-center px-4 py-3 text-[#333] text-base">
                   {faq.question}
                 </AccordionTrigger>
                 
