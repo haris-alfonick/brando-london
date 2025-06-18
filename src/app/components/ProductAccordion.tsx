@@ -26,7 +26,7 @@ const ProductAccordion = ({description}: ProductLongDescriptionParams) => {
         <AccordionTrigger>Description</AccordionTrigger>
         <AccordionContent>
         <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description || '') }} /> 
-        <h4 className='mt-4 font-semibold'>Feature</h4>
+        <h4 className='mt-3 font-semibold'>Feature</h4>
         <ul className='mt-2 space-y-3 [&>li]:bg-no-repeat [&>li]:bg-[length:21px_20px] [&>li]:bg-[left_center] [&>li]:pl-8'>
           <li className="bg-[url('/images/Medal.png')]">
             Free 1 Year Warranty

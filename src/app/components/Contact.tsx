@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className="md:py-20 px-5 py-10">
       <div className="container mx-auto lg:max-w-[1200px] [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&>h2]:pb-5">
-        <h2>Create Your Custom <span className="md:block inline">Leather Jackets</span></h2>
+        <h2>Need Help <span className="md:block inline">Contact Us Anytime</span></h2>
         <div className="grid grid-cols-12 md:justify-items-center md:gap-x-5 max-md:gap-y-6">
           <div className="md:col-span-6 col-span-12 max-md:order-2">
              {/* <ul className="grid grid-cols-4 gap-x-2 [&>li>img]:rounded-lg [&>li>strong>span]:block [&>li>strong]:block [&>li>strong]:mt-2.5 [&>li>strong]:font-medium [&>li>strong]:leading-5">

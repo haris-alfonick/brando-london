@@ -71,7 +71,7 @@ const HeroBanner = () => {
         <div className="parent1 flex flex-col">
           <div className="child child1" style={{transform: "translate(0px, -100%)",}}>
             <Image
-              src="/images/banner1.webp"
+              src="/images/men-banner-left.webp"
               alt="Image 1"
               className="w-full h-full object-cover"
               width={2000}
@@ -80,11 +80,11 @@ const HeroBanner = () => {
           </div>
           <div className="child" style={{transform: "translate(0px, -100%)",}}>
             <Image
-              src="/images/banner3.webp"
-              alt="Image 2"
+              src="/images/women-banner-right.webp"
+              alt="Women Jackets"
               className="w-full h-full object-cover"
               width={2000}
-              height={100}
+              height={500}
             />
           </div>
         </div>
@@ -93,7 +93,7 @@ const HeroBanner = () => {
         <div className="parent2 flex flex-col">
           <div className="child">
             <Image
-              src="/images/banner4.webp"
+              src="/images/women-banner-left.webp"
               alt="Image 3"
               className="w-full h-full object-cover"
               width={2000}
@@ -102,7 +102,7 @@ const HeroBanner = () => {
           </div>
           <div className="child">
             <Image
-              src="/images/banner2.webp"
+              src="/images/men-banner-right.webp"
               alt="Image 4"
               className="w-full h-full object-cover"
               width={2000}
@@ -115,7 +115,7 @@ const HeroBanner = () => {
         <h1>Explore the latest Trends<span className="block">and timeless classics</span></h1>
         <p className="md:block hidden">Fashion is part of the daily air and it changes all the time with all events. Tou can even see the approaching of a revolution in clothes.</p>
         <div className="flex justify-center gap-x-3 max-md:pt-5">
-          <button onClick={() => router.push('mens-leather-jackets')} className="!bg-white !text-[#282828]">Men</button>
+          <button onClick={() => router.push('mens-leather-jackets')} className="!bg-white !text-[#282828] border border-[#282828]">Men</button>
           <button onClick={() => router.push('womens-leather-jackets')} className="cursor-pointer">Women</button>
         </div>
       </div>

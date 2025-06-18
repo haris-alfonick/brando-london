@@ -51,7 +51,7 @@ const SideBar = () => {
               'price',
               'mensCollection',
               'womensCollection',
-              'customerRating'
+              'LeatherType'
             ]}
           >
             <MensCollections />
