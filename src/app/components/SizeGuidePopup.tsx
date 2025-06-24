@@ -26,7 +26,7 @@ export default function SizeGuide() {
        width={180}
        height={180}
       />
-      <span>Men's Jacket</span>
+      <span>Men&apos;s Jacket</span>
       <strong className="text-xl max-md:text-2xl lg:text-3xl">Edward Cafe Racer Black Leather Jacket</strong>
       <div className="w-[93%] h-[2px] bg-gray-400 mt-[30px]"></div>
       <strong className="!text-[21px] max-lg:leading-[1] max-md:leading-[unset] !font-[400] block lg:pt-[15px] pt-[20px]">

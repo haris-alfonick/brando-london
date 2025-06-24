@@ -34,10 +34,10 @@ const MensJackets = dynamic(() => import("./components/MensJackets"), {
   ssr: true
 });
 
-const Womenjackets = dynamic(() => import("./components/WomenJackets"), {
-  loading: LoadingFallback,
-  ssr: true
-});
+// const Womenjackets = dynamic(() => import("./components/WomenJackets"), {
+//   loading: LoadingFallback,
+//   ssr: true
+// });
 
 const Testimonial = dynamic(() => import("./components/Testimonial"), {
   loading: LoadingFallback,
