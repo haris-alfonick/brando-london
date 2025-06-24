@@ -142,8 +142,8 @@ const Carousel = React.forwardRef<
               width: auto;
               height: 400px;
               object-fit: cover;
-              transition: .4s ease-in-out;
             }
+
               @media (max-width: 768px) {
                .carousel-item.active img {
               width: 100%;
@@ -151,7 +151,7 @@ const Carousel = React.forwardRef<
             }
               }
                .carousel-item img {
-    transition: 3s ease-in-out;
+    transition: height 4s ease-in-out, transform 4s ease-in-out;
   }
           `}</style>
         </div>
@@ -233,7 +233,7 @@ const CarouselPrevious = React.forwardRef<
       className={cn(
         "absolute h-8 w-8 rounded-full z-10",
         orientation === "horizontal"
-          ? "left-[-105px] top-auto bottom-0 max-md:top-[-45px] max-md:bottom-auto max-md:left-auto max-md:right-[40px]"
+          ? "left-[-75px] top-auto bottom-0 max-md:top-[-45px] max-md:bottom-auto max-md:left-auto max-md:right-[40px]"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -261,7 +261,7 @@ const CarouselNext = React.forwardRef<
       className={cn(
         "absolute h-8 w-8 rounded-full z-10",
         orientation === "horizontal"
-          ? "-left-16 top-auto bottom-0 max-md:top-[-45px] max-md:bottom-auto max-md:left-auto max-md:right-0"
+          ? "left-[-30px] top-auto bottom-0 max-md:top-[-45px] max-md:bottom-auto max-md:left-auto max-md:right-0"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -279,7 +279,7 @@ const CarouselDots = () => {
   const { selectedIndex, scrollTo, slidesCount } = useCarousel()
 
   return (
-    <div className="flex max-md:justify-center justify-start gap-2 mt-4 absolute left-[343px] 2xl:left-[295px] top-auto max-md:bottom-[-30px] bottom-0 max-md:left-0 max-md:right-0">
+    <div className="flex max-md:justify-center justify-start gap-2 mt-4 absolute left-[350px] 2xl:left-[303px] top-auto max-md:bottom-[-30px] bottom-0 max-md:left-0 max-md:right-0">
       {Array.from({ length: slidesCount }).map((_, index) => (
         <button
           key={index}

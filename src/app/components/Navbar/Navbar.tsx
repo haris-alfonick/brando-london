@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className='relative px-4 py-4 grid grid-cols-12 items-center bg-white z-[9999]'>
+      <nav className='relative px-4 py-4 grid grid-cols-12 items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
         {/* Logo */}
         <Link className='col-span-3 text-3xl font-bold leading-none' href='/'>
           <Image src='/images/logo.png' alt='logo' width={145} height={100} />
@@ -59,6 +59,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link href='/shop'>Shop</Link>
+          </li>
+          <li>
+            <Link href='/size-guide'>Size Guide</Link>
           </li>
           {/* <li><Link href="#">Blog</Link></li> */}
           <li>
@@ -126,7 +129,7 @@ const Navbar = () => {
                 <Link href='/shop'>Shop</Link>
               </li>
               <li>
-                <Link href='#'>Blog</Link>
+                <Link href='/size-guide'>Size Guide</Link>
               </li>
               <li>
                 <Link href='/contact'>Contact Us</Link>

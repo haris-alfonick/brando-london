@@ -96,7 +96,7 @@ export default function Home() {
         <FeatureProduct />
         <CategoryList />
         <MensJackets />
-        <Womenjackets />
+        {/* <Womenjackets /> */}
         <CounterSlider />
         <Testimonial />
         <CallUs />

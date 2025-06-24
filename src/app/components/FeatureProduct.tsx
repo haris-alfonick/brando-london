@@ -19,6 +19,8 @@ const FeatureProduct = async () => {
             <TabsList className="flex justify-center bg-transparent mt-5 mb-6 [&>button]:text-base [&>button]:!shadow-none">
               {/* <TabsTrigger value="featured">Featured</TabsTrigger> */}
               <TabsTrigger value="newArrival">New Arrival</TabsTrigger>
+              <TabsTrigger value="featured">Men Jackets</TabsTrigger>
+              <TabsTrigger value="bestSeller">Women  Jackets</TabsTrigger>
               {/* <TabsTrigger value="bestSeller">Best Seller</TabsTrigger> */}
             </TabsList>
 
