@@ -7,43 +7,70 @@ import Navbar from "../components/Navbar/Navbar";
       <>
         <Navbar />
         <BreadCrumbs page="Privacy Policy" />
-        <section className="px-5 md:py-12 py-10 [&_p]:text-base [&_ul_li]:text-[#888] [&_p]:pt-4 [&_p]:text-[#888] [&_strong]:text-xl [&_strong]:font-medium [&_strong]:text-[#333] [&_strong]:mt-8 [&_strong]:block">
-          <div className="container mx-auto">
-            <h2 className="text-2xl font-semibold uppercase text-center sm:mb-8 mb-3">
-              Privacy Policy & Security
-            </h2>
-            <p>We Brando London happy for your recognition Brando London.com for online jacket searching. Brando London is committed to make sure the privacy and protective the non-public data for all our online guests to our online store.</p>
-            <strong>Personal Information We May Collect</strong>
-           <p>At visiting this online store, we may pose you to enroll and/or give information that describes you, including yet not confined to your name, address, telephone number, email address, birth date, Visa or portion information, or other individual information.</p>
-           <p>As a piece of Brando London&apos;s progressing endeavors to furnish you with a charming and proficient shopping background, we may utilize the individual data you give to us to customize your shopping knowledge on this site. This data will likewise empower us to process, track and satisfy your request and to give you data we accept might bear some significance with you.</p>
-           <p>Unless required by law, or condition as depicted beneath, Brando London does not uncover any individual data to outsiders. Brando London maintains whatever authority is needed to make special cases, for example, when we trust that a crisis, unlawful action or some other sensible premise exists for advising or giving such data to the suitable powers. Likewise, Brando London may impart certain individual data to organizations who give certain administrations to us. We share just the data we accept is important for the execution of such administrations.
-           </p>
-           <p>We gather and store certain other data consequently at whatever point you cooperate with this site. For instance, we gather your IP address, program data and reference site area name each time you visit. We likewise gather data with respect to client movement examples and site utilization. This data is utilized to break down and enhance this site and to give our clients a satisfying shopping knowledge.</p>
-           <p>Every once in a while, we join forces with trusted outsiders to outline and work challenges or limited time occasions for our esteemed clients and guests. All Personally Identifiable Information (PII) and Public Information acquired through your interest in our limited time occasions will be liable to this Privacy Policy, and also the security strategies and practices of our special occasion accomplice. We will require, by contract that our accomplices treat any PII and Public Information that might be gotten through a challenge or limited time occasion in a way predictable with this Privacy Policy.</p>
-           <p>We hold your own data for whatever length of time that we accept is important to satisfy the purpose(s) for which it was gathered and to agree to material laws.</p>
-           <strong>Cookies and Superior Shopping Experience</strong>
-           <p>Brando London utilizes “cookies” to furnish you with an improved site experience. A cookie is a little information document that a site sends to your program, which is then put away on your framework and gathers data identified with your utilization of this site. Some of Brando London&apos;s pages use treats so we may better serve you when you come back to our site. Treats permit us to remember you when you come back to this site and screen and keep up data about your visits to tailor our site to your necessities.</p>
-           <p>You can set your program to inform you when you get a cookie, giving you the chance to choose whether to acknowledge it. On the off chance that you don&apos;t wish to have cookies on your framework, you can set your program to impair them, yet know that on the off chance that you debilitate treats, you might not have entry to specific elements and administrations that make your experience on this site more proficient and charming.</p>
-           <strong>Our Communication Preferences</strong>
-           <p>Brando London offers the individuals who agree to our email list notification ahead of time of offers, new stock, store openings, and other Brando London news. Email addresses gathered on this site are utilized inside and by our business accomplices. If you need to unsubscribe from our email data bank, you may utilize the connection gave at the base of each Brando London email. On the other hand, you may roll out improvements to your correspondence inclinations through your record online or contact Customer Service. In the occasion you decide to unsubscribe, we will quickly expel your email address from our mailing list. Kindly note that when you make an online buy from us, we will keep on confirming your request status and shipment by email. We may likewise need to get in touch with you by means of phone, email or postal mail with inquiries or data in regards to your request.</p>
-           <strong>Sharing Information </strong>
-           <p>We don&apos;t impart to others any individual data that you give to us through this site or through our Customer Service Department, aside from with your assent or as depicted in this Privacy Policy.</p>
-           <p>We draw in outsiders to perform administrations regarding the operation of our business. Case of these administrations incorporate installment preparing and approval, extortion insurance and credit hazard decrease, item customization, request satisfaction and transportation, showcasing and limited time material dispersion, site assessment, information examination and, where relevant, information purging.We give individual data to these outsiders, however we approve them to utilize this data just regarding the administrations they perform. </p>
-           <p>We additionally may offer you the chance to buy items and administrations gave by outsiders, for example, magazine memberships and service contract arranges. On the off chance that you buy any of these items or administrations, we will give your own data to the outsiders that give them, however we approve these outsiders to utilize this data just regarding the items and administrations they give.</p>
-           <p>We may impart non-individual data to our showcasing accomplices, promoters and others now and again. In case of such non-individual data incorporate the quantity of clients who went to this site amid a particular era or acquired a particular item through this site. This data by and large is partaken in an accumulated structure.</p>
-           <p>Similarly as with any business, it is conceivable that as our business creates, we may offer or purchase online stores or different resources. In such exchanges, data about clients frequently is among the exchanged resources. Under such circumstances, we would to the degree conceivable require the gaining gathering to take after the practices depicted in this Privacy Policy.</p>
-           <strong>Secure Shopping </strong>
-           <p>Orders placed on our website are scrambled utilizing Secure Socket Layer (SSL) innovation, the industry-standard validation and encryption innovation, to ensure exchanges. All together for SSL security to work appropriately, you should utilize a SSL empowered program. Information transmissions over the Internet or any remote system can&apos;t be ensured as totally secure, and you comprehend through your utilization of this site certain Internet security issues are outside our ability to control.</p>
-           <p>Orders placed on our website are scrambled utilizing Secure Socket Layer (SSL) innovation, the industry-standard validation and encryption innovation, to ensure exchanges. All together for SSL security to work appropriately, you should utilize a SSL empowered program. Information transmissions over the Internet or any remote system can&apos;t be ensured as totally secure, and you comprehend through your utilization of this site certain Internet security issues are outside our ability to control.</p>
-           <strong>Social Media </strong>
-           <p>We band together with trusted outsiders, including informal community, to associate with your interpersonal organizations. We give this sort of access to our site by outsiders and business accomplices to create enthusiasm for our items among the individuals from your interpersonal organizations furthermore to empower you to impart item interests to your system of companions.</p>
-           <p>The utilization of any components made accessible to you on our sites by an outsider may bring about data being gathered or shared about you by us or by the outsider. Data gathered or shared through any such outsider elements is viewed as Public Information under this security approach on the grounds that the outsider locales made it freely accessible. On the off chance that you don&apos;t need us to have the capacity to get to data about you from outsider locales you should train outsider destinations not to share the data. We can&apos;t control how your information is gathered, put away, utilized or shared by outsider destinations or to whom it is unveiled. If you don&apos;t mind make certain to audit the protection strategies and settings on your long range informal communication destinations to ensure you comprehend the data they are sharing. Brando London is not at risk for how these outsiders may utilize data gathered from or about you. Be that as it may, we do distinguish any territories on our sites where outsiders offer data about you.</p>
-           <strong>Policy Changes </strong>
-           <p>Brando London may intermittently overhaul this Privacy and Security Policy and will present any progressions on this site. By going by this site, you consent to acknowledge any progressions made to this arrangement. It would be ideal if you take note of that our Privacy and Security Policy is joined into this current site&apos;s Terms of Use.</p>
-           <strong>Contact Us </strong>
-           <p>If you have any queries regarding our Privacy & Security Policy, please don&apos;t hesitate to contact our Customer Service department.</p>
-          </div>
-        </section>
+        <section className='px-5 md:py-12 py-10 [&_p]:text-base [&_p]:pt-4 [&_ul_li]:text-[#888] [&_p]:text-[#888] [&_strong]:text-xl [&_strong]:font-medium [&_strong]:text-[#333] [&_strong]:mt-8 [&_strong]:block [&_p_a]:text-[#d13636] [&_li]:mt-1 [&_ul_li]:ml-4 [&_ol_li]:ml-5 [&_ol_li]:list-decimal [&_ul_li]:list-disc [&_b]:text-[#333] [&_li]:text-[#666] [&_b]:font-medium '>
+        <div className='container mx-auto'>
+          <h2 className='text-2xl font-semibold uppercase text-center sm:mb-8 mb-3'>Privacy Policy</h2>
+          <p>
+            At Brando London, your trust means everything to us. As a fashion brand committed to delivering exceptional quality and service, we also take our responsibility to protect your personal information seriously. This privacy policy outlines how we collect, use and safeguard your data whenever you interact with our website.
+          </p>
+          <strong>Our Commitment to Privacy</strong>
+          <p>
+            Brando London is more than just a fashion label, it’s a brand built on trust, craftsmanship and transparency. We understand that protecting your personal details is a top priority, which is why our privacy policy is designed to keep you informed and secure every step of the way.
+          </p>
+          <strong>What This Policy Covers</strong>
+          <p>
+            This privacy policy explains the type of data we collect when you visit our website, how that information is used and who may access it. It also highlights the steps we take to ensure your personal information is treated with confidentiality and care.
+          </p>
+          <strong>Information We Collect</strong>
+          <p>
+           If you place an order, we require specific personal information, including your full name, email address, billing and shipping address, along with contact number. However, when you browse on our website, we automatically collect general information such as:
+          </p>
+          <ul>
+            <li>Your IP address.
+            </li>
+            <li>Browser type.
+            </li>
+            <li>Time zone.
+            </li>
+            <li>Cookies installed on your device. 
+            </li>
+          </ul>
+          <p>
+            Additionally, as you navigate through the site, we gather data about the specific pages you view, the products you click on and the searches you make. This data helps us better understand your preferences and deliver a personalized shopping experience.
+            </p>
+          <strong>
+            How We Use Your Information
+          </strong>
+          <p>
+            We collect your personal details to provide you with a better service. This includes processing your order, confirming the transaction, sending shipping updates and providing you with tracking information. It also enables us to contact you regarding your order or to inform you of new arrivals, seasonal offers or exclusive details. Note that you can always block unwanted notifications.
+            </p>
+          <strong>
+            How Your Information Is Protected
+          </strong>
+          <p>
+            At Brando London, we use secure services and advanced encryption protocols to protect your data. All financial transactions are processed through a secure, encrypted payment gateway. We do not store your credit card details after the order is placed, and we never share or sell your private information to third-party companies for marketing or advertising purposes.
+          </p>
+          <strong>
+            Who Has Access To Your Data
+          </strong>
+          <p>
+            Only authorized members of our team and trusted courier partners have access to your personal information, and only for order-related purposes. Everyone involved in handling your information is bound by confidentiality and professional standards to ensure your privacy is never compromised.
+          </p>
+          <strong>
+            Your Privacy, Our Priority
+          </strong>
+          <p>
+            We make it a point to delete your personal data shortly after your order has been successfully processed and delivered. Our systems are designed with your privacy in mind. Clean, secure and compliant with global privacy norms. Your information remains with us only as long as it&apos;s needed to provide you with a smooth and safe shopping experience
+          </p>
+          <strong>
+            Contact Us for More Information
+          </strong>
+          <p>
+            If you have questions about how we manage your information or if you need help with anything related to our privacy practices, feel free to reach out to us. Our support team is available around the clock to ensure you get the help and answers you need. Email us anytime at <a href="mailto:">support@brandolondon.com</a>.
+          </p>
+
+        </div>
+      </section>
         <Footer />
       </>
     );
