@@ -93,15 +93,15 @@ export default function SizeGuide () {
               <Image
                 src='/images/tops.webp'
                 alt='image'
-                width={1500}
-                height={1500}
+                width={2000}
+                height={2000}
               />
               <h2>How to measure bottoms?</h2>
               <Image
                 src='/images/bottom.webp'
                 alt='image'
-                width={1500}
-                height={1500}
+                width={2000}
+                height={2000}
               />
             </div>
           </div>

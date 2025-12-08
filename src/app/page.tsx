@@ -78,9 +78,9 @@ export default function Home() {
                   className="md:w-[560px] w-full object-cover"
                 />
               </div>
-              <div className="lg:order-2 order-1 md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-[#333333] [&_p]:text-base [&_p]:text-[#757575] [&_p]:sm:w-[380px] [&_p]:py-4 [&_p]:pb-6">
-                <h2>DESIGNED FOR JACKETS <span className="md:block inline">JUST FOR YOU.</span></h2>
-                <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry that standards dummy text ever since the 1500s, when an unknown</p>            
+              <div className="lg:order-2 order-1 md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:uppercase [&_h2]:font-semibold [&_h2]:text-[#333333] [&_p]:text-base [&_p]:text-[#757575] [&_p]:sm:w-[380px] [&_p]:py-4 [&_p]:pb-6">
+                <h2>Aviation Style, <span className="md:block inline">Everyday Comfort.</span></h2>
+                <p>Every aviator and flight jacket is crafted with your comfort, confidence, and individuality in mind, delivering the perfect balance of classic aviation style and high-performance function.</p>            
                 <Image
                   src="/images/women-jackets.webp"
                   alt="Women Leather Jacket"

@@ -76,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <body
-        className={`${outfit.className} antialiased`}
+        className={`${outfit.className} antialiased overflow-x-hidden`}
       >
         <StoreProvider>
           {children}
