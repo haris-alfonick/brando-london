@@ -52,6 +52,7 @@ export interface WooCommerceProduct {
   name: string;
   slug: string;
   price: string;
+  price_html: string;
   regular_price: string;
   sale_price: string;
   average_rating: number;
@@ -129,7 +130,7 @@ export async function fetchWooCommerceProducts(filters?: ProductFilters) {
     const params: Record<string, string | number | boolean> = {
       per_page: filters?.per_page || 10,
       page: filters?.page || 1,
-      status: 'publish',
+      status: 'publish'
     };
 
     let categoryInfo: WooCommerceCategory | null = null;

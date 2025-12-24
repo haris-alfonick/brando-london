@@ -15,7 +15,7 @@ const Slider = () => {
     <div className="relative overflow-hidden container mx-auto bg-white md:py-14 py-7 z-[99]">
       <div className="text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold md:[&_p]:text-lg [&_p]:px-5 [&_p]:text-base [&_p]:font-medium [&_p]:py-4">
         <h2>AS FEATURE IN</h2>
-        <p>The Perfect Look and perfect Fit. The Perfect Look and perfect Fit</p>
+        <p>The world knows us for our expertise — that is why they recognize our efforts.</p>
       </div>
       <Carousel className="cursor-pointer">
         <CarouselContent>

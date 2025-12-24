@@ -68,7 +68,7 @@ const Contact = () => {
                 </li>
             </ul>
           </div>
-          <div className="md:col-span-6 col-span-12 md:-mt-24 ml-auto mr-0">
+          <div className="md:col-span-6 col-span-12 md:-mt-24 mr-0">
             <ContactForm />
           </div>
         </div>

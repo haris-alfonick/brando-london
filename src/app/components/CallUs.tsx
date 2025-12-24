@@ -23,7 +23,7 @@ const CallUs = () => {
 
                     <div className="md:col-span-6 col-span-12">
                         <Image
-                            src="/images/call-image.webp"
+                            src="/images/instagram-image.webp"
                             alt="Image"
                             width={500}
                             height={100}

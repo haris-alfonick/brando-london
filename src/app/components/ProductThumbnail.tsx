@@ -65,8 +65,8 @@ const Thumbnail = ({ images }: ProductThumbnailProps) => {
         <Image
           src={mainImage1}
           alt='Main Product Image'
-          width={500}
-          height={100}
+          width={1000}
+          height={1000}
           className='w-full h-auto rounded-lg mb-4 cursor-pointer select-none'
           draggable={false}
           onClick={() => {
@@ -82,7 +82,7 @@ const Thumbnail = ({ images }: ProductThumbnailProps) => {
               key={thumbnail.id}
               src={thumbnail.src}
               width={500}
-              height={100}
+              height={500}
               alt={thumbnail.name}
               draggable={false}
               onDragStart={(e) => e.preventDefault()}
@@ -114,7 +114,7 @@ const Thumbnail = ({ images }: ProductThumbnailProps) => {
 
           <button
             onClick={showPrev}
-            className='absolute left-4 sm:text-white text-[#ccc] text-2xl'
+            className='absolute left-4 sm:text-white text-[#333] text-2xl'
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
@@ -131,7 +131,7 @@ const Thumbnail = ({ images }: ProductThumbnailProps) => {
 
           <button
             onClick={showNext}
-            className='absolute right-4 sm:text-white text-[#ccc] text-2xl'
+            className='absolute right-4 sm:text-white text-[#333] text-2xl'
           >
             <FontAwesomeIcon icon={faChevronRight} />
           </button>

@@ -34,10 +34,10 @@ const MensJackets = dynamic(() => import("./components/MensJackets"), {
   ssr: true
 });
 
-const Womenjackets = dynamic(() => import("./components/WomenJackets"), {
-  loading: LoadingFallback,
-  ssr: true
-});
+// const Womenjackets = dynamic(() => import("./components/WomenJackets"), {
+//   loading: LoadingFallback,
+//   ssr: true
+// });
 
 const Testimonial = dynamic(() => import("./components/Testimonial"), {
   loading: LoadingFallback,
@@ -66,7 +66,12 @@ export default function Home() {
         <Navbar />
         <HeroBanner />
         <Slider />
-        <section className="relative z-[99] bg-white md:pt-5 md:py-0 py-10 pt-1 max-md:pb-2 px-5">
+        <MensJackets />  
+        <TextSlider />
+        <FeatureProduct />
+        <CategoryList />
+        {/* <Womenjackets /> */}
+         <section className="relative z-[99] bg-white md:pt-16 md:py-4 py-10 max-md:pb-2 px-5">
           <div className="container mx-auto">
             <div className="flex justify-center lg:flex-row flex-col h-full lg:gap-x-12 md:gap-x-8 gap-x-0">
               <div className="lg:order-1 order-2">
@@ -78,9 +83,9 @@ export default function Home() {
                   className="md:w-[560px] w-full object-cover"
                 />
               </div>
-              <div className="lg:order-2 order-1 md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-[#333333] [&_p]:text-base [&_p]:text-[#757575] [&_p]:sm:w-[380px] [&_p]:py-4 [&_p]:pb-6">
-                <h2>DESIGNED FOR JACKETS <span className="md:block inline">JUST FOR YOU.</span></h2>
-                <p>Lorem Ipsum is simply dummy text of the printings the types industry. Lorem Ipsum has been the industry that standards dummy text ever since the 1500s, when an unknown</p>            
+              <div className="lg:order-2 order-1 md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:uppercase [&_h2]:font-semibold [&_h2]:text-[#333333] [&_p]:text-base [&_p]:text-[#757575] [&_p]:sm:w-[380px] [&_p]:py-4 [&_p]:pb-6">
+                <h2>Aviation Style, <span className="md:block inline">Everyday Comfort.</span></h2>
+                <p>Every aviator and flight jacket is crafted with your comfort, confidence, and individuality in mind, delivering the perfect balance of classic aviation style and high-performance function.</p>            
                 <Image
                   src="/images/women-jackets.webp"
                   alt="Women Leather Jacket"
@@ -92,11 +97,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <TextSlider />
-        <FeatureProduct />
-        <CategoryList />
-        <MensJackets />
-        <Womenjackets />
         <CounterSlider />
         <Testimonial />
         <CallUs />

@@ -6,7 +6,7 @@ export default function TextSlider() {
   ];
 
   return (
-    <div className="overflow-hidden whitespace-nowrap w-full bg-white md:pt-16">
+    <div className="hidden overflow-hidden whitespace-nowrap w-full bg-white md:pt-16">
       <div className="flex w-min animate-scroll textSlider-scroll">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex max-md:text-[45px] text-[80px] font-bold uppercase">
