@@ -12,7 +12,7 @@ const Price = ({price, productPage}: PriceType) => {
         <span className={`${productPage ? 'text-xl lg:text-2xl' : 'text-[#282828]'} font-semibold`}>
           ${sale}
         </span>
-         <span className='line-through text-xl lg:text-[23px] text-gray-500'> ${parseFloat(price).toFixed(2)}</span>
+         <span className='line-through text-xl lg:text-[23px] text-gray-500 test'> ${parseFloat(price).toFixed(2)}</span>
         {productPage && (
           <span className='text-sm bg-gray-800 text-white px-2 py-1 rounded'>
              Save {Math.round(((parseFloat(price) - parseFloat(sale)) / parseFloat(price)) * 100)}%
