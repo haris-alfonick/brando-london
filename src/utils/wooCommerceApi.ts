@@ -184,6 +184,7 @@ export async function fetchWooCommerceProducts(filters?: ProductFilters) {
   }
 }
 
+
 export async function fetchWooCommerceProduct(productId: string) {
   try {
     const response = await api.get(`products/${productId}`);

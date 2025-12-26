@@ -1,5 +1,7 @@
+export const dynamic = "force-dynamic";
+
 import Image from "next/image";
-import dynamic from 'next/dynamic';
+import dynamicImport from "next/dynamic";
 import Navbar from "./components/Navbar/Navbar";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import CounterSlider from "./components/CounterSlider";
@@ -13,47 +15,47 @@ const LoadingFallback = () => (
 );
 
 // Lazy load components that are not immediately visible
-const Slider = dynamic(() => import("./components/Slider"), {
+const Slider = dynamicImport(() => import("./components/Slider"), {
   loading: LoadingFallback,
   ssr: true
 });
 
-const FeatureProduct = dynamic(() => import("./components/FeatureProduct"), {
+const FeatureProduct = dynamicImport(() => import("./components/FeatureProduct"), {
   loading: LoadingFallback,
   ssr: true
 });
 
-const CategoryList = dynamic(() => import("./components/categories"), {
+const CategoryList = dynamicImport(() => import("./components/categories"), {
   loading: LoadingFallback,
   ssr: true
 });
 
-const MensJackets = dynamic(() => import("./components/MensJackets"), {
+const MensJackets = dynamicImport(() => import("./components/MensJackets"), {
   loading: LoadingFallback,
   ssr: true
 });
 
-// const Womenjackets = dynamic(() => import("./components/WomenJackets"), {
+// const Womenjackets = dynamicImport(() => import("./components/WomenJackets"), {
 //   loading: LoadingFallback,
 //   ssr: true
 // });
 
-const Testimonial = dynamic(() => import("./components/Testimonial"), {
+const Testimonial = dynamicImport(() => import("./components/Testimonial"), {
   loading: LoadingFallback,
   ssr: true
 });
 
-const CallUs = dynamic(() => import("./components/CallUs"), {
+const CallUs = dynamicImport(() => import("./components/CallUs"), {
   loading: LoadingFallback,
   ssr: true
 });
 
-const Contact = dynamic(() => import("./components/Contact"), {
+const Contact = dynamicImport(() => import("./components/Contact"), {
   loading: LoadingFallback,
   ssr: true
 });
 
-const Footer = dynamic(() => import("./components/Footer"), {
+const Footer = dynamicImport(() => import("./components/Footer"), {
   loading: LoadingFallback,
   ssr: true
 });

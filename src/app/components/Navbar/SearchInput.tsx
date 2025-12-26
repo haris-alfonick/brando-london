@@ -41,7 +41,7 @@ export default function SearchInput() {
           {results.map((product) => (
             <li
               key={product.id}
-              onClick={() => router.push(`/product/${product.slug}`)}
+              onClick={() => router.push(`/buy/${product.slug}`)}
               className="flex items-center gap-3 p-2 hover:bg-gray-100 cursor-pointer"
             >
               {product.image && (

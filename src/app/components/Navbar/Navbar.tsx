@@ -7,6 +7,7 @@ import { useAppSelector } from '@/lib/hooks'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Input } from '@/components/ui/input'
+import SearchInput from './SearchInput'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -109,7 +110,7 @@ const Navbar = () => {
               Customer Care
               <FontAwesomeIcon
                 icon={faAngleDown}
-                className='text-xs transition-transform duration-300 group-hover:rotate-180'
+                className='w-3 h-3 text-xs transition-transform duration-300 group-hover:rotate-180'
               />
             </Link>
 
@@ -148,7 +149,8 @@ const Navbar = () => {
         {/* Desktop Sign In / Sign Up Buttons */}
         <div className='col-span-4 hidden lg:flex w-fit mr-0 ml-auto gap-x-6 items-center'>
           <div>
-            <Input type='text' placeholder='Search...' />
+            {/* <Input type='text' placeholder='Search...' /> */}
+            <SearchInput />
           </div>
           <div className=' relative'>
             <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>
@@ -255,7 +257,7 @@ const Navbar = () => {
                   Customer Care
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className='text-xs transition-transform duration-300 group-hover:rotate-180 float-right'
+                    className='w-3 h-3 text-xs transition-transform duration-300 group-hover:rotate-180 float-right'
                   />
                 </Link>
 
