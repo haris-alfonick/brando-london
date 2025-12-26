@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
             type: 'fixed_amount',
             fixed_amount: {
               amount: Math.floor(25 * 100),
-              currency: 'usd',
+              currency: 'gbp',
             },
             display_name: 'Shipping Charges',
             delivery_estimate: {

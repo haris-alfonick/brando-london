@@ -8,70 +8,95 @@ import Navbar from "../components/Navbar/Navbar";
         <Navbar />
         <BreadCrumbs page="Privacy Policy" />
         <section className='px-5 md:py-12 py-10 [&_p]:text-base [&_p]:pt-4 [&_ul_li]:text-[#888] [&_p]:text-[#888] [&_strong]:text-xl [&_strong]:font-medium [&_strong]:text-[#333] [&_strong]:mt-8 [&_strong]:block [&_p_a]:text-[#d13636] [&_li]:mt-1 [&_ul_li]:ml-4 [&_ol_li]:ml-5 [&_ol_li]:list-decimal [&_ul_li]:list-disc [&_b]:text-[#333] [&_li]:text-[#666] [&_b]:font-medium '>
-        <div className='container mx-auto'>
-          <h2 className='text-2xl font-semibold uppercase text-center sm:mb-8 mb-3'>Privacy Policy</h2>
-          <p>
-            At Brando London, your trust means everything to us. As a fashion brand committed to delivering exceptional quality and service, we also take our responsibility to protect your personal information seriously. This privacy policy outlines how we collect, use and safeguard your data whenever you interact with our website.
-          </p>
-          <strong>Our Commitment to Privacy</strong>
-          <p>
-            Brando London is more than just a fashion label, it’s a brand built on trust, craftsmanship and transparency. We understand that protecting your personal details is a top priority, which is why our privacy policy is designed to keep you informed and secure every step of the way.
-          </p>
-          <strong>What This Policy Covers</strong>
-          <p>
-            This privacy policy explains the type of data we collect when you visit our website, how that information is used and who may access it. It also highlights the steps we take to ensure your personal information is treated with confidentiality and care.
-          </p>
-          <strong>Information We Collect</strong>
-          <p>
-           If you place an order, we require specific personal information, including your full name, email address, billing and shipping address, along with contact number. However, when you browse on our website, we automatically collect general information such as:
-          </p>
-          <ul>
-            <li>Your IP address.
-            </li>
-            <li>Browser type.
-            </li>
-            <li>Time zone.
-            </li>
-            <li>Cookies installed on your device. 
-            </li>
-          </ul>
-          <p>
-            Additionally, as you navigate through the site, we gather data about the specific pages you view, the products you click on and the searches you make. This data helps us better understand your preferences and deliver a personalized shopping experience.
-            </p>
-          <strong>
-            How We Use Your Information
-          </strong>
-          <p>
-            We collect your personal details to provide you with a better service. This includes processing your order, confirming the transaction, sending shipping updates and providing you with tracking information. It also enables us to contact you regarding your order or to inform you of new arrivals, seasonal offers or exclusive details. Note that you can always block unwanted notifications.
-            </p>
-          <strong>
-            How Your Information Is Protected
-          </strong>
-          <p>
-            At Brando London, we use secure services and advanced encryption protocols to protect your data. All financial transactions are processed through a secure, encrypted payment gateway. We do not store your credit card details after the order is placed, and we never share or sell your private information to third-party companies for marketing or advertising purposes.
-          </p>
-          <strong>
-            Who Has Access To Your Data
-          </strong>
-          <p>
-            Only authorized members of our team and trusted courier partners have access to your personal information, and only for order-related purposes. Everyone involved in handling your information is bound by confidentiality and professional standards to ensure your privacy is never compromised.
-          </p>
-          <strong>
-            Your Privacy, Our Priority
-          </strong>
-          <p>
-            We make it a point to delete your personal data shortly after your order has been successfully processed and delivered. Our systems are designed with your privacy in mind. Clean, secure and compliant with global privacy norms. Your information remains with us only as long as it&apos;s needed to provide you with a smooth and safe shopping experience
-          </p>
-          <strong>
-            Contact Us for More Information
-          </strong>
-          <p>
-            If you have questions about how we manage your information or if you need help with anything related to our privacy practices, feel free to reach out to us. Our support team is available around the clock to ensure you get the help and answers you need. Email us anytime at <a href="mailto:">support@brandolondon.com</a>.
-          </p>
+          <div className='container mx-auto'>
+            <h2 className='text-2xl font-semibold uppercase text-center sm:mb-8 mb-3'>
+              Privacy Policy
+            </h2>
 
-        </div>
-      </section>
-        <Footer />
+            <p>
+              When shopping with Brando London, we strive to maintain trust and provide a
+              hassle-free experience. As your only hand fashion buddy, it is our responsibility
+              to offer a secure and reliable environment.
+            </p>
+            <p>
+              We craft our policies clearly and precisely to ensure a friendly online shopping
+              experience. As our customer, you must follow the instructions and cooperate with us
+              to ensure a smooth purchase.
+            </p>
+
+            <strong>What Data We Collect</strong>
+            <p>
+              Remember, our team is restricted to using your data for other methods. We have
+              experts who respect your privacy and our policies. So, all your personal and
+              financial data is used to make the transaction reliable and confirm the order. To
+              make all procedures hassle-free, we ask for:
+            </p>
+            <ul>
+              <li>Your Name:</li>
+              <li>Email Address:</li>
+              <li>Phone Number:</li>
+              <li>Shipping Address:</li>
+              <li>Payment Details:</li>
+            </ul>
+
+            <strong>How Do We Use Your Information?</strong>
+            <p>
+              We use this information to further process your order to ship to the accurate
+              address. If any issues arise, we will contact you immediately using your phone
+              number. Or your number will be helpful to the dispatch department in determining
+              your exact location.
+            </p>
+            <p>
+              The email address is used for order confirmation and to notify you of all necessary
+              updates, such as your order tracking number, whether the order is in dispatch, and
+              whether the order is confirmed successfully.
+            </p>
+            <p>
+              Also, our team is prohibited from forwarding or storing your data under any
+              condition. But it can be used in legal conditions to defend our brand against any
+              defamation.
+            </p>
+
+            <strong>Cookies Policies</strong>
+            <p>
+              We use cookies to make your experience reliable and mesmerizing. Whenever you
+              order from us again and again, you don’t have to type; we use cookies to recall your
+              information and identify you. Moreover, all data is safe and secure at Brando
+              London.
+            </p>
+
+            <strong>Who Has The Access</strong>
+            <p>
+              Your data is in safe hands. We do not sell or disclose our customers' personal
+              information to third parties. We only ask for specific details that are necessary
+              to place the order and for further processing. Except for our team and dispatchers,
+              no one has access to your personal information.
+            </p>
+
+            <strong>Customer’s Right</strong>
+            <p>
+              As a Brando London customer, you have the right to enjoy breathable online shopping
+              experience. We ensure every procedure is hassle-free, whether placing the order,
+              returning or exchanging, or choosing a payment method. That’s why we follow the
+              General Data Protection Regulation (GDPR/UK GDPR), which protects customer rights.
+            </p>
+
+            <strong>Contact Details</strong>
+            <p>
+              If you are struggling to understand any point or have any questions about the
+              product or our policies, please feel free to contact us at +1012 3456 789.
+            </p>
+            <p>
+              You can also email us at{' '}
+              <a href="mailto:sales@brandolondon.com">sales@brandolondon.com</a> or{' '}
+              <a href="mailto:support@brandolondon.com">support@brandolondon.com</a>
+            </p>
+            <p>
+              We love to hear from you and wish you a happy shopping at Brando London!
+            </p>
+          </div>
+        </section>
+      <Footer />
       </>
     );
   }

@@ -28,7 +28,7 @@ const StripeCheckOut = ({ total, data }: { total: number, data: OrderData }) => 
       options={{
         mode: "payment",
         amount: convertToSubCurreny(total),
-        currency: "usd",
+        currency: "gbp",
       }}
     >
       <StripeCheckOutForm amount={total} data={data} />

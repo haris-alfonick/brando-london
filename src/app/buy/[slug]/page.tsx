@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCcVisa,
   faCcMastercard,
-  faCcPaypal,
+  // faCcPaypal,
   faCcStripe,
   faCcDiscover
 } from '@fortawesome/free-brands-svg-icons'
@@ -19,7 +19,7 @@ import BreadCrumbs from '../../components/breadcrumbs'
 import RelatedProductCard from '../../components/RelatedProduct'
 import Testimonial from '../../components/Testimonial'
 import Price from "@/app/components/shop/price";
-import SocialShare from "@/app/components/shop/socialShare";
+// import SocialShare from "@/app/components/shop/socialShare";
 import Handler from "./handler";
 import StarRating from "@/app/components/review-star";
 
@@ -96,7 +96,7 @@ export default async function ProductPage({ params }: any) {
             </div>
             <Handler attributes={product.attributes} productId={product.id} productName={product.name} image={product.images[0].src} price={product.price} />
 
-            <div className='flex xl:flex-row flex-col mt-6 justify-between xl:items-center items-start max-xl:gap-y-2.5'>
+            {/* <div className='flex xl:flex-row flex-col mt-6 justify-between xl:items-center items-start max-xl:gap-y-2.5'>
               <div className='[&>span]:bg-no-repeat [&>span]:lg:bg-[center_left_0px] [&>span]:lg:pl-[30px] [&>span]:md:pl-6 [&>span]:pl-7 [&>span]:bg-contain [&>span]:bg-[center_left] [&>span:nth-child(2)]:ml-6'>
                 <span className="bg-[url('/images/heart.png')]">
                   Add to Wishlist
@@ -106,23 +106,26 @@ export default async function ProductPage({ params }: any) {
                 </span>
               </div>
               <SocialShare />
-            </div>
+            </div> */}
 
             {/* Delivery and Features Section */}
             <div className='mt-3.5 [&>p]:pl-8 [&>p]:text-[#333333] [&>p]:text-sm [&>p]:bg-no-repeat [&>p]:bg-[length:22px_20px] [&>p]:bg-left [&_strong]:font-semibold'>
-              <p className='bg-[url(/images/delivery.png)]'>
-                <strong>Estimated Delivery:</strong> Jul 30 - Aug 03
+              <p className='bg-[url(/images/shipping.png)]'>
+                <strong>Availability:</strong> In Stock
+              </p>
+              <p className='bg-[url(/images/delivery.png)] !bg-[length:22px_16px] mt-3.5'>
+                <strong>Free Shipping:</strong> USA, UK & Canada
               </p>
               <p className='bg-[url(/images/shipping.png)] !bg-[length:22px_16px] mt-3.5'>
-                <strong>Free Shipping & Returns:</strong> On all orders over $75
+                <strong>Returns:</strong> Hassle-Free 14-Day Returns
               </p>
             </div>
             <div className='mt-7 [&>p]:pb-1.5 [&>p]:text-[#333333] [&>p]:text-sm border p-3.5 rounded '>
               <p>100% Guarantee Safe Checkout</p>
-              <div className='flex justify-start gap-x-1.5 items-center [&_svg]:w-6 [&_svg]:h-8'>
+              <div className='flex justify-start gap-x-1.5 items-center [&_svg]:w-8 [&_svg]:h-10'>
                 <FontAwesomeIcon icon={faCcVisa} />
                 <FontAwesomeIcon icon={faCcMastercard} />
-                <FontAwesomeIcon icon={faCcPaypal} />
+                {/* <FontAwesomeIcon icon={faCcPaypal} /> */}
                 <FontAwesomeIcon icon={faCcStripe} />
                 <FontAwesomeIcon icon={faCcDiscover} />
               </div>
@@ -132,7 +135,7 @@ export default async function ProductPage({ params }: any) {
              </div>
           </div>
         </section>
-        <Testimonial />
+        {/* <Testimonial /> */}
         <RelatedProductCard relatedIds={product.related_ids} />
       </div>
       <Footer />

@@ -13,7 +13,7 @@ const RelatedProductCard = async ({relatedIds = []}:RelatedProductCardProps) => 
 
   return (
     <>
-      <div className='min-[1440px]:max-w-[1600px] mx-auto w-full'>
+      <div className='min-[1440px]:max-w-[1600px] mx-auto w-full mt-10'>
         <div className='text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase'>
           <h2>Related Products</h2>
         </div>

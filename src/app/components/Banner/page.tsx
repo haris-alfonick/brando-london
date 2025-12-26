@@ -36,7 +36,7 @@ const Banner = () => {
           <div className='flex justify-center gap-x-3'>
             <button
               onClick={() => router.push('mens-leather-jackets')}
-              className='bg-white text-[#282828] hover:bg-[#eae645]'
+              className='bg-[#282828] text-white hover:bg-[#eae645] hover:text-[#282828]'
             >
               Men
             </button>

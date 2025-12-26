@@ -64,7 +64,7 @@ const CartTotal = ({ cartPage }: CartTotalProps) => {
                     <div>
                       <p>{item.name}</p>
                       <span>{item.quantity} x</span>
-                      <span> ${item.price}</span>
+                      <span> £{item.price}</span>
                     </div>
                   </div>
                 ))}
@@ -73,15 +73,15 @@ const CartTotal = ({ cartPage }: CartTotalProps) => {
             <div className="space-y-3 text-sm sm:text-base">
               <div className="flex justify-between border-t pt-3">
                 <p className="text-gray-700">Sub-total</p>
-                <p className="text-gray-700">${totals.subtotal.toFixed(2)}</p>
+                <p className="text-gray-700">£{totals.subtotal.toFixed(2)}</p>
               </div>
               <div className="flex justify-between">
                 <p className="text-gray-700">Shipping</p>
-                <p className="text-gray-700">${totals.shipping.toFixed(2)}</p>
+                <p className="text-gray-700">£{totals.shipping.toFixed(2)}</p>
               </div>
               <div className="flex justify-between border-t pt-3">
                 <p className="text-gray-900 font-semibold">Total</p>
-                <p className="text-gray-900 font-semibold">${totals.total.toFixed(2)}</p>
+                <p className="text-gray-900 font-semibold">£{totals.total.toFixed(2)}</p>
               </div>
             </div>
             {cartPage ? (

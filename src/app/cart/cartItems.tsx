@@ -54,13 +54,13 @@ const CartItem = () => {
           <p className="text-sm sm:text-base sm:leading-5 !leading-4">{item.name}</p>
         </div>
         <div className="col-span-2 sm:col-span-2 text-center max-[485px]:flex-row flex-col max-[485px]:col-span-4">
-          <p>${item.price}</p>
+          <p>£{item.price}</p>
         </div>
         <div className="col-span-3 sm:col-span-2 text-center max-[640px]:item-right flex items-center justify-center gap-2 max-[485px]:col-span-4">
             <p>{item.quantity}</p>
         </div>
         <div className="col-span-2 sm:col-span-2 text-right max-[485px]:col-span-4">
-          <p>${item.price * item.quantity}</p>
+          <p>£{item.price * item.quantity}</p>
         </div>
       </div>
       ))}

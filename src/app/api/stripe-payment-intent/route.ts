@@ -12,7 +12,7 @@ export const POST = async (request: NextRequest) => {
     // Create a PaymentIntent with order_id in metadata
     const paymentIntent = await stripe.paymentIntents.create({
       amount, // Amount in the smallest currency unit (cents)
-      currency: "usd",
+      currency: "gbp",
       automatic_payment_methods: { enabled: true },
       metadata: {
         order_id: order_id, // Add WooCommerce order ID to metadata

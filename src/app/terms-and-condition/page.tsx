@@ -9,33 +9,108 @@ const TermsCondition = () => {
       <BreadCrumbs page='Terms & Conditions' />
       <section className='px-5 md:py-12 py-10 [&_p]:text-base [&_p]:pt-4 [&_ul_li]:text-[#888] [&_p]:text-[#888] [&_strong]:text-xl [&_strong]:font-medium [&_strong]:text-[#333] [&_strong]:mt-8 [&_strong]:block [&_p_a]:text-[#d13636] [&_li]:mt-1 [&_ul_li]:ml-4 [&_ol_li]:ml-5 [&_ol_li]:list-decimal [&_ul_li]:list-disc [&_b]:text-[#333] [&_li]:text-[#666] [&_b]:font-medium '>
         <div className='container mx-auto'>
-          <h2 className='text-2xl font-semibold uppercase text-center sm:mb-8 mb-3'>TERMS & CONDITIONS</h2>
-          <p>At Brando London, we believe in building trust through transparency. These Terms & Conditions outline how we process payments, handle orders and serve our customers globally. By placing an order on our website, you agree to the policies listed below.</p>
-          <strong>Payment Methods</strong>
+          <h2 className='text-2xl font-semibold uppercase text-center sm:mb-8 mb-3'>
+            Terms and Conditions - Brando London
+          </h2>
+
           <p>
-            To ensure a secure and seamless checkout experience, we currently accept Stripe, Visa Card and MasterCard. All payment transactions are encrypted and processed through an SSL-secured page to safeguard your personal and financial data. For now, we do not accept PayPal, checks, cash or any alternative payment methods outside of those listed.
+            A warm welcome to all our valued buyers at Brando London! We respect our customers
+            and buyers and believe in maintaining transparency and clarity. Therefore, please
+            read our terms and conditions to avoid future disagreements.
           </p>
-          <strong>Pricing & Availability Changes</strong>
+
+          <strong>Copyright Issues</strong>
           <p>
-            All product prices and availability are subject to change without prior notice. While we aim to keep our offerings up to date, Brando London reserves the right to update prices, end promotions, or discontinue products at any time. We also reserve the right to reject the use of promotional codes if they are found invalid or expired.
+            To avoid legal issues, do not use any web content from our website, including
+            product images, descriptions, or specifications. Brando London owns all written
+            and image content, and we have the right to take legal action against anyone who
+            uses it without our consent.
           </p>
-          <strong>Global Shipping Security</strong>
+
+          <strong>Refresh the Web Content</strong>
           <p>
-            Brando London offers free worldwide shipping once your order reaches the qualifying amount, allowing you to enjoy and unlock premium fashion from anywhere without additional delivery charges. Our shipping is handled through verified, trusted courier partners to ensure your package arrives safely and promptly.
+            We ensure that our customers receive accurate data and information on our website.
+            However, we have the right to make changes in products and charges as needed
+            without advance agreement or permission.
           </p>
-          <strong>Order Cancellation</strong>
           <p>
-            If you need to cancel your order, we encourage you to contact our support team within 24 hours of placing it. Once your order has been processed, dispatched or reached customs, it cannot be cancelled. Custom-made items, in particular, may be ineligible for cancellation due to their production-specific nature.
+            On the other hand, we believe in clarity, and you will be informed about your
+            order cancellations, postponements in the shipment days or any other major issue
+            regarding the order.
           </p>
-          <strong>Shipping Restrictions</strong>
+
+          <strong>Shipment and Processing</strong>
           <p>
-            While Brando London proudly serves customers across borders, certain regions may have international shipping limitations or restrictions due to local import laws and customs regulations. In such cases, customers are responsible for paying any customs duties, VAT or other import-related fees required by their country. Brando London adheres to all international shipping laws and encourages customers to be informed of any import policies before ordering.
+            We keep our customers' data safe and secure and use it only to provide you with
+            our best service. Once you place an order on our website and confirm it, we
+            generate the tracking ID and shipment details to share them with you.
           </p>
-          <strong>Order Approval and Denial</strong>
-          <p>Brando London reserves the right to approve or decline any order at our discretion. Orders may be rejected due to payment verification issues, suspected fraud, or address errors. In case your order is denied or requires additional verification, our customer support team will reach out to assist you within 12 to 24 hours.</p>
-          <strong>For Questions or Assistance</strong>
-          <p>If you need further clarification about your order, shipping status, payment or any other inquiry, our customer support team is available 24/7. Your satisfaction is our top priority, and we are here to provide the best possible service. You can contact us at <a href="mailto:support@brandolondon.com">support@brandolondon.com</a>, and we&apos;ll be glad to help.</p>
-        </div>
+          <p>
+            We do not share your personal information except with the service providers to
+            deliver your product on time.
+          </p>
+          <p>
+            Our service providers are safe and secure, and your data will be protected.
+          </p>
+          <p>
+            We do not carry your information, nor your card details.
+          </p>
+          <p>
+            Items take 2-4 business days to dispatch due to exceptional craftsmanship. Also,
+            our custom orders take time to dispatch for extra detailing.
+          </p>
+          <p>
+            We have the right to cancel your order if we suspect any scam or fraud, failed
+            payment, or a violation of the terms and conditions.
+          </p>
+
+          <strong>Custom Charges or Taxes</strong>
+          <p>
+            Our entire collection is listed in GBP. Therefore, charges may vary by country at
+            the time of exchange.
+          </p>
+          <p>
+            Our price range does not include taxes or any customs charges. You have to ensure
+            that by confirming your customs tax officer for details, depending on your
+            country.
+          </p>
+
+          <strong>Misconduct of Website Usage</strong>
+          <p>
+            Make sure that your visit to our website does not result in any form of
+            misconduct: in that case, we have the right to,
+          </p>
+          <ul>
+            <li>
+              Restrict your visit to our page if we find any violation of our policy.
+            </li>
+            <li>
+              If we suspect a scam or fraud, we will not entertain your orders nor proceed
+              with them.
+            </li>
+            <li>We have the right to take legal action when necessary.</li>
+          </ul>
+
+          <strong>Age Limitation</strong>
+          <p>
+            You must be above 18 years old to use our website or to place an order. If you are
+            under 18, make sure to use it under the supervision of your parents or guardian.
+          </p>
+
+  <strong>Security Of your Data and Information</strong>
+  <p>
+    Your trust in us is valued and respected. Hence, we safeguard your trusted data
+    and information throughout your shopping journey on our website. It is
+    recommended to keep a record of your payments for your own safety and reference.
+  </p>
+
+  <strong>Need Help?</strong>
+  <p>
+    Our team is very responsive and cooperative. If you have any questions, you can
+    contact us at{' '}
+    <a href="mailto:support@brandolondon.com">support@brandolondon.com</a>.
+  </p>
+</div>
       </section>
       <Footer />
     </>
