@@ -4,6 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import './style.css'
 import { useAppSelector } from '@/lib/hooks'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Input } from '@/components/ui/input'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,12 +20,15 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav className='relative px-4 py-4 grid grid-cols-12 items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
         {/* Logo */}
-        <Link className='col-span-3 text-3xl font-bold leading-none max-lg:[&_img]:max-w-[145px]' href='/'>
+        <Link
+          className='col-span-2 text-3xl font-bold leading-none max-lg:[&_img]:max-w-[145px]'
+          href='/'
+        >
           <Image src='/images/logo.png' alt='logo' width={145} height={145} />
         </Link>
 
         {/* Menu Button for Mobile */}
-        <div className='col-span-9 lg:hidden flex items-center w-fit mr-0 ml-auto gap-x-2.5'>
+        <div className='col-span-10 lg:hidden flex items-center w-fit mr-0 ml-auto gap-x-2.5'>
           <div className=' relative'>
             <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>
               {cartLength}
@@ -50,27 +56,100 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navbar Menu */}
-        <ul className='col-span-6 navWrap w-fit m-auto hidden lg:flex lg:items-center lg:space-x-7 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
+        <ul className='col-span-6 mr-0 navWrap w-fit m-auto hidden lg:flex lg:items-center lg:space-x-7 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
           <li>
             <Link href='/'>Home</Link>
           </li>
-          <li>
-            <Link href='/about-us'>About Us</Link>
+
+          {/* Shop Dropdown */}
+          <li className='relative group'>
+            <Link href='/shop' className='inline-flex items-center gap-1'>
+              Shop{' '}
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                className='text-xs transition-transform duration-300 group-hover:rotate-180'
+              />
+            </Link>
+
+            {/* Dropdown */}
+            <ul className='absolute left-0 top-full mt-3 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+              <li>
+                <Link
+                  href='#'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Men Jackets
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href=''
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Women Jackets
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href=''
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Pilot Jacket
+                </Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <Link href='/shop'>Shop</Link>
-          </li>
+
           <li>
             <Link href='/size-guide'>Size Guide</Link>
           </li>
-          {/* <li><Link href="#">Blog</Link></li> */}
-          <li>
-            <Link href='/contact'>Contact Us</Link>
+
+          <li className='relative group'>
+            <Link href='/contact' className='inline-flex items-center gap-1'>
+              Customer Care
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                className='text-xs transition-transform duration-300 group-hover:rotate-180'
+              />
+            </Link>
+
+            {/* Dropdown */}
+            <ul className='absolute left-0 top-full mt-3 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+              <li>
+                <Link
+                  href='/faq'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  FAQ
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href='/contact'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Contact Us
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href='#'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Shipping Policy
+                </Link>
+              </li>
+            </ul>
           </li>
         </ul>
 
         {/* Desktop Sign In / Sign Up Buttons */}
-        <div className='col-span-3 hidden lg:flex w-fit mr-0 ml-auto gap-x-6'>
+        <div className='col-span-4 hidden lg:flex w-fit mr-0 ml-auto gap-x-6 items-center'>
+          <div>
+            <Input type='text' placeholder='Search...' />
+          </div>
           <div className=' relative'>
             <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>
               {cartLength}
@@ -116,7 +195,9 @@ const Navbar = () => {
                 />
               </Link>
             </div>
-
+            <div className='mb-4'>
+              <Input type='text' placeholder='Search...' />
+            </div>
             {/* Menu Items for Sidebar */}
             <ul className='navWrap space-y-3'>
               <li>
@@ -125,14 +206,97 @@ const Navbar = () => {
               <li>
                 <Link href='/about-us'>About Us</Link>
               </li>
-              <li>
-                <Link href='/shop'>Shop</Link>
+              {/* Shop Dropdown */}
+              <li className='relative group'>
+                <Link href='/shop' className='inline-flex items-center gap-1'>
+                  Shop{' '}
+                  <FontAwesomeIcon
+                    icon={faAngleDown}
+                    className='text-xs mt-[2px]'
+                  />
+                </Link>
+
+                {/* Dropdown */}
+                <ul className='absolute left-0 top-full mt-3 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+                  <li>
+                    <Link
+                      href='#'
+                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                    >
+                      Men Jackets
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href=''
+                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                    >
+                      Women Jackets
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href=''
+                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                    >
+                      Pilot Jacket
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link href='/size-guide'>Size Guide</Link>
               </li>
-              <li>
-                <Link href='/contact'>Contact Us</Link>
+              <li className='relative group'>
+                <Link
+                  href='/contact'
+                  className='inline-flex items-center gap-1'
+                >
+                  Customer Care
+                  <FontAwesomeIcon
+                    icon={faAngleDown}
+                    className='text-xs transition-transform duration-300 group-hover:rotate-180 float-right'
+                  />
+                </Link>
+
+                {/* Dropdown */}
+                <ul className='absolute left-0 top-full mt-3 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+                  <li>
+                    <Link
+                      href='/faq'
+                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                    >
+                      FAQ
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href='/about-us'
+                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                    >
+                      About Us
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href='/contact'
+                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href='#'
+                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                    >
+                      Shipping Policy
+                    </Link>
+                  </li>
+                </ul>
               </li>
             </ul>
 

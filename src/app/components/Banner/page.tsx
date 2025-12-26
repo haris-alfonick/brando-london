@@ -1,126 +1,55 @@
-"use client";
+'use client'
+import Image from 'next/image'
+import router from 'next/router'
+Image
 
-import { useEffect } from "react";
-import gsap from "gsap";
-import "./style.css";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-
-const HeroBanner = () => {
-  const router = useRouter()
-  useEffect(() => {
-    let scrollDirection: string | null = null; // Track last scroll direction
-
-    const handleScroll = (e: { deltaY: number; }) => {
-      if (e.deltaY > 0) {
-        // Scrolling Down
-        if (scrollDirection !== "down") {
-          scrollDirection = "down";
-          runScrollAnimation("down");
-        }
-      } else {
-        // Scrolling Up
-        if (scrollDirection !== "up") {
-          scrollDirection = "up";
-          runScrollAnimation("up");
-        }
-      }
-    };
-
-    const runScrollAnimation = (direction: string) => {
-      if (direction === "down") {
-        // Scroll Down Animation
-        gsap.to(".parent1 .child", {
-          y: "0%",
-          duration: 2,
-          ease: "power1.out",
-        });
-        gsap.to(".parent2 .child", {
-          y: "-100%",
-          duration: 2,
-          ease: "power1.out",
-        });
-      } else if (direction === "up") {
-        // Scroll Up Animation
-        gsap.to(".parent1 .child", {
-          y: "-100%",
-          duration: 2,
-          ease: "power1.out",
-        });
-        gsap.to(".parent2 .child", {
-          y: "0%",
-          duration: 2,
-          ease: "power1.out",
-        });
-      }
-    };
-
-    // Attach the event listener
-    window.addEventListener("wheel", handleScroll);
-
-    // Cleanup on unmount
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
-
+const Banner = () => {
   return (
-    <div className="relative">
-      <div className="section hidden md:flex justify-center h-screen overflow-hidden">
-        {/* Parent 1 */}
-        <div className="parent1 flex flex-col">
-          <div className="child child1" style={{transform: "translate(0px, -100%)",}}>
+    <>
+      <div className='relative overflow-hidden'>
+        <div className='grid grid-cols-12 [&_img]:h-full max-lg:hidden'>
+          <div className='col-span-6'>
             <Image
-              src="/images/hero-banner3.webp"
-              alt="Image 1"
-              className="w-full h-full object-cover"
+              src='/images/hero-banner1.webp'
+              height={2000}
               width={2000}
-              height={500}
+              alt='Women Jacket'
             />
           </div>
-          <div className="child" style={{transform: "translate(0px, -100%)",}}>
+          <div className='col-span-6'>
             <Image
-              src="/images/hero-banner1.webp"
-              alt="Women Jackets"
-              className="w-full h-full object-cover"
+              src='/images/hero-banner4.webp'
+              height={2000}
               width={2000}
-              height={500}
+              alt='Women Jacket'
             />
           </div>
         </div>
-
-        {/* Parent 2 */}
-        <div className="parent2 flex flex-col">
-          <div className="child">
-            <Image
-              src="/images/hero-banner2.webp"
-              alt="Image 3"
-              className="w-full h-full object-cover"
-              width={2000}
-              height={500}
-            />
-          </div>
-          <div className="child">
-            <Image
-              src="/images/hero-banner4.webp"
-              alt="Image 4"
-              className="w-full h-full object-cover"
-              width={2000}
-              height={500}
-            />
+        <div className='max-lg:bg-[#efefed] absolute max-lg:static h-fit bottom-0 top-0 left-0 right-0 m-auto lg:max-w-[700px] max-w-full lg:py-0 sm:py-20 max-sm:px-4 py-14  md:bg-none bg-no-repeat bg-cover bg-center sm:px-0 px-1.5 text-center [&>h1]:text-[#282828] sm:[&>h1]:text-[42px] [&>h1]:text-3xl [&>h1]:leading-tight [&>h1]:font-bold [&>h1]:uppercase [&>p]:font-semibold [&>p]:text-[#5f5f5f] [&>p]:py-5 [&>p]:pb-8 [&>p]:leading-6 sm:[&>p]:w-[415px] [&>p]:w-full [&>p]:m-auto [&>p]:text-lg [&_button]:cursor:pointer sm:[&_button]:w-44 [&_button]:w-32 sm:[&_button]:text-lg [&_button]:py-2.5 [&_button]:rounded-md'>
+          <h1>
+            Style for Today, <span className='block'>Classics for Always</span>
+          </h1>
+          <p>
+            Crafted with precision and designed for comfort, each jacket brings
+            the spirit of flight to your everyday adventures.
+          </p>
+          <div className='flex justify-center gap-x-3'>
+            <button
+              onClick={() => router.push('mens-leather-jackets')}
+              className='bg-white text-[#282828] hover:bg-[#eae645]'
+            >
+              Men
+            </button>
+            <button
+              onClick={() => router.push('womens-leather-jackets')}
+              className='text-white bg-[#282828] hover:text-[#282828] hover:bg-[#eae645]'
+            >
+              Women
+            </button>
           </div>
         </div>
       </div>
-      <div className="bgMobile relative md:absolute h-fit bottom-0 top-0 left-0 right-0 m-auto md:max-w-[700px] max-w-full md:py-0 sm:py-20 py-12 pt-28 md:bg-none bg-no-repeat bg-cover bg-center sm:px-0 px-1.5 text-center [&>h1]:text-[#282828] sm:[&>h1]:text-[42px] [&>h1]:text-2xl [&>h1]:leading-tight [&>h1]:font-bold [&>h1]:uppercase [&>p]:font-semibold [&>p]:text-[#5f5f5f] [&>p]:py-5 [&>p]:pb-8 [&>p]:leading-6 sm:[&>p]:w-[415px] [&>p]:w-full [&>p]:m-auto [&>p]:text-lg [&_button]:bg-[#282828] [&_button]:text-white sm:[&_button]:w-44 [&_button]:w-32 sm:[&_button]:text-lg [&_button]:py-2.5 [&_button]:rounded-md">   
-        <h1>Style for Today, <span className="block">Classics for Always</span></h1>
-        <p className="md:block hidden">Crafted with precision and designed for comfort, each jacket brings the spirit of flight to your everyday adventures.</p>
-        <div className="flex justify-center gap-x-3 max-md:pt-5">
-          <button onClick={() => router.push('mens-leather-jackets')} className="!bg-white !text-[#282828] hover:bg-[#282828]">Men</button>
-          <button onClick={() => router.push('womens-leather-jackets')} className="cursor-pointer">Women</button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default HeroBanner;
+    </>
+  )
+}
+export default Banner

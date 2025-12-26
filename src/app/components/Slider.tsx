@@ -1,5 +1,4 @@
 
-import React from "react";
 import {
   Carousel,
   CarouselContent,
@@ -19,7 +18,7 @@ const Slider = () => {
       </div>
       <Carousel className="cursor-pointer">
         <CarouselContent>
-        <CarouselItem className="md:basis-[20%] basis-[50%] [&_img]:mx-auto">
+        <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
             <Image
               src="/images/icon2.png"
               alt="Logo 5"
@@ -27,15 +26,39 @@ const Slider = () => {
               height={150}
             />
           </CarouselItem>
-          <CarouselItem className="md:basis-[20%] basis-[50%] [&_img]:mx-auto">
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
             <Image
-              src="/images/icon1.png"
-              alt="Logo 1"
+              src="/images/bloom-logo.png"
+              alt="Bloomberg"
               width={150}
               height={150}
             />
           </CarouselItem>
-          <CarouselItem className="md:basis-[20%] basis-[50%] [&_img]:mx-auto">
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
+            <Image
+              src="/images/forbes-logo1.png"
+              alt="Forbes"
+              width={150}
+              height={150}
+            />
+          </CarouselItem>
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
+            <Image
+              src="/images/inc-logo.png"
+              alt="Inc. Magazine"
+              width={150}
+              height={150}
+            />
+          </CarouselItem>
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
+            <Image
+              src="/images/insider-logo.png"
+              alt="Business Insider"
+              width={150}
+              height={150}
+            />
+          </CarouselItem>
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
             <Image
               src="/images/icon2.png"
               alt="Logo 2"
@@ -43,7 +66,7 @@ const Slider = () => {
               height={150}
             />
           </CarouselItem>
-          <CarouselItem className="md:basis-[20%] basis-[50%] [&_img]:mx-auto">
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
             <Image
               src="/images/icon3.png"
               alt="Logo 3"
@@ -51,7 +74,7 @@ const Slider = () => {
               height={150}
             />
           </CarouselItem>
-          <CarouselItem className="md:basis-[20%] basis-[50%] [&_img]:mx-auto">
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
             <Image
               src="/images/icon1.png"
               alt="Logo 4"
@@ -59,7 +82,7 @@ const Slider = () => {
               height={150}
             />
           </CarouselItem>
-          <CarouselItem className="md:basis-[20%] basis-[50%] [&_img]:mx-auto">
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
             <Image
               src="/images/icon2.png"
               alt="Logo 5"
@@ -67,7 +90,7 @@ const Slider = () => {
               height={150}
             />
           </CarouselItem>
-          <CarouselItem className="md:basis-[20%] basis-[50%] [&_img]:mx-auto">
+          <CarouselItem className="md:basis-[20%] basis-[50%] h-fit m-auto [&_img]:mx-auto">
             <Image
               src="/images/icon3.png"
               alt="Logo 6"

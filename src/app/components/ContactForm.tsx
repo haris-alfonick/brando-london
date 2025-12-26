@@ -60,7 +60,7 @@ const ContactForm = () => {
 
   return (
     <div className="lg:[&_strong]:text-3xl md:[&_strong]:text-2xl [&_strong]:text-xl">
-      <strong className="text-2xl font-semibold mb-6">Send Us a Message</strong>
+      <strong className="text-2xl font-semibold mb-8">Send Us a Message</strong>
       <form
         onSubmit={handleSubmit}
         className="grid grid-cols-1 sm:grid-cols-2 gap-4 [&>label]:text-sm [&_label]:block [&_label]:font-medium [&_label]:mt-1.5 [&_label]:mb-2.5 [&>input]:w-full [&>textarea]:w-full"
