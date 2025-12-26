@@ -98,7 +98,7 @@ const Contact = () => {
             </div>
           </div> */}
 
-          <h2 className='text-center font-semibold pt-16 pb-6 text-xl text-[#333333]'>
+          {/* <h2 className='text-center font-semibold pt-16 pb-6 text-xl text-[#333333]'>
             Popular Topics
           </h2>
           <ul className='grid grid-cols-12 px-5 md:px-4 gap-3 [&_li]:md:col-span-4 [&_li]:col-span-12 [&_li]:py-[2px] text-[15px] [&_li_a]:text-[#333333] [&_li_a]:lg:text-[15px] [&_li_a]:md:text-[13px] [&_li_a]:text-[15px] [&_li]:list-disc [ gap-x-[13px]'>
@@ -131,7 +131,7 @@ const Contact = () => {
             <li>
               <Link href='#'>How to change size of product i ordered?</Link>
             </li>
-          </ul>
+          </ul> */}
 
           <div className='grid grid-cols-12 md:py-16 py-10'>
             <ul className='md:col-span-5 col-span-12 mb-5 [&_li]:lg:col-span-4 [&_li]:md:col-span-4 [&_li]:col-span-12 [&>h3]:font-semibold [&>h3]:text-[#333333] [&>h3]:xl:text-3xl [&>h3]:text-2xl [&>h3]:pb-7 [&_li]:lg-mb-5 [&_li]:mb-4 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block [&>h3>span]:md:block [&>h3>span]:inline [&>h3]:leading-9 [&>h3]:max-sm:leading-8'>

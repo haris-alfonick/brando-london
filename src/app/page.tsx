@@ -1,10 +1,9 @@
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 import Navbar from "./components/Navbar/Navbar";
-import HeroBanner from "./components/Banner/page";
 import { ErrorBoundary } from "./components/ErrorBoundary";
-import TextSlider from "./components/TextSlider";
 import CounterSlider from "./components/CounterSlider";
+import Banner from "./components/Banner/page";
 
 // Loading component
 const LoadingFallback = () => (
@@ -64,10 +63,11 @@ export default function Home() {
     <ErrorBoundary>
       <div>
         <Navbar />
-        <HeroBanner />
-        <Slider />
+        {/* <HeroBanner /> GSAP Hero Banner */} 
+        <Banner />
+        {/* <Slider /> */}
         <MensJackets />  
-        <TextSlider />
+        {/* <TextSlider /> */}
         <FeatureProduct />
         <CategoryList />
         {/* <Womenjackets /> */}
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
         </section>
         <CounterSlider />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <CallUs />
         <Contact />
         <Footer />
