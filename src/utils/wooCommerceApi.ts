@@ -52,6 +52,7 @@ export interface WooCommerceProduct {
   name: string;
   slug: string;
   price: string;
+  price_html: string;
   regular_price: string;
   sale_price: string;
   average_rating: number;

@@ -1,12 +1,12 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FeaturedProducts from "./HomePageTabs/FeaturedProducts";
-import BestSellers from "./HomePageTabs/BestSellers";
-import NewArrivals from "./HomePageTabs/NewArrivals";
+// import BestSellers from "./HomePageTabs/BestSellers";
+// import NewArrivals from "./HomePageTabs/NewArrivals";
 import { fetchHomePageData } from "@/actions/FetchTabs";
 
 
 const FeatureProduct = async () => {
-	const { featuredProducts, newArrivals, bestSellers } = await fetchHomePageData();
+	const { newArrivals, mensJackets, womenJackets } = await fetchHomePageData();
 
   return (
     <>
@@ -19,19 +19,19 @@ const FeatureProduct = async () => {
             <TabsList className="flex justify-center bg-transparent mt-5 mb-6 p-0 max-sm:[&>button]:text-[14px] [&>button]:text-base [&>button]:!shadow-none border w-fit mx-auto [&>button[data-state='active']]:bg-[#333333] [&>button[data-state='active']]:text-white">
               {/* <TabsTrigger value="featured">Featured</TabsTrigger> */}
               <TabsTrigger value="newArrival">New Arrival</TabsTrigger>
-              <TabsTrigger value="featured">Men Jackets</TabsTrigger>
-              <TabsTrigger value="bestSeller">Women  Jackets</TabsTrigger>
+              <TabsTrigger value="mensJackets">Men Jackets</TabsTrigger>
+              <TabsTrigger value="womenJackets">Women  Jackets</TabsTrigger>
               {/* <TabsTrigger value="bestSeller">Best Seller</TabsTrigger> */}
             </TabsList>
 
-            <TabsContent value="featured">
-              <FeaturedProducts products={featuredProducts} />
-            </TabsContent>
             <TabsContent value="newArrival">
-              <NewArrivals products={newArrivals} />
+              <FeaturedProducts products={newArrivals} />
             </TabsContent>
-            <TabsContent value="bestSeller">
-              <BestSellers products={bestSellers} />
+            <TabsContent value="mensJackets">
+              <FeaturedProducts products={mensJackets} />
+            </TabsContent>
+            <TabsContent value="womenJackets">
+              <FeaturedProducts products={womenJackets} />
             </TabsContent>
           </Tabs>
         </div>
