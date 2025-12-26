@@ -123,6 +123,7 @@ interface ProductFilters {
   bestSeller?: boolean;
   newArrivals?: boolean;
   include?: string[];
+  search?: string;
 }
 
 export async function fetchWooCommerceProducts(filters?: ProductFilters) {
@@ -130,10 +131,14 @@ export async function fetchWooCommerceProducts(filters?: ProductFilters) {
     const params: Record<string, string | number | boolean> = {
       per_page: filters?.per_page || 10,
       page: filters?.page || 1,
-      status: 'publish'
+      status: "publish",
     };
 
     let categoryInfo: WooCommerceCategory | null = null;
+
+    if (filters?.search) {
+      params.search = filters.search;
+    }
 
     if (filters?.min_price) params.min_price = filters.min_price;
     if (filters?.max_price) params.max_price = filters.max_price;
@@ -161,8 +166,10 @@ export async function fetchWooCommerceProducts(filters?: ProductFilters) {
     const response = await api.get("products", params);
     let products: WooCommerceProduct[] = response.data;
 
-    if (filters && filters.rating !== undefined) {
-      products = products.filter((product) => product.average_rating >= filters.rating!);
+    if (filters?.rating !== undefined) {
+      products = products.filter(
+        (product) => product.average_rating >= filters.rating!
+      );
     }
 
     return {
