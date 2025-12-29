@@ -77,7 +77,8 @@ const CartTotal = ({ cartPage }: CartTotalProps) => {
               </div>
               <div className="flex justify-between">
                 <p className="text-gray-700">Shipping</p>
-                <p className="text-gray-700">£{totals.shipping.toFixed(2)}</p>
+                {/* <p className="text-gray-700">£{totals.shipping.toFixed(2)}</p> */}
+                <p className="text-gray-700">Free</p>
               </div>
               <div className="flex justify-between border-t pt-3">
                 <p className="text-gray-900 font-semibold">Total</p>
