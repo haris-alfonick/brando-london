@@ -19,10 +19,10 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className='relative px-4 py-4 grid grid-cols-12 items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
+      <nav className='relative px-4 py-4 flex grid-cols-12 items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
         {/* Logo */}
         <Link
-          className='col-span-2 text-3xl font-bold leading-none max-lg:[&_img]:max-w-[145px]'
+          className='col-span-2 w-full text-3xl font-bold leading-none max-lg:[&_img]:max-w-[145px]'
           href='/'
         >
           <Image src='/images/logo.png' alt='logo' width={145} height={145} />
@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navbar Menu */}
-        <ul className='col-span-6 mr-0 navWrap w-fit m-auto hidden lg:flex lg:items-center lg:space-x-7 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
+        <ul className='col-span-6 w-full m-auto justify-center navWrap hidden lg:flex lg:items-center lg:space-x-7 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
           <li>
             <Link href='/'>Home</Link>
           </li>
@@ -76,7 +76,7 @@ const Navbar = () => {
             <ul className='absolute left-0 top-full mt-3 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
               <li>
                 <Link
-                  href='#'
+                  href='/mens-jackets'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
                   Men Jackets
@@ -84,7 +84,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href=''
+                  href='/womens-jackets/'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
                   Women Jackets
@@ -92,10 +92,18 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href=''
+                  href='/pilot-jackets/'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
                   Pilot Jacket
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/burgundy-leather-jacket/'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Burgundy Leather Jacket
                 </Link>
               </li>
             </ul>
@@ -147,7 +155,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Sign In / Sign Up Buttons */}
-        <div className='col-span-4 hidden lg:flex w-fit mr-0 ml-auto gap-x-6 items-center'>
+        <div className='col-span-4 hidden justify-end lg:flex w-full gap-x-6 items-center'>
           <div>
             {/* <Input type='text' placeholder='Search...' /> */}
             <SearchInput />

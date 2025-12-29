@@ -34,7 +34,7 @@ const ProductCard = ({product, relatedProduct}: ProductCardProps) => {
     <>
       <div className={`${product.id} ${relatedProduct ? 'lg:col-span-(need 5)' : 'lg:col-span-3 md:col-span-4 col-span-6'} group flex w-full flex-col overflow-hidden`}>
         <div
-          className='relative w-full h-full overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20'
+          className='relative w-full 2xl:h-[330px] xl:h-[300px] lg:h-[285px] md:h-[250px] h-[220px] overflow-hidden after:absolute after:top-0 after:bg-black after:content-{} after:opacity-0 after:w-full after:h-full group-hover:after:opacity-20'
         >
           <Link href={`/buy/${product.slug}`} className='relative z-10'>
           

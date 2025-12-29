@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <section className="md:py-20 px-5 py-10">
+    <section className="md:py-16 px-5 py-10">
       <div className="container mx-auto lg:max-w-[1200px] [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&>h2]:pb-5">
         <h2>Need Help <span className="md:block inline">Contact Us Anytime</span></h2>
         <div className="grid grid-cols-12 md:justify-items-center md:gap-x-5 max-md:gap-y-6">

@@ -121,7 +121,7 @@ export default async function ProductPage({ params }: any) {
               </p>
             </div>
             <div className='mt-7 [&>p]:pb-1.5 [&>p]:text-[#333333] [&>p]:text-sm border p-3.5 rounded '>
-              <p>100% Guarantee Safe Checkout</p>
+              <p>Safe & Secure Checkout</p>
               <div className='flex justify-start gap-x-1.5 items-center [&_svg]:w-8 [&_svg]:h-10'>
                 <FontAwesomeIcon icon={faCcVisa} />
                 <FontAwesomeIcon icon={faCcMastercard} />

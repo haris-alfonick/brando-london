@@ -35,7 +35,7 @@ const ProductAccordion = ({description}: ProductLongDescriptionParams) => {
             Free Shipping & Fasted Delivery
           </li> */}
           <li className="bg-[url('/images/hand1.png')]">
-            100% Money-back Guarantee
+            Shop with Confidence
           </li>
           <li className="bg-[url('/images/support.png')] !bg-[length:19px_18px] !bg-[left_1px_center]">
             24/7 Customer Support

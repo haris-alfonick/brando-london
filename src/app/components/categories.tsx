@@ -19,7 +19,7 @@ const CategoryList = async () => {
               <strong>Men&apos;s Pilot Jackets</strong>
             </Link>
 
-            <Link href="/womens-jackets" className="relative item2 md:col-span-3 col-span-6">
+            <Link href="/pilot-jackets/" className="relative item2 md:col-span-3 col-span-6">
               <Image
                 src="/images/women-pilot.webp"
                 alt="Image"
@@ -29,7 +29,7 @@ const CategoryList = async () => {
               <strong>Women&apos;s Pilot Jackets</strong>
             </Link>
 
-            <Link href="/mens-coats" className="relative item3 md:col-span-3 col-span-6">
+            <Link href="/mens-biker-leather-jackets/" className="relative item3 md:col-span-3 col-span-6">
               <Image
                 src="/images/mens-biker.webp"
                 alt="Image"
@@ -39,7 +39,7 @@ const CategoryList = async () => {
               <strong>Men&apos;s Biker Jackets</strong>
             </Link>
 
-            <Link href="/womens-coats" className="relative item4 md:col-span-3 col-span-6">
+            <Link href="/womens-jackets/" className="relative item4 md:col-span-3 col-span-6">
               <Image
                 src="/images/women-casual.webp"
                 alt="Image"

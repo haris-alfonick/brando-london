@@ -70,10 +70,11 @@ export default function Home() {
         {/* <Slider /> */}
         <MensJackets />  
         {/* <TextSlider /> */}
-        <FeatureProduct />
         <CategoryList />
+        <FeatureProduct />
         {/* <Womenjackets /> */}
-         <section className="relative z-[99] bg-white md:pt-16 md:py-4 py-10 max-md:pb-2 px-5">
+        <CounterSlider />
+         <section className="relative z-[99] bg-white md:py-20 py-10 max-md:pb-2 px-5">
           <div className="container mx-auto">
             <div className="flex justify-center lg:flex-row flex-col h-full lg:gap-x-12 md:gap-x-8 gap-x-0">
               <div className="lg:order-1 order-2">
@@ -99,7 +100,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <CounterSlider />
+        
         {/* <Testimonial /> */}
         <CallUs />
         <Contact />
