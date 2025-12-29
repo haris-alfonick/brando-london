@@ -12,7 +12,6 @@ const CartItem = () => {
   const [loading, setLoading] = useState(false)
   const cartItemsData = useAppSelector((state) => state.cart.items)
   const dispatch = useAppDispatch()
-  
   useEffect(() => {
     setLoading(true)
   }, [])
@@ -46,8 +45,8 @@ const CartItem = () => {
             <FontAwesomeIcon icon={faCircleXmark} />
           </div>
           <Image
-            src="/images/jacket.webp"
-            alt="Product" 
+            src={item.image}
+            alt={item.name} 
             width={100}
             height={100}
             className="w-12 h-14 corner"/>
