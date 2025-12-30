@@ -31,7 +31,7 @@ const CategoryList = async () => {
 
             <Link href="/mens-biker-leather-jackets/" className="relative item3 md:col-span-3 col-span-6">
               <Image
-                src="/images/mens-biker.webp"
+                src="/images/biker-jackets.webp"
                 alt="Image"
                 width={1000}
                 height={500}

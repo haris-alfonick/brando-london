@@ -30,7 +30,7 @@ const CategoryList = dynamicImport(() => import("./components/categories"), {
   ssr: true
 });
 
-const MensJackets = dynamicImport(() => import("./components/MensJackets"), {
+const StarProducts = dynamicImport(() => import("./components/StarProducts"), {
   loading: LoadingFallback,
   ssr: true
 });
@@ -68,7 +68,7 @@ export default function Home() {
         {/* <HeroBanner /> GSAP Hero Banner */} 
         <Banner />
         {/* <Slider /> */}
-        <MensJackets />  
+        <StarProducts />  
         {/* <TextSlider /> */}
         <CategoryList />
         <FeatureProduct />
