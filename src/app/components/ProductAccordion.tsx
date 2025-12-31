@@ -18,7 +18,7 @@ const ProductAccordion = ({description}: ProductLongDescriptionParams) => {
   return (
     <Accordion
       type='multiple'
-      className='mt-8 [&_h3_button]:uppercase [&_h3_button]:text-lg [&_h3_button]:text-[#333333] [&_h3_button]:tracking-wide [&_h3_button_svg]:w-7 [&_h3_button_svg]:h-7 [&_h3_button]:hover:!no-underline [&_p]:text-sm [&_p]:pb-3.5 [&_p]:text-[#888888] [&_h4]:text-lg [&_h4]:pt-0 [&_h4]:py-2 [&_h4]:font-medium [&_h4]:text-[#333333] [ul_li]:text-[#333333]'
+      className='mt-4 [&_h3_button]:uppercase [&_h3_button]:text-lg [&_h3_button]:text-[#333333] [&_h3_button]:tracking-wide [&_h3_button_svg]:w-7 [&_h3_button_svg]:h-7 [&_h3_button]:hover:!no-underline [&_p]:text-sm [&_p]:pb-2 [&_p]:text-[#757575] [&_h4]:text-lg [&_h4]:pt-0 [&_h4]:py-2 [&_h4]:font-medium [&_h4]:text-[#333333] [ul_li]:text-[#333333] [&_b]:font-semibold [&_strong]:font-semibold [&_strong]:inline-block [&_strong]:pr-1.5 [&_strong]:text-[#333]'
       defaultValue={["description"]}
     >
       {/* Description Section */}
@@ -49,18 +49,45 @@ const ProductAccordion = ({description}: ProductLongDescriptionParams) => {
 
       {/* Additional Information Section */}
       <AccordionItem value='additional-info'>
-        <AccordionTrigger>Additional Information</AccordionTrigger>
+        <AccordionTrigger>Return & Exchange</AccordionTrigger>
         <AccordionContent>
-          <p>
-            Additional information about the product such as materials,
-            warranty, or care instructions goes here.
-          </p>
+          <ul className='[&_li]:!list-inside [&_li]:list-disc '>
+            <li>Returns and exchanges are accepted within 14 days of delivery.</li>
+            <li>All items must be new, unused, and in their original condition with all tags attached.</li>
+            <li>Customized or personalized products are not eligible for returns or exchanges.</li>
+            <li>The customer is responsible for return shipping unless the product is damaged or incorrect.</li>
+            <li>Submit your return or exchange request to <a href="mailto:sales@brandolondon.com">sales@brandolondon.com</a> with your order details.</li>
+            <li>Refunds are processed within 6 business days after approval.</li>
+            <li>Once approved, exchanges will be dispatched promptly.</li>
+          </ul>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='shippig-details'>
         <AccordionTrigger>Shipping Details</AccordionTrigger>
         <AccordionContent>
-          <p>Shipping Details</p>
+          <div className="shipping-policy [&_strong]:text-[15px] [&_p]:mb-0 [&_ul]:mt-2.5 [&_ul]:mb-3.5">
+            <p>
+              <strong>Processing Time:</strong>
+              Orders are processed within 2 to 4 business days. Due to the additional detailing required, custom orders may take longer.
+            </p>
+
+            <strong className='mt-2'>Shipping Options:</strong>
+            <ul className='[&>li]:text-end [&>li]:mb-1 [&>li>b]:text-[#383838] [&>li>b]:font-medium [&>li>b]:float-left [&>li]:text-[15px]'>
+              <li><b>Standard Shipping:</b> Free, 8–10 business days</li>
+              <li><b>Express Shipping:</b> $40, 4–7 business days</li>
+              <li><b>Customized Orders:</b> 10–13 business days</li>
+            </ul>
+
+            <p>
+              <strong>Tracking:</strong>
+              A tracking ID will be sent via email once your order has been dispatched.
+            </p>
+
+            <p>
+              <strong>Notes:</strong>
+              Shipping is free; however, customs duties or fees may apply depending on your country. Please ensure your shipping address details are accurate.
+            </p>
+          </div>
         </AccordionContent>
       </AccordionItem>
     </Accordion>

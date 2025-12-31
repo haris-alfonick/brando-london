@@ -1,9 +1,10 @@
 'use client'
 import Image from 'next/image'
-import router from 'next/router'
+import { useRouter } from 'next/navigation';
 Image
 
 const Banner = () => {
+    const router = useRouter();
   return (
     <>
       <div className='relative overflow-hidden'>
@@ -35,13 +36,13 @@ const Banner = () => {
           </p>
           <div className='flex justify-center gap-x-3'>
             <button
-              onClick={() => router.push('womens-leather-jackets')}
+              onClick={() => router.push('womens-jackets')}
               className='text-white bg-[#282828] hover:text-[#282828] hover:bg-[#eae645]'
             >
               Women
             </button>
              <button
-              onClick={() => router.push('mens-leather-jackets')}
+              onClick={() => router.push('/mens-jackets')}
               className='bg-[#282828] text-white hover:bg-[#eae645] hover:text-[#282828]'
             >
               Men

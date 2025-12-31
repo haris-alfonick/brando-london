@@ -41,8 +41,9 @@ const Navbar = () => {
               <Image
                 src='/images/cart-icon.png'
                 alt='icon'
-                width={25}
+                width={100}
                 height={100}
+                className=' md:w-7 sm:w-8 w-9'
               />
             </Link>
           </div>
@@ -57,7 +58,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navbar Menu */}
-        <ul className='col-span-6 w-full m-auto justify-center navWrap hidden lg:flex lg:items-center lg:space-x-7 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
+        <ul className='col-span-6 w-full m-auto justify-center navWrap hidden lg:flex lg:items-center xl:space-x-7 lg:space-x-3 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
           <li>
             <Link href='/'>Home</Link>
           </li>
