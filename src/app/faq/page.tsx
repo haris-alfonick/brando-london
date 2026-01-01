@@ -12,7 +12,7 @@ import BreadCrumbs from "../components/breadcrumbs";
 const FAQs = [
   {
     question: "How can I pay for my order?",
-    answer: "For your convenience, Brando London accepts multiple secure payment methods, including PayPal, Visa, MasterCard, American Express and Discover cards. All transactions are processed through SSL-encrypted servers, ensuring a safe and secure checkout experience.",
+    answer: "For your convenience, Brando London accepts multiple secure payment methods, including Visa, MasterCard, American Express, Discover cards and Revolut Pay. All transactions are processed through SSL-encrypted servers, ensuring a safe and secure checkout experience.",
   },
   {
     question: "Can I make changes to my order after it has been placed?",
@@ -24,15 +24,22 @@ const FAQs = [
   },
   {
     question: "Do you ship worldwide?",
-    answer: "Yes, Brando London ships globally. However, there are a few exceptions where delivery is not available, including Israel, Russia and APO/FPO addresses. For further information on delivery locations, you can email us at support@brandolondon.com. ",
+    answer: "Yes, we ship worldwide. We offer free standard shipping to the USA, UK, Canada, Asia, and Europe. Express shipping is also available for an additional charge of $40.",
   },
   {
     question: "Is it safe to place an order online?",
     answer: "Absolutely. Your personal and financial information is protected by SSL (Secure Socket Layer) encryption. We also use secure payment gateways like PayPal to ensure that your data is handled safely and responsibly throughout the transaction. ",
   },
-  {
+ {
     question: "When will I receive my order?",
-    answer:"Standard delivery usually takes between 3-8 business days. If your order is delayed beyond its scheduled delivery window, please contact our customer support team for assistance and real-time updates.",
+    answer: {
+      processing: "Orders are processed within 2–4 business days.",
+      shipping: [
+        { type: "Standard Shipping", time: "8–10 business days" },
+        { type: "Express Shipping", time: "4–7 business days" },
+        { type: "Customized Orders", time: "10–13 business days" },
+      ],
+    },
   },
   {
     question: "How will I know if my order has been received?",
@@ -60,31 +67,19 @@ const FAQs = [
   },
    {
     question: "Do you offer custom sizing?",
-    answer: "We currently offer custom sizing only for suits. For other garments, please refer to our standard size chart for the best fit.",
-  },
-   {
-    question: "Are your size measurements listed in inches or centimeters? ",
-    answer: "Our size guides feature both inches and centimeters to accommodate all preferences. Please consult the guide before placing your order.",
+    answer: "Yes, we offer custom sizing. Please contact us with your measurements and requirements, and our team will be happy to assist you.",
   }, 
    {
-    question: "How do I use a coupon code?",
-    answer: "You can enter your discount code at checkout in the designated field labeled “Coupon Code.” The discount will be applied instantly to your total.",
-  },
-   {
     question: "Do I have to pay for return courier charges?",
-    answer: "While we offer free global shipping on all orders, return courier charges are the customer’s responsibility unless the item received was incorrect or defective.",
+    answer: "Return shipping costs are the responsibility of the customer unless the return is due to a defective or incorrect item. In such cases, we will cover the return shipping.",
   },
    {
     question: "Can I get a refund if I return my item?",
-    answer: "Yes, refunds are processed through the original payment method and may take 6-7 working days after the return has been received and approved.",
+    answer: "Yes. Once your return is received and approved, the refund will be processed to your original payment method within 6 working days.",
   },
    {
     question: "Which courier services does Brando London use?",
-    answer: "At Brando London, we use trusted global shipping partners, including FedEx and DHL. For domestic U.S deliveries, we also work with USPS and UPS depending on the region and availability.",
-  },
-   {
-    question: "Does Brando London have any physical retail stores?",
-    answer: "No, Brando London operates exclusively as an online fashion store. All of our premium leather jackets and apparel are available exclusively through our website.",
+    answer: "At Brando London, we use trusted global shipping partners, including FedEx and DHL. For domestic U.S deliveries, we also work with UPS depending on the region and availability.",
   },
    {
     question: "Will I have to pay customer fees? ",
@@ -92,7 +87,11 @@ const FAQs = [
   },
    {
     question: "How can I contact Brando London if I have more questions?",
-    answer: "Our customer care team is always available to assist you. Please feel free to email us at support@brandolondon.com for any inquiries or support.",
+    answer: "Our customer care team is always available to assist you. Please feel free to email us at sales@brandolondon.com for any inquiries or support.",
+  },
+  {
+    question: "Will I have to pay customs fees?",
+    answer: "Customs or import fees may apply depending on your country’s regulations. These fees are the responsibility of the customer and are not included in the order price.",
   },
 ];
 
@@ -123,9 +122,20 @@ export default function FAQSection() {
                 </AccordionTrigger>
                 
                 <AccordionContent>
-                  <p className="text-[15px] px-4 py-2 text-[#888]">
-                    {faq.answer}
-                  </p>
+                  {typeof faq.answer === "string" ? (
+                    <p className="text-[15px] px-4 py-0 text-[#888]">{faq.answer}</p>
+                  ) : (
+                    <>
+                      <p className="text-[15px] px-4 text-[#888]">{faq.answer.processing}</p>
+                      <ul className="text-[15px] px-4 pt-2 space-y-1 text-[#888] [&_strong]:font-medium">
+                        {faq.answer.shipping.map((item, i) => (
+                          <li key={i}>
+                            <strong>{item.type}:</strong> {item.time}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                 </AccordionContent>
               </AccordionItem>
             ))}
