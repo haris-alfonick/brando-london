@@ -92,10 +92,10 @@ const AddToCartButton = ({productId, name, image, price, text, size, quantity}: 
             isMobile
               ? "fixed bg-white shadow-inner bottom-0 left-0 right-0 m-auto p-3 gap-x-2"
               : "relative"
-          } md:mt-6 flex justify-between items-center md:gap-x-6 z-[99999] w-[100%] md:w-full [&>button]:bg-[#333333] [&>button]:text-white [&>button]:w-full md:[&>button]:py-2 [&>button]:py-2.5 md:[&>button]:rounded [&_.buyNow]:bg-white [&_.buyNow]:text-[#333] [&_.buyNow]:border [&_.buyNow]:font-medium [&_.buyNow]:border-[#333] [&_.cart]:border [&_.cart]:border-[#333]`}
+          } md:mt-6 flex justify-between items-center md:gap-x-6 z-[99999] w-[100%] md:w-full [&>button]:bg-[#333333] [&>button]:text-white [&>button]:w-full md:[&>button]:py-2 [&>button]:py-2.5 md:[&>button]:rounded [&_.buyNow]:bg-white [&_.buyNow]:text-[#333] [&_.buyNow]:border [&_button]:font-medium [&_.buyNow]:border-[#333] [&_.cart]:border [&_.cart]:border-[#333]`}
         >
-          <button className="buyNow" onClick={() => HandleAddTocart(productId, true)}>Buy Now</button>
-          <button className="cart" onClick={() => HandleAddTocart(productId, false)}>Add to Cart</button>
+          <button className="buyNow hover:!bg-[#eae645] hover:!text-[#333] hover:!border-transparent transition-all" onClick={() => HandleAddTocart(productId, true)}>Buy Now</button>
+          <button className="cart hover:!bg-[#eae645] hover:!text-[#333] hover:!border-transparent transition-all" onClick={() => HandleAddTocart(productId, false)}>Add to Cart</button>
         </div>
       ) : (
         <button onClick={() => HandleAddTocart(productId, false)} className='cardIcons text-black hover:!bg-gray-300'>

@@ -4,14 +4,7 @@ import { Metadata } from 'next';
 import { JSDOM } from 'jsdom';
 import createDOMPurify from 'dompurify';
 import ProductAccordion from '../../components/ProductAccordion'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faCcVisa,
-  faCcMastercard,
-  // faCcPaypal,
-  faCcStripe,
-  faCcDiscover
-} from '@fortawesome/free-brands-svg-icons'
+import Image from "next/image";
 import Thumbnail from '../../components/ProductThumbnail'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer'
@@ -120,14 +113,15 @@ export default async function ProductPage({ params }: any) {
                 <strong>Returns:</strong> Hassle-Free 14-Day Returns
               </p>
             </div>
-            <div className='mt-7 [&>p]:pb-1.5 [&>p]:text-[#333333] [&>p]:text-sm border p-3.5 rounded '>
+            <div className='mt-7 [&>p]:font-medium [&>p]:pb-1.5 [&>p]:text-[#333333] [&>p]:text-base border p-3.5 rounded '>
               <p>Safe & Secure Checkout</p>
-              <div className='flex justify-start gap-x-1.5 items-center [&_svg]:w-8 [&_svg]:h-10'>
-                <FontAwesomeIcon icon={faCcVisa} />
-                <FontAwesomeIcon icon={faCcMastercard} />
-                {/* <FontAwesomeIcon icon={faCcPaypal} /> */}
-                <FontAwesomeIcon icon={faCcStripe} />
-                <FontAwesomeIcon icon={faCcDiscover} />
+              <div className=''>
+                <Image
+                src="/images/payment-icons.png"
+                alt="Payment Icon"
+                width={260}
+                height={200}
+                />
               </div>
             </div>
 

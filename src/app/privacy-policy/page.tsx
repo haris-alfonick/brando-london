@@ -1,17 +1,18 @@
 import BreadCrumbs from "../components/breadcrumbs";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import Link from "next/link";
 
   const PrivacyPolicy = () => {
     return (
       <>
         <Navbar />
         <BreadCrumbs page="Privacy Policy" />
-        <section className='px-5 md:py-12 py-10 [&_p]:text-base [&_p]:pt-4 [&_ul_li]:text-[#888] [&_p]:text-[#888] [&_strong]:text-xl [&_strong]:font-medium [&_strong]:text-[#333] [&_strong]:mt-8 [&_strong]:block [&_p_a]:text-[#d13636] [&_li]:mt-1 [&_ul_li]:ml-4 [&_ol_li]:ml-5 [&_ol_li]:list-decimal [&_ul_li]:list-disc [&_b]:text-[#333] [&_li]:text-[#666] [&_b]:font-medium '>
+        <section className='px-5 md:py-12 py-10 [&_p]:text-base [&_p]:py-1 [&_ul_li]:text-[#888] [&_p]:text-[#888] [&_strong]:text-base [&_strong]:font-medium [&_strong]:text-[#333] [&_strong]:mt-0 [&_strong]:block [&_a]:text-[#d13636] hover:[&_a]:text-[#333] [&_li]:mt-1 [&_ul_li]:ml-4 [&_ol_li]:ml-5 [&_ol_li]:list-decimal [&_ul_li]:list-disc [&_b]:text-[#333] [&_li]:text-[#666] [&_b]:font-medium [&_h3]:font-medium [&_h3]:mt-4 [&_h3]:mb-1 [&_h3]:text-xl [&_ul]:my-3 [&_ol]:my-3'>
           <div className='container mx-auto'>
-            <h2 className='text-2xl font-semibold uppercase text-center sm:mb-8 mb-3'>
+            <h1 className='text-3xl font-semibold uppercase text-center sm:mb-8 mb-3'>
               Privacy Policy
-            </h2>
+            </h1>
 
             <p>
               When shopping with Brando London, we strive to maintain trust and provide a
@@ -24,7 +25,7 @@ import Navbar from "../components/Navbar/Navbar";
               to ensure a smooth purchase.
             </p>
 
-            <strong>What Data We Collect</strong>
+            <h3>What Data We Collect</h3>
             <p>
               Remember, our team is restricted to using your data for other methods. We have
               experts who respect your privacy and our policies. So, all your personal and
@@ -39,7 +40,7 @@ import Navbar from "../components/Navbar/Navbar";
               <li>Payment Details:</li>
             </ul>
 
-            <strong>How Do We Use Your Information?</strong>
+            <h3>How Do We Use Your Information?</h3>
             <p>
               We use this information to further process your order to ship to the accurate
               address. If any issues arise, we will contact you immediately using your phone
@@ -57,7 +58,7 @@ import Navbar from "../components/Navbar/Navbar";
               defamation.
             </p>
 
-            <strong>Cookies Policies</strong>
+            <h3>Cookies Policies</h3>
             <p>
               We use cookies to make your experience reliable and mesmerizing. Whenever you
               order from us again and again, you don’t have to type; we use cookies to recall your
@@ -65,7 +66,7 @@ import Navbar from "../components/Navbar/Navbar";
               London.
             </p>
 
-            <strong>Who Has The Access</strong>
+            <h3>Who Has The Access</h3>
             <p>
               Your data is in safe hands. We do not sell or disclose our customers' personal
               information to third parties. We only ask for specific details that are necessary
@@ -73,7 +74,7 @@ import Navbar from "../components/Navbar/Navbar";
               no one has access to your personal information.
             </p>
 
-            <strong>Customer’s Right</strong>
+            <h3>Customer’s Right</h3>
             <p>
               As a Brando London customer, you have the right to enjoy breathable online shopping
               experience. We ensure every procedure is hassle-free, whether placing the order,
@@ -81,15 +82,14 @@ import Navbar from "../components/Navbar/Navbar";
               General Data Protection Regulation (GDPR/UK GDPR), which protects customer rights.
             </p>
 
-            <strong>Contact Details</strong>
+            <h3>Contact Details</h3>
             <p>
               If you are struggling to understand any point or have any questions about the
-              product or our policies, please feel free to contact us at +1012 3456 789.
+              product or our policies, please feel free to contact us at <Link href="tel:+10123456789">+1012 3456 789</Link>
             </p>
             <p>
               You can also email us at{' '}
-              <a href="mailto:sales@brandolondon.com">sales@brandolondon.com</a> or{' '}
-              <a href="mailto:support@brandolondon.com">support@brandolondon.com</a>
+              <Link href="mailto:sales@brandolondon.com">sales@brandolondon.com</Link>
             </p>
             <p>
               We love to hear from you and wish you a happy shopping at Brando London!

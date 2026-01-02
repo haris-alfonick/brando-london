@@ -49,7 +49,7 @@ const Footer = () => {
           <strong>Customer Care</strong>
           <div className='footerNav'>
             <Link href='/terms-and-condition'>Terms & Condition</Link>
-            <Link href='/shipping-and-delivery'>Shipping & Delivery</Link>
+            <Link href='/shipping-policy'>Shipping & Delivery</Link>
             <Link href='/privacy-policy'>Privacy Policy</Link>
             <Link href='/faq'>FAQ</Link>
           </div>
