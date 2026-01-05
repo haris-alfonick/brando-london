@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { searchProducts } from "@/utils/wooSearch";
+import Image from "next/image";
 
 export default function SearchInput() {
   const [query, setQuery] = useState("");
@@ -37,7 +38,7 @@ export default function SearchInput() {
       />
 
       {results.length > 0 && (
-        <ul className="absolute z-50 w-full bg-white border mt-1 rounded shadow">
+        <ul className="absolute z-50 w-full bg-white border mt-1 rounded-lg shadow-lg [&>li>span]:text-sm">
           {results.map((product) => (
             <li
               key={product.id}
@@ -45,10 +46,12 @@ export default function SearchInput() {
               className="flex items-center gap-3 p-2 hover:bg-gray-100 cursor-pointer"
             >
               {product.image && (
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
-                  className="w-10 h-10 object-cover"
+                  width={200}
+                  height={200}
+                  className="w-11 h-11 object-cover"
                 />
               )}
               <span>{product.name}</span>

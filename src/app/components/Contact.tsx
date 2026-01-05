@@ -47,23 +47,24 @@ const Contact = () => {
                 <strong>Others</strong>
               </li>
             </ul> */}        
-            <Image
+            {/* <Image
                   src="/images/address.webp"
                   alt="image"
                   width={1000}
                   height={100}
                   className="rounded-lg"
-                  />
-                   <ul className=' mt-5 [&_li]:mb-3 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:w-fit [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block'>
+                  /> */}
+              <iframe className="rounded-lg overflow-hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.494691050523!2d-0.44990590581337536!3d51.39633546540817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767437da720533%3A0xe1cd13a15fd91242!2sLindsay%20Court!5e0!3m2!1sen!2s!4v1767622790743!5m2!1sen!2s" width="600" height="260" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              <ul className=' mt-5 [&_li]:mb-3 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:w-fit [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block'>
                 <li className="bg-[url('/images/bxs_phone-call.png')] bg-[length:25px_25px]">
-                  <Link href='tel:+10123456789'>+1012 3456 789</Link>
+                  <Link href='tel:447796079986'>+44 7796 079986</Link>
                 </li>
                 <li className="bg-[url('/images/ic_sharp-email.png')]">
                   <Link href='mailto:sales@brandolondon.com'>sales@brandolondon.com</Link>
                 </li>
                 <li className="bg-[url('/images/carbon_location-filled.png')] bg-[length:20px_3px]">
                   <Link href='#'>
-                     	7 Station Approach Street Worcester <br /> Park, Surrey UK
+                     15 Lindsay Court, Shepperton, TW17 8AF
                   </Link>
                 </li>
             </ul>

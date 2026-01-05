@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
 import BreadCrumbs from '../components/breadcrumbs'
 import ContactForm from '../components/ContactForm'
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = () => {
   return (
@@ -139,44 +141,22 @@ const Contact = () => {
                 Don&apos;t find your answer. <span>Contact with us </span>
               </h3>
               <li className="bg-[url('/images/bxs_phone-call.png')] bg-[length:25px_25px]">
-                <Link href='#'>+1012 3456 789</Link>
+                <Link href='tel:447796079986'>+44 7796 079986</Link>
               </li>
               <li className="bg-[url('/images/ic_sharp-email.png')]">
                 <Link href='mailto:sales@brandolondon.com'>sales@brandolondon.com</Link>
               </li>
               <li className="bg-[url('/images/carbon_location-filled.png')] bg-[length:20px_3px]">
                 <Link href='#'>
-                  132 Dartmouth Street Boston, <br /> Massachusetts 02156
-                  United States
+                 15 Lindsay Court, Shepperton, TW17 8AF
                 </Link>
               </li>
 
               {/* <div> */}
-              <div className='mt-6 [&_li]:w-[40px] [&_li]:list-none [&_span]:inline-block [&_span]:pr-4 [&_span>img]:w-[25px] '>
-                <span>
-                  <Image
-                    src='/images/vector1.png'
-                    width={100}
-                    height={100}
-                    alt=''
-                  />
-                </span>
-                <span>
-                  <Image
-                    src='/images/vector2-1.png'
-                    width={100}
-                    height={100}
-                    alt=''
-                  />
-                </span>
-                <span>
-                  <Image
-                    src='/images/vector3-1.png'
-                    width={100}
-                    height={100}
-                    alt=''
-                  />
-                </span>
+              <div className='mt-6 [&_svg]:cursor-pointer [&_svg]:transition-transform [&_svg]:duration-300 [&_svg]:ease-in-out [&_img:hover]:scale-110 space-x-2
+              '>
+                <Link href="https://www.facebook.com/brandolondonoffical/"><FontAwesomeIcon icon={faFacebook} width={24} height={24} size='xl' color='#333' /></Link>
+                <Link href="https://www.instagram.com/brando_landon/"><FontAwesomeIcon icon={faInstagram} width={24} height={24} size='xl' color='#333' /></Link>
               </div>
               {/* </div> */}
             </ul>

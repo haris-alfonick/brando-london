@@ -125,6 +125,23 @@ const Navbar = () => {
 
             {/* Dropdown */}
             <ul className='absolute left-0 top-full mt-3 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+              
+              <li>
+                <Link
+                  href='/about-us'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/contact'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Contact Us
+                </Link>
+              </li>
               <li>
                 <Link
                   href='/faq'
@@ -134,18 +151,18 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li>
-                <Link
-                  href='/contact'
-                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                >
-                  Contact Us
-                </Link>
-              </li>
 
               <li>
                 <Link
-                  href='#'
+                  href='/return-and-exchange-policy'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Return & Exchange Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/shipping-policy'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
                   Shipping Policy
