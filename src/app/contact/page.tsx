@@ -148,7 +148,7 @@ const Contact = () => {
               </li>
               <li className="bg-[url('/images/carbon_location-filled.png')] bg-[length:20px_3px]">
                 <Link href='#'>
-                 15 Lindsay Court, Shepperton, TW17 8AF
+                 14 Lindsay Court, Shepperton, TW17 8AF
                 </Link>
               </li>
 
