@@ -2,6 +2,7 @@
 import { useState } from "react"
 import IncrementCounter from "@/app/components/shop/Counter"
 import AddToCartButton from "@/app/components/shop/AddToCartButton"
+import SizeGuidePopup from "@/app/components/SizeGuidePopup/page";
 
 interface Attribute {
   id: string | number;
@@ -31,7 +32,7 @@ const Handler = ({attributes, productId, productName, image, price}: AttributesP
       {attributes.map((attribute) => (
         <div
           key={attribute.id}
-          className="mt-6 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block"
+          className="mt-5 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block"
         >
           <strong>{attribute.name}</strong>
           <div className="block gap-x-2 mt-2 [&_label]:mr-1.5 [&_label]:mb-1.5 [&_label]:inline-block [&_span]:block [&>label:last-child]:hidden">
@@ -68,12 +69,15 @@ const Handler = ({attributes, productId, productName, image, price}: AttributesP
           </div>
         </div>
       ))}
-      <div className='mt-6 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block'>
-        <strong>Quantity</strong>
-        <IncrementCounter 
-          count={quantity}
-          setCount={setQuantity}
-        />
+      <SizeGuidePopup />
+      <div className='mt-5 [&>strong]:font-medium [&>strong]:text-lg [&>strong]:block'>
+        <div>
+          <strong>Quantity</strong>
+          <IncrementCounter 
+            count={quantity}
+            setCount={setQuantity}
+          />
+        </div>
       </div>
 
       {/* <div className='mt-6 flex justify-between items-center gap-x-6 [&>button]:bg-[#333333] [&>button]:text-white [&>button]:w-full [&>button]:py-2 [&>button]:rounded'>
