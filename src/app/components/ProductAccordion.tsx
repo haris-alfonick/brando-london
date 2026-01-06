@@ -1,25 +1,37 @@
-import React from 'react'
+'use client'
+
+import { useEffect, useState } from 'react'
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
-  AccordionContent
+  AccordionContent,
 } from '@/components/ui/accordion'
-import createDOMPurify from 'dompurify';
-import { JSDOM } from 'jsdom';
+import DOMPurify from 'dompurify'
 
-interface ProductLongDescriptionParams{
-  description: string | undefined
+interface ProductLongDescriptionParams {
+  description?: string
 }
 
-const window = new JSDOM('').window;
-const DOMPurify = createDOMPurify(window);
-const ProductAccordion = ({description}: ProductLongDescriptionParams) => {
+const ProductAccordion = ({ description }: ProductLongDescriptionParams) => {
+  const [mounted, setMounted] = useState(false)
+  const [defaultOpen, setDefaultOpen] = useState<string[]>([])
+
+  useEffect(() => {
+    setMounted(true)
+
+    if (window.innerWidth >= 768) {
+      setDefaultOpen(['description'])
+    }
+  }, [])
+
+  if (!mounted) return null
+
   return (
     <Accordion
-      type='multiple'
       className='mt-4 [&_h3_button]:uppercase [&_h3_button]:text-lg [&_h3_button]:text-[#333333] [&_h3_button]:tracking-wide [&_h3_button_svg]:w-7 [&_h3_button_svg]:h-7 [&_h3_button]:hover:!no-underline [&_p]:text-sm [&_p]:pb-2 [&_p]:text-[#757575] [&_h4]:text-lg [&_h4]:pt-0 [&_h4]:py-2 [&_h4]:font-medium [&_h4]:text-[#333333] [ul_li]:text-[#333333] [&_b]:font-semibold [&_strong]:font-semibold [&_strong]:inline-block [&_strong]:pr-1.5 [&_strong]:text-[#333]'
-      defaultValue={["description"]}
+      type="multiple"
+      defaultValue={defaultOpen}
     >
       {/* Description Section */}
       <AccordionItem value='description'>

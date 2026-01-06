@@ -51,7 +51,9 @@ const RefundPolicy = () => {
 
           <h3>How to Request a Refund?</h3>
           <p>
-            Email us at <strong>sales@brandolondon.com</strong> with the
+            Email us at <Link href="mailto:sales@brandolondon.com">
+              sales@brandolondon.com
+            </Link> with the
             following details:
           </p>
           <ul>
@@ -141,7 +143,7 @@ const RefundPolicy = () => {
             reach out with any questions regarding our products or policies.
           </p>
           <p>
-            <span className='block'><b>Phone:</b>{' '} <Link href="tel:10123456789">+1012 3456 789</Link></span>
+            <span className='block'><b>Phone:</b>{' '} <Link href="tel:447796079986">+44 7796 079986</Link></span>
             <b>Email:</b>{' '}
             <Link href="mailto:sales@brandolondon.com">
               sales@brandolondon.com

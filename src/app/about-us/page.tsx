@@ -2,8 +2,6 @@ import Image from 'next/image'
 import BreadCrumbs from '../components/breadcrumbs'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar/Navbar'
-import StatsBlock from '../components/stats'
-import Slider from '../components/Slider'
 
 const AboutUs = () => {
   return (
@@ -24,7 +22,7 @@ const AboutUs = () => {
       {/* <section className='sm:py-3'>
         <Slider />
       </section> */}
-      <section className='px-5 mb-10'>
+      <section className='px-5 mb-3'>
         <div className="container mx-auto">
           <div className="min-[1300px]:max-w-[1100px] m-auto grid grid-cols-1 justify-items-center gap-y-10 items-center gap-x-14 sm:[&_h2]:text-4xl [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-[#282828] [&_p]:text-[#888] sm:[&_p]:text-lg [&_p]:text-base [&_p]:pt-3">
             <div>
@@ -46,11 +44,11 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <StatsBlock />
+      {/* <StatsBlock /> */}
       <section className='sm:py-10 py-10 pb-0 px-5'>
         <div className="container mx-auto">
           <div className="min-[1300px]:max-w-[1100px] m-auto grid grid-cols-1 justify-items-center gap-y-10 items-center gap-x-14 sm:[&_h2]:text-4xl [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-[#282828] [&_p]:text-[#888] sm:[&_p]:text-lg [&_p]:text-base [&_p]:pt-3 [&_h3]:mt-5 [&_h3]:text-xl">
-            
+          
               <div>
                 <h2 className='pb-5'>What Makes Our Collection Unique?</h2>
                 <div>
@@ -59,7 +57,7 @@ const AboutUs = () => {
                   alt="image"
                   width={2000}
                   height={100}
-                  className='sm:h-96 h-56 object-cover'
+                  className='sm:h-96 h-56 my-3 object-cover'
                   />
                 </div>
                 <p>

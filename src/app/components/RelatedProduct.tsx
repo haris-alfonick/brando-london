@@ -1,15 +1,20 @@
 import { fetchRelatedProducts } from '@/utils/wooCommerceApi'
 import ProductCard from './shop/sidebar/productCard'
 import { WooCommerceProduct } from '@/utils/wooCommerceApi'
+import Image from 'next/image'
 
 interface RelatedProductCardProps {
-  relatedIds?: (number | string)[];
+  relatedIds?: (number | string)[]
 }
 
-const RelatedProductCard = async ({relatedIds = []}:RelatedProductCardProps) => {
-  if (!relatedIds?.length) return null;
+const RelatedProductCard = async ({
+  relatedIds = []
+}: RelatedProductCardProps) => {
+  if (!relatedIds?.length) return null
 
-  const relatedProducts = await fetchRelatedProducts(relatedIds).catch(() => null);
+  const relatedProducts = await fetchRelatedProducts(relatedIds).catch(
+    () => null
+  )
 
   return (
     <>
@@ -17,11 +22,34 @@ const RelatedProductCard = async ({relatedIds = []}:RelatedProductCardProps) => 
         <div className='text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase'>
           <h2>Related Products</h2>
         </div>
-        <div className='overflow-x-auto m-w-full mt-5'>
+        <div className='scrollNone overflow-x-auto min-w-full mt-5'>
           <div className='grid grid-cols-5 gap-x-7 md:gap-y-0 gap-y-3 min-w-[1200px]'>
             {relatedProducts?.map((product: WooCommerceProduct) => (
-              <ProductCard key={product.id} product={product} relatedProduct={true} />
+              <ProductCard
+                key={product.id}
+                product={product}
+                relatedProduct={true}
+              />
             ))}
+          </div>
+        </div>
+        <div className='block xl:hidden w-full'>
+          <div className='mx-auto max-w-[1200px] flex flex-col items-center justify-center py-2'>
+            {/* Animated Hand */}
+            <div className='relative animate-drag-x'>
+              <Image
+                src='/images/drag-img-black.png'
+                alt='Drag to see more'
+                width={18}
+                height={18}
+                className='object-contain'
+              />
+            </div>
+
+            {/* Text */}
+            <p className='mt-2 text-xs font-medium tracking-wide text-[#333] uppercase'>
+              Drag to See More
+            </p>
           </div>
         </div>
       </div>

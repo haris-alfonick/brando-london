@@ -85,7 +85,7 @@ import Link from "next/link";
             <h3>Contact Details</h3>
             <p>
               If you are struggling to understand any point or have any questions about the
-              product or our policies, please feel free to contact us at <Link href="tel:+10123456789">+1012 3456 789</Link>
+              product or our policies, please feel free to contact us at <Link href="tel:447796079986">+44 7796 079986</Link>
             </p>
             <p>
               You can also email us at{' '}

@@ -43,7 +43,9 @@
 .counterCarouselItem.active div {
   display: block;
 }
-
+.scrollNone{
+  scrollbar-width: none;;
+}
 .counterSpan::before {
   content: "";
   position: absolute;
@@ -55,6 +57,26 @@
   margin: auto;
   left: 0;
 }
+
+@keyframes drag-x {
+	0%{
+		transform: translate(0, 0);
+	}
+	25%{
+		transform: translate(40px, 0);
+	}
+	50%{
+		transform: translate(-40px, 0);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+
+.animate-drag-x {
+  animation: drag-x 2.5s ease-in-out infinite;
+}
+
 
 @media (min-width: 1366px){
   .container{

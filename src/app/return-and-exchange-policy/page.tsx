@@ -167,7 +167,7 @@ const ReturnAndExchangePolicy = () => {
             contact us at:
           </p>
           <p>
-            <span className='block'><b>Phone:</b>{' '} <Link href="tel:10123456789">+1012 3456 789</Link></span>
+            <span className='block'><b>Phone:</b>{' '} <Link href="tel:447796079986">+44 7796 079986</Link></span>
             <b>Email:</b>{' '}
             <Link href="mailto:sales@brandolondon.com">
               sales@brandolondon.com
