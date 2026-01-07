@@ -5,12 +5,12 @@ import { useRouter } from 'next/navigation'
 const ImageText = () => {
   const router = useRouter()
   return (
-    <section className='relative z-[99] bg-white md:py-20 py-10 max-md:pb-2 px-5'>
+    <section className='relative z-[99] bg-white md:py-20 py-10 px-5'>
       <div className='container mx-auto'>
         <div className='flex justify-center lg:flex-row flex-col h-full lg:gap-x-12 md:gap-x-8 gap-x-0 [&_button]:cursor:pointer sm:[&_button]:text-lg [&_button]:px-6 [&_button]:p-2 [&_button]:rounded-md [&_button]:m-auto [&_button]:w-fit [&_.btnCenter]:mt-3 [&_.btnCenter]:text-center'>
-          <div className='lg:order-1 order-2'>
+          <div className='lg:order-1 order-2 lg:block hidden'>
             <Image
-              src='/images/men-jackets.webp'
+              src='/images/men-jacket-image.webp'
               alt='Men Leather Jacket'
               width={2000}
               height={500}
@@ -36,11 +36,11 @@ const ImageText = () => {
               balance of classic aviation style and high-performance function.
             </p>
             <Image
-              src='/images/women-jackets.webp'
+              src='/images/women-jacket-image.webp'
               alt='Women Leather Jacket'
               width={2000}
               height={500}
-              className='lg:w-[396px] w-full lg:block hidden'
+              className='lg:w-[396px] w-full'
             />
             <div className='btnCenter'>
               <button
