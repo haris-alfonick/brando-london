@@ -55,7 +55,7 @@ const Contact = () => {
                   className="rounded-lg"
                   /> */}
               <div className="xl:w-[550px] lg:w-[450px] h-[260px] w-full">
-                <iframe className="rounded-lg overflow-hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9955.271732841507!2d-0.3006084264270343!3d51.406399963787145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760bc2d3fa5ee5%3A0xf18b002ae7b2e15d!2s63%20Kingsworthy%20Cl%2C%20Kingston%20upon%20Thames%20KT1%203ER%2C%20UK!5e0!3m2!1sen!2s!4v1767883008135!5m2!1sen!2s" width="100%" height="100%" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className="rounded-lg overflow-hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.7706059248144!2d-0.4044060205554071!3d51.388893955883326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487674e1eb9efb0b%3A0x80bbf8a974497393!2s17%20Vanbrugh%20Dr%2C%20Walton-on-Thames%20KT12%202YQ%2C%20UK!5e0!3m2!1sen!2s!4v1767884421672!5m2!1sen!2s" width="100%" height="100%" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
               <ul className=' mt-5 [&_li]:mb-3 [&_li]:bg-no-repeat [&_li]:bg-[top_left] [&>li]:w-fit [&>li]:pl-8 [&_li]:bg-[length:20px_20px] [&>li>a]:md:text-sm [&>li>a]:text-[15px] [&_li:nth-child(1)]:2xl-pr-[80px] [&>li>a]:text-[#333333] [&>li>a]:block'>
                 <li className="bg-[url('/images/bxs_phone-call.png')] bg-[length:25px_25px]">
@@ -66,7 +66,7 @@ const Contact = () => {
                 </li>
                 <li className="bg-[url('/images/carbon_location-filled.png')] bg-[length:20px_3px]">
                   <Link href='#'>
-                     63 Kingsworthy Close, Kingston-upon-Thames, KT1 3ER, UK
+                     17 Vanbrugh Drive, Walton-on-Thames, <span className='lg:block inline'>Surrey, KT12 2YQ, United Kingdom</span>
                   </Link>
                 </li>
             </ul>

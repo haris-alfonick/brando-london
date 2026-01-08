@@ -148,7 +148,7 @@ const Contact = () => {
               </li>
               <li className="bg-[url('/images/carbon_location-filled.png')] bg-[length:20px_3px]">
                 <Link href='#'>
-                 63 Kingsworthy Close, Kingston-upon-Thames, KT1 3ER, UK
+                 17 Vanbrugh Drive, Walton-on-Thames, <span className='lg:block inline'>Surrey, KT12 2YQ, United Kingdom</span>
                 </Link>
               </li>
 
