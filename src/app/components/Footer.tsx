@@ -98,7 +98,7 @@ const Footer = () => {
             </Button>
           </div> */}
           <strong>Business Information</strong>
-          <p className='flex items-center gap-x-3 !pt-0'><FontAwesomeIcon icon={faLocationDot} color='#fff' size='lg' width={18} height={16} /><span className='location leading-6 text-white !text-[15px]'>14 Lindsay Court, <span className="lg:block inline">Shepperton, TW17 8AF</span></span></p>
+          <p className='flex items-center gap-x-3 !pt-0'><FontAwesomeIcon icon={faLocationDot} color='#fff' size='lg' width={18} height={16} /><span className='location leading-6 text-white !text-[15px]'>63 Kingsworthy Close, <span className="lg:block inline">Kingston-upon-Thames, KT1 3ER, UK</span></span></p>
           <p className='flex items-center gap-x-3 !pt-2.5'><FontAwesomeIcon icon={faEnvelope} color='#fff' size='lg' width={18} height={16} /><Link className='mail !text-[15px] !pb-0 hover:text-[#d13636]' href="mailto:sales@brandolondon.com">sales@brandolondon.com</Link></p>
           <p className='flex items-center gap-x-3 !pt-3'><FontAwesomeIcon icon={faPhone} color='#fff' size='lg' width={18} height={16} /><Link className='tel !text-[15px] !pb-0 hover:text-[#d13636]' href="tel:447796079986">+44 7796 079986</Link></p>
 
