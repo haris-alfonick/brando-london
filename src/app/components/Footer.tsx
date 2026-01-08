@@ -33,7 +33,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href='https://www.instagram.com/brando_landon/' target='_blank'>
+              <Link href='https://www.instagram.com/brando__london' target='_blank'>
                 <Image
                   src='/images/_Instagram.png'
                   width={28}

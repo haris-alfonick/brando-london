@@ -18,7 +18,7 @@ const CallUs = () => {
                         <strong>@brandolondon</strong>
                         <span className="lg:w-[85%] pt-1.5">Contemporary wardrobe staples and authentic style for the modern man and women. Follow us for the latest trends.</span>
                         <span>Tag us and get featured <Link href="">@brandolondon</Link></span>
-                        <span><Link href="https://www.instagram.com/brando_landon/" target="_blank">instagram.com/brandolondon</Link></span>
+                        <span><Link href="https://www.instagram.com/brando__london" target="_blank">instagram.com/brandolondon</Link></span>
                     </div>
 
                     <div className="md:col-span-6 col-span-12">

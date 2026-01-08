@@ -155,8 +155,8 @@ const Contact = () => {
               {/* <div> */}
               <div className='mt-6 [&_svg]:cursor-pointer [&_svg]:transition-transform [&_svg]:duration-300 [&_svg]:ease-in-out [&_img:hover]:scale-110 space-x-2
               '>
-                <Link href="https://www.facebook.com/brandolondonoffical/"><FontAwesomeIcon icon={faFacebook} width={24} height={24} size='xl' color='#333' /></Link>
-                <Link href="https://www.instagram.com/brando_landon/"><FontAwesomeIcon icon={faInstagram} width={24} height={24} size='xl' color='#333' /></Link>
+                <Link href="https://www.facebook.com/brandolondonoffical/" target='_blank'><FontAwesomeIcon icon={faFacebook} width={24} height={24} size='xl' color='#333' /></Link>
+                <Link href="https://www.instagram.com/brando__london" target='_blank'><FontAwesomeIcon icon={faInstagram} width={24} height={24} size='xl' color='#333' /></Link>
               </div>
               {/* </div> */}
             </ul>
