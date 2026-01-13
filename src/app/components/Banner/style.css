@@ -1,0 +1,16 @@
+@media(max-width: 1023px){
+    .bgMobile{
+        background: url(/images/jacket-mobile-banner.webp) center no-repeat;
+        background-size: cover;
+    }
+    .bgMobile h1, .bgMobile div, .bgMobile p{
+        color: #fff;
+    }
+    .bgMobile p{
+        font-weight: 300;
+    }
+    .bgMobile button{
+        background: #fff;
+        color: #000;
+    }
+}
