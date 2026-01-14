@@ -14,11 +14,11 @@ const StarRating = ({ rating, reviewCount }: reviewStar) => {
 
   for (let i = 1; i <= 5; i++) {
     if (rating >= i) {
-      stars.push(<FontAwesomeIcon key={i} icon={solidStar} width={16}  className="text-[#eae640]" />);
+      stars.push(<FontAwesomeIcon key={i} icon={solidStar} width={16}  className="text-[#ff6201]" />);
     } else if (rating >= i - 0.5) {
-      stars.push(<FontAwesomeIcon key={i} icon={faStarHalfAlt} width={16} className="text-[#eae640]" />);
+      stars.push(<FontAwesomeIcon key={i} icon={faStarHalfAlt} width={16} className="text-[#ff6201]" />);
     } else {
-      stars.push(<FontAwesomeIcon key={i} icon={regularStar} width={16} className="text-[#eae640]" />);
+      stars.push(<FontAwesomeIcon key={i} icon={regularStar} width={16} className="text-[#ff6201]" />);
     }
   }
 

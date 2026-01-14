@@ -19,7 +19,7 @@ const ImageText = () => {
             <div className='btnCenter'>
               <button
                 onClick={() => router.push('mens-biker-leather-jackets/')}
-                className='text-white bg-[#282828] hover:text-[#282828] hover:bg-[#eae645]'
+                className='text-white bg-[#282828] hover:text-[#fff] hover:bg-[#373737]'
               >
                 Men's Aviator Jacket
               </button>
@@ -45,7 +45,7 @@ const ImageText = () => {
             <div className='btnCenter'>
               <button
                 onClick={() => router.push('womens-aviator-jackets/')}
-                className='text-white bg-[#282828] hover:text-[#282828] hover:bg-[#eae645]'
+                className='text-white bg-[#282828] hover:text-[#fff] hover:bg-[#373737]'
               >
                 Women's Aviator Jacket
               </button>

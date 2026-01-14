@@ -31,10 +31,10 @@ const CounterSlider = () => {
               <CarouselContent className='md:duration-500 2xl:duration-0 ml-0'>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter1.webp'
+                    src='/images/slide-1.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
@@ -51,10 +51,10 @@ const CounterSlider = () => {
                 </CarouselItem>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter2.webp'
+                    src='/images/slide-2.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
@@ -71,10 +71,10 @@ const CounterSlider = () => {
                 </CarouselItem>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter3.webp'
+                    src='/images/slide-3.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
@@ -91,10 +91,10 @@ const CounterSlider = () => {
                 </CarouselItem>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter4.webp'
+                    src='/images/slide-4.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
@@ -111,10 +111,10 @@ const CounterSlider = () => {
                 </CarouselItem>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter1.webp'
+                    src='/images/slide-5.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
@@ -131,10 +131,10 @@ const CounterSlider = () => {
                 </CarouselItem>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter2.webp'
+                    src='/images/slide-6.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
@@ -151,10 +151,10 @@ const CounterSlider = () => {
                 </CarouselItem>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter3.webp'
+                    src='/images/slide-7.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
@@ -171,10 +171,10 @@ const CounterSlider = () => {
                 </CarouselItem>
                 <CarouselItem className='counterCarouselItem max-2xl:min-w-fit w-[33%] max-md:basis-[100%] basis-[33%] 2xl:basis-[31%] relative'>
                   <Image
-                    src='/images/counter4.webp'
+                    src='/images/slide-8.webp'
                     alt='image'
-                    width={250}
-                    height={400}
+                    width={2000}
+                    height={2000}
                     className='w-[100%]'
                   />
                   <div className='rounded-sm p-[15px] bg-white w-fit [&_span]:text-[#666] absolute z-2 top-auto bottom-[15px] left-[30px]'>
