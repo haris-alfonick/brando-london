@@ -34,7 +34,7 @@ const ProductCategory = async ({
     ? resolvedSearchParams.max_price[0] 
     : resolvedSearchParams.max_price || '';
 
-  const { products: initialProducts, categoryName, totalPages, totalProducts } = 
+  const { products: initialProducts, categoryName, categoryDescription, totalPages, totalProducts } = 
     await fetchProductsServerAction(
       1, 
       12, 
@@ -80,6 +80,12 @@ const ProductCategory = async ({
               categorySlug={slug}
             />
             <CustomizedNow />
+            {categoryDescription && (
+              <div
+                className="mt-4 text-base font-normal normal-case text-gray-600"
+                dangerouslySetInnerHTML={{ __html: categoryDescription }}
+              />
+            )}
           </div>
         </div>
       </div>

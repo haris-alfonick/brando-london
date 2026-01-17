@@ -7,7 +7,7 @@ export async function fetchProductsServerAction(
   min_price: string = '',
   max_price: string = '',
   categorySlug: string | '',
-): Promise<{ products: WooCommerceProduct[]; categoryName: string; totalPages: number; totalProducts: number }> {
+): Promise<{ products: WooCommerceProduct[]; categoryName: string; categoryDescription: string; totalPages: number; totalProducts: number }> {
   try {
     const filters = { page, per_page, min_price, max_price, categorySlug };
     const wooCommerceProducts = await fetchWooCommerceProducts(filters);
@@ -17,10 +17,11 @@ export async function fetchProductsServerAction(
     const totalProducts = wooCommerceProducts?.totalProducts || 0;
     const products = wooCommerceProducts?.products || [];
     const categoryName = wooCommerceProducts?.categoryName || '';
+    const categoryDescription = wooCommerceProducts?.categoryDescription || '';
 
-    return { products, totalPages, totalProducts, categoryName };
+    return { products, totalPages, totalProducts, categoryName, categoryDescription };
   } catch (error) {
     console.error('Error fetching products in server action:', error);
-    return { products: [], categoryName: '', totalPages: 0, totalProducts: 0 };
+    return { products: [], categoryName: '', categoryDescription: '', totalPages: 0, totalProducts: 0 };
   }
 }

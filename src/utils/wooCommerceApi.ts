@@ -175,6 +175,7 @@ export async function fetchWooCommerceProducts(filters?: ProductFilters) {
     return {
       products,
       categoryName: categoryInfo?.name || null,
+      categoryDescription: categoryInfo?.description || null,
       totalProducts: response.headers["x-wp-total"],
       totalPages: response.headers["x-wp-totalpages"],
     };
