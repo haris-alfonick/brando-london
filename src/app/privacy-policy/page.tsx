@@ -68,7 +68,7 @@ import Link from "next/link";
 
             <h3>Who Has The Access</h3>
             <p>
-              Your data is in safe hands. We do not sell or disclose our customers' personal
+              Your data is in safe hands. We do not sell or disclose our customers personal
               information to third parties. We only ask for specific details that are necessary
               to place the order and for further processing. Except for our team and dispatchers,
               no one has access to your personal information.

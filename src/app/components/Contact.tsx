@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ContactForm from "./ContactForm";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Contact = () => {
   return (

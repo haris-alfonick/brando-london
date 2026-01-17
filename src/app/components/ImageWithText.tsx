@@ -21,7 +21,7 @@ const ImageText = () => {
                 onClick={() => router.push('mens-biker-leather-jackets/')}
                 className='text-white bg-[#282828] hover:text-[#282828] hover:bg-[#eae645]'
               >
-                Men's Aviator Jacket
+                Men&apos;s Aviator Jacket
               </button>
             </div>
           </div>
@@ -47,7 +47,7 @@ const ImageText = () => {
                 onClick={() => router.push('womens-aviator-jackets/')}
                 className='text-white bg-[#282828] hover:text-[#282828] hover:bg-[#eae645]'
               >
-                Women's Aviator Jacket
+                Women&apos;s Aviator Jacket
               </button>
             </div>
           </div>

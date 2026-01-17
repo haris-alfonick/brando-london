@@ -14,10 +14,10 @@ const LoadingFallback = () => (
 )
 
 // Lazy load components that are not immediately visible
-const Slider = dynamicImport(() => import('./components/Slider'), {
-  loading: LoadingFallback,
-  ssr: true
-})
+// const Slider = dynamicImport(() => import('./components/Slider'), {
+//   loading: LoadingFallback,
+//   ssr: true
+// })
 
 const FeatureProduct = dynamicImport(
   () => import('./components/FeatureProduct'),
@@ -42,10 +42,10 @@ const StarProducts = dynamicImport(() => import('./components/StarProducts'), {
 //   ssr: true
 // });
 
-const Testimonial = dynamicImport(() => import('./components/Testimonial'), {
-  loading: LoadingFallback,
-  ssr: true
-})
+// const Testimonial = dynamicImport(() => import('./components/Testimonial'), {
+//   loading: LoadingFallback,
+//   ssr: true
+// })
 
 const CallUs = dynamicImport(() => import('./components/CallUs'), {
   loading: LoadingFallback,

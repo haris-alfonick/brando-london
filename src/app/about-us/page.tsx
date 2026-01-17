@@ -62,8 +62,8 @@ const AboutUs = () => {
                 </div>
                 <p>
                   We offer a premium-quality leather jacket collection, made from cowhide,
-                  sheepskin, and goatskin. Our store offers men's vintage and suede jackets,
-                  women's leather and vintage jackets.
+                  sheepskin, and goatskin. Our store offers men&apos;s vintage and suede jackets,
+                  women&apos;s leather and vintage jackets.
                 </p>
 
                 <p>
@@ -79,7 +79,7 @@ const AboutUs = () => {
 
                 <h3>Our Work Ethics</h3>
                 <p>
-                  Our customers' trust in us reflects our work ethic, as evidenced by the
+                  Our customers trust in us reflects our work ethic, as evidenced by the
                   top-tier collection they access. We ensure that we provide our customers with
                   products that offer comfort, sustainability, durability, and reliability.
                 </p>
@@ -93,14 +93,14 @@ const AboutUs = () => {
                 <h3>Our Brand Values the Velocity and Audience</h3>
                 <p>
                   Volume over velocity best defines our brand. We believe in assurance,
-                  reliable outfits that ensure our customers' satisfaction and needs. Leather
+                  reliable outfits that ensure our customers satisfaction and needs. Leather
                   is a material suitable for both genders and ideal for every age group.
                 </p>
 
                 <p>
                   It offers style, comfort, and a sophisticated, timeless look with a bold
                   personality. It aligns with the age group, which is why we have chosen this
-                  appealing fabric to design our entire collection to meet our audience's
+                  appealing fabric to design our entire collection to meet our audience&apos;s
                   needs.
                 </p>
 
@@ -120,7 +120,7 @@ const AboutUs = () => {
 
                 <p>
                   Consequently, we have created a firm, impactful privacy policy to ensure the
-                  security of our valued customers' and visitors' data and information.
+                  security of our valued customers and visitors data and information.
                   Moreover, we have engaged a trusted third party to handle shipping methods to
                   ensure your safety.
                 </p>

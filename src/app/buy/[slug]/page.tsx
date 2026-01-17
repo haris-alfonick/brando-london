@@ -10,7 +10,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer'
 import BreadCrumbs from '../../components/breadcrumbs'
 import RelatedProductCard from '../../components/RelatedProduct'
-import Testimonial from '../../components/Testimonial'
+// import Testimonial from '../../components/Testimonial'
 import Price from "@/app/components/shop/price";
 // import SocialShare from "@/app/components/shop/socialShare";
 import Handler from "./handler";

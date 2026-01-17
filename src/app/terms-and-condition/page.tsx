@@ -44,7 +44,7 @@ const TermsCondition = () => {
 
           <h3>Shipment and Processing</h3>
           <p>
-            We keep our customers' data safe and secure and use it only to
+            We keep our customers data safe and secure and use it only to
             provide you with our best service. Once you place an order on our
             website and confirm it, we generate the tracking ID and shipment
             details to share them with you.

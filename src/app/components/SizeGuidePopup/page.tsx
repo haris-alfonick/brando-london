@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { faChartColumn, faRulerVertical } from '@fortawesome/free-solid-svg-icons'
+import { faChartColumn } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const SizeGuidePopup = () => {

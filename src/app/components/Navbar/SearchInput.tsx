@@ -5,9 +5,16 @@ import { useRouter } from "next/navigation";
 import { searchProducts } from "@/utils/wooSearch";
 import Image from "next/image";
 
+interface SearchProduct {
+  id: number;
+  name: string;
+  slug: string;
+  image?: string;
+}
+
 export default function SearchInput() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<SearchProduct[]>([]);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
