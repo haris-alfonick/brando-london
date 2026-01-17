@@ -23,10 +23,11 @@ export default function SizeGuide () {
 
         <div className='[&>img]:rounded-[14px] [&>img]:mx-auto pt-8'>
           <Image
-            src='/images/guide.webp'
+            src='/images/size-guide-top.webp'
             alt='image'
-            width={1500}
-            height={1500}
+            width={2000}
+            height={1000}
+            className='xl:h-[550px] object-cover'
           />
         </div>
 

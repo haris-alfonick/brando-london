@@ -6,16 +6,20 @@ import './style.css'
 import { useAppSelector } from '@/lib/hooks'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Input } from '@/components/ui/input'
 import SearchInput from './SearchInput'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [cartLength, setCartLength] = useState(0)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const toggleDropdown = (key: string) => {
+    setActiveDropdown(prev => (prev === key ? null : key))
+  }
   const cartItemsData = useAppSelector(state => state.cart.items.length)
   useEffect(() => {
     setCartLength(cartItemsData)
   }, [cartItemsData])
+  
   return (
     <>
       {/* Main Navbar */}
@@ -224,103 +228,104 @@ const Navbar = () => {
               </Link>
             </div>
             <div className='mb-4'>
-              <Input type='text' placeholder='Search...' />
+              <SearchInput />
             </div>
             {/* Menu Items for Sidebar */}
-            <ul className='navWrap space-y-3'>
+            <ul className='navWrap space-y-3 [&_.nestedList>li>a]:pl-1.5 [&_.nestedList>li>a]:pb-0 [&_.nestedList>li>a]:text-[15px]'>
               <li>
                 <Link href='/'>Home</Link>
               </li>
               <li>
                 <Link href='/about-us'>About Us</Link>
               </li>
-              {/* Shop Dropdown */}
-              <li className='relative group'>
-                <Link href='/shop' className='inline-flex items-center gap-1'>
-                  Shop{' '}
+              {/* Mobile Shop Dropdown */}
+              <li className="w-full">
+                <button
+                  type="button"
+                  onClick={() => toggleDropdown('shop')}
+                  className="flex w-full items-center justify-between text-left"
+                >
+                  <Link href="/shop">Shop</Link>
+
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className='text-xs mt-[2px]'
+                    className={`transition-transform duration-300 ${
+                      activeDropdown === 'shop' ? 'rotate-180' : ''
+                    }`}
                   />
-                </Link>
+                </button>
 
-                {/* Dropdown */}
-                <ul className='absolute left-0 top-full mt-3 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+                <ul
+                  className={`nestedList overflow-hidden transition-all duration-300 ${
+                    activeDropdown === 'shop'
+                      ? 'max-h-60 opacity-100'
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
                   <li>
-                    <Link
-                      href='#'
-                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                    >
+                    <Link href="/men-jackets" className="block py-2 pl-4 text-sm">
                       Men Jackets
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href=''
-                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                    >
+                    <Link href="/women-jackets" className="block py-2 pl-4 text-sm">
                       Women Jackets
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href=''
-                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                    >
+                    <Link href="/pilot-jacket" className="block py-2 pl-4 text-sm">
                       Pilot Jacket
                     </Link>
                   </li>
                 </ul>
               </li>
+
               <li>
                 <Link href='/size-guide'>Size Guide</Link>
               </li>
-              <li className='relative group'>
-                <Link
-                  href='/contact'
-                  className='inline-flex items-center gap-1'
+              <li className="w-full">
+                <button
+                  type="button"
+                  onClick={() => toggleDropdown('customer-care')}
+                  className="flex w-full items-center justify-between text-left"
                 >
-                  Customer Care
+                  <span>Customer Care</span>
+
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className='w-3 h-3 text-xs transition-transform duration-300 group-hover:rotate-180 float-right'
+                    className={`transition-transform duration-300 ${
+                      activeDropdown === 'customer-care' ? 'rotate-180' : ''
+                    }`}
                   />
-                </Link>
+                </button>
 
-                {/* Dropdown */}
-                <ul className='absolute left-0 top-full mt-3 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+                <ul
+                  className={`nestedList overflow-hidden transition-all duration-300 ${
+                    activeDropdown === 'customer-care'
+                      ? 'max-h-60 opacity-100'
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
                   <li>
-                    <Link
-                      href='/faq'
-                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                    >
+                    <Link href="/faq" className="block py-2 pl-4 text-sm">
                       FAQ
                     </Link>
                   </li>
 
                   <li>
-                    <Link
-                      href='/about-us'
-                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                    >
+                    <Link href="/about-us" className="block py-2 pl-4 text-sm">
                       About Us
                     </Link>
                   </li>
 
                   <li>
-                    <Link
-                      href='/contact'
-                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                    >
+                    <Link href="/contact" className="block py-2 pl-4 text-sm">
                       Contact Us
                     </Link>
                   </li>
 
                   <li>
-                    <Link
-                      href='#'
-                      className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                    >
+                    <Link href="/shipping-policy" className="block py-2 pl-4 text-sm">
                       Shipping Policy
                     </Link>
                   </li>
