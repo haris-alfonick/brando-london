@@ -255,3 +255,19 @@ export async function createOrder(data: OrderData) {
     throw new Error("Failed to create order.");
   }
 }
+
+export async function updateWooOrderStatus(
+  orderId: string,
+  stripeIntentId: string
+) {
+  await api.put(`orders/${orderId}`, {
+    status: "processing", // or "completed"
+    transaction_id: stripeIntentId,
+    meta_data: [
+      {
+        key: "_stripe_payment_intent",
+        value: stripeIntentId,
+      },
+    ],
+  });
+}

@@ -19,17 +19,17 @@ const Navbar = () => {
   useEffect(() => {
     setCartLength(cartItemsData)
   }, [cartItemsData])
-  
+
   return (
     <>
       {/* Main Navbar */}
-      <nav className='relative px-4 py-4 flex grid-cols-12 items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
+      <nav className='relative px-4 py-4 flex justify-items-center items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
         {/* Logo */}
         <Link
-          className='col-span-2 w-full text-3xl font-bold leading-none max-lg:[&_img]:max-w-[145px]'
+          className='col-span-2 2xl:w-full w-96 text-3xl font-bold leading-none'
           href='/'
         >
-          <Image src='/images/logo.png' alt='logo' width={145} height={145} />
+          <Image src='/images/logo.png' alt='logo' width={145} height={38} />
         </Link>
 
         {/* Menu Button for Mobile */}
@@ -45,8 +45,8 @@ const Navbar = () => {
               <Image
                 src='/images/cart-icon.png'
                 alt='icon'
-                width={100}
-                height={100}
+                width={30}
+                height={30}
                 className=' md:w-7 sm:w-8 w-9'
               />
             </Link>
@@ -62,17 +62,19 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navbar Menu */}
-        <ul className='col-span-6 w-full m-auto justify-center navWrap hidden lg:flex lg:items-center xl:space-x-7 lg:space-x-3 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
+        <ul className='col-span-6 w-full m-auto justify-center navWrap hidden lg:flex lg:items-center 2xl:space-x-7 space-x-6 [&>li>a]:font-medium [&>li>a]:text-base [&>li>a]:text-[#282828] [&>li>a]:transition-all duration-300'>
           <li>
-            <Link href='/'>Home</Link>
+            <Link href='/new-arrival'>New Arrival</Link>
           </li>
 
           {/* Shop Dropdown */}
           <li className='relative group'>
-            <Link href='/shop' className='inline-flex items-center gap-1'>
-              Shop{' '}
+            <Link href='/mens-jackets' className='inline-flex items-center gap-1'>
+              Mens Jackets{' '}
               <FontAwesomeIcon
                 icon={faAngleDown}
+                width={12}
+                height={30}
                 className='text-xs transition-transform duration-300 group-hover:rotate-180'
               />
             </Link>
@@ -81,103 +83,94 @@ const Navbar = () => {
             <ul className='absolute left-0 top-full mt-3 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
               <li>
                 <Link
-                  href='/mens-jackets'
+                  href='/mens-biker-leather-jackets'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
-                  Men Jackets
+                  Mens Biker Jackets
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/womens-jackets/'
+                  href='/mens-black-leather-jacket'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
-                  Women Jackets
+                  Mens Black Leather Jackets
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/pilot-jackets/'
+                  href='/mens-jackets/brown-color-leather-jackets'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
-                  Pilot Jacket
+                  Mens Brown Leather Jackets
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/burgundy-leather-jacket/'
+                  href='/mens-trucker-jackets'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
-                  Burgundy Leather Jacket
+                  Mens Trucker Jackets
+                </Link>
+              </li>
+            </ul>
+          </li>
+
+          <li className='relative group'>
+            <Link href='/womens-jackets' className='inline-flex items-center gap-1'>
+              Womens Jackets{' '}
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                width={12}
+                height={30}
+                className='text-xs transition-transform duration-300 group-hover:rotate-180'
+              />
+            </Link>
+
+            {/* Dropdown */}
+            <ul className='absolute left-0 top-full mt-3 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+              <li>
+                <Link
+                  href='/womens-aviator-jackets'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Womens Aviator Jackets
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/womens-biker-leather-jackets'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Womens Biker Jackets
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/womens-jackets/womens-black-leather-jackets'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Womens Black Leather Jackets
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/burgundy-leather-jacket'
+                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
+                >
+                  Burgundy Leather Jackets
                 </Link>
               </li>
             </ul>
           </li>
 
           <li>
-            <Link href='/size-guide'>Size Guide</Link>
-          </li>
-
-          <li className='relative group'>
-            <Link href='/contact' className='inline-flex items-center gap-1'>
-              Customer Care
-              <FontAwesomeIcon
-                icon={faAngleDown}
-                className='w-3 h-3 text-xs transition-transform duration-300 group-hover:rotate-180'
-              />
-            </Link>
-
-            {/* Dropdown */}
-            <ul className='absolute left-0 top-full mt-3 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
-              
-              <li>
-                <Link
-                  href='/about-us'
-                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/contact'
-                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/faq'
-                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                >
-                  FAQ
-                </Link>
-              </li>
-
-
-              <li>
-                <Link
-                  href='/return-and-exchange-policy'
-                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                >
-                  Return & Exchange Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/shipping-policy'
-                  className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
-                >
-                  Shipping Policy
-                </Link>
-              </li>
-            </ul>
+            <Link href='/pilot-jackets'>Pilot Jackets</Link>
           </li>
         </ul>
 
         {/* Desktop Sign In / Sign Up Buttons */}
-        <div className='col-span-4 hidden justify-end lg:flex w-full gap-x-6 items-center'>
+        <div className='col-span-4 hidden justify-end lg:flex 2xl:w-full gap-x-6 items-center'>
           <div>
             {/* <Input type='text' placeholder='Search...' /> */}
             <SearchInput />
@@ -194,7 +187,7 @@ const Navbar = () => {
                 src='/images/cart-icon.png'
                 alt='icon'
                 width={23}
-                height={100}
+                height={23}
               />
             </Link>
           </div>
@@ -233,10 +226,7 @@ const Navbar = () => {
             {/* Menu Items for Sidebar */}
             <ul className='navWrap space-y-3 [&_.nestedList>li>a]:pl-1.5 [&_.nestedList>li>a]:pb-0 [&_.nestedList>li>a]:text-[15px]'>
               <li>
-                <Link href='/'>Home</Link>
-              </li>
-              <li>
-                <Link href='/about-us'>About Us</Link>
+                <Link href='/new-arrival'>New Arrival</Link>
               </li>
               {/* Mobile Shop Dropdown */}
               <li className="w-full">
@@ -245,96 +235,99 @@ const Navbar = () => {
                   onClick={() => toggleDropdown('shop')}
                   className="flex w-full items-center justify-between text-left"
                 >
-                  <Link href="/shop">Shop</Link>
+                  <Link href="/mens-jackets">Mens Jackets</Link>
 
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className={`transition-transform duration-300 ${
-                      activeDropdown === 'shop' ? 'rotate-180' : ''
-                    }`}
+                    className={`transition-transform duration-300 ${activeDropdown === 'shop' ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
 
                 <ul
-                  className={`nestedList overflow-hidden transition-all duration-300 ${
-                    activeDropdown === 'shop'
+                  className={`nestedList overflow-hidden transition-all duration-300 ${activeDropdown === 'shop'
                       ? 'max-h-60 opacity-100'
                       : 'max-h-0 opacity-0'
-                  }`}
+                    }`}
                 >
                   <li>
-                    <Link href="/men-jackets" className="block py-2 pl-4 text-sm">
-                      Men Jackets
+                    <Link href="/mens-biker-leather-jackets" className="block py-2 pl-4 text-sm">
+                      Mens Biker Jackets
                     </Link>
                   </li>
                   <li>
-                    <Link href="/women-jackets" className="block py-2 pl-4 text-sm">
-                      Women Jackets
+                    <Link href="/mens-black-leather-jacket" className="block py-2 pl-4 text-sm">
+                      Mens Black Leather Jackets
                     </Link>
                   </li>
                   <li>
-                    <Link href="/pilot-jacket" className="block py-2 pl-4 text-sm">
-                      Pilot Jacket
+                    <Link href="/mens-jackets/brown-color-leather-jackets" className="block py-2 pl-4 text-sm">
+                      Mens Brown Leather Jackets
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/mens-trucker-jackets" className="block py-2 pl-4 text-sm">
+                      Mens Trucker Jackets
                     </Link>
                   </li>
                 </ul>
               </li>
 
-              <li>
-                <Link href='/size-guide'>Size Guide</Link>
-              </li>
               <li className="w-full">
                 <button
                   type="button"
                   onClick={() => toggleDropdown('customer-care')}
                   className="flex w-full items-center justify-between text-left"
                 >
-                  <span>Customer Care</span>
+                  <Link href="/womens-jackets">Womens Jackets</Link>
 
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className={`transition-transform duration-300 ${
-                      activeDropdown === 'customer-care' ? 'rotate-180' : ''
-                    }`}
+                    className={`transition-transform duration-300 ${activeDropdown === 'customer-care' ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
 
                 <ul
-                  className={`nestedList overflow-hidden transition-all duration-300 ${
-                    activeDropdown === 'customer-care'
+                  className={`nestedList overflow-hidden transition-all duration-300 ${activeDropdown === 'customer-care'
                       ? 'max-h-60 opacity-100'
                       : 'max-h-0 opacity-0'
-                  }`}
+                    }`}
                 >
                   <li>
-                    <Link href="/faq" className="block py-2 pl-4 text-sm">
-                      FAQ
+                    <Link href="/womens-aviator-jackets" className="block py-2 pl-4 text-sm">
+                      Womens Aviator Jackets
                     </Link>
                   </li>
 
                   <li>
-                    <Link href="/about-us" className="block py-2 pl-4 text-sm">
-                      About Us
+                    <Link href="/womens-biker-leather-jackets" className="block py-2 pl-4 text-sm">
+                      Womens Biker Jackets
                     </Link>
                   </li>
 
                   <li>
-                    <Link href="/contact" className="block py-2 pl-4 text-sm">
-                      Contact Us
+                    <Link href="/womens-jackets/womens-black-leather-jackets" className="block py-2 pl-4 text-sm">
+                      Womens Black Leather Jackets
                     </Link>
                   </li>
 
                   <li>
-                    <Link href="/shipping-policy" className="block py-2 pl-4 text-sm">
-                      Shipping Policy
+                    <Link href="/burgundy-leather-jacket" className="block py-2 pl-4 text-sm">
+                      Burgundy Leather Jackets
                     </Link>
                   </li>
                 </ul>
               </li>
+
+              <li>
+                <Link href='/pilot-jackets'>Pilot Jackets</Link>
+              </li>
+
             </ul>
 
             {/* Categories */}
-            <div className='[&_a]:text-[#333] [&_a]:text-base [&_a]:block [&_a]:pb-2 [&_strong]:text-[#333] [&_strong]:my-3 [&_strong]:mt-6 [&_strong]:text-lg [&_strong]:py-1.5 [&_strong]:pb-0 [&_strong]:underline [&_strong]:rounded-sm [&_strong]:font-semibold [&_strong]:block '>
+            {/* <div className='[&_a]:text-[#333] [&_a]:text-base [&_a]:block [&_a]:pb-2 [&_strong]:text-[#333] [&_strong]:my-3 [&_strong]:mt-6 [&_strong]:text-lg [&_strong]:py-1.5 [&_strong]:pb-0 [&_strong]:underline [&_strong]:rounded-sm [&_strong]:font-semibold [&_strong]:block '>
               <strong>Men&apos;s Collection</strong>
               <div className='footerNav space-y-0.5'>
                 <Link href='/mens-leather-jackets'>Men Leather Jackets</Link>
@@ -366,7 +359,7 @@ const Navbar = () => {
                   Women Vintage Jackets
                 </Link>
               </div>
-            </div>
+            </div> */}
             {/* Close Button */}
             <button
               className='absolute top-6 right-6 text-[#333333]'

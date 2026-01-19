@@ -35,7 +35,7 @@ export default function SearchInput() {
   }, [query]);
 
   return (
-    <div className="relative w-full max-w-md">
+    <div className="relative w-max max-w-md">
       <input
         type="text"
         placeholder="Search products..."

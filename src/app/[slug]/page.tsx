@@ -82,7 +82,7 @@ const ProductCategory = async ({
             <CustomizedNow />
             {categoryDescription && (
               <div
-                className="mt-4 text-base font-normal normal-case text-gray-600"
+                className="mt-4 text-base font-normal normal-case text-[#777] sm:[&_h1]:leading-[1.2] sm:[&_h1]:text-[28px] [&_h1]:text-[18px] [&_h1]:pb-[14px] sm:[&_h2]:text-[26px] text-[16px] [&_h2]:pt-[18px] [&_h2]:pb-3 [&_h2]:font-medium [&_h3]:text-[16px] [&_h3]:pt-[7px] [&_h1]:text-[#333333] [&_h2]:text-[#333333] [&_h3]:text-[#333333] [&_h4]:text-[#333333] [&_h5]:text-[#333333] [&_h6]:text-[#333333]"
                 dangerouslySetInnerHTML={{ __html: categoryDescription }}
               />
             )}
