@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster"
 import StoreProvider from "./StoreProviders";
+import Script from "next/script";
 
 const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700"],
@@ -75,6 +76,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={outfit.variable}>
+      <head>
+        {/* Google Ads / Google Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17861181730"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17861181730');
+          `}
+        </Script>
+      </head>
       <body
         className={`${outfit.className} antialiased overflow-x-hidden`}
       >

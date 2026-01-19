@@ -5,6 +5,7 @@ import { ErrorBoundary } from './components/ErrorBoundary'
 import CounterSlider from './components/CounterSlider'
 import Banner from './components/Banner/page'
 import ImageText from './components/ImageWithText'
+import PilotCollection from './components/pilotCollection'
 
 // Loading component
 const LoadingFallback = () => (
@@ -77,7 +78,8 @@ export default function Home () {
         <FeatureProduct />
         {/* <Womenjackets /> */}
         <CounterSlider />
-        <ImageText />
+        {/* <ImageText /> shop collection old */}
+        <PilotCollection />
         {/* <Testimonial /> */}
         <CallUs />
         <Contact />

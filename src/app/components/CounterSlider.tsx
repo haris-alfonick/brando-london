@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 const CounterSlider = () => {
   return (
-    <section className='md:py-20 bg-[#282828] px-5 py-14 mt-12'>
+    <section className='md:py-20 bg-[#282828] px-5 py-14 lg:mt-12'>
       <div className='!max-2xl:max-w-[1240px] container mx-auto'>
         <div className='animateCircle after:animate-spin bg-no-repeat relative grid grid-cols-12 items-center md:gap-y-0 gap-y-16 md:justify-items-end justify-items-center gap-5'>
           <div className='md:col-span-4 col-span-12 flex flex-col space-y-4 lg:[&>h3]:text-4xl md:[&>h3]:text-3xl [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-white [&>h3]:uppercase [&>strong]:block [&>strong]:text-white [&>strong]:text-2xl [&>strong]:font-semibold [&>span]:lg:w-[85%] [&>span]:pt-1.5 [&>span]:leading-[1.4] [&>span]:text-lg [&>span]:text-white [&>span]:block [&_button]:bg-[#fff] [&_button]:text-[#282828] [&_button]:w-36 sm:[&_button]:text-lg [&_button]:py-2 [&_button]:rounded-md'>

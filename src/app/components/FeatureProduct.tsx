@@ -10,7 +10,7 @@ const FeatureProduct = async () => {
 
   return (
     <>
-      <section className="relative z-[99] bg-white px-5 md:py-16 md:pb-0 py-10">
+      <section className="relative z-[99] bg-white px-5 md:py-16 max-md:pb-[1rem] md:pb-0 py-10">
         <div className="container mx-auto">
           <div className="text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold">
             <h2>FEATURE PRODUCTS</h2>

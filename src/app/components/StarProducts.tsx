@@ -6,7 +6,7 @@ const MensJackets = async () => {
   const { featuredProducts } = await fetchHomePageData();
   return (
     <>
-      <section className='px-5 md:pb-12 md:py-16 py-4 pb-1'>
+      <section className='px-5 md:pb-12 md:py-16 py-8 pb-1'>
         <div className='container mx-auto'>
           <div className='text-center [&>h2]:text-[#333333] lg:[&>h2]:text-4xl md:[&>h2]:text-3xl [&>h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase mb-8'>
             <h2>Best Seller</h2>
