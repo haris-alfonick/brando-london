@@ -29,7 +29,7 @@ const PilotCollection = () => {
             <div className="absolute inset-0 bg-[linear-gradient(to_top,#00000087_0%,#d9d9d900_80%)]"></div>
             <div className='absolute lg:bottom-10 bottom-[25px] lg:left-10 left-[20px]'>
                 <h3>Men's Aviator {' '} <span className='block'> Jacket</span></h3>
-                <a href="#">Shop Now</a>
+                <a href="/mens-aviator-jackets">Shop Now</a>
             </div>
             </div>
 
@@ -44,7 +44,7 @@ const PilotCollection = () => {
             <div className="absolute inset-0 bg-[linear-gradient(to_top,#00000087_0%,#d9d9d900_80%)]"></div>
             <div className='absolute lg:bottom-10 bottom-[25px] lg:left-10 left-[20px]'>
                 <h3>Women's Aviator {' '} <span className='block'>Jacket</span></h3>
-                <a href="#">Shop Now</a>
+                <a href="/womens-aviator-jackets">Shop Now</a>
             </div>
             </div>
 
