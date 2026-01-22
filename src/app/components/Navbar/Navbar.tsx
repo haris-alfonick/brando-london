@@ -99,7 +99,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href='/mens-jackets/brown-color-leather-jackets'
+                  href='/product-category/mens-jackets/brown-color-leather-jackets/'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
                   Mens Brown Leather Jackets
@@ -147,7 +147,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href='/womens-jackets/womens-black-leather-jackets'
+                  href='/product-category/womens-jackets/womens-black-leather-jackets/'
                   className='block px-4 py-2 text-sm text-[#282828] hover:bg-gray-100'
                 >
                   Womens Black Leather Jackets
@@ -261,7 +261,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/mens-jackets/brown-color-leather-jackets" className="block py-2 pl-4 text-sm">
+                    <Link href="/product-category/mens-jackets/brown-color-leather-jackets/" className="block py-2 pl-4 text-sm">
                       Mens Brown Leather Jackets
                     </Link>
                   </li>
@@ -307,7 +307,7 @@ const Navbar = () => {
                   </li>
 
                   <li>
-                    <Link href="/womens-jackets/womens-black-leather-jackets" className="block py-2 pl-4 text-sm">
+                    <Link href="/product-category/womens-jackets/womens-black-leather-jackets/" className="block py-2 pl-4 text-sm">
                       Womens Black Leather Jackets
                     </Link>
                   </li>
