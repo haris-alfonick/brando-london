@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { OrderData } from "@/utils/wooCommerceApi";
 
 const StripeCheckOut = ({ total, data }: { total: number, data: OrderData }) => {
+  console.log(total)
   const [stripePromise, setStripePromise] = useState<Promise<Stripe | null> | null>(null);
 
   useEffect(() => {

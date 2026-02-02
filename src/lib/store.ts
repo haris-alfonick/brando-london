@@ -4,6 +4,7 @@ import cartReducer from '@/lib/features/cart/cartSlice'
 import orderSlice from './features/checkout/orderSlice'
 import userReducer from './features/user/userSlice'
 import productReducer from './features/product/productSlice'
+import currencyReducer from "./features/currency/currencySlice";
 
 export const store = () => {
   return configureStore({
@@ -12,6 +13,7 @@ export const store = () => {
       order: orderSlice,
       user: userReducer,
       products: productReducer,
+      currency: currencyReducer
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({

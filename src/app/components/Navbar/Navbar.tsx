@@ -7,6 +7,7 @@ import { useAppSelector } from '@/lib/hooks'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SearchInput from './SearchInput'
+import { CurrencySwitcher } from '../CurrencySwitcher'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -22,6 +23,7 @@ const Navbar = () => {
 
   return (
     <>
+    <CurrencySwitcher />
       {/* Main Navbar */}
       <nav className='relative px-4 py-4 flex justify-items-center items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
         {/* Logo */}
