@@ -16,6 +16,7 @@ export function CurrencySwitcher() {
 
   return (
     <select
+      className="!bg-transparent"
       value={current}
       onChange={(e) =>
         dispatch(setCurrency(e.target.value as CurrencyCode))

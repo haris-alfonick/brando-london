@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-    <CurrencySwitcher />
+   
       {/* Main Navbar */}
       <nav className='relative px-4 py-4 flex justify-items-center items-center bg-white z-[9999] border border-b-[#f0f0f0]'>
         {/* Logo */}
@@ -36,22 +36,25 @@ const Navbar = () => {
 
         {/* Menu Button for Mobile */}
         <div className='col-span-10 lg:hidden flex items-center w-fit mr-0 ml-auto gap-x-2.5'>
-          <div className=' relative'>
-            <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>
-              {cartLength}
+          <div className='flex items-center gap-x-2'>
+             <CurrencySwitcher />
+            <div className='relative w-fit h-fit top-[3px] bottom-0 m-auto left-0 right-0'>
+              <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>
+                {cartLength}
+              </div>
+              <Link
+                className='inline-block w-6'
+                href='/cart'
+              >
+                <Image
+                  src='/images/cart-icon.png'
+                  alt='icon'
+                  width={23}
+                  height={23}
+                 
+                />
+              </Link>
             </div>
-            <Link
-              className='text-sm text-[#333333] font-bold rounded-xl'
-              href='/cart'
-            >
-              <Image
-                src='/images/cart-icon.png'
-                alt='icon'
-                width={30}
-                height={30}
-                className=' md:w-7 sm:w-8 w-9'
-              />
-            </Link>
           </div>
           <button
             className='navbar-burger flex items-center text-[#333333] pl-3'
@@ -172,26 +175,30 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Sign In / Sign Up Buttons */}
-        <div className='col-span-4 hidden justify-end lg:flex 2xl:w-full gap-x-6 items-center'>
+        <div className='col-span-4 hidden justify-end lg:flex 2xl:w-full gap-x-4 items-center'>
           <div>
             {/* <Input type='text' placeholder='Search...' /> */}
             <SearchInput />
           </div>
-          <div className=' relative'>
-            <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>
-              {cartLength}
+          <div className='flex items-center gap-x-2'>
+             <CurrencySwitcher />
+            <div className='relative w-fit h-fit top-[3px] bottom-0 m-auto left-0 right-0'>
+              <div className='absolute -top-1 -right-1.5 w-4 h-4 text-[11px] text-white text-center bg-gray-700 rounded-full leading-[15px]'>
+                {cartLength}
+              </div>
+              <Link
+                className='inline-block w-6'
+                href='/cart'
+              >
+                <Image
+                  src='/images/cart-icon.png'
+                  alt='icon'
+                  width={23}
+                  height={23}
+                 
+                />
+              </Link>
             </div>
-            <Link
-              className='text-sm text-[#333333] font-bold rounded-xl'
-              href='/cart'
-            >
-              <Image
-                src='/images/cart-icon.png'
-                alt='icon'
-                width={23}
-                height={23}
-              />
-            </Link>
           </div>
           {/* <Link className="text-sm text-white font-bold rounded-xl" href="/"> 
           <Image
