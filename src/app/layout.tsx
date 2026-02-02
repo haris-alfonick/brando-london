@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster"
 import StoreProvider from "./StoreProviders";
 import Script from "next/script";
+import { headers } from "next/headers";
 
 const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700"],
@@ -69,11 +70,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const headersList = await headers();
+
+  // Vercel / Edge providers
+  const country =
+  headersList.get("x-vercel-ip-country") ||
+  headersList.get("cf-ipcountry") ||
+  "GB";
+  
   return (
     <html lang="en" className={outfit.variable}>
       <head>
@@ -92,6 +102,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
+        data-country={country}
         className={`${outfit.className} antialiased overflow-x-hidden`}
       >
         <StoreProvider>

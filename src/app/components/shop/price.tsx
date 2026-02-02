@@ -2,6 +2,7 @@
 
 import { useAppSelector } from "@/lib/store";
 import { convertPrice, formatPrice } from "@/utils/price";
+import { useMounted } from "@/hooks/useMounted";
 
 interface PriceType {
   price: string;
@@ -9,17 +10,47 @@ interface PriceType {
 }
 
 const Price = ({ price, productPage }: PriceType) => {
+  const mounted = useMounted(); // 👈 THIS was missing
   const currency = useAppSelector((s) => s.currency.current);
 
   // ---- GBP base values ----
   const gbpPrice = parseFloat(price);
   const gbpSalePrice = gbpPrice + 40;
 
-  // ---- Converted values (display only) ----
+  // ---- 🔒 SSR-safe fallback (IMPORTANT) ----
+  if (!mounted) {
+    return (
+      <div
+        className={`flex items-center ${
+          productPage ? "gap-x-4 mb-4" : "gap-x-2 [&_span]:text-lg"
+        }`}
+      >
+        <span
+          className={`${
+            productPage ? "text-xl lg:text-2xl" : "text-[#282828]"
+          } font-semibold`}
+        >
+          £{gbpPrice.toFixed(2)}
+        </span>
+
+        <span className="line-through text-xl lg:text-[23px] text-gray-500">
+          £{gbpSalePrice.toFixed(2)}
+        </span>
+
+        {productPage && (
+          <span className="text-sm bg-gray-800 text-white px-2 py-1 rounded">
+            Save{" "}
+            {Math.round(((gbpSalePrice - gbpPrice) / gbpSalePrice) * 100)}%
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  // ---- Converted values (display only, AFTER mount) ----
   const displayPrice = convertPrice(gbpPrice, currency);
   const displaySalePrice = convertPrice(gbpSalePrice, currency);
 
-  // ---- Discount % (GBP-based, correct formula) ----
   const discountPercent = Math.round(
     ((gbpSalePrice - gbpPrice) / gbpSalePrice) * 100
   );

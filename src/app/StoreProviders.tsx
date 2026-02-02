@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { Provider } from 'react-redux'
 import { store, AppStore } from '../lib/store'
 import CurrencyHydration from '@/lib/features/currency/CurrencyHydration'
+import AutoCurrency from '@/lib/features/currency/AutoCurrency'
 
 export default function StoreProvider({
   children,
@@ -18,5 +19,5 @@ export default function StoreProvider({
     // storeRef.current.dispatch(addUser('testUser'))
   }
 
-  return <Provider store={storeRef.current}><CurrencyHydration />{children}</Provider>
+  return <Provider store={storeRef.current}><CurrencyHydration /><AutoCurrency />{children}</Provider>
 }
